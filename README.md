@@ -10,3 +10,10 @@ Single-file interactive exploded-view parts catalog for one specific car:
 
 Scope for now: help with this one car. Anything beyond that (public launch, any token/claimant mechanics)
 is explicitly deferred and is the last thing that would ever ship, not the first.
+
+## 3D body
+The body is procedural three.js built against two reference photos in `ref/` (2003 Focus SE wagon, Light Tundra
+Metallic; Mr.choppers, Wikimedia Commons, CC BY-SA 3.0): wagon side profile extruded with wheel arches and window
+openings, separate hood/fenders/doors/liftgate/bumpers/roof panels, glass, lamps, wheels, seats and dash, under
+PBR paint with environment lighting and shadows. Paint color is editable in the Vehicle sheet (`paintHex`).
+`renders/` holds headless screenshots. URL params for testing: `?t=0.5&cam=x,y,z&target=x,y,z&shellonly=1&xray=1`.
