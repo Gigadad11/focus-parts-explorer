@@ -1,0 +1,41 @@
+{
+ "summary": {
+  "systems": 14,
+  "parts": 96,
+  "errors": 0,
+  "warnings": 12
+ },
+ "errors": [],
+ "warnings": [
+  "Cooling -> Ignition & Electrical interaction is not reciprocated in Ignition & Electrical",
+  "Exhaust -> Ignition & Electrical interaction is not reciprocated in Ignition & Electrical",
+  "Exhaust -> Body interaction is not reciprocated in Body",
+  "Transmission & Drive -> Ignition & Electrical interaction is not reciprocated in Ignition & Electrical",
+  "Suspension -> Transmission & Drive interaction is not reciprocated in Transmission & Drive",
+  "Brakes -> Engine interaction is not reciprocated in Engine",
+  "Steering -> Engine interaction is not reciprocated in Engine",
+  "Steering -> Interior interaction is not reciprocated in Interior",
+  "HVAC -> Engine interaction is not reciprocated in Engine",
+  "HVAC -> Ignition & Electrical interaction is not reciprocated in Ignition & Electrical",
+  "Body -> Ignition & Electrical interaction is not reciprocated in Ignition & Electrical",
+  "Lighting -> Interior interaction is not reciprocated in Interior"
+ ],
+ "parts_per_system": {
+  "Engine": 7,
+  "Cooling": 6,
+  "Fuel & Air": 9,
+  "Ignition & Electrical": 9,
+  "Exhaust": 4,
+  "Transmission & Drive": 5,
+  "Suspension": 8,
+  "Brakes": 7,
+  "Steering": 4,
+  "HVAC": 5,
+  "Body": 14,
+  "Lighting": 5,
+  "Interior": 8,
+  "Wheels & Tires": 5
+ },
+ "_loop": "systems",
+ "_at": "2026-09-26T16:31:47Z"
+}

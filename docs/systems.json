@@ -1,0 +1,354 @@
+{
+ "Engine": {
+  "does": "Burns gasoline to make the turning force that moves the car. It is the 2.0-liter four-cylinder Zetec, the heart everything else hangs off of.",
+  "how": "Pistons inside the engine long block are driven down by burning fuel and spin the crankshaft. The timing belt kit keeps the two overhead camshafts in step with the crank so the valves open at the right moment (the Zetec is an interference engine, so a snapped belt lets pistons hit valves). The serpentine belt and tensioner run off the crank pulley to spin the alternator, water pump, power steering pump and A/C compressor. The engine mounts hold the whole lump to the body and soak up its shaking, while the oil filter and oil pan keep the oil clean and contained under the valve cover.",
+  "interacts": [
+   {
+    "with": "Cooling",
+    "how": "The water pump, spun by the engine's serpentine belt, circulates coolant through the block and head to carry heat away."
+   },
+   {
+    "with": "Fuel & Air",
+    "how": "The intake feeds the metered air and fuel mist the cylinders burn; the PCV valve returns crankcase fumes to be burned."
+   },
+   {
+    "with": "Ignition & Electrical",
+    "how": "The belt spins the alternator; the PCM reads the crank sensor and fires the coils and injectors at the right instant."
+   },
+   {
+    "with": "Exhaust",
+    "how": "Burned gas leaves through the manifold and catalytic converter; the flex pipe lets the engine rock on its mounts."
+   },
+   {
+    "with": "Transmission & Drive",
+    "how": "The crankshaft's spin goes into the transaxle through the clutch (manual) or torque converter (automatic)."
+   }
+  ],
+  "watch": "Valve cover gasket oil leaks (oil smell, seepage down the back of the engine), a collapsed hydraulic right-side engine mount (clunk and shudder on takeoff), and the timing belt if nobody can prove it was changed near 100k miles.",
+  "refresher": "It is an air pump that sets fire to what it pumps; the timing belt is the one part that, if it breaks, wrecks everything else."
+ },
+ "Cooling": {
+  "does": "Keeps the engine at its happy temperature (around 195 F) by carrying heat away in liquid coolant and dumping it into the air at the front of the car.",
+  "how": "The water pump, spun by the serpentine belt on this Zetec, pushes coolant through the block and head. Below operating temperature the thermostat stays shut so the engine warms up fast; once warm it opens and coolant flows through the radiator hoses into the radiator. Air moving through the grille cools it, and at idle or in traffic the cooling fan pulls that air through instead. The coolant degas bottle is the pressurized fill point on top where air bubbles separate out of the loop.",
+  "interacts": [
+   {
+    "with": "Engine",
+    "how": "Coolant loops through the block and head; the serpentine belt drives the water pump."
+   },
+   {
+    "with": "HVAC",
+    "how": "Hot engine coolant flows through the heater core to warm the cabin, and the A/C condenser sits in front of the radiator sharing its airflow and fan."
+   },
+   {
+    "with": "Ignition & Electrical",
+    "how": "The PCM reads the coolant temperature sensor and switches the cooling fan through a relay in the engine bay fuse box."
+   },
+   {
+    "with": "Transmission & Drive",
+    "how": "On the 4F27E automatic, transmission fluid is cooled in a loop built into one radiator end tank."
+   }
+  ],
+  "watch": "Cracked plastic thermostat housing and degas bottle (sweet smell, coolant puddle, level keeps dropping) and a cooling fan that quits (temp gauge climbs only in traffic, A/C blows warm at a stop).",
+  "refresher": "A closed loop of yellow Motorcraft Gold coolant: pump pushes, thermostat gates, radiator and fan dump the heat, and the plastic bits are what crack."
+ },
+ "Fuel & Air": {
+  "does": "Gets the right mix of gasoline and air into the engine. Too much or too little of either and it runs rough, stalls, or wastes gas.",
+  "how": "The fuel pump module inside the fuel tank sends gasoline through the fuel filter to the fuel injectors and rail, which spray a fine mist into each intake port. Air comes in through the air filter box, is measured by the mass air flow sensor, metered by the throttle body (your gas pedal opens it with a cable) and split four ways by the intake manifold. The PCM reads the air sensor and sets how long each injector stays open. The PCV valve pulls oily crankcase fumes back into the intake so they are burned instead of leaked.",
+  "interacts": [
+   {
+    "with": "Engine",
+    "how": "Delivers the metered air and fuel charge to the cylinders and returns crankcase vapor through the PCV valve."
+   },
+   {
+    "with": "Ignition & Electrical",
+    "how": "The PCM runs the injectors and reads the MAF sensor; the fuel pump gets power through a relay in the engine bay fuse box."
+   },
+   {
+    "with": "Exhaust",
+    "how": "The O2 sensors in the exhaust report whether the burn was rich or lean so the PCM can correct the fuel mix."
+   }
+  ],
+  "watch": "A dirty mass air flow sensor or throttle body (rough idle, stumble, check engine light) and a tired in-tank fuel pump (long crank, hesitation under load, whine from under the rear seat).",
+  "refresher": "Pump pushes fuel, sensor counts air, computer matches them: most drivability gremlins are a dirty sensor before they are a dead part."
+ },
+ "Ignition & Electrical": {
+  "does": "Makes and stores the electricity the car needs and uses it to light the spark that fires each cylinder. It is also home to the computer that runs the engine.",
+  "how": "The battery supplies the jolt and the starter motor cranks the engine; once running, the alternator, spun by the serpentine belt, recharges the battery and powers everything. The PCM reads the crank position sensor to know where the pistons are, fires the coil pack to send spark to the four spark plugs at the exact moment, and listens to the O2 sensors to trim fuel. The ignition switch and lock cylinder wake it all up, and the engine bay fuse/relay box is the breaker panel that protects each circuit.",
+  "interacts": [
+   {
+    "with": "Engine",
+    "how": "The serpentine belt spins the alternator; the crank sensor tells the PCM engine position so it can time spark and fuel."
+   },
+   {
+    "with": "Fuel & Air",
+    "how": "The PCM pulses the injectors and powers the fuel pump relay based on the MAF reading."
+   },
+   {
+    "with": "Brakes",
+    "how": "The ABS hydraulic unit and its wheel speed sensors run off this system; the brake pedal switch also lights the brake lamps."
+   },
+   {
+    "with": "Lighting",
+    "how": "All lamps draw through fuses and relays in the engine bay box, switched from the column stalks."
+   },
+   {
+    "with": "Interior",
+    "how": "The PATS key chip must be read before the PCM allows a start; the cluster, windows and locks are all powered from here."
+   }
+  ],
+  "watch": "A cracked coil pack or worn plugs (shaking at idle, misfire, flashing check engine light) and a sticky ignition switch or lock cylinder (key hard to turn, dash flickers when you wiggle the key).",
+  "refresher": "Battery starts it, alternator keeps it alive, the PCM is the brain: if the dash goes dim while driving, suspect the alternator, not the battery."
+ },
+ "Exhaust": {
+  "does": "Carries the burned gases from the engine out the back, cleans them in the catalytic converter and quiets them in the muffler.",
+  "how": "Hot gas leaves the head through the exhaust manifold and catalytic converter, which on this car are one piece bolted right to the engine so the converter heats up fast. The flex pipe / front pipe has a braided bellows so the engine can rock on its mounts without cracking the pipe. Gas then passes through the resonator / mid pipe, which cancels highway drone, and the muffler and tailpipe, which hush the rest. The O2 sensors sit before and after the converter to grade its work.",
+  "interacts": [
+   {
+    "with": "Engine",
+    "how": "Takes the burned gas straight off the cylinder head; engine movement is absorbed by the flex joint."
+   },
+   {
+    "with": "Fuel & Air",
+    "how": "The upstream O2 sensor tells the PCM whether the mix was rich or lean so it can correct fuel."
+   },
+   {
+    "with": "Ignition & Electrical",
+    "how": "Both O2 sensors are heated electrical sensors wired to the PCM; a P0420 code means the downstream one sees a weak converter."
+   },
+   {
+    "with": "Body",
+    "how": "Rubber hangers under the floor carry the pipes; a rusted hanger lets the system sag and tear the flex joint."
+   }
+  ],
+  "watch": "A torn flex pipe (sudden loud rasp under the front floor, exhaust smell in the cabin) and a rusted-through muffler or hanger (drone, rattle, pipe hanging low).",
+  "refresher": "Manifold, cat, flex, resonator, muffler, front to back; the flex joint is the part that takes the abuse."
+ },
+ "Transmission & Drive": {
+  "does": "Takes the engine's spin, multiplies it through gears and delivers it to the front wheels. Yours is either a 5-speed stick or a 4-speed automatic.",
+  "how": "The transaxle bolts to the side of the engine and holds both the gearbox and the differential in one case. With the MTX-75 manual, the clutch kit and release bearing let you disconnect the engine while you shift and the shifter cables move the gears; with the 4F27E automatic, a torque converter and fluid pressure do that for you. Either way the output spins two CV axles: the driver (LH) axle is short, the passenger (RH) one is longer and uses an intermediate shaft with a support bearing so both sides act the same. The transaxle fluid lubricates it all and, in the automatic, is also the working fluid.",
+  "interacts": [
+   {
+    "with": "Engine",
+    "how": "Receives the crankshaft's power through the clutch or torque converter; the trans mount shares the engine's job of holding it still."
+   },
+   {
+    "with": "Wheels & Tires",
+    "how": "The two CV axles spline into the front hubs and turn the front wheels."
+   },
+   {
+    "with": "Interior",
+    "how": "The shifter and its cables reach through the floor to select gears."
+   },
+   {
+    "with": "Cooling",
+    "how": "The 4F27E automatic sends its fluid through a cooler built into the radiator."
+   },
+   {
+    "with": "Ignition & Electrical",
+    "how": "The PCM commands the 4F27E's shifts and reads the range switch; the starter only cranks in park/neutral or with the clutch down."
+   }
+  ],
+  "watch": "Torn CV boots (grease sprayed inside the wheel, then clicking on turns), a worn clutch on manuals (revs rise but speed does not), and on the 4F27E a harsh 1-2 shift or slipping when the MERCON V fluid is old.",
+  "refresher": "The transaxle is a gearbox and axle in one box; a click on turns is a CV joint, a shudder on takeoff is a mount or clutch."
+ },
+ "Suspension": {
+  "does": "Holds the wheels to the body, soaks up bumps and keeps the tires flat on the road so you can steer and stop. This car's rear setup is unusually good for an economy car.",
+  "how": "Up front each front strut + spring + mount (LH and RH) is a MacPherson strut: shock, coil spring and steering pivot in one leg, with the front lower control arms and ball joints locating the bottom of the knuckle and the front sway bar links tying both sides together to cut lean. In back the rear Control Blade arms and bushings are a multi-link design where a long blade-shaped arm runs forward to a big rubber body bushing, with the rear shocks and springs mounted separately. The front and rear wheel hub/bearings are what the wheels actually spin on.",
+  "interacts": [
+   {
+    "with": "Steering",
+    "how": "The outer tie rods bolt to the steering knuckles hung on the front struts; steering geometry lives here."
+   },
+   {
+    "with": "Wheels & Tires",
+    "how": "The hubs and bearings carry the wheels; worn bushings and struts show up first as odd tire wear."
+   },
+   {
+    "with": "Brakes",
+    "how": "Front calipers bolt to the knuckles and rear drums ride on the rear hubs."
+   },
+   {
+    "with": "Transmission & Drive",
+    "how": "The CV axles pass through the front hubs and bearings."
+   },
+   {
+    "with": "Body",
+    "how": "Strut towers and the Control Blade bushings tie everything to the unibody."
+   }
+  ],
+  "watch": "Worn rear Control Blade bushings and front sway bar links (clunks over bumps, rear end wandering, inner tire wear) and leaking struts (bouncy ride, nose-dive when braking).",
+  "refresher": "Struts in front, blades in back: if it clunks over speed bumps it is a link or bushing, if it floats it is a strut."
+ },
+ "Brakes": {
+  "does": "Turns the car's motion into heat to slow it down. Discs in front do most of the work; drums in back do the rest and hold the parking brake.",
+  "how": "Your foot pushes the brake master cylinder and booster, where engine vacuum multiplies your effort and the master cylinder turns it into fluid pressure. Up front that pressure makes the front calipers squeeze the front brake pads against the spinning front brake rotors. In back it pushes the wheel cylinders outward so the rear brake shoes press into the rear brake drums. If the car has ABS, the ABS hydraulic unit sits in the lines and pulses pressure to keep a locked wheel turning.",
+  "interacts": [
+   {
+    "with": "Ignition & Electrical",
+    "how": "The ABS module and wheel speed sensors, and the brake pedal switch that lights the brake lamps, are all electrical."
+   },
+   {
+    "with": "Engine",
+    "how": "The booster runs on engine vacuum from the intake manifold; a hard pedal with the engine off is normal."
+   },
+   {
+    "with": "Suspension",
+    "how": "Calipers and drums are mounted on the knuckles and hubs; a bad bearing can feel like a brake pull."
+   },
+   {
+    "with": "Wheels & Tires",
+    "how": "Rotors and drums bolt behind the wheels; braking grip is only as good as the tires."
+   },
+   {
+    "with": "Lighting",
+    "how": "The pedal switch lights the tail lamps' 3157 brake filaments."
+   }
+  ],
+  "watch": "Warped front rotors (steering wheel shakes when braking from speed), seized rear wheel cylinders or rusted drums (weak parking brake, grinding from the back), and a sticking caliper slide pin (pulls to one side, one wheel hot).",
+  "refresher": "Pedal to booster to fluid to friction: the front discs do about 70 percent of the stopping, so that is where pads and rotors wear first."
+ },
+ "Steering": {
+  "does": "Turns your steering wheel motion into the front wheels pointing left or right, with hydraulic help so it is not a workout.",
+  "how": "The steering column and intermediate shaft carry your wheel's rotation down to the power steering rack and inner tie rods, a toothed bar that slides side to side. The power steering pump and reservoir, spun by the serpentine belt, supply fluid pressure that helps the rack move. The outer tie rod ends connect the rack to each steering knuckle on the front struts, so when the rack slides the wheels pivot.",
+  "interacts": [
+   {
+    "with": "Suspension",
+    "how": "Tie rod ends bolt to the knuckles on the front struts; the struts are the pivot the wheels steer around."
+   },
+   {
+    "with": "Engine",
+    "how": "The serpentine belt drives the power steering pump; a slipping belt shows up as heavy steering and a squeal."
+   },
+   {
+    "with": "Wheels & Tires",
+    "how": "Toe alignment set at the tie rods decides whether the tires wear evenly or scrub their inner edges."
+   },
+   {
+    "with": "Interior",
+    "how": "The column carries the airbag clock spring, horn and stalk switches up to the steering wheel."
+   }
+  ],
+  "watch": "Worn outer tie rod ends (wander, clunk over bumps, inner edge tire wear) and a whining power steering pump or leaking rack (groan when turning, reservoir dropping).",
+  "refresher": "Column to rack to tie rods to wheels; the tie rod ends are the cheap wear items, and an alignment should follow any of them."
+ },
+ "HVAC": {
+  "does": "Heats, cools and moves air in the cabin, and clears the windshield fog. Heat comes free from the engine; cold takes a compressor.",
+  "how": "The blower motor and its resistor push cabin air through the cabin air filter and across two little radiators behind the dash. For heat, engine coolant runs through the heater core and warms the air. For cold, the A/C compressor and clutch, spun by the serpentine belt, squeeze refrigerant, which sheds its heat in the A/C condenser in front of the radiator and then chills the evaporator in the dash. The dash controls blend the two.",
+  "interacts": [
+   {
+    "with": "Cooling",
+    "how": "Engine coolant feeds the heater core, and the condenser shares the radiator's airflow and cooling fan."
+   },
+   {
+    "with": "Engine",
+    "how": "The A/C compressor is driven by the serpentine belt and loads the engine when the clutch engages."
+   },
+   {
+    "with": "Ignition & Electrical",
+    "how": "Blower motor, compressor clutch relay and the fan trigger all run through the fuse box and PCM."
+   },
+   {
+    "with": "Interior",
+    "how": "The dash control head sets temperature, fan speed and which vents get the air."
+   }
+  ],
+  "watch": "Blower resistor failure (fan only works on high), a leaking heater core (sweet smell, fogged windshield, wet passenger floor, dash-out repair), and a failed compressor clutch (A/C just stops).",
+  "refresher": "Heat is a small radiator fed by the engine; cold is a belt-driven fridge; if the fan only works on high it is the resistor, a cheap part."
+ },
+ "Body": {
+  "does": "The steel shell and the bolt-on panels around it: it keeps weather out, holds everything else in place, and takes the hit in a crash.",
+  "how": "The hood, front fenders (LH and RH), front and rear bumper covers, four doors and the wagon liftgate bolt or hinge to the unibody, while the roof panel and windshield are welded or glued in and add stiffness. The liftgate's gas struts hold the tailgate up. The side mirrors bolt to the front door frames, and the wiper blades and rear wiper motor keep the glass clear.",
+  "interacts": [
+   {
+    "with": "Interior",
+    "how": "The doors carry the window regulators, latches and lock actuators; the dash and seats bolt to the shell."
+   },
+   {
+    "with": "Lighting",
+    "how": "Headlamps and tail lamps mount into the fenders and rear quarters."
+   },
+   {
+    "with": "Suspension",
+    "how": "Strut towers and the rear Control Blade bushings carry suspension loads into the unibody."
+   },
+   {
+    "with": "Ignition & Electrical",
+    "how": "Mirrors, wipers, locks and the liftgate wiring all run through the door and liftgate loom boots, which chafe with age."
+   }
+  ],
+  "watch": "Rust at the rear wheel arches and liftgate seam, weak liftgate struts (tailgate drops on your head in cold weather), and a tired rear wiper motor or chafed liftgate wiring.",
+  "refresher": "The body is the skeleton everything else bolts to; on a 2003 wagon, rust and tired gas struts are the normal enemies."
+ },
+ "Lighting": {
+  "does": "Lets you see the road and lets everyone else see what you are doing: headlamps forward, tail, brake and turn lamps to the rear, markers on the corners.",
+  "how": "The headlamp assemblies (LH and RH) each hold one 9007 dual-filament bulb that does both low and high beam. The wagon tail lamps (LH and RH) hold 3157 bulbs for tail, brake and turn, and 194 bulbs light the side markers and small lamps. Power comes through fuses and relays in the engine bay fuse/relay box, controlled by the stalk switches on the steering column.",
+  "interacts": [
+   {
+    "with": "Ignition & Electrical",
+    "how": "Every lamp draws power through the fuse box, switched by the column stalks and the multifunction switch."
+   },
+   {
+    "with": "Brakes",
+    "how": "The brake pedal switch lights the 3157 brake filaments in the tail lamps."
+   },
+   {
+    "with": "Body",
+    "how": "Housings are mounted in the fenders and rear quarter panels; a fender bender usually breaks their tabs."
+   },
+   {
+    "with": "Interior",
+    "how": "Headlamp and turn signal switches, and the dimmer, live on the column and dash."
+   }
+  ],
+  "watch": "Yellowed, hazy headlamp lenses (dim low beams at night) and corroded 3157 tail sockets (one brake or turn lamp dead, turn signal flashing fast).",
+  "refresher": "Three bulb types cover the whole car; if a turn signal flashes fast, a bulb is dead, not the flasher."
+ },
+ "Interior": {
+  "does": "Everything you sit on, look at and touch inside: seats, dash and gauges, windows, locks, the shifter, and the key that tells the car it is allowed to start.",
+  "how": "The driver seat and track, passenger seat and 60/40 rear bench bolt to the floor. The instrument panel and cluster shows what the PCM reports. Inside each door a window regulator and motor lift the glass while a door latch and lock actuator secure it. The shifter and cables reach through the floor to the transaxle. The PATS transponder key carries a chip the ignition reads before the PCM will let the engine run; the fob works the locks.",
+  "interacts": [
+   {
+    "with": "Ignition & Electrical",
+    "how": "The PATS key chip, the cluster, window motors, lock actuators and every switch are powered and read from here."
+   },
+   {
+    "with": "Transmission & Drive",
+    "how": "The shifter cables select gears in the transaxle."
+   },
+   {
+    "with": "HVAC",
+    "how": "The dash control head runs the blower, temperature blend and vent doors."
+   },
+   {
+    "with": "Body",
+    "how": "Window regulators and latches live inside the door shells; the liftgate carries the rear latch and wiper."
+   }
+  ],
+  "watch": "Snapped window regulator cables (glass drops into the door, grinding when you press the switch) and PATS glitches (theft light flashing fast, cranks but will not start).",
+  "refresher": "Window regulators are this car's signature failure; if the theft light blinks fast and it will not start, it is the key chip, not the engine."
+ },
+ "Wheels & Tires": {
+  "does": "The only four hand-sized patches of rubber touching the road; everything the car does goes through them.",
+  "how": "Each wheel and tire (front LH and RH, rear LH and RH) is a 15-inch wheel wearing a 195/60R15 tire, bolted to its hub with five M12x1.5 lug nuts, 20 in all, with a spare under the cargo floor. The front pair are driven by the CV axles and steered by the tie rods; the rears just follow on the Control Blade arms. Even pressure and tread across all four is what keeps braking and steering predictable.",
+  "interacts": [
+   {
+    "with": "Transmission & Drive",
+    "how": "The CV axles turn the front wheels."
+   },
+   {
+    "with": "Suspension",
+    "how": "Wheels bolt to the hub/bearings; worn struts or bushings show up as cupped or edge-worn tires."
+   },
+   {
+    "with": "Brakes",
+    "how": "Rotors and drums sit behind the wheels; ABS reads each wheel's speed, so mismatched tires confuse it."
+   },
+   {
+    "with": "Steering",
+    "how": "Toe alignment at the tie rods decides whether the front tires track straight or scrub."
+   }
+  ],
+  "watch": "Uneven or inside-edge wear (alignment or worn tie rods) and a hum that rises with speed and changes when you swerve (a wheel bearing, not the tire).",
+  "refresher": "Four 195/60R15s and 20 lug nuts; check pressure monthly and rotate front to back, because the fronts do all the work."
+ }
+}

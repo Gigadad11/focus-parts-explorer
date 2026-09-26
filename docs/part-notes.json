@@ -1,0 +1,578 @@
+{
+ "eng-block": {
+  "does": "The 2.0L four-cylinder Zetec itself: iron block, aluminum twin-cam head, the assembly that burns fuel and spins the crank.",
+  "fails": "Blue smoke, oil use, knocking, low compression, or coolant in the oil mean the core engine, not a bolt-on, is worn.",
+  "diy": 5,
+  "tip": "Rarely replaced; fix leaks and keep the timing belt current. A used Zetec swap is cheaper than a rebuild."
+ },
+ "valve-cover": {
+  "does": "The lid on top of the engine covering the camshafts; its rubber gasket keeps oil in.",
+  "fails": "Oil smell after driving, oil wet around the top of the engine or dripping down the back, sometimes oil in the spark plug wells.",
+  "diy": 2,
+  "tip": "Zetec gasket is YS4Z-6584-AA / Fel-Pro VS 50581 R; bolts are low torque (about 5 ft-lb), do not crank them down."
+ },
+ "timing-belt": {
+  "does": "Toothed rubber belt that keeps the two camshafts in step with the crankshaft so valves and pistons never meet.",
+  "fails": "Usually no warning; a tick or squeal from the belt cover, then a sudden no-start with a fast, easy crank means it broke and valves are bent.",
+  "diy": 4,
+  "tip": "Change every 100k miles or 8 years with tensioner and idler (Gates TCK294 kit). Interference engine: do not gamble on it."
+ },
+ "oil-pan": {
+  "does": "Steel tub bolted under the engine that holds the oil supply the pump draws from.",
+  "fails": "Oil drips under the front of the car after parking, a rusty or dented pan, or a stripped drain plug that will not stop weeping.",
+  "diy": 3,
+  "tip": "Zetec pan (YS4Z-6675-AA) seals with RTV, not a paper gasket; clean both faces fully. Drain plug torque about 18 ft-lb."
+ },
+ "oil-filter": {
+  "does": "Screws onto the block and strains dirt and metal out of the oil every time it circulates.",
+  "fails": "Nothing you will feel until it is badly clogged; the symptom is dirty oil and, in time, engine wear.",
+  "diy": 1,
+  "tip": "Motorcraft FL-400S; hand tight plus three-quarter turn. Change with every oil change (about 5k miles on conventional oil)."
+ },
+ "motor-mounts": {
+  "does": "Rubber and fluid-filled blocks that hold the engine and transaxle to the body and soak up vibration.",
+  "fails": "Clunk or thump on takeoff and when shifting between drive and reverse, engine visibly rocking, more vibration at idle.",
+  "diy": 3,
+  "tip": "The hydraulic right-side (passenger) mount is the usual failure; look for fluid weeping from it. Support the engine before unbolting."
+ },
+ "serp-belt": {
+  "does": "One long ribbed belt off the crank pulley that spins the alternator, water pump, power steering pump and A/C compressor.",
+  "fails": "Squeal on cold start or when turning the wheel, cracks across the ribs, or a battery light and hot engine if it snaps.",
+  "diy": 2,
+  "tip": "6-rib K060882 with A/C; the spring tensioner (YS4Z-6B209-AA) weakens, so replace it with the belt. Photograph the routing first."
+ },
+ "spark-plugs": {
+  "does": "Four plugs make the spark in each cylinder; the coil pack on the head boosts 12 volts to the thousands needed to jump the gap.",
+  "fails": "Rough idle, shaking, hesitation, flashing check engine light with a misfire code for one cylinder.",
+  "diy": 1,
+  "tip": "Plug AZFS-32F-E gapped 0.052 in, torque about 11 ft-lb. Coil XS8Z-12029-AA; cracked coils fail wet, so suspect it after rain."
+ },
+ "radiator": {
+  "does": "The finned block behind the grille where air pulls heat out of the coolant.",
+  "fails": "Sweet smell, crust or damp at the plastic end tanks, temp gauge creeping up on the highway, low coolant with no visible leak.",
+  "diy": 3,
+  "tip": "Spectra CU2296 / 3S4Z-8005-GA. Plastic end tanks crack with age; the automatic's fluid cooler is in one tank. Refill with Motorcraft Gold."
+ },
+ "rad-fan": {
+  "does": "Electric fan behind the radiator that pulls air through when the car is not moving fast enough to do it.",
+  "fails": "Temp gauge climbs at idle or in traffic but is fine on the highway; A/C blows warm at a stop.",
+  "diy": 2,
+  "tip": "Test by switching A/C on: the fan should run. Check the fan relay and fuse in the engine bay box before buying a motor."
+ },
+ "thermostat": {
+  "does": "A wax valve in a plastic housing that holds coolant in the engine until it is warm, then lets it out to the radiator.",
+  "fails": "Heater slow to warm and gauge sits low (stuck open), sudden overheat (stuck closed), or the plastic housing cracks and leaks.",
+  "diy": 2,
+  "tip": "Buy housing and thermostat together (YS4Z-8592-BD); the old plastic housing is a known weak point. Drain some coolant first."
+ },
+ "water-pump": {
+  "does": "Belt-driven pump on the side of the block that circulates coolant through the engine and radiator.",
+  "fails": "Coolant weep from the small hole under the pump, a grinding or rumbling bearing noise, or overheating.",
+  "diy": 3,
+  "tip": "On the Zetec it runs off the serpentine belt, not the timing belt, so it is a stand-alone job. YS4Z-8501-AA or Gates 42294."
+ },
+ "rad-hoses": {
+  "does": "Two big rubber hoses carrying coolant between the engine and the radiator, hot going out, cooler coming back.",
+  "fails": "Hose feels mushy or crunchy, bulges near the clamps, or wets the area around the ends; a burst hose empties the system fast.",
+  "diy": 1,
+  "tip": "Squeeze them cold; swap both at once (Motorcraft KM-4590 upper, Gates 22500 lower). Fresh clamps and Motorcraft Gold coolant."
+ },
+ "coolant-res": {
+  "does": "The pressurized plastic tank on top that you fill, where air separates out of the coolant; its cap sets system pressure.",
+  "fails": "Hairline cracks that weep, level that keeps dropping, brown stains on the tank, or a cap that will not hold pressure.",
+  "diy": 1,
+  "tip": "Known weak point; replace at the first crack (3S4Z-8A080-AC) and buy a new cap with it. Never open it hot."
+ },
+ "intake-mani": {
+  "does": "Runners on the back of the head that split incoming air into four equal streams, one per cylinder.",
+  "fails": "Vacuum hiss, high or hunting idle, lean code P0171 from a leaking gasket or a cracked runner.",
+  "diy": 3,
+  "tip": "Check the gaskets and the PCV and brake booster hoses that plug into it first; a leak there mimics a bad manifold."
+ },
+ "throttle-body": {
+  "does": "The butterfly valve your gas pedal opens by cable to let air into the engine.",
+  "fails": "Rough or low idle, stalling at stops, sticky pedal feel from a carbon-caked bore.",
+  "diy": 1,
+  "tip": "Cleaning fixes most complaints: throttle body cleaner on a rag, wipe the bore and plate. Verify the part by VIN if replacing."
+ },
+ "airbox": {
+  "does": "Plastic box holding the paper air filter that keeps dust out of the engine.",
+  "fails": "Sluggish power and worse fuel economy as the filter clogs; a torn filter lets grit past to the MAF and engine.",
+  "diy": 1,
+  "tip": "Check yearly, change every 15-30k miles. Motorcraft FA-1632 or K&N 33-2819 drop-in; snap every clip back on."
+ },
+ "maf": {
+  "does": "Hot-wire sensor in the intake tube that measures how much air is entering so the PCM can add matching fuel.",
+  "fails": "Hesitation, stumble on takeoff, rough idle, poor mileage, lean or rich codes; often after an over-oiled aftermarket filter.",
+  "diy": 1,
+  "tip": "Try MAF-specific cleaner spray first and never touch the wires. Unplug the battery a few minutes afterward to reset the PCM."
+ },
+ "fuel-inj": {
+  "does": "Four electric spray nozzles on a metal rail that mist gasoline into each intake port on command from the PCM.",
+  "fails": "Misfire on one cylinder that does not follow the coil, gas smell under the hood, rough idle.",
+  "diy": 3,
+  "tip": "Depressurize the fuel line first. Replace the O-rings when you pull the rail; a bottle of injector cleaner is worth a try before parts."
+ },
+ "fuel-pump": {
+  "does": "Electric pump inside the gas tank that pushes fuel forward to the engine at pressure.",
+  "fails": "Long cranking, stalling when hot or uphill, loss of power under load, a whine from under the rear seat.",
+  "diy": 4,
+  "tip": "Access is under the rear seat cushion, no tank drop. Run the tank low first, and keep it above a quarter to keep the pump cool."
+ },
+ "fuel-tank": {
+  "does": "13.2-gallon plastic tank under the rear seat area that stores the gasoline and houses the pump.",
+  "fails": "Fuel smell at the back, evap code P0455 from a bad seal, or a leak after hitting road debris.",
+  "diy": 4,
+  "tip": "Plastic tanks do not rust; most 'tank' smells are the filler neck, pump ring seal or the gas cap. Check the cap first."
+ },
+ "fuel-filter": {
+  "does": "Canister filter under the car that strains rust and dirt from gasoline before it reaches the injectors.",
+  "fails": "Hesitation and power loss under load, or long cranks, as it clogs.",
+  "diy": 2,
+  "tip": "Motorcraft FG-986B; needs the plastic quick-connect tool and the arrow points toward the engine. Eye protection, fuel will spill."
+ },
+ "pcv": {
+  "does": "A one-way valve and hose that pull oily crankcase vapor back into the intake to be burned instead of vented.",
+  "fails": "Oil leaks from gaskets and seals from crankcase pressure, oil in the intake, rough idle, oil use.",
+  "diy": 1,
+  "tip": "Cheap part: shake it and it should rattle. Check the rubber hose for softening or collapse; a split hose is a vacuum leak."
+ },
+ "alternator": {
+  "does": "Belt-driven generator that recharges the battery and powers everything electrical once the engine is running.",
+  "fails": "Battery light, dimming dash, headlights that pulse with engine speed, dead battery after a drive, whine or growl from the front.",
+  "diy": 3,
+  "tip": "Lester 8260 for this car, not 8418 or 8406. Confirm belt tension and the battery first: many 'alternators' are a slipping belt."
+ },
+ "starter": {
+  "does": "Small motor that engages the flywheel to spin the engine over when you turn the key.",
+  "fails": "Click but no crank, slow crank with a good battery, or grinding noise at start.",
+  "diy": 3,
+  "tip": "Manual and automatic use different starters; know which transaxle you have. Disconnect the battery negative before touching it."
+ },
+ "battery": {
+  "does": "Group 96R lead-acid battery that stores power to start the car and steady the electrical system.",
+  "fails": "Slow crank on cold mornings, click-click at the key, needs a jump, dash flicker; most last 4-5 years.",
+  "diy": 1,
+  "tip": "Motorcraft BXT-96R-590 fits. Clean terminals with baking soda; the PCM relearns idle after a disconnect, so a rough idle for a day is normal."
+ },
+ "ignition-sw": {
+  "does": "The lock cylinder your key turns and the electrical switch behind it that wakes the car and cranks the starter.",
+  "fails": "Key hard to turn or sticks, car dies when the key is jiggled, no crank on some tries, dash flicker.",
+  "diy": 3,
+  "tip": "Switch and cylinder are separate parts. A new cylinder means new keys, so plan on PATS programming; disconnect the battery (airbag)."
+ },
+ "o2-sensors": {
+  "does": "Two sensors in the exhaust that report how rich or lean the burn is; upstream trims fuel, downstream grades the converter.",
+  "fails": "Poor mileage, rough idle, check engine light with O2 or catalyst codes, failed emissions test.",
+  "diy": 2,
+  "tip": "Penetrant on the threads and an O2 socket while the exhaust is warm. Fix exhaust leaks first; a leak fools the sensor."
+ },
+ "ckp-sensor": {
+  "does": "Magnetic sensor beside the crank pulley that tells the PCM exactly where the engine is in its rotation.",
+  "fails": "Cranks but will not start, stalls when hot then restarts after cooling, tach drops to zero while running.",
+  "diy": 2,
+  "tip": "1S7Z-6C315-AA. Cheap and common on Zetecs; the connector and wire near the block get brittle from heat, so check those too."
+ },
+ "pcm": {
+  "does": "The engine computer: reads every sensor and controls fuel, spark, idle, the fan and, on automatics, shifting.",
+  "fails": "No start with good crank and spark, several unrelated codes, or a scan tool that cannot talk to it; rare compared to sensors.",
+  "diy": 5,
+  "tip": "Must be programmed to the VIN and the PATS keys relearned; a junkyard unit will not just plug in."
+ },
+ "fuse-box": {
+  "does": "The engine bay box of fuses and relays that protects each circuit and switches big loads like the fan and fuel pump.",
+  "fails": "One system dead (fan, pump, lights), a relay that clicks but does nothing, corroded terminals under the box.",
+  "diy": 1,
+  "tip": "The lid shows the fuse map. Swap a suspect relay with an identical neighbor to test it; keep spare 10, 15 and 20 A fuses in the glovebox."
+ },
+ "exh-mani": {
+  "does": "Cast header bolted to the head that collects hot exhaust, with the catalytic converter built into it to clean the gas.",
+  "fails": "Ticking at cold start (cracked manifold or gasket), rotten-egg smell, P0420 code, loss of power from a clogged converter.",
+  "diy": 4,
+  "tip": "49-state and California versions differ; read the underhood emissions label. Studs snap when rusted, so soak them a day ahead."
+ },
+ "flex-pipe": {
+  "does": "Front section of the exhaust with a braided flexible joint that lets the engine rock without cracking the pipes.",
+  "fails": "Sudden loud rasp under the front floor, exhaust smell in the cabin, sometimes a rattle from the torn braid.",
+  "diy": 3,
+  "tip": "A weld-in flex section is a cheap muffler-shop fix; the bolted assembly is the DIY route. New donut gasket while you are there."
+ },
+ "muffler": {
+  "does": "Rear canister and tailpipe that cancel the exhaust noise before it leaves the car.",
+  "fails": "Deep drone, rattle from loose baffles, rust holes, pipe hanging low on a broken hanger.",
+  "diy": 2,
+  "tip": "The wagon muffler is a different part from sedan and hatch. Cut the old pipe if rusted; new clamps and rubber hangers are cheap."
+ },
+ "mid-pipe": {
+  "does": "Middle section of the exhaust with a resonator chamber that cancels the annoying highway drone.",
+  "fails": "Hollow booming at cruise speed, rust weeping at the seams, rattle under the seats.",
+  "diy": 2,
+  "tip": "Usually replaced with the muffler as one cat-back. Check the rubber hangers; a sagging pipe tears the flex joint up front."
+ },
+ "trans": {
+  "does": "Gearbox and differential in one case beside the engine: the MTX-75 5-speed stick or the 4F27E 4-speed automatic.",
+  "fails": "Manual: grinding into gear, popping out. Auto: harsh or delayed shifts, slipping, no reverse, whine that changes with speed.",
+  "diy": 5,
+  "tip": "Check fluid first: MTX-75 XT-M5-QS via the side fill plug, 4F27E MERCON V. A used 4F27E is the Mazda FN4A-EL if sourcing one."
+ },
+ "clutch": {
+  "does": "Friction disc, pressure plate and release bearing that let you disconnect the engine from the manual gearbox to shift.",
+  "fails": "Slipping (revs rise, speed does not), shudder on takeoff, chirp when the pedal is pressed, engagement high in the travel.",
+  "diy": 4,
+  "tip": "Transaxle comes out, so do the rear main seal and release bearing at the same time. Bleed the hydraulic slave cylinder after."
+ },
+ "cv-axle-l": {
+  "does": "Short driver-side driveshaft with two flexible joints that carries power from the transaxle to the left front wheel.",
+  "fails": "Clicking on turns (outer joint), grease flung inside the wheel from a split boot, vibration on acceleration (inner joint).",
+  "diy": 3,
+  "tip": "Axle nut is about 200 ft-lb, loosen with the wheel on the ground. Have a catch pan ready; the seal drips when the axle pops out."
+ },
+ "cv-axle-r": {
+  "does": "Longer passenger-side driveshaft with an intermediate shaft and support bearing so both sides behave the same.",
+  "fails": "Same click on turns and torn boots; the intermediate bearing adds a hum or growl that changes with speed, not turning.",
+  "diy": 3,
+  "tip": "Three bolts hold the intermediate bearing bracket to the block. Buy the assembly with the shaft included; loosen the nut on the ground."
+ },
+ "trans-fluid": {
+  "does": "The lubricant inside the transaxle: XT-M5-QS in the MTX-75 manual, MERCON V automatic fluid in the 4F27E.",
+  "fails": "Manual: notchy shifting, whine. Auto: burnt smell, brown fluid on the dipstick, slipping or harsh shifts.",
+  "diy": 2,
+  "tip": "MTX-75 takes XT-M5-QS through the side fill plug (about 2.2 qt), not gear oil. 4F27E: drain and fill MERCON V every 30k, no flush."
+ },
+ "strut-fl": {
+  "does": "Left front leg that combines the shock, coil spring and top mount; the wheel steers by pivoting the whole strut.",
+  "fails": "Bouncy ride, nose-dive under braking, clunk over bumps, oil wet on the strut body, cupped tire wear.",
+  "diy": 3,
+  "tip": "Monroe 171505 loaded strut (LH) means no spring compressor. Replace as a pair with the right side and get an alignment after."
+ },
+ "strut-fr": {
+  "does": "Right front leg that combines the shock, coil spring and top mount; the wheel steers by pivoting the whole strut.",
+  "fails": "Same as the left: bounce, dive, clunks, leaking oil, cupped tires.",
+  "diy": 3,
+  "tip": "Monroe 171504 loaded strut (RH). Do both sides together and mark the strut-to-knuckle bolts; they set camber."
+ },
+ "lca-f": {
+  "does": "The lower arms that locate the bottom of each front knuckle, with a ball joint that lets the wheel steer and move.",
+  "fails": "Clunk over bumps, steering wander, popping when turning at low speed, uneven front tire wear.",
+  "diy": 3,
+  "tip": "Ball joint is pressed into the arm, so buy the arm complete. Torque the rear bushing bolt with the car on its wheels, then align."
+ },
+ "sway-f": {
+  "does": "Thin links and rubber bushings that tie the front anti-roll bar to each strut so the car leans less in corners.",
+  "fails": "Rattle or clunk over small bumps at low speed that goes away when you press down on the corner of the car.",
+  "diy": 2,
+  "tip": "Most common front-end clunk on this car; 5S4Z-5K484-AA links, replace in pairs. Hold the stud with an Allen key while tightening."
+ },
+ "shock-r": {
+  "does": "Two rear dampers and separate coil springs that control the rear of the wagon over bumps.",
+  "fails": "Rear end bouncing or wallowing, sagging under a load, thump over bumps, oil on the shock body.",
+  "diy": 2,
+  "tip": "Wagon shock and spring rates differ from sedan, so order for the ZTW. Shocks are a two-bolt job; springs need a compressor."
+ },
+ "rear-blade": {
+  "does": "The multi-link rear arms; the long blade-shaped arm runs forward to a rubber body bushing that takes braking and bump loads.",
+  "fails": "Clunk from the rear over bumps, rear end feels loose or steers itself over dips, uneven rear tire wear.",
+  "diy": 4,
+  "tip": "The big front blade bushings are the known weak point. Bushings alone need a press; the whole arm bolts in, then align."
+ },
+ "wheel-brg-f": {
+  "does": "Pressed-in bearings the front wheels spin on, sitting inside the knuckle behind the hub.",
+  "fails": "Hum or growl that rises with speed and changes when you swerve, play when you rock the wheel top to bottom.",
+  "diy": 4,
+  "tip": "Needs a shop press to swap the bearing into the knuckle. 6S4Z-1215-B supersedes YS4Z-1215-AA. Do not drive far on a howling one."
+ },
+ "wheel-brg-r": {
+  "does": "Sealed bearings the rear wheels spin on; on drum-brake cars they live inside the drum hub.",
+  "fails": "Hum from the rear that changes when you weave, roughness when you spin the wheel by hand, wobble.",
+  "diy": 2,
+  "tip": "Dust cap, one big hub nut, and the drum or hub slides off the stub axle. Use a new nut and torque it; far easier than the fronts."
+ },
+ "rotor-f": {
+  "does": "The 258mm vented steel discs the front pads squeeze; the vents let air cool them between stops.",
+  "fails": "Steering wheel shake or pedal pulse when braking from speed (warped), grinding and deep grooves (worn out).",
+  "diy": 2,
+  "tip": "Replace in pairs with fresh pads. Clean the hub face of rust so the new rotor sits flat; that is what causes most 'warping'."
+ },
+ "pads-f": {
+  "does": "Friction blocks that clamp the front rotors; they do most of the car's stopping.",
+  "fails": "Squeal from the wear tab, grinding metal on metal, longer stops, brake dust heavier on one wheel.",
+  "diy": 2,
+  "tip": "Grease the caliper slide pins and shims when you change pads; sticky pins wear one pad early. Bed them in with gentle stops."
+ },
+ "caliper-f": {
+  "does": "Hydraulic clamps at each front wheel that push the pads against the rotor when you brake.",
+  "fails": "Pull to one side, one wheel hot or smelling after a drive, pad worn on one side only, fluid leak at the piston.",
+  "diy": 3,
+  "tip": "Most 'bad calipers' are seized slide pins; clean and grease those first. If replacing, do both sides and bleed the brakes."
+ },
+ "drum-r": {
+  "does": "The 203mm iron drums at the rear wheels; the shoes push out against the inside to slow the car.",
+  "fails": "Scraping from the back, weak parking brake, rear pulsing, a rust ridge that makes the drum hard to pull off.",
+  "diy": 2,
+  "tip": "Motorcraft BRD-45. Back off the adjuster through the slot if the drum will not come off. Rear-disc cars use a 253mm solid rotor instead."
+ },
+ "shoes-r": {
+  "does": "Curved friction shoes, springs and the wheel cylinders that push them into the drum; also the parking brake.",
+  "fails": "Grinding from the rear, parking brake weak or needs many clicks, fluid weep at the wheel cylinder, pedal sinking.",
+  "diy": 3,
+  "tip": "Wagner Z764. Do one side at a time so you can copy the spring layout from the other. Replace leaking wheel cylinders with the shoes."
+ },
+ "master-cyl": {
+  "does": "The cylinder your pedal pushes to make fluid pressure, with the vacuum booster behind it that multiplies your leg.",
+  "fails": "Pedal slowly sinks at a stop (master), pedal hard as a rock with a hiss (booster), fluid low with no visible leak.",
+  "diy": 3,
+  "tip": "Bench-bleed a new master before bolting it on. Flush the fluid every 2-3 years with DOT 3; dark fluid eats seals."
+ },
+ "abs-mod": {
+  "does": "Pump and valve block that pulses brake pressure so the wheels keep rolling and steering during a panic stop.",
+  "fails": "ABS light on, pedal buzz during normal stops, or a wheel locking early; usually a wheel speed sensor rather than the unit.",
+  "diy": 5,
+  "tip": "2M5Z-2C286-AA. Read the code first: a cheap wheel speed sensor is the usual cause. Needs a scan tool to bleed properly."
+ },
+ "rack": {
+  "does": "Toothed bar in a housing under the engine that slides left or right as you turn the wheel, with power assist from the pump.",
+  "fails": "Fluid leaking from the boots, groan or extra effort turning, loose or notchy on-center feel, clunk from below.",
+  "diy": 4,
+  "tip": "Inner tie rods are part of the rack job. The subframe drops a bit; then a full alignment. Flush the old fluid when you fit it."
+ },
+ "tie-rods": {
+  "does": "The outer ball joints that connect the steering rack to each front wheel's knuckle.",
+  "fails": "Steering wander, clunk over bumps, play in the wheel, inner tire edge wear.",
+  "diy": 2,
+  "tip": "Count the turns off the old one to keep toe close, then get an alignment. Replace in pairs; they are cheap."
+ },
+ "ps-pump": {
+  "does": "Belt-driven hydraulic pump and its reservoir that supply the pressure that makes steering easy.",
+  "fails": "Whine that rises when you turn, heavy steering at parking speed, foamy or low fluid, leak at the pump.",
+  "diy": 3,
+  "tip": "Cardone 20-292 for 2000-03. Fill with MERCON V. Bleed by turning lock to lock with the front wheels off the ground before starting."
+ },
+ "steering-col": {
+  "does": "The shaft from the steering wheel down to the rack, with a jointed intermediate shaft to get around the engine.",
+  "fails": "Clunk or click when turning at low speed, notchy feel, rattle from the column, airbag light if the clock spring is disturbed.",
+  "diy": 4,
+  "tip": "The intermediate shaft joints dry out; grease or replace. Column work means airbag: disconnect the battery and wait 10 minutes."
+ },
+ "ac-comp": {
+  "does": "Belt-driven pump with an electromagnetic clutch that squeezes refrigerant to start the cooling cycle.",
+  "fails": "A/C blows warm, clutch does not click on, grinding or squeal when A/C is switched on, belt slipping.",
+  "diy": 5,
+  "tip": "If the clutch will not engage, check refrigerant level and the relay first. A swap needs evacuation and recharge equipment."
+ },
+ "condenser": {
+  "does": "Thin radiator in front of the main radiator where hot refrigerant gives up its heat to outside air.",
+  "fails": "A/C weakens in traffic and hot weather, oily stain on the fins from a leak, bent fins from road debris.",
+  "diy": 4,
+  "tip": "Spectra 7-4879. Refrigerant must be recovered by a shop before you open the system. Fit a new receiver-drier at the same time."
+ },
+ "blower": {
+  "does": "The cabin fan and the resistor pack that gives it four speeds.",
+  "fails": "Fan works only on high (resistor), no fan at all or squealing and slow (motor), burnt plastic smell.",
+  "diy": 1,
+  "tip": "Resistor is a couple of screws on the blower housing behind the glovebox; cheap fix. A clogged cabin filter overheats it."
+ },
+ "heater-core": {
+  "does": "Small radiator behind the dash that engine coolant flows through to heat the cabin.",
+  "fails": "Sweet smell inside, windshield fogging, wet passenger floor, coolant loss, or no heat when the rest of the system is fine.",
+  "diy": 5,
+  "tip": "Known failure on this generation and a dash-out job. If it is only clogged, a garden-hose backflush through the heater hoses can restore heat."
+ },
+ "cabin-filter": {
+  "does": "Paper filter that cleans outside air before the blower pushes it into the cabin.",
+  "fails": "Weak airflow at every fan speed, musty smell, dust on the vents.",
+  "diy": 1,
+  "tip": "Change yearly. On this car it sits under the hood in the passenger-side cowl beneath a plastic cover; the arrow shows airflow direction."
+ },
+ "hood": {
+  "does": "The steel lid over the engine bay, hinged at the base of the windshield.",
+  "fails": "Will not latch or pops loose (cable or latch), rust along the leading edge, chips through to bare metal.",
+  "diy": 3,
+  "tip": "Have a helper when unbolting; scribe around the hinges so it goes back aligned. Grease the latch and check the release cable yearly."
+ },
+ "front-bumper": {
+  "does": "The painted plastic skin over the front crash beam and lower grille.",
+  "fails": "Cracks, sagging at the corners where tabs broke, missing clips, faded paint.",
+  "diy": 2,
+  "tip": "Plastic push clips are cheap and go first; buy a bag. A dozen fasteners; a painted-to-match cover costs more than a raw one."
+ },
+ "rear-bumper": {
+  "does": "The painted plastic skin at the back of the wagon, over the rear crash beam.",
+  "fails": "Scuffs from parking, corner tabs broken so it sags, cracks around the tow-hook hole.",
+  "diy": 2,
+  "tip": "Wagon rear cover is not the sedan or hatch part. Fasteners hide in the wheel wells and under the liftgate sill."
+ },
+ "fender-l": {
+  "does": "The bolt-on panel over the left front wheel.",
+  "fails": "Rust at the bottom rear corner behind the wheel liner, dents, paint bubbling.",
+  "diy": 3,
+  "tip": "Pull the plastic wheel liner first and dig out the mud that rots the corner. Bolts run along the door jamb and under the hood edge."
+ },
+ "fender-r": {
+  "does": "The bolt-on panel over the right front wheel (Partslink FO1241210).",
+  "fails": "Rust at the lower rear corner, dents, mismatched paint from an old repair.",
+  "diy": 3,
+  "tip": "Same as the left: clean out the liner pocket. A painted-to-match fender saves the body shop step."
+ },
+ "door-fl": {
+  "does": "Driver door shell with hinges and check strap; holds the window, regulator, latch and mirror.",
+  "fails": "Sag that makes it drop into the striker, rust along the bottom seam, clicking check strap, loose hinge pins.",
+  "diy": 3,
+  "tip": "Heavy, and the wiring loom runs through the jamb boot: two people and a floor jack with a towel. Grease the hinges twice a year."
+ },
+ "door-fr": {
+  "does": "Front passenger door shell with hinges and check strap; holds its window, regulator and latch.",
+  "fails": "Sag, rust along the bottom, worn check strap, rattling inner panel.",
+  "diy": 3,
+  "tip": "Same handling as the driver door. Swap the interior panel, glass and latch over from the old door if you fit a used shell."
+ },
+ "door-rl": {
+  "does": "Left rear door shell; holds the rear window regulator, latch and child lock.",
+  "fails": "Rust at the bottom edge, window grinding as the regulator fails, latch not catching.",
+  "diy": 3,
+  "tip": "Rear doors are lighter but still a two-person job. The child lock lever is in the latch edge; check it before blaming the latch."
+ },
+ "door-rr": {
+  "does": "Right rear door shell; holds the rear window regulator, latch and child lock.",
+  "fails": "Rust, dents from parking-lot doors, window slow or stuck, latch not catching.",
+  "diy": 3,
+  "tip": "Same as the left rear. Rear regulators are Dorman 741-584/585 if the glass drops while you are in there."
+ },
+ "liftgate": {
+  "does": "The wagon's rear hatch, hinged at the roof, with two gas struts that hold it up.",
+  "fails": "Hatch falls or will not stay up, worse in cold weather; rust at the lower seam; rear wiper or lock quits when the loom chafes.",
+  "diy": 1,
+  "tip": "StrongArm 4358 struts (interchange YS41-N406A10-A). Pop the clips with a small screwdriver and swap one at a time with a helper holding it."
+ },
+ "windshield": {
+  "does": "Laminated safety glass glued into the body; it braces the roof and backs up the passenger airbag.",
+  "fails": "Cracks spreading from chips, wiper haze, whistle or water leak from a bad urethane seal.",
+  "diy": 5,
+  "tip": "Fill chips right away; once a crack crosses your sight line, replace. Glass shops come to you and insurance often waives the deductible."
+ },
+ "roof": {
+  "does": "The welded steel panel spanning the pillars; part of the car's structure.",
+  "fails": "Rust bubbles along the drip rails and roof rack mounts, dents from hail, clear coat peeling.",
+  "diy": 5,
+  "tip": "Replacement means cutting and welding, so body shop only. Keep the roof rail channels clean so water does not sit and start rust."
+ },
+ "mirrors": {
+  "does": "The two door mirrors, manually or electrically adjusted, each with a glass and a housing.",
+  "fails": "Glass loose or fallen out, mirror will not adjust, housing cracked from a garage clip.",
+  "diy": 1,
+  "tip": "Dorman 955-020 (LH) / 955-021 (RH). Three nuts behind the triangle trim inside the door; glass alone can be replaced with adhesive."
+ },
+ "wipers": {
+  "does": "Front wiper blades and the motor that drives the wagon's rear wiper.",
+  "fails": "Streaks and chatter (blades); rear wiper slow, stopping mid-sweep or parking wrong (motor or wiring in the liftgate boot).",
+  "diy": 1,
+  "tip": "Front blades snap on; change yearly. Rear motor is behind the liftgate trim; check the rubber loom boot for chafed wires first."
+ },
+ "headlamp-l": {
+  "does": "Left headlamp housing with reflector, lens and the 9007 bulb for low and high beam.",
+  "fails": "Yellowed, hazy lens that dims the beam, moisture inside, cracked mounting tab, misaimed beam.",
+  "diy": 1,
+  "tip": "Try a lens restoration kit before replacing. Two bolts on top and one behind the corner; aim the beam on a wall afterward."
+ },
+ "headlamp-r": {
+  "does": "Right headlamp housing with reflector, lens and the 9007 bulb for low and high beam.",
+  "fails": "Same as the left: haze, moisture, broken tabs, dim beam.",
+  "diy": 1,
+  "tip": "Replace as a pair so color and brightness match. Do not touch the glass of a new bulb; skin oil shortens its life."
+ },
+ "taillamp-l": {
+  "does": "Left wagon tail lamp housing with the 3157 tail/brake and turn bulbs.",
+  "fails": "One bulb out, cracked lens letting water in, corroded socket causing a fast-flash turn signal.",
+  "diy": 1,
+  "tip": "2S4Z-13405-AA. Reached from inside the cargo area behind the trim panel; two nuts. Clean the socket contacts with a pencil eraser."
+ },
+ "taillamp-r": {
+  "does": "Right wagon tail lamp housing with the 3157 tail/brake and turn bulbs.",
+  "fails": "Bulb out, water inside the lens, corroded socket, fast-flash turn signal.",
+  "diy": 1,
+  "tip": "TYC 11-5963-01 / 2S4Z-13404-AA. Same two nuts behind the cargo trim; push the lamp out from behind."
+ },
+ "bulbs": {
+  "does": "The three bulb types that light the car: 9007 headlamps, 3157 tail/brake/turn, 194 side markers and small lamps.",
+  "fails": "One lamp dark, fast-flashing turn signal, dim yellowed headlights.",
+  "diy": 1,
+  "tip": "Replace headlamp bulbs in pairs and handle by the base only. Keep a spare 3157 and 194 in the glovebox; a fast flasher means a dead bulb."
+ },
+ "seat-fl": {
+  "does": "Driver's seat and the track that lets it slide and, with the side lever, change height.",
+  "fails": "Seat rocks on the track, height lever loose, torn bolster, seat belt warning from a bad buckle connector.",
+  "diy": 2,
+  "tip": "Four bolts to the floor, then unplug the buckle sensor. Disconnect the battery first: the airbag system reads the seat belt buckle."
+ },
+ "seat-fr": {
+  "does": "Front passenger seat on its track.",
+  "fails": "Rocking on the track, torn fabric, airbag warning light from a chafed connector underneath.",
+  "diy": 2,
+  "tip": "Same four bolts. A used seat from a sedan fits the wagon; match the cloth and any side airbag option."
+ },
+ "seat-rear": {
+  "does": "The split 60/40 rear bench that folds flat to make the wagon a cargo hauler.",
+  "fails": "Latch will not release, cushion loose, folding hinge stiff, seat belt buckle cover cracked.",
+  "diy": 1,
+  "tip": "The bottom cushion pops up on two clips; the fuel pump access is under it. Vacuum the hinge tracks so the seatback folds smoothly."
+ },
+ "dash": {
+  "does": "The instrument cluster that shows speed, revs, fuel and temperature, plus the warning lights the PCM turns on.",
+  "fails": "Gauges sweep or drop to zero (cracked solder joints), dim or dead backlight bulbs, odometer segments missing.",
+  "diy": 2,
+  "tip": "2M5Z-10849-DA. Behind the bezel and two screws; a used one carries its own mileage, so a rebuild service is the clean route."
+ },
+ "window-reg": {
+  "does": "Cable and motor mechanism inside each door that raises and lowers the glass.",
+  "fails": "Window drops into the door, grinding or a pop when you press the switch, glass tilted in the track.",
+  "diy": 2,
+  "tip": "This car's signature failure. Dorman 741-874/875 front, 741-584/585 rear. Tape the glass up before removing the old regulator."
+ },
+ "door-latch": {
+  "does": "The mechanical latch in each door and the electric actuator that locks and unlocks it from the fob or switch.",
+  "fails": "One door will not lock or unlock with the others, handle does nothing, door opens while driving, latch rattles.",
+  "diy": 2,
+  "tip": "Latch and actuator come as one assembly; three Torx screws in the door edge. Lube the striker and latch with white grease yearly."
+ },
+ "shifter": {
+  "does": "The gear lever and the two cables that run through the floor to move the transaxle's shift mechanism.",
+  "fails": "Sloppy or stiff shifting, will not go into a gear, lever loose, auto not showing the right gear in the cluster.",
+  "diy": 3,
+  "tip": "Cable end bushings wear and pop off; that is the usual manual-shifter complaint. Auto: check cable adjustment before blaming the 4F27E."
+ },
+ "key": {
+  "does": "The PATS transponder key with a chip the ignition reads, and the fob that locks and unlocks the doors.",
+  "fails": "Theft light flashes rapidly and the engine cranks but will not run (chip not read); fob range shrinks or dies (battery).",
+  "diy": 2,
+  "tip": "Fob CWTWB1U331 takes a CR2032. With two working keys you can program a third yourself; with one, you need a locksmith or dealer."
+ },
+ "wheel-fl": {
+  "does": "Front left 15-inch wheel with a 195/60R15 tire; it steers and drives.",
+  "fails": "Vibration through the wheel (balance), inside-edge wear (alignment), cracked sidewall, bent rim from a pothole.",
+  "diy": 1,
+  "tip": "Rotate front to rear every 5-7k miles; the fronts wear faster. Torque lugs to 94 ft-lb in a star pattern, not with an impact gun."
+ },
+ "wheel-fr": {
+  "does": "Front right 15-inch wheel with a 195/60R15 88H tire; it steers and drives.",
+  "fails": "Vibration, edge wear, bent rim; the passenger side eats more curb and pothole damage.",
+  "diy": 1,
+  "tip": "Same size and torque as the left. Check pressure monthly, about 32 psi cold; the sticker is on the driver door jamb."
+ },
+ "wheel-rl": {
+  "does": "Rear left 15-inch wheel with a 195/60R15 tire; it follows and brakes.",
+  "fails": "Cupped tread if a shock is bad; a slow leak from a corroded steel rim bead is common.",
+  "diy": 1,
+  "tip": "Rears wear slowly, so rotate them forward. A cupped rear tire means look at the shocks and Control Blade bushings."
+ },
+ "wheel-rr": {
+  "does": "Rear right 15-inch wheel with a 195/60R15 tire; it follows and brakes.",
+  "fails": "Cupping, slow leak, or a hum that is really a wheel bearing.",
+  "diy": 1,
+  "tip": "Same as the rear left. Keep all four the same brand and tread depth so the ABS sees matched wheel speeds."
+ },
+ "lugs": {
+  "does": "Twenty M12x1.5 nuts that hold the four wheels on, plus the spare tire under the cargo floor.",
+  "fails": "Rounded or swollen lug nuts the socket no longer fits, seized studs, a spare that is flat when you need it.",
+  "diy": 1,
+  "tip": "Torque 94 ft-lb in a star pattern. Check the spare's pressure twice a year and keep the jack and wrench in the cargo well."
+ }
+}
