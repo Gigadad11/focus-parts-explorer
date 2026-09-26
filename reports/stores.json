@@ -1,0 +1,62 @@
+{
+ "summary": {
+  "claimed": 5,
+  "confirmed": 4,
+  "unverifiable": 1,
+  "not_found": 0
+ },
+ "results": [
+  {
+   "chain": "AutoZone",
+   "addr": "1626 N Main St, Meridian, ID 83642",
+   "tel": "(208) 888-1430",
+   "url": "https://www.autozone.com/locations/id/meridian/1626-n-main-st.html",
+   "http": "403",
+   "tel_on_page": false,
+   "street_on_page": false,
+   "verdict": "unverifiable"
+  },
+  {
+   "chain": "O'Reilly",
+   "addr": "1915 Fairview Ave, Meridian, ID 83642",
+   "tel": "(208) 288-2114",
+   "url": "https://locations.oreillyauto.com/en-us/id/meridian/",
+   "http": "200",
+   "tel_on_page": true,
+   "street_on_page": true,
+   "verdict": "confirmed"
+  },
+  {
+   "chain": "O'Reilly",
+   "addr": "24 E Calderwood Dr, Meridian, ID 83642",
+   "tel": "(208) 888-4815",
+   "url": "https://locations.oreillyauto.com/en-us/id/meridian/",
+   "http": "200",
+   "tel_on_page": true,
+   "street_on_page": true,
+   "verdict": "confirmed"
+  },
+  {
+   "chain": "O'Reilly",
+   "addr": "3420 N Eagle Rd, Meridian, ID 83646",
+   "tel": "(208) 888-0805",
+   "url": "https://locations.oreillyauto.com/en-us/id/meridian/",
+   "http": "200",
+   "tel_on_page": true,
+   "street_on_page": true,
+   "verdict": "confirmed"
+  },
+  {
+   "chain": "O'Reilly",
+   "addr": "3377 N Ten Mile Rd, Meridian, ID 83646",
+   "tel": "(208) 888-1200",
+   "url": "https://locations.oreillyauto.com/en-us/id/meridian/",
+   "http": "200",
+   "tel_on_page": true,
+   "street_on_page": true,
+   "verdict": "confirmed"
+  }
+ ],
+ "_loop": "stores",
+ "_at": "2026-09-26T04:34:07Z"
+}

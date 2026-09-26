@@ -25,3 +25,13 @@ dead-videos.log) → sheet → syntax → stamp (build id in `<meta name="build"
 smoke (live bounding-box check that the car is car-shaped) → git commit → deploy → verify the public URL carries
 the build id. Deploy and commit are skipped if any earlier stage fails. `BUILD-REPORT.md` has the last run.
 Flags: `--skip-videos`, `--skip-render`; omit `--deploy` to verify only.
+
+## Verification loops (run before every deploy)
+`run.sh` now runs, in order: `loops/loop_videos.py` (live + relevant + right generation), `loop_links.py`
+(HTTP status of every generated URL; bot-walled hosts recorded as unverifiable, never as pass), `loop_geometry.py`
+(headless render, every part's world bbox checked against its system's zone and the body envelope), `loop_sheet.py`
+(flat sheet must agree with the page part-for-part), `loop_stores.py` (store addresses/phones re-read from the chains'
+own location pages). `reports/partnumbers.json` comes from an agent pass that web-checks every claimed part number.
+Then `loops/loop_cross.py --apply` checks all reports against each other and the page, applies only safe fixes
+(confirmed numbers → verified + reordered first; contradicted → flagged X; wrong-vehicle videos dropped), writes
+CROSS-REPORT.md, and blocks the deploy on any error. Only then does `loop.py --deploy` run.

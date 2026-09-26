@@ -1,0 +1,4159 @@
+{
+ "summary": {
+  "videos": 180,
+  "live": 180,
+  "relevant": 178,
+  "focus": 180,
+  "weak": [
+   {
+    "id": "pcm",
+    "url": "https://www.youtube.com/watch?v=2L1NHH4SW44",
+    "title": "2002 FORD FOCUS 2.0L ECM REPLACEMENT"
+   },
+   {
+    "id": "muffler",
+    "url": "https://www.youtube.com/watch?v=_-GZBWnzepU",
+    "title": "How to Replace Flex Pipe 00-04 Ford Focus"
+   }
+  ],
+  "dead": [],
+  "wrong": [],
+  "sibling": [
+   {
+    "id": "seat-fr",
+    "url": "https://www.youtube.com/watch?v=7ekauh7Fzuc",
+    "title": "How to remove front seats in a 2005 Ford Focus"
+   },
+   {
+    "id": "pcm",
+    "url": "https://www.youtube.com/watch?v=OM3r6lpuFp4",
+    "title": "PCM (Power Control Module) Replacement in 2005 Ford Focus"
+   },
+   {
+    "id": "master-cyl",
+    "url": "https://www.youtube.com/watch?v=naF4DSXtrGQ",
+    "title": "2005 Ford Focus brake master cylinder"
+   },
+   {
+    "id": "mid-pipe",
+    "url": "https://www.youtube.com/watch?v=AxaFT6lEHxM",
+    "title": "ford focus 2005 EXHAUST REPAIR  (TIPS) ( all models ) ALL CARS"
+   },
+   {
+    "id": "rear-bumper",
+    "url": "https://www.youtube.com/watch?v=SXEUiKIiH8k",
+    "title": "2005  Ford Focus Rear Bumper Change -Episode 5"
+   },
+   {
+    "id": "windshield",
+    "url": "https://www.youtube.com/watch?v=pH2M79QI7WI",
+    "title": "ford focus 2007 style.old school,windshield replacement"
+   },
+   {
+    "id": "exh-mani",
+    "url": "https://www.youtube.com/watch?v=tPyAL_sFs5U",
+    "title": "2005 Ford Focus Exhaust Manifold Removal- Part 1"
+   },
+   {
+    "id": "cabin-filter",
+    "url": "https://www.youtube.com/watch?v=E72Ze1xBKy4",
+    "title": "2007 Ford Focus Cabin Air Filter Replacement PC5387X - Breathe Easier with PUREFLOW"
+   },
+   {
+    "id": "seat-fl",
+    "url": "https://www.youtube.com/watch?v=7ekauh7Fzuc",
+    "title": "How to remove front seats in a 2005 Ford Focus"
+   }
+  ],
+  "parts_without_video": [
+   "roof"
+  ]
+ },
+ "per_part": {
+  "eng-block": [
+   {
+    "id": "eng-block",
+    "url": "https://www.youtube.com/watch?v=JWDNqM768-M",
+    "live": true,
+    "title": "I Remove The Engine From the Focus Sylva Mojo Rebuild Part #2",
+    "author": "BHP Cars",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "engin",
+     "engine"
+    ],
+    "kw": [
+     "block",
+     "engin",
+     "engine",
+     "long"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "oil-filter": [
+   {
+    "id": "oil-filter",
+    "url": "https://www.youtube.com/watch?v=d-LBR0t6g78",
+    "live": true,
+    "title": "How to Change Oil 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "oil"
+    ],
+    "kw": [
+     "filte",
+     "filter",
+     "oil"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "oil-filter",
+    "url": "https://www.youtube.com/watch?v=pppixlQjZO8",
+    "live": true,
+    "title": "Simple how to: Ford Focus oil & filter change (service)",
+    "author": "Craig's DIY Car",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "filte",
+     "filter",
+     "oil"
+    ],
+    "kw": [
+     "filte",
+     "filter",
+     "oil"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "radiator": [
+   {
+    "id": "radiator",
+    "url": "https://www.youtube.com/watch?v=7uUgksXAcJk",
+    "live": true,
+    "title": "How to Replace Radiator 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "radia",
+     "radiator"
+    ],
+    "kw": [
+     "radia",
+     "radiator"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "radiator",
+    "url": "https://www.youtube.com/watch?v=jNpvFjV-JSs",
+    "live": true,
+    "title": "How to Replace Radiator Assembly 00-07 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "radia",
+     "radiator"
+    ],
+    "kw": [
+     "radia",
+     "radiator"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "rad-hoses": [
+   {
+    "id": "rad-hoses",
+    "url": "https://www.youtube.com/watch?v=qOk4dcD7XWY",
+    "live": true,
+    "title": "How To, Remove And Replace Radiator Hose Ford Focus 2.0L",
+    "author": "Southern Blessed Homestead",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "hose",
+     "radia",
+     "radiator"
+    ],
+    "kw": [
+     "hose",
+     "hoses",
+     "radia",
+     "radiator"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "rad-hoses",
+    "url": "https://www.youtube.com/watch?v=22m0YbhZ3jE",
+    "live": true,
+    "title": "2003 Ford Focus 2.3L engine (ZX3 model) Radiator Replacement",
+    "author": "Miguel Marquez",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "radia",
+     "radiator"
+    ],
+    "kw": [
+     "hose",
+     "hoses",
+     "radia",
+     "radiator"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "airbox": [
+   {
+    "id": "airbox",
+    "url": "https://www.youtube.com/watch?v=6NF10byeJiU",
+    "live": true,
+    "title": "How to Replace Engine Air Filter 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "air",
+     "filte",
+     "filter"
+    ],
+    "kw": [
+     "air",
+     "box",
+     "filte",
+     "filter"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "airbox",
+    "url": "https://www.youtube.com/watch?v=9bKaLK0TdRc",
+    "live": true,
+    "title": "Simple how-to: Replace engine air filter, Ford Focus",
+    "author": "Craig's DIY Car",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "air",
+     "filte",
+     "filter"
+    ],
+    "kw": [
+     "air",
+     "box",
+     "filte",
+     "filter"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "fuel-tank": [
+   {
+    "id": "fuel-tank",
+    "url": "https://www.youtube.com/watch?v=Yeeq9MUrrGM",
+    "live": true,
+    "title": "How to Replace Fuel Pump Module Assembly 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fuel"
+    ],
+    "kw": [
+     "fuel",
+     "tank"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "fuel-tank",
+    "url": "https://www.youtube.com/watch?v=D1AyqeftAmA",
+    "live": true,
+    "title": "HOW TO REPLACE A FUEL PUMP IN 90 MINUTES! - Ford Focus 1999-2007",
+    "author": "2CarPros",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fuel"
+    ],
+    "kw": [
+     "fuel",
+     "tank"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "starter": [
+   {
+    "id": "starter",
+    "url": "https://www.youtube.com/watch?v=c_Rc75FnIzM",
+    "live": true,
+    "title": "How to Replace Starter 2000-2007 Ford Focus (2.0L L4)",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "start",
+     "starter"
+    ],
+    "kw": [
+     "motor",
+     "start",
+     "starter"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "starter",
+    "url": "https://www.youtube.com/watch?v=zLC0picTboo",
+    "live": true,
+    "title": "2000 Ford Focus Starter Removal and Install",
+    "author": "E025796",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "start",
+     "starter"
+    ],
+    "kw": [
+     "motor",
+     "start",
+     "starter"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "ckp-sensor": [
+   {
+    "id": "ckp-sensor",
+    "url": "https://www.youtube.com/watch?v=0oLmP2bs67Q",
+    "live": true,
+    "title": "How to Replace Crankshaft Position Sensor 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "crank",
+     "posit",
+     "senso",
+     "sensor"
+    ],
+    "kw": [
+     "crank",
+     "posit",
+     "senso",
+     "sensor"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "ckp-sensor",
+    "url": "https://www.youtube.com/watch?v=_xoGyRrHYbM",
+    "live": true,
+    "title": "How to Replace Crankshaft Position Sensor Ford Focus 2000\u20132007",
+    "author": "2CarPros",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "crank",
+     "posit",
+     "senso",
+     "sensor"
+    ],
+    "kw": [
+     "crank",
+     "posit",
+     "senso",
+     "sensor"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "flex-pipe": [
+   {
+    "id": "flex-pipe",
+    "url": "https://www.youtube.com/watch?v=_-GZBWnzepU",
+    "live": true,
+    "title": "How to Replace Flex Pipe 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "flex",
+     "pipe"
+    ],
+    "kw": [
+     "exhaust",
+     "flex",
+     "pipe"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "flex-pipe",
+    "url": "https://www.youtube.com/watch?v=QIteJ7hUuvY",
+    "live": true,
+    "title": "Replacing Flex Pipe On Ford Focus",
+    "author": "Channel Ron",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "flex",
+     "pipe"
+    ],
+    "kw": [
+     "exhaust",
+     "flex",
+     "pipe"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "clutch": [
+   {
+    "id": "clutch",
+    "url": "https://www.youtube.com/watch?v=1eoUL347ce0",
+    "live": true,
+    "title": "2002 Ford Focus Clutch Replacement Video (Part 1) - EricTheCarGuy",
+    "author": "EricTheCarGuy",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "clutc",
+     "clutch"
+    ],
+    "kw": [
+     "beari",
+     "bearing",
+     "clutc",
+     "clutch",
+     "relea"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "clutch",
+    "url": "https://www.youtube.com/watch?v=45DEIj1vReM",
+    "live": true,
+    "title": "2003 Ford Focus Clutch Removal part 1",
+    "author": "ChargerMiles007",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "clutc",
+     "clutch"
+    ],
+    "kw": [
+     "beari",
+     "bearing",
+     "clutc",
+     "clutch",
+     "relea"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "strut-fl": [
+   {
+    "id": "strut-fl",
+    "url": "https://www.youtube.com/watch?v=_FS6xOX0v2U",
+    "live": true,
+    "title": "How to Replace Front Strut & Spring Assemblies 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "sprin",
+     "strut"
+    ],
+    "kw": [
+     "mount",
+     "sprin",
+     "strut"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "strut-fl",
+    "url": "https://www.youtube.com/watch?v=k4736Kwa3Vo",
+    "live": true,
+    "title": "How to Replace Front Strut Assembly 00-05 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "strut"
+    ],
+    "kw": [
+     "mount",
+     "sprin",
+     "strut"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "shock-r": [
+   {
+    "id": "shock-r",
+    "url": "https://www.youtube.com/watch?v=fmTzMnFfooo",
+    "live": true,
+    "title": "How to Replace Rear Shock Absorbers 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "shock"
+    ],
+    "kw": [
+     "shock",
+     "sprin"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "shock-r",
+    "url": "https://www.youtube.com/watch?v=puTKiOUWXdk",
+    "live": true,
+    "title": "2000-2011 Ford Focus Rear Shocks Replacement How-To",
+    "author": "Blue Collar Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "shock"
+    ],
+    "kw": [
+     "shock",
+     "sprin"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "rotor-f": [
+   {
+    "id": "rotor-f",
+    "url": "https://www.youtube.com/watch?v=r4uNuyc4Ess",
+    "live": true,
+    "title": "How to Replace Front Brakes 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "brake"
+    ],
+    "kw": [
+     "brake",
+     "rotor"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "rotor-f",
+    "url": "https://www.youtube.com/watch?v=281l2Ps9IRE",
+    "live": true,
+    "title": "How To Replace Front Brakes 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "brake"
+    ],
+    "kw": [
+     "brake",
+     "rotor"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "shoes-r": [
+   {
+    "id": "shoes-r",
+    "url": "https://www.youtube.com/watch?v=1j7qDoi1LP0",
+    "live": true,
+    "title": "Rear Brake Shoe and Wheel Cylinder Replacement Ford Focus 1999-2005",
+    "author": "2CarPros",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "brake",
+     "cylin",
+     "shoe",
+     "wheel"
+    ],
+    "kw": [
+     "brake",
+     "cylin",
+     "hardw",
+     "shoe",
+     "shoes",
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "shoes-r",
+    "url": "https://www.youtube.com/watch?v=guptHDJWIHk",
+    "live": true,
+    "title": "How to Replace Rear Brakes 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "brake"
+    ],
+    "kw": [
+     "brake",
+     "cylin",
+     "hardw",
+     "shoe",
+     "shoes",
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "tie-rods": [
+   {
+    "id": "tie-rods",
+    "url": "https://www.youtube.com/watch?v=-XYVtow1wh0",
+    "live": true,
+    "title": "How to Replace Front Outer Tie Rods 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "outer",
+     "rod",
+     "tie"
+    ],
+    "kw": [
+     "ends",
+     "outer",
+     "rod",
+     "tie"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "tie-rods",
+    "url": "https://www.youtube.com/watch?v=84yufqTbwdk",
+    "live": true,
+    "title": "How to Replace Front Outer Tie Rods 00-05 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "outer",
+     "rod",
+     "tie"
+    ],
+    "kw": [
+     "ends",
+     "outer",
+     "rod",
+     "tie"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "condenser": [
+   {
+    "id": "condenser",
+    "url": "https://www.youtube.com/watch?v=UZ-m0cDMw0o",
+    "live": true,
+    "title": "How to Replace AC Condenser 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "conde",
+     "condenser"
+    ],
+    "kw": [
+     "a/c",
+     "conde",
+     "condenser"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "hood": [
+   {
+    "id": "hood",
+    "url": "https://www.youtube.com/watch?v=7QXDedrP18s",
+    "live": true,
+    "title": "Ford Focus Hood Bonnet Removal",
+    "author": "Mark's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "bonnet",
+     "hood"
+    ],
+    "kw": [
+     "bonnet",
+     "hood"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "hood",
+    "url": "https://www.youtube.com/watch?v=XY6KKa3UtHU",
+    "live": true,
+    "title": "Ford Focus. Hood hinges replacement",
+    "author": "MW",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "hood"
+    ],
+    "kw": [
+     "bonnet",
+     "hood"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "fender-r": [
+   {
+    "id": "fender-r",
+    "url": "https://www.youtube.com/watch?v=UJ1qp_wthI0",
+    "live": true,
+    "title": "Ford Focus MK1 Front Wing (Fender) Replacement",
+    "author": "One Auto",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fende",
+     "fender",
+     "wing"
+    ],
+    "kw": [
+     "fende",
+     "fender",
+     "wing"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "fender-r",
+    "url": "https://www.youtube.com/watch?v=uCwXg-cvLUc",
+    "live": true,
+    "title": "Ford Focus Fender Wing Removal",
+    "author": "Mark's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fende",
+     "fender",
+     "wing"
+    ],
+    "kw": [
+     "fende",
+     "fender",
+     "wing"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "door-rr": [
+   {
+    "id": "door-rr",
+    "url": "https://www.youtube.com/watch?v=ew6qPwycsjM",
+    "live": true,
+    "title": "Ford Focus Front Door Change",
+    "author": "Mark's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "door"
+    ],
+    "kw": [
+     "door"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "door-rr",
+    "url": "https://www.youtube.com/watch?v=gYk-2BqfTkI",
+    "live": true,
+    "title": "How To Remove Rear Door Panel 00-07 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "door"
+    ],
+    "kw": [
+     "door"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "mirrors": [
+   {
+    "id": "mirrors",
+    "url": "https://www.youtube.com/watch?v=ZdJSRLgxK9c",
+    "live": true,
+    "title": "How to Replace Driver Side Mirror 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "mirro",
+     "mirror"
+    ],
+    "kw": [
+     "mirro",
+     "mirror"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "mirrors",
+    "url": "https://www.youtube.com/watch?v=LdPViGmbCQk",
+    "live": true,
+    "title": "How to Replace Side Mirror 00-07 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "mirro",
+     "mirror"
+    ],
+    "kw": [
+     "mirro",
+     "mirror"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "taillamp-l": [
+   {
+    "id": "taillamp-l",
+    "url": "https://www.youtube.com/watch?v=VmhlWPat-iQ",
+    "live": true,
+    "title": "How To Replace Taillight & Bulbs 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "light",
+     "tail"
+    ],
+    "kw": [
+     "lamp",
+     "light",
+     "tail"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "taillamp-l",
+    "url": "https://www.youtube.com/watch?v=ky2u6ydIh1g",
+    "live": true,
+    "title": "How to Replace Tail Light 00-07 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "light",
+     "tail"
+    ],
+    "kw": [
+     "lamp",
+     "light",
+     "tail"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "seat-fr": [
+   {
+    "id": "seat-fr",
+    "url": "https://www.youtube.com/watch?v=CtYeUKwoYog",
+    "live": true,
+    "title": "Ford Focus Front Seat Removal",
+    "author": "Mark's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "seat"
+    ],
+    "kw": [
+     "seat"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "seat-fr",
+    "url": "https://www.youtube.com/watch?v=7ekauh7Fzuc",
+    "live": true,
+    "title": "How to remove front seats in a 2005 Ford Focus",
+    "author": "Scott's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "seat"
+    ],
+    "kw": [
+     "seat"
+    ],
+    "gen1": false,
+    "sibling_2005_07": true,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "door-latch": [
+   {
+    "id": "door-latch",
+    "url": "https://www.youtube.com/watch?v=C1wu0x1qOS8",
+    "live": true,
+    "title": "Car Door Lock Fix \u2013 Actuator Replacement \u2013 Ford Focus Mk1 LR",
+    "author": "Horus Works",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "actua",
+     "door",
+     "lock"
+    ],
+    "kw": [
+     "actua",
+     "door",
+     "latch",
+     "lock"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "door-latch",
+    "url": "https://www.youtube.com/watch?v=MhZSknNr2pM",
+    "live": true,
+    "title": "Ford Lock/latch not working |Replacement",
+    "author": "Asad Firm",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "latch",
+     "lock"
+    ],
+    "kw": [
+     "actua",
+     "door",
+     "latch",
+     "lock"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "wheel-fr": [
+   {
+    "id": "wheel-fr",
+    "url": "https://www.youtube.com/watch?v=arR5OuUWNoY",
+    "live": true,
+    "title": "Ford Focus (2001 - 2005) - Wheel changing",
+    "author": "Haynes Manuals",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "wheel"
+    ],
+    "kw": [
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "wheel-fr",
+    "url": "https://www.youtube.com/watch?v=O21P-mEKNVg",
+    "live": true,
+    "title": "Changing a wheel on a Ford Focus",
+    "author": "Thame Cars",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "wheel"
+    ],
+    "kw": [
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "valve-cover": [
+   {
+    "id": "valve-cover",
+    "url": "https://www.youtube.com/watch?v=9dEvA7fqFa4",
+    "live": true,
+    "title": "How to Replace Valve Cover Gasket 00-07 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "cover",
+     "gaske",
+     "gasket",
+     "valve"
+    ],
+    "kw": [
+     "cover",
+     "gaske",
+     "gasket",
+     "valve"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "valve-cover",
+    "url": "https://www.youtube.com/watch?v=QC-AdK7IFtg",
+    "live": true,
+    "title": "FocusHacks Ford Focus Zetec Valve Cover Gasket Replacement",
+    "author": "Noah Axon",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "cover",
+     "gaske",
+     "gasket",
+     "valve"
+    ],
+    "kw": [
+     "cover",
+     "gaske",
+     "gasket",
+     "valve"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "motor-mounts": [
+   {
+    "id": "motor-mounts",
+    "url": "https://www.youtube.com/watch?v=L5eY1RXHXMc",
+    "live": true,
+    "title": "How to Replace Passenger Side Motor Mount 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "mount"
+    ],
+    "kw": [
+     "engin",
+     "mount",
+     "trans",
+     "transaxle",
+     "transmission"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "motor-mounts",
+    "url": "https://www.youtube.com/watch?v=gnqFvunSJqA",
+    "live": true,
+    "title": "How to Replace Engine Mount 2000-2007 Ford Focus 2.0L L4",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "engin",
+     "mount"
+    ],
+    "kw": [
+     "engin",
+     "mount",
+     "trans",
+     "transaxle",
+     "transmission"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "rad-fan": [
+   {
+    "id": "rad-fan",
+    "url": "https://www.youtube.com/watch?v=JWhAEVt3V6w",
+    "live": true,
+    "title": "How to Replace Dual Radiator & Condenser Fan Assembly 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fan"
+    ],
+    "kw": [
+     "cooli",
+     "fan",
+     "motor"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "rad-fan",
+    "url": "https://www.youtube.com/watch?v=-CUPypclSKs",
+    "live": true,
+    "title": "How to Replace Radiator Fan Assembly 00-02 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fan"
+    ],
+    "kw": [
+     "cooli",
+     "fan",
+     "motor"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "coolant-res": [
+   {
+    "id": "coolant-res",
+    "url": "https://www.youtube.com/watch?v=-8-psb-LzJ8",
+    "live": true,
+    "title": "Ford Focus Coolant Tank Replacement for 1999-2005 LR Hatchback & Sedan",
+    "author": "The Parts Factory",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "coola",
+     "coolant"
+    ],
+    "kw": [
+     "bottl",
+     "coola",
+     "coolant",
+     "degas",
+     "overflow",
+     "reservoir"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "coolant-res",
+    "url": "https://www.youtube.com/watch?v=GwfHn_Aar74",
+    "live": true,
+    "title": "Ford Focus Coolant Reservoir Replacement!!!",
+    "author": "ghetto van adventures",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "coola",
+     "coolant",
+     "reservoir"
+    ],
+    "kw": [
+     "bottl",
+     "coola",
+     "coolant",
+     "degas",
+     "overflow",
+     "reservoir"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "maf": [
+   {
+    "id": "maf",
+    "url": "https://www.youtube.com/watch?v=pKyMziwa_TM",
+    "live": true,
+    "title": "How to: Clean & replace Ford MAF sensor (Focus Mk1)",
+    "author": "Craig's DIY Car",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "senso",
+     "sensor"
+    ],
+    "kw": [
+     "air",
+     "flow",
+     "mass",
+     "senso",
+     "sensor"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "maf",
+    "url": "https://www.youtube.com/watch?v=sE2hSUQf4tU",
+    "live": true,
+    "title": "Mass Air Flow (MAF) sensor quick clean (2001-2008 Ford Escape 3.0L engine)",
+    "author": "Grease Monkey Fever",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "air",
+     "flow",
+     "mass",
+     "senso",
+     "sensor"
+    ],
+    "kw": [
+     "air",
+     "flow",
+     "mass",
+     "senso",
+     "sensor"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "fuel-filter": [
+   {
+    "id": "fuel-filter",
+    "url": "https://www.youtube.com/watch?v=Lvj_TznY1F8",
+    "live": true,
+    "title": "How to Replace Fuel Filter 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "filte",
+     "filter",
+     "fuel"
+    ],
+    "kw": [
+     "filte",
+     "filter",
+     "fuel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "fuel-filter",
+    "url": "https://www.youtube.com/watch?v=PJJuwrbAPTU",
+    "live": true,
+    "title": "2000-2007 Ford Focus Fuel Filter",
+    "author": "Matt SR",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "filte",
+     "filter",
+     "fuel"
+    ],
+    "kw": [
+     "filte",
+     "filter",
+     "fuel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "battery": [
+   {
+    "id": "battery",
+    "url": "https://www.youtube.com/watch?v=UwK7zSpEMv4",
+    "live": true,
+    "title": "How to Replace Battery 00-07 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "batte",
+     "battery"
+    ],
+    "kw": [
+     "batte",
+     "battery"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "battery",
+    "url": "https://www.youtube.com/watch?v=Yb-ytljdCjc",
+    "live": true,
+    "title": "How to Replace Battery Ford Focus 2000-2007 in 4 Minutes!",
+    "author": "2CarPros",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "batte",
+     "battery"
+    ],
+    "kw": [
+     "batte",
+     "battery"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "pcm": [
+   {
+    "id": "pcm",
+    "url": "https://www.youtube.com/watch?v=2L1NHH4SW44",
+    "live": true,
+    "title": "2002 FORD FOCUS 2.0L ECM REPLACEMENT",
+    "author": "davidmezera",
+    "focus": true,
+    "relevant": false,
+    "hits": [],
+    "kw": [
+     "contr",
+     "modul",
+     "module",
+     "power"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "pcm",
+    "url": "https://www.youtube.com/watch?v=OM3r6lpuFp4",
+    "live": true,
+    "title": "PCM (Power Control Module) Replacement in 2005 Ford Focus",
+    "author": "Scott's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "contr",
+     "modul",
+     "module",
+     "power"
+    ],
+    "kw": [
+     "contr",
+     "modul",
+     "module",
+     "power"
+    ],
+    "gen1": false,
+    "sibling_2005_07": true,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "muffler": [
+   {
+    "id": "muffler",
+    "url": "https://www.youtube.com/watch?v=Au8oCig0ajU",
+    "live": true,
+    "title": "2000 Ford Focus ZX3 Flowmaster Exhaust",
+    "author": "prerunnerwannabe",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "exhaust"
+    ],
+    "kw": [
+     "exhaust",
+     "muffl",
+     "muffler",
+     "tailp"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "muffler",
+    "url": "https://www.youtube.com/watch?v=_-GZBWnzepU",
+    "live": true,
+    "title": "How to Replace Flex Pipe 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": false,
+    "hits": [],
+    "kw": [
+     "exhaust",
+     "muffl",
+     "muffler",
+     "tailp"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "cv-axle-l": [
+   {
+    "id": "cv-axle-l",
+    "url": "https://www.youtube.com/watch?v=NlS2ATpJOU0",
+    "live": true,
+    "title": "How to Replace Drivers Side Axle 00-11 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "axle"
+    ],
+    "kw": [
+     "axle",
+     "cv"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "cv-axle-l",
+    "url": "https://www.youtube.com/watch?v=wsmks7D_WzY",
+    "live": true,
+    "title": "How to Replace Front CV Axles 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "axle",
+     "cv"
+    ],
+    "kw": [
+     "axle",
+     "cv"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "strut-fr": [
+   {
+    "id": "strut-fr",
+    "url": "https://www.youtube.com/watch?v=_FS6xOX0v2U",
+    "live": true,
+    "title": "How to Replace Front Strut & Spring Assemblies 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "sprin",
+     "strut"
+    ],
+    "kw": [
+     "mount",
+     "sprin",
+     "strut"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "strut-fr",
+    "url": "https://www.youtube.com/watch?v=k4736Kwa3Vo",
+    "live": true,
+    "title": "How to Replace Front Strut Assembly 00-05 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "strut"
+    ],
+    "kw": [
+     "mount",
+     "sprin",
+     "strut"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "rear-blade": [
+   {
+    "id": "rear-blade",
+    "url": "https://www.youtube.com/watch?v=3FGjdJ8RB5o",
+    "live": true,
+    "title": "How to Replace Trailing Arm Bushings 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "bushi",
+     "trailing"
+    ],
+    "kw": [
+     "arms",
+     "blade",
+     "bushi",
+     "contr",
+     "control arm",
+     "rear arm",
+     "trailing"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "rear-blade",
+    "url": "https://www.youtube.com/watch?v=nhQWOLt5qZk",
+    "live": true,
+    "title": "How to Replace Rear Lower Control Arm 00-11  Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "contr",
+     "control arm"
+    ],
+    "kw": [
+     "arms",
+     "blade",
+     "bushi",
+     "contr",
+     "control arm",
+     "rear arm",
+     "trailing"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "pads-f": [
+   {
+    "id": "pads-f",
+    "url": "https://www.youtube.com/watch?v=r4uNuyc4Ess",
+    "live": true,
+    "title": "How to Replace Front Brakes 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "brake"
+    ],
+    "kw": [
+     "brake",
+     "pad",
+     "pads"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "pads-f",
+    "url": "https://www.youtube.com/watch?v=Ubv8Bezx2Jw",
+    "live": true,
+    "title": "How To Replace Front Brakes 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "brake"
+    ],
+    "kw": [
+     "brake",
+     "pad",
+     "pads"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "master-cyl": [
+   {
+    "id": "master-cyl",
+    "url": "https://www.youtube.com/watch?v=naF4DSXtrGQ",
+    "live": true,
+    "title": "2005 Ford Focus brake master cylinder",
+    "author": "Heather Rohrer (RohrArt)",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "brake",
+     "cylin",
+     "cylinder",
+     "maste"
+    ],
+    "kw": [
+     "boost",
+     "brake",
+     "cylin",
+     "cylinder",
+     "maste"
+    ],
+    "gen1": false,
+    "sibling_2005_07": true,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "master-cyl",
+    "url": "https://www.youtube.com/watch?v=8RPn38iNM5M",
+    "live": true,
+    "title": "2000 FORD FOCUS VACUUM BRAKE BOOSTER",
+    "author": "davidmezera",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "boost",
+     "brake"
+    ],
+    "kw": [
+     "boost",
+     "brake",
+     "cylin",
+     "cylinder",
+     "maste"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "ps-pump": [
+   {
+    "id": "ps-pump",
+    "url": "https://www.youtube.com/watch?v=NjX6TQvWLIc",
+    "live": true,
+    "title": "2000 - 2007 ford focus power steering pump replacement",
+    "author": "Axlsnakedog",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "power",
+     "pump",
+     "steer"
+    ],
+    "kw": [
+     "power",
+     "pump",
+     "reser",
+     "steer"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "ps-pump",
+    "url": "https://www.youtube.com/watch?v=pq_iVTgCTRQ",
+    "live": true,
+    "title": "Ford Focus Power Steering Pump Replacement Part 1",
+    "author": "richpin06a",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "power",
+     "pump",
+     "steer"
+    ],
+    "kw": [
+     "power",
+     "pump",
+     "reser",
+     "steer"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "blower": [
+   {
+    "id": "blower",
+    "url": "https://www.youtube.com/watch?v=xtD9pxwG2Ys",
+    "live": true,
+    "title": "How to Replace HVAC Blower Motor Assembly 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "blowe",
+     "blower",
+     "motor"
+    ],
+    "kw": [
+     "blowe",
+     "blower",
+     "motor",
+     "resis"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "blower",
+    "url": "https://www.youtube.com/watch?v=IoAdY2twhFI",
+    "live": true,
+    "title": "How to Replace Blower Motor Resistor 00-07 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "blowe",
+     "blower",
+     "motor",
+     "resis"
+    ],
+    "kw": [
+     "blowe",
+     "blower",
+     "motor",
+     "resis"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "front-bumper": [
+   {
+    "id": "front-bumper",
+    "url": "https://www.youtube.com/watch?v=5j8xS8pibso",
+    "live": true,
+    "title": "How To Remove Front Bumper Cover 00-07 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "bumpe",
+     "bumper",
+     "cover"
+    ],
+    "kw": [
+     "bumpe",
+     "bumper",
+     "cover",
+     "gasket"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "front-bumper",
+    "url": "https://www.youtube.com/watch?v=j4Q33rLq0zo",
+    "live": true,
+    "title": "Ford Focus (1998\u20132005) front bumper removal",
+    "author": "Giannis Papadimas",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "bumpe",
+     "bumper"
+    ],
+    "kw": [
+     "bumpe",
+     "bumper",
+     "cover",
+     "gasket"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "door-fl": [
+   {
+    "id": "door-fl",
+    "url": "https://www.youtube.com/watch?v=ew6qPwycsjM",
+    "live": true,
+    "title": "Ford Focus Front Door Change",
+    "author": "Mark's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "door"
+    ],
+    "kw": [
+     "door"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "door-fl",
+    "url": "https://www.youtube.com/watch?v=Q-DvC76SUZ8",
+    "live": true,
+    "title": "How To Remove Front Door Panel 00-07 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "door"
+    ],
+    "kw": [
+     "door"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "liftgate": [
+   {
+    "id": "liftgate",
+    "url": "https://www.youtube.com/watch?v=XpI68-75xNg",
+    "live": true,
+    "title": "Replacing Rear Hatch Lift Struts 2000 Ford Focus - Let's How",
+    "author": "jason olsen",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "hatch",
+     "strut"
+    ],
+    "kw": [
+     "hatch",
+     "liftg",
+     "liftgate",
+     "strut",
+     "tailgate"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "liftgate",
+    "url": "https://www.youtube.com/watch?v=Z1eFJ_tTgsQ",
+    "live": true,
+    "title": "How To Fit Ford Focus Tailgate & Boot Gas Struts",
+    "author": "SGS Engineering UK Ltd",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "strut",
+     "tailgate"
+    ],
+    "kw": [
+     "hatch",
+     "liftg",
+     "liftgate",
+     "strut",
+     "tailgate"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "wipers": [
+   {
+    "id": "wipers",
+    "url": "https://www.youtube.com/watch?v=_tYNKJS6KT4",
+    "live": true,
+    "title": "How to Replace Wiper Blades 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "blade",
+     "wiper"
+    ],
+    "kw": [
+     "blade",
+     "motor",
+     "wiper"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "wipers",
+    "url": "https://www.youtube.com/watch?v=UoswLtPFJ00",
+    "live": true,
+    "title": "How To Replace a Rear Windshield Wiper Motor - Ford Focus Hatchback",
+    "author": "TheHowToChannel",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "motor",
+     "wiper"
+    ],
+    "kw": [
+     "blade",
+     "motor",
+     "wiper"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "taillamp-r": [
+   {
+    "id": "taillamp-r",
+    "url": "https://www.youtube.com/watch?v=VmhlWPat-iQ",
+    "live": true,
+    "title": "How To Replace Taillight & Bulbs 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "light",
+     "tail"
+    ],
+    "kw": [
+     "lamp",
+     "light",
+     "tail"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "taillamp-r",
+    "url": "https://www.youtube.com/watch?v=ky2u6ydIh1g",
+    "live": true,
+    "title": "How to Replace Tail Light 00-07 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "light",
+     "tail"
+    ],
+    "kw": [
+     "lamp",
+     "light",
+     "tail"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "seat-rear": [
+   {
+    "id": "seat-rear",
+    "url": "https://www.youtube.com/watch?v=xi0Qrydq4G4",
+    "live": true,
+    "title": "Ford Focus Back Seat Removal",
+    "author": "Mark's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "seat"
+    ],
+    "kw": [
+     "60/40",
+     "bench",
+     "seat"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "shifter": [
+   {
+    "id": "shifter",
+    "url": "https://www.youtube.com/watch?v=mMIjSy0IBUQ",
+    "live": true,
+    "title": "2000-2007 Ford Focus Gear Shifter Assembly Replacement",
+    "author": "Online Auto Repair Videos",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "shift",
+     "shifter"
+    ],
+    "kw": [
+     "cable",
+     "shift",
+     "shift cable",
+     "shifter"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "shifter",
+    "url": "https://www.youtube.com/watch?v=bSmEpWOCT30",
+    "live": true,
+    "title": "Focus shifter cables part 1",
+    "author": "mgRacing31",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "cable",
+     "shift",
+     "shifter"
+    ],
+    "kw": [
+     "cable",
+     "shift",
+     "shift cable",
+     "shifter"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "wheel-rl": [
+   {
+    "id": "wheel-rl",
+    "url": "https://www.youtube.com/watch?v=arR5OuUWNoY",
+    "live": true,
+    "title": "Ford Focus (2001 - 2005) - Wheel changing",
+    "author": "Haynes Manuals",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "wheel"
+    ],
+    "kw": [
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "wheel-rl",
+    "url": "https://www.youtube.com/watch?v=P_d6YLDn-TI",
+    "live": true,
+    "title": "How To Locate Ford Focus Spare Tyre & Jack & Repack Afterwards",
+    "author": "How To Videos And Tips",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "tyre"
+    ],
+    "kw": [
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "timing-belt": [
+   {
+    "id": "timing-belt",
+    "url": "https://www.youtube.com/watch?v=MjP3dLc0Qc4",
+    "live": true,
+    "title": "HOW TO: ULTIMATE Ford Focus Zetec timing belt replacement video (2000-2004)",
+    "author": "That Racing Life",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "belt",
+     "timin",
+     "timing"
+    ],
+    "kw": [
+     "belt",
+     "timin",
+     "timing"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "timing-belt",
+    "url": "https://www.youtube.com/watch?v=GSHiwP8aksk",
+    "live": true,
+    "title": "How to Replace Timing Belt 00-04 Ford Focus Sedan Wagon Hatchback",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "belt",
+     "timin",
+     "timing"
+    ],
+    "kw": [
+     "belt",
+     "timin",
+     "timing"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "serp-belt": [
+   {
+    "id": "serp-belt",
+    "url": "https://www.youtube.com/watch?v=JSt0ibMlnl8",
+    "live": true,
+    "title": "How to Replace Serpentine Belt Tensioner 2000-07 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "belt",
+     "serpe",
+     "tensi"
+    ],
+    "kw": [
+     "belt",
+     "serpe",
+     "tensi"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "serp-belt",
+    "url": "https://www.youtube.com/watch?v=7T5IvliWgXA",
+    "live": true,
+    "title": "How to Replace Serpentine Belt 2000-07 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "belt",
+     "serpe"
+    ],
+    "kw": [
+     "belt",
+     "serpe",
+     "tensi"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "thermostat": [
+   {
+    "id": "thermostat",
+    "url": "https://www.youtube.com/watch?v=ZCX55rkff0k",
+    "live": true,
+    "title": "2004 Ford Focus ZX5 (Zetec) thermostat housing replacement",
+    "author": "Robby94LS",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "housi",
+     "therm",
+     "thermostat"
+    ],
+    "kw": [
+     "housi",
+     "therm",
+     "thermostat"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "thermostat",
+    "url": "https://www.youtube.com/watch?v=ETaYyOX0jeA",
+    "live": true,
+    "title": "How to Replace Thermostat Housing 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "housi",
+     "therm",
+     "thermostat"
+    ],
+    "kw": [
+     "housi",
+     "therm",
+     "thermostat"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "intake-mani": [
+   {
+    "id": "intake-mani",
+    "url": "https://www.youtube.com/watch?v=6kKfVup1NH8",
+    "live": true,
+    "title": "Focus MK1 - 1.8/2.0 Zetec Intake Manifold Rebuild",
+    "author": "Usually Fixing & Tinkering",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "intak",
+     "intake",
+     "manif",
+     "manifold"
+    ],
+    "kw": [
+     "gaske",
+     "intak",
+     "intake",
+     "manif",
+     "manifold"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "intake-mani",
+    "url": "https://www.youtube.com/watch?v=H_DnE4YlZRg",
+    "live": true,
+    "title": "Intake manifold replacement 2004 Ford Focus   ZTS 4 cylinder Install Remove Replace",
+    "author": "Fixing cars and stuff",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "intak",
+     "intake",
+     "manif",
+     "manifold"
+    ],
+    "kw": [
+     "gaske",
+     "intak",
+     "intake",
+     "manif",
+     "manifold"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "fuel-inj": [
+   {
+    "id": "fuel-inj",
+    "url": "https://www.youtube.com/watch?v=oUUrHgLGSLo",
+    "live": true,
+    "title": "How to Replace Fuel Injector Harness 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fuel",
+     "injec",
+     "injector"
+    ],
+    "kw": [
+     "fuel",
+     "injec",
+     "injector",
+     "rail"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "pcv": [
+   {
+    "id": "pcv",
+    "url": "https://www.youtube.com/watch?v=GCtKVnREkkE",
+    "live": true,
+    "title": "2001 Ford Focus PCV Valve and breather hose",
+    "author": "Charles And Cars",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "hose",
+     "pcv",
+     "valve"
+    ],
+    "kw": [
+     "hose",
+     "pcv",
+     "valve"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "pcv",
+    "url": "https://www.youtube.com/watch?v=qR0f_yfBPTQ",
+    "live": true,
+    "title": "Simple how-to: Replace Ford Focus PCV valve & hose, blown rocker gasket #1",
+    "author": "Craig's DIY Car",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "hose",
+     "pcv",
+     "valve"
+    ],
+    "kw": [
+     "hose",
+     "pcv",
+     "valve"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "ignition-sw": [
+   {
+    "id": "ignition-sw",
+    "url": "https://www.youtube.com/watch?v=Y3ZlXg0wpqc",
+    "live": true,
+    "title": "How to Replace Ignition Switch 2000 2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "ignit",
+     "ignition",
+     "switc",
+     "switch"
+    ],
+    "kw": [
+     "cylin",
+     "cylinder",
+     "ignit",
+     "ignition",
+     "lock",
+     "switc",
+     "switch"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "ignition-sw",
+    "url": "https://www.youtube.com/watch?v=mQ6jFEBdOuk",
+    "live": true,
+    "title": "How to Replace the Ignition Cylinder in a 1999-2007 Ford Focus",
+    "author": "6speeddakota",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "cylin",
+     "cylinder",
+     "ignit",
+     "ignition"
+    ],
+    "kw": [
+     "cylin",
+     "cylinder",
+     "ignit",
+     "ignition",
+     "lock",
+     "switc",
+     "switch"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "fuse-box": [
+   {
+    "id": "fuse-box",
+    "url": "https://www.youtube.com/watch?v=LMHFjRkFRUk",
+    "live": true,
+    "title": "Relay and Fuse Box Location Ford Focus 00 01 02 03 04 05 06 07 2001 2002 2003 2004 2005 2006 2007",
+    "author": "Dirt Road Auto Repair",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "box"
+    ],
+    "kw": [
+     "bay",
+     "box",
+     "engin",
+     "fuse/"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "fuse-box",
+    "url": "https://www.youtube.com/watch?v=GnrIG5YGThM",
+    "live": true,
+    "title": "Ford Focus (1999 to 2007) Fuse Box Diagrams & Location User Guide",
+    "author": "Auto User Guide",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "box"
+    ],
+    "kw": [
+     "bay",
+     "box",
+     "engin",
+     "fuse/"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "mid-pipe": [
+   {
+    "id": "mid-pipe",
+    "url": "https://www.youtube.com/watch?v=AxaFT6lEHxM",
+    "live": true,
+    "title": "ford focus 2005 EXHAUST REPAIR  (TIPS) ( all models ) ALL CARS",
+    "author": "NOBOX7",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "exhaust"
+    ],
+    "kw": [
+     "exhaust",
+     "mid",
+     "pipe",
+     "reson"
+    ],
+    "gen1": false,
+    "sibling_2005_07": true,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "cv-axle-r": [
+   {
+    "id": "cv-axle-r",
+    "url": "https://www.youtube.com/watch?v=Zdz32nGXc2o",
+    "live": true,
+    "title": "How to Replace Passenger Side CV Axle Assembly 2000-2007 Ford Focus 2.0L L4",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "axle",
+     "cv"
+    ],
+    "kw": [
+     "axle",
+     "cv"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "cv-axle-r",
+    "url": "https://www.youtube.com/watch?v=yS-Ka9hfZCs",
+    "live": true,
+    "title": "How to Replace Passengers Side Axle 00-11 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "axle"
+    ],
+    "kw": [
+     "axle",
+     "cv"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "lca-f": [
+   {
+    "id": "lca-f",
+    "url": "https://www.youtube.com/watch?v=ETmIvIpo15E",
+    "live": true,
+    "title": "How to Replace Front Lower Control Arms 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "arms",
+     "contr",
+     "lower"
+    ],
+    "kw": [
+     "arms",
+     "ball",
+     "contr",
+     "joint",
+     "lower"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "lca-f",
+    "url": "https://www.youtube.com/watch?v=YGH9xGF3HeM",
+    "live": true,
+    "title": "How to Replace Front Lower Control Arm 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "contr",
+     "lower"
+    ],
+    "kw": [
+     "arms",
+     "ball",
+     "contr",
+     "joint",
+     "lower"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "wheel-brg-f": [
+   {
+    "id": "wheel-brg-f",
+    "url": "https://www.youtube.com/watch?v=S0QjaLjYLDE",
+    "live": true,
+    "title": "How to Replace Wheel Bearing & Hub 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "wheel"
+    ],
+    "kw": [
+     "hub/b",
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "wheel-brg-f",
+    "url": "https://www.youtube.com/watch?v=Ay0jWxt8gjQ",
+    "live": true,
+    "title": "How To Replace Front Wheel Hub 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "wheel"
+    ],
+    "kw": [
+     "hub/b",
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "caliper-f": [
+   {
+    "id": "caliper-f",
+    "url": "https://www.youtube.com/watch?v=fj7mEgYbw-8",
+    "live": true,
+    "title": "How to Replace Front Brake Calipers 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "calip",
+     "caliper"
+    ],
+    "kw": [
+     "calip",
+     "caliper"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "caliper-f",
+    "url": "https://www.youtube.com/watch?v=MwFACrGpNTs",
+    "live": true,
+    "title": "How to Replace Brake Caliper and Hose 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "calip",
+     "caliper"
+    ],
+    "kw": [
+     "calip",
+     "caliper"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "abs-mod": [
+   {
+    "id": "abs-mod",
+    "url": "https://www.youtube.com/watch?v=M5gxyfGQD7w",
+    "live": true,
+    "title": "Ford Focus ABS Pump & Module Location Video Guide",
+    "author": "Driven By Satch",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "abs"
+    ],
+    "kw": [
+     "abs",
+     "hydra",
+     "unit"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "steering-col": [
+   {
+    "id": "steering-col",
+    "url": "https://www.youtube.com/watch?v=_Y5WVJPj3NM",
+    "live": true,
+    "title": "Ford Focus MK1 Steering Column Replacement",
+    "author": "Starcrunch72",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "colum",
+     "steer"
+    ],
+    "kw": [
+     "colum",
+     "inter",
+     "shaft",
+     "steer"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "steering-col",
+    "url": "https://www.youtube.com/watch?v=ZRpZTZDeA1Q",
+    "live": true,
+    "title": "How to remove steering wheel + AirBag : FORD FOCUS mk1",
+    "author": "DR.VOLANT - \u062f\u0643\u062a\u0648\u0631. \u0627\u0644\u0645\u0642\u0648\u062f",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "steer"
+    ],
+    "kw": [
+     "colum",
+     "inter",
+     "shaft",
+     "steer"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "heater-core": [
+   {
+    "id": "heater-core",
+    "url": "https://www.youtube.com/watch?v=F7MWGanD4xw",
+    "live": true,
+    "title": "2000-04 Ford Focus heater core replacement",
+    "author": "Tyler's Neighborhood Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "core",
+     "heate",
+     "heater core"
+    ],
+    "kw": [
+     "core",
+     "heate",
+     "heater core"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "heater-core",
+    "url": "https://www.youtube.com/watch?v=yWUDEu0DEFk",
+    "live": true,
+    "title": "2000-2007 Ford Focus - Replace Heater Core - Girlie Garage",
+    "author": "Girlie Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "core",
+     "heate",
+     "heater core"
+    ],
+    "kw": [
+     "core",
+     "heate",
+     "heater core"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "rear-bumper": [
+   {
+    "id": "rear-bumper",
+    "url": "https://www.youtube.com/watch?v=wuFUAD-AmDQ",
+    "live": true,
+    "title": "How to remove the rear bumper on a Ford Focus in 5 minutes. Ford Focus SVT zx3 zx5 zx4 se",
+    "author": "World Mechanics",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "bumpe",
+     "bumper"
+    ],
+    "kw": [
+     "bumpe",
+     "bumper",
+     "cover",
+     "gasket"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "rear-bumper",
+    "url": "https://www.youtube.com/watch?v=SXEUiKIiH8k",
+    "live": true,
+    "title": "2005  Ford Focus Rear Bumper Change -Episode 5",
+    "author": "Focused Hands",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "bumpe",
+     "bumper"
+    ],
+    "kw": [
+     "bumpe",
+     "bumper",
+     "cover",
+     "gasket"
+    ],
+    "gen1": false,
+    "sibling_2005_07": true,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "door-fr": [
+   {
+    "id": "door-fr",
+    "url": "https://www.youtube.com/watch?v=ew6qPwycsjM",
+    "live": true,
+    "title": "Ford Focus Front Door Change",
+    "author": "Mark's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "door"
+    ],
+    "kw": [
+     "door"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "door-fr",
+    "url": "https://www.youtube.com/watch?v=xYgPc7D0YgY",
+    "live": true,
+    "title": "Ford Focus Door Removal, Replacement and strip down the complete job",
+    "author": "Rich Man Poor Motors",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "door"
+    ],
+    "kw": [
+     "door"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "windshield": [
+   {
+    "id": "windshield",
+    "url": "https://www.youtube.com/watch?v=pH2M79QI7WI",
+    "live": true,
+    "title": "ford focus 2007 style.old school,windshield replacement",
+    "author": "Vdkar Auto Glass Replacement",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "winds",
+     "windshield"
+    ],
+    "kw": [
+     "winds",
+     "windscreen",
+     "windshield"
+    ],
+    "gen1": false,
+    "sibling_2005_07": true,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "headlamp-l": [
+   {
+    "id": "headlamp-l",
+    "url": "https://www.youtube.com/watch?v=ow1a0WOjRPU",
+    "live": true,
+    "title": "Ford Focus Headlight Assembly Replacement 2000-2004 (1st gen)",
+    "author": "Cartia Customs",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "headl",
+     "headlight"
+    ],
+    "kw": [
+     "headl",
+     "headlight"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "headlamp-l",
+    "url": "https://www.youtube.com/watch?v=kMDEMu5uP-Y",
+    "live": true,
+    "title": "How to Replace Headlights 00-02 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "headl",
+     "headlight"
+    ],
+    "kw": [
+     "headl",
+     "headlight"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "bulbs": [
+   {
+    "id": "bulbs",
+    "url": "https://www.youtube.com/watch?v=5Xhye_tGDFk",
+    "live": true,
+    "title": "2004 Ford Focus Headlight Bulb Replacement, Headlight Fuses & Relays",
+    "author": "Lehew",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "bulb",
+     "headlight"
+    ],
+    "kw": [
+     "bulb",
+     "headlight"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "bulbs",
+    "url": "https://www.youtube.com/watch?v=krH2PUu8JUc",
+    "live": true,
+    "title": "Ford Focus (2001 - 2005) -  Headlight bulb renewal",
+    "author": "Haynes Manuals",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "bulb",
+     "headlight"
+    ],
+    "kw": [
+     "bulb",
+     "headlight"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "dash": [
+   {
+    "id": "dash",
+    "url": "https://www.youtube.com/watch?v=0YYnkDutv3k",
+    "live": true,
+    "title": "Ford Focus instrument cluster removal",
+    "author": "Ash",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "clust",
+     "instr"
+    ],
+    "kw": [
+     "clust",
+     "instr",
+     "panel"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "dash",
+    "url": "https://www.youtube.com/watch?v=x_0DDeMlBI4",
+    "live": true,
+    "title": "Ford Focus mk1 instrument cluster removal",
+    "author": "golf Wagen",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "clust",
+     "instr"
+    ],
+    "kw": [
+     "clust",
+     "instr",
+     "panel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "key": [
+   {
+    "id": "key",
+    "url": "https://www.youtube.com/watch?v=0oJXWE_SKvM",
+    "live": true,
+    "title": "How To Program A Ford PATS Key",
+    "author": "Blue Springs Ford Parts",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "key",
+     "pats"
+    ],
+    "kw": [
+     "fob",
+     "key",
+     "pats",
+     "trans",
+     "transponder"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "key",
+    "url": "https://www.youtube.com/watch?v=0i06ZckgIIc",
+    "live": true,
+    "title": "Ford\u00ae PATS Key Programming Quick Tip | Program A Set Of Keys |Training Solutions\u00ae",
+    "author": "Snap-on Diagnostics",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "key",
+     "pats"
+    ],
+    "kw": [
+     "fob",
+     "key",
+     "pats",
+     "trans",
+     "transponder"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "wheel-rr": [
+   {
+    "id": "wheel-rr",
+    "url": "https://www.youtube.com/watch?v=arR5OuUWNoY",
+    "live": true,
+    "title": "Ford Focus (2001 - 2005) - Wheel changing",
+    "author": "Haynes Manuals",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "wheel"
+    ],
+    "kw": [
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "wheel-rr",
+    "url": "https://www.youtube.com/watch?v=O21P-mEKNVg",
+    "live": true,
+    "title": "Changing a wheel on a Ford Focus",
+    "author": "Thame Cars",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "wheel"
+    ],
+    "kw": [
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "oil-pan": [
+   {
+    "id": "oil-pan",
+    "url": "https://www.youtube.com/watch?v=0pwXKFrx2iU",
+    "live": true,
+    "title": "How to Replace Oil Pan 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "oil",
+     "pan"
+    ],
+    "kw": [
+     "gaske",
+     "gasket",
+     "oil",
+     "pan"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "oil-pan",
+    "url": "https://www.youtube.com/watch?v=CGC7K095gpQ",
+    "live": true,
+    "title": "How to Replace Engine Oil Pan 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "oil",
+     "pan"
+    ],
+    "kw": [
+     "gaske",
+     "gasket",
+     "oil",
+     "pan"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "spark-plugs": [
+   {
+    "id": "spark-plugs",
+    "url": "https://www.youtube.com/watch?v=BSUCOE3Sn2c",
+    "live": true,
+    "title": "How To Replace Spark Plugs 00-07 Ford Focus 2.0L",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "plug",
+     "plugs",
+     "spark"
+    ],
+    "kw": [
+     "coil",
+     "pack",
+     "plug",
+     "plugs",
+     "spark"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "spark-plugs",
+    "url": "https://www.youtube.com/watch?v=I3qzinL2D9k",
+    "live": true,
+    "title": "How to Replace Ignition Coil 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "coil"
+    ],
+    "kw": [
+     "coil",
+     "pack",
+     "plug",
+     "plugs",
+     "spark"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "water-pump": [
+   {
+    "id": "water-pump",
+    "url": "https://www.youtube.com/watch?v=qc9DR3MAhfE",
+    "live": true,
+    "title": "How to Replace Water Pump 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "pump",
+     "water",
+     "water pump"
+    ],
+    "kw": [
+     "pump",
+     "water",
+     "water pump"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "water-pump",
+    "url": "https://www.youtube.com/watch?v=jkeMCrnnRv8",
+    "live": true,
+    "title": "2001 ford focus Zetec engine water pump replacement",
+    "author": "freestyleflowful",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "pump",
+     "water",
+     "water pump"
+    ],
+    "kw": [
+     "pump",
+     "water",
+     "water pump"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "throttle-body": [
+   {
+    "id": "throttle-body",
+    "url": "https://www.youtube.com/watch?v=20-Dyq3fmNA",
+    "live": true,
+    "title": "How to Service a Throttle Body Housing Ford Focus 2000-2008",
+    "author": "2CarPros",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "body",
+     "throt",
+     "throttle"
+    ],
+    "kw": [
+     "body",
+     "throt",
+     "throttle"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "throttle-body",
+    "url": "https://www.youtube.com/watch?v=9xdS8FUE7Uo",
+    "live": true,
+    "title": "How to Clean Your Throttle Body - DIY Guide - Ford Focus Mk1",
+    "author": "Horus Works",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "body",
+     "throt",
+     "throttle"
+    ],
+    "kw": [
+     "body",
+     "throt",
+     "throttle"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "fuel-pump": [
+   {
+    "id": "fuel-pump",
+    "url": "https://www.youtube.com/watch?v=Yeeq9MUrrGM",
+    "live": true,
+    "title": "How to Replace Fuel Pump Module Assembly 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fuel",
+     "modul",
+     "module",
+     "pump"
+    ],
+    "kw": [
+     "fuel",
+     "modul",
+     "module",
+     "pump"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "fuel-pump",
+    "url": "https://www.youtube.com/watch?v=D1AyqeftAmA",
+    "live": true,
+    "title": "HOW TO REPLACE A FUEL PUMP IN 90 MINUTES! - Ford Focus 1999-2007",
+    "author": "2CarPros",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fuel",
+     "pump"
+    ],
+    "kw": [
+     "fuel",
+     "modul",
+     "module",
+     "pump"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "alternator": [
+   {
+    "id": "alternator",
+    "url": "https://www.youtube.com/watch?v=AVh_gk1wUbs",
+    "live": true,
+    "title": "How to Replace Alternator 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "alter",
+     "alternator"
+    ],
+    "kw": [
+     "110a",
+     "alter",
+     "alternator"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "o2-sensors": [
+   {
+    "id": "o2-sensors",
+    "url": "https://www.youtube.com/watch?v=cNZuBPE7Ct8",
+    "live": true,
+    "title": "How to Replace Upstream O2 Oxygen Sensor 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "o2",
+     "oxygen",
+     "senso",
+     "sensor"
+    ],
+    "kw": [
+     "o2",
+     "oxygen",
+     "senso",
+     "sensor"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "o2-sensors",
+    "url": "https://www.youtube.com/watch?v=nPXZSM5Odok",
+    "live": true,
+    "title": "How to Replace Center O2 Oxygen Sensor 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "o2",
+     "oxygen",
+     "senso",
+     "sensor"
+    ],
+    "kw": [
+     "o2",
+     "oxygen",
+     "senso",
+     "sensor"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "exh-mani": [
+   {
+    "id": "exh-mani",
+    "url": "https://www.youtube.com/watch?v=uNBrX_RNXL8",
+    "live": true,
+    "title": "How to Replace Exhaust Manifold Catalytic Converter Assembly 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "catal",
+     "conve",
+     "exhau",
+     "manif",
+     "manifold"
+    ],
+    "kw": [
+     "catal",
+     "conve",
+     "exhau",
+     "manif",
+     "manifold"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "exh-mani",
+    "url": "https://www.youtube.com/watch?v=tPyAL_sFs5U",
+    "live": true,
+    "title": "2005 Ford Focus Exhaust Manifold Removal- Part 1",
+    "author": "Focused Hands",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "exhau",
+     "manif",
+     "manifold"
+    ],
+    "kw": [
+     "catal",
+     "conve",
+     "exhau",
+     "manif",
+     "manifold"
+    ],
+    "gen1": false,
+    "sibling_2005_07": true,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "trans": [
+   {
+    "id": "trans",
+    "url": "https://www.youtube.com/watch?v=Eg1wXv6RO5g",
+    "live": true,
+    "title": "Ford focus 2000-2007 Madza 3 2004-2008 2.0 automatic transmission removal",
+    "author": "Barrett Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "trans",
+     "transmission"
+    ],
+    "kw": [
+     "trans",
+     "transmission"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "trans-fluid": [
+   {
+    "id": "trans-fluid",
+    "url": "https://www.youtube.com/watch?v=7VTe7q42M-c",
+    "live": true,
+    "title": "2000-2007 Ford Focus Transmission Fluid Change (4F27E Transmission)",
+    "author": "Matt SR",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fluid",
+     "trans",
+     "transmission"
+    ],
+    "kw": [
+     "fluid",
+     "oil change",
+     "trans",
+     "transmission"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "trans-fluid",
+    "url": "https://www.youtube.com/watch?v=HkXblW4kdFY",
+    "live": true,
+    "title": "1999-2007 Ford Focus Manual Transmission Fluid Change",
+    "author": "JungleKing007",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fluid",
+     "trans",
+     "transmission"
+    ],
+    "kw": [
+     "fluid",
+     "oil change",
+     "trans",
+     "transmission"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "sway-f": [
+   {
+    "id": "sway-f",
+    "url": "https://www.youtube.com/watch?v=Q_I0lHuorTE",
+    "live": true,
+    "title": "How to Replace Front Sway Bar Links 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "bar",
+     "link",
+     "links",
+     "sway"
+    ],
+    "kw": [
+     "bar",
+     "bushi",
+     "link",
+     "links",
+     "stabilizer",
+     "sway"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "sway-f",
+    "url": "https://www.youtube.com/watch?v=Jwfk2cpgsiw",
+    "live": true,
+    "title": "How to Replace Front Sway Bar Bushings 1998-2011 Ford Ranger",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "bar",
+     "bushi",
+     "sway"
+    ],
+    "kw": [
+     "bar",
+     "bushi",
+     "link",
+     "links",
+     "stabilizer",
+     "sway"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "wheel-brg-r": [
+   {
+    "id": "wheel-brg-r",
+    "url": "https://www.youtube.com/watch?v=sedN47nbKlo",
+    "live": true,
+    "title": "How to Replace Rear Wheel Bearings 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "wheel"
+    ],
+    "kw": [
+     "hub/b",
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "wheel-brg-r",
+    "url": "https://www.youtube.com/watch?v=RPv7KhgBdUY",
+    "live": true,
+    "title": "2000-2007 Ford Focus Rear Brake Drum/Wheel Bearing Assembly Replacement (Stuck HARD)",
+    "author": "Jody Bruchon",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "wheel"
+    ],
+    "kw": [
+     "hub/b",
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "drum-r": [
+   {
+    "id": "drum-r",
+    "url": "https://www.youtube.com/watch?v=D4bchckCwqM",
+    "live": true,
+    "title": "How to Replace Rear Drum Brakes 00-08 Ford Focus Sedan Hatchback Wagon",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "brake",
+     "drum"
+    ],
+    "kw": [
+     "brake",
+     "drum",
+     "drums"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "drum-r",
+    "url": "https://www.youtube.com/watch?v=dPx0VDicERk",
+    "live": true,
+    "title": "How to repair 2000-08 Ford Focus rear drum brakes (the easy way)",
+    "author": "The Joy of Wrenching",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "brake",
+     "drum"
+    ],
+    "kw": [
+     "brake",
+     "drum",
+     "drums"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "rack": [
+   {
+    "id": "rack",
+    "url": "https://www.youtube.com/watch?v=kHzVhSUqVKY",
+    "live": true,
+    "title": "How to Replace Front Inner Tie Rods 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "inner",
+     "rods",
+     "tie"
+    ],
+    "kw": [
+     "inner",
+     "power",
+     "rack",
+     "rods",
+     "steer",
+     "steering",
+     "tie"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "ac-comp": [
+   {
+    "id": "ac-comp",
+    "url": "https://www.youtube.com/watch?v=PnibVoSrxQ4",
+    "live": true,
+    "title": "Replace AC Compressor, Accumulator, Orifice Tube, Hose Assembly on 2003 Ford Focus",
+    "author": "Because Stuff Breaks with Justin Peters",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "compr"
+    ],
+    "kw": [
+     "a/c",
+     "clutc",
+     "clutch",
+     "compr"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "ac-comp",
+    "url": "https://www.youtube.com/watch?v=02Lt0wfqM_c",
+    "live": true,
+    "title": "How to remove the AC compressor - 2001 Ford Focus",
+    "author": "N33s Workshop",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "compr"
+    ],
+    "kw": [
+     "a/c",
+     "clutc",
+     "clutch",
+     "compr"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "cabin-filter": [
+   {
+    "id": "cabin-filter",
+    "url": "https://www.youtube.com/watch?v=E72Ze1xBKy4",
+    "live": true,
+    "title": "2007 Ford Focus Cabin Air Filter Replacement PC5387X - Breathe Easier with PUREFLOW",
+    "author": "PUREFLOW\u00ae ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "air",
+     "cabin",
+     "filte",
+     "filter"
+    ],
+    "kw": [
+     "air",
+     "cabin",
+     "filte",
+     "filter"
+    ],
+    "gen1": false,
+    "sibling_2005_07": true,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "cabin-filter",
+    "url": "https://www.youtube.com/watch?v=ziCz8aq0nfM",
+    "live": true,
+    "title": "Ford Focus Pollen Cabin Air Filter Change",
+    "author": "Mark's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "air",
+     "cabin",
+     "filte",
+     "filter"
+    ],
+    "kw": [
+     "air",
+     "cabin",
+     "filte",
+     "filter"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "fender-l": [
+   {
+    "id": "fender-l",
+    "url": "https://www.youtube.com/watch?v=UJ1qp_wthI0",
+    "live": true,
+    "title": "Ford Focus MK1 Front Wing (Fender) Replacement",
+    "author": "One Auto",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fende",
+     "fender",
+     "wing"
+    ],
+    "kw": [
+     "fende",
+     "fender",
+     "wing"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "fender-l",
+    "url": "https://www.youtube.com/watch?v=uCwXg-cvLUc",
+    "live": true,
+    "title": "Ford Focus Fender Wing Removal",
+    "author": "Mark's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "fende",
+     "fender",
+     "wing"
+    ],
+    "kw": [
+     "fende",
+     "fender",
+     "wing"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "door-rl": [
+   {
+    "id": "door-rl",
+    "url": "https://www.youtube.com/watch?v=ew6qPwycsjM",
+    "live": true,
+    "title": "Ford Focus Front Door Change",
+    "author": "Mark's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "door"
+    ],
+    "kw": [
+     "door"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "door-rl",
+    "url": "https://www.youtube.com/watch?v=eb8ehvgKaME",
+    "live": true,
+    "title": "Ford Focus  1998\u20132004  rear door panel removal",
+    "author": "Giannis Papadimas",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "door"
+    ],
+    "kw": [
+     "door"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "headlamp-r": [
+   {
+    "id": "headlamp-r",
+    "url": "https://www.youtube.com/watch?v=ow1a0WOjRPU",
+    "live": true,
+    "title": "Ford Focus Headlight Assembly Replacement 2000-2004 (1st gen)",
+    "author": "Cartia Customs",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "headl",
+     "headlight"
+    ],
+    "kw": [
+     "headl",
+     "headlight"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "headlamp-r",
+    "url": "https://www.youtube.com/watch?v=kMDEMu5uP-Y",
+    "live": true,
+    "title": "How to Replace Headlights 00-02 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "headl",
+     "headlight"
+    ],
+    "kw": [
+     "headl",
+     "headlight"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "seat-fl": [
+   {
+    "id": "seat-fl",
+    "url": "https://www.youtube.com/watch?v=CtYeUKwoYog",
+    "live": true,
+    "title": "Ford Focus Front Seat Removal",
+    "author": "Mark's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "seat"
+    ],
+    "kw": [
+     "seat",
+     "track"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "seat-fl",
+    "url": "https://www.youtube.com/watch?v=7ekauh7Fzuc",
+    "live": true,
+    "title": "How to remove front seats in a 2005 Ford Focus",
+    "author": "Scott's Garage",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "seat"
+    ],
+    "kw": [
+     "seat",
+     "track"
+    ],
+    "gen1": false,
+    "sibling_2005_07": true,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "window-reg": [
+   {
+    "id": "window-reg",
+    "url": "https://www.youtube.com/watch?v=pku_bFpj4oE",
+    "live": true,
+    "title": "How to Replace Window Regulator 00-04 Ford Focus",
+    "author": "1A Auto: Repair Tips & Secrets Only Mechanics Know",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "regul",
+     "regulator",
+     "windo",
+     "window"
+    ],
+    "kw": [
+     "motor",
+     "regul",
+     "regulator",
+     "windo",
+     "window"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "window-reg",
+    "url": "https://www.youtube.com/watch?v=ldWlV7NPtxI",
+    "live": true,
+    "title": "How to Replace Rear Window Regulators 2000-2007 Ford Focus",
+    "author": "TRQ",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "regul",
+     "regulator",
+     "windo",
+     "window"
+    ],
+    "kw": [
+     "motor",
+     "regul",
+     "regulator",
+     "windo",
+     "window"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "wheel-fl": [
+   {
+    "id": "wheel-fl",
+    "url": "https://www.youtube.com/watch?v=arR5OuUWNoY",
+    "live": true,
+    "title": "Ford Focus (2001 - 2005) - Wheel changing",
+    "author": "Haynes Manuals",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "wheel"
+    ],
+    "kw": [
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": true,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "wheel-fl",
+    "url": "https://www.youtube.com/watch?v=P_d6YLDn-TI",
+    "live": true,
+    "title": "How To Locate Ford Focus Spare Tyre & Jack & Repack Afterwards",
+    "author": "How To Videos And Tips",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "tyre"
+    ],
+    "kw": [
+     "tire",
+     "tyre",
+     "wheel"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ],
+  "lugs": [
+   {
+    "id": "lugs",
+    "url": "https://www.youtube.com/watch?v=BkVXiz-gWhE",
+    "live": true,
+    "title": "HOW TO GET FORD FOCUS LUG NUTS OFF",
+    "author": "Roadside Guy",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "lug",
+     "nuts"
+    ],
+    "kw": [
+     "lug",
+     "nuts",
+     "spare"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   },
+   {
+    "id": "lugs",
+    "url": "https://www.youtube.com/watch?v=jqqEavWTFeE",
+    "live": true,
+    "title": "Ford Swollen Lug Nut Removal & Replacement (complete Guide)",
+    "author": "Aaron Hines",
+    "focus": true,
+    "relevant": true,
+    "hits": [
+     "lug"
+    ],
+    "kw": [
+     "lug",
+     "nuts",
+     "spare"
+    ],
+    "gen1": false,
+    "sibling_2005_07": false,
+    "wrong_engine_or_gen": false
+   }
+  ]
+ },
+ "_loop": "videos",
+ "_at": "2026-09-26T04:32:37Z"
+}

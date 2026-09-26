@@ -40,7 +40,7 @@ def lint():
         if p.get('sys') not in d['SYSTEMS']: bad.append(f"{p['id']} bad system {p.get('sys')}")
         x,y,z=p['pos']
         if not(-9.5<=x<=9.5 and -0.5<=y<=6.5 and -4<=z<=4): bad.append(f"{p['id']} pos out of car bounds {p['pos']}")
-        if p.get('conf') not in ('V','K','L'): bad.append(f"{p['id']} conf {p.get('conf')}")
+        if p.get('conf') not in ('V','K','L','X'): bad.append(f"{p['id']} conf {p.get('conf')}")
     for k in d['VIDEOS']:
         if k not in ids: bad.append(f'VIDEOS key {k} is not a part')
     assert not bad,'; '.join(bad[:8])+(' …' if len(bad)>8 else '')

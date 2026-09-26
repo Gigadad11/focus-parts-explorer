@@ -1,0 +1,554 @@
+{
+ "summary": {
+  "checked": 88,
+  "ok": 2,
+  "bad": 0,
+  "unverifiable": 86,
+  "blocked_hosts": [
+   "rockauto.com/en/partsearch",
+   "amazon.com",
+   "ebay.com",
+   "autozone.com",
+   "oreillyauto.com",
+   "partsgeek.com",
+   "1aauto.com",
+   "car-part.com",
+   "lkqpickyourpart.com",
+   "ford.oempartsonline.com",
+   "google.com/maps"
+  ]
+ },
+ "bad": [],
+ "results": [
+  {
+   "key": "rockauto-vehicle",
+   "url": "https://www.rockauto.com/en/catalog/ford,2003,focus,2.0l+l4+dohc,1431898",
+   "status": "unverifiable (no response / rate-limited)",
+   "ok": null
+  },
+  {
+   "key": "wikimedia-front",
+   "url": "https://commons.wikimedia.org/wiki/File:2003_Ford_Focus_SE_Station_Wagon_in_Light_Tundra_Metallic,_front_right.jpg",
+   "status": "200",
+   "ok": true
+  },
+  {
+   "key": "youtube-search-sample",
+   "url": "https://www.youtube.com/results?search_query=2003+Ford+Focus+alternator+replacement",
+   "status": "200",
+   "ok": true
+  },
+  {
+   "key": "autozone-locator",
+   "url": "https://www.autozone.com/locations/id/meridian.html",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "oreilly-locator",
+   "url": "https://locations.oreillyauto.com/en-us/id/meridian/",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:valve-cover",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=YS4Z-6584-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:timing-belt",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:oil-pan",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=YS4Z-6675-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:oil-filter",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:motor-mounts",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S4Z-6038-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:serp-belt",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Tensioner",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:spark-plugs",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=AZFS-32F-E",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:radiator",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=3S4Z-8005-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:rad-fan",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=YS4Z-8C607-AB",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:thermostat",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S7Z-8592-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:water-pump",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:rad-hoses",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=KM-4672",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:coolant-res",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S4Z-8A080-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:intake-mani",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S7Z-9424-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:throttle-body",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S7Z-9E926-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:airbox",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:maf",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:fuel-inj",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:fuel-pump",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:fuel-tank",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=4S4Z-9002-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:fuel-filter",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:pcv",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:alternator",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:starter",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:battery",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:ignition-sw",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=3S4Z-11572-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:o2-sensors",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:ckp-sensor",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:fuse-box",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-14A068-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:exh-mani",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S7Z-5G232-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:flex-pipe",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=3S4Z-5246-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:muffler",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=3S4Z-5230-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:clutch",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:cv-axle-l",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S4Z-3A427-BA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:cv-axle-r",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S4Z-3B436-BA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:strut-fl",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Monroe",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:strut-fr",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:lca-f",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S4Z-3078-BA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:sway-f",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S4Z-5K484-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:shock-r",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:rear-blade",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-5500-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:wheel-brg-f",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:wheel-brg-r",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:rotor-f",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:pads-f",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:caliper-f",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S4Z-2B120-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:drum-r",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:shoes-r",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:master-cyl",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:abs-mod",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-2C286-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:rack",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S4Z-3504-BARM",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:tie-rods",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S4Z-3A130-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:ps-pump",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:steering-col",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-3524-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:ac-comp",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:condenser",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=1S4Z-19712-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:blower",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:heater-core",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:cabin-filter",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:hood",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-16612-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:front-bumper",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-17D957-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:rear-bumper",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-17K835-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:fender-l",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-16006-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:fender-r",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-16005-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:door-fl",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-5420125-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:door-fr",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-5420124-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:door-rl",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-5424631-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:door-rr",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-5424630-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:liftgate",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-7440110-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:windshield",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=FW02306",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:roof",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-7450202-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:mirrors",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-17682-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:wipers",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:headlamp-l",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-13008-AB",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:headlamp-r",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-13008-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:taillamp-l",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2S4Z-13405-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:taillamp-r",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2S4Z-13404-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:bulbs",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=9007",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:dash",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Cluster",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:window-reg",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Front",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:door-latch",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=2M5Z-54219A64-AA",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:key",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=H72-PT",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  },
+  {
+   "key": "rockauto-pn:lugs",
+   "url": "https://www.rockauto.com/en/partsearch/?partnum=Motorcraft",
+   "status": "unverifiable (bot wall)",
+   "ok": null
+  }
+ ],
+ "_loop": "links",
+ "_at": "2026-09-26T04:33:55Z"
+}
