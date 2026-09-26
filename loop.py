@@ -66,7 +66,7 @@ def videos():
 
 def sheet():
     r=sh(['python3','snipe.py']); assert r.returncode==0,r.stderr[-300:]
-    n=open('snipe-sheet.html',encoding='utf8').count('<tr><td>'); assert n>=90,f'sheet rows {n}'
+    n=open('snipe-sheet.html',encoding='utf8').read().count('<tr><td>'); assert n>=90,f'sheet rows {n}'
     return f'{n} rows'
 
 def syntax():
@@ -133,7 +133,7 @@ def git():
     assert r.returncode==0,r.stderr[-200:]; return 'committed '+sh(['git','rev-parse','--short','HEAD']).stdout.strip()
 
 for name,fn in [('lint',lint),('videos',videos),('sheet',sheet),('syntax',syntax),('stamp',stamp),('render',render),('smoke',smoke),('git',git),('deploy',deploy)]:
-    if FAIL and name in ('deploy',): REPORT.append((name,False,'skipped: earlier failure',0)); continue
+    if FAIL and name in ('git','deploy'): REPORT.append((name,False,'skipped: earlier failure',0)); continue
     stage(name,fn)
 if SERVER: SERVER.terminate()
 with open('BUILD-REPORT.md','w') as f:
