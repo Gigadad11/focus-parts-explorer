@@ -1,5 +1,5 @@
 # Cross-verification report
-2026-09-26 04:34 UTC  apply=True
+2026-09-26 06:13 UTC  apply=True
 
 Loops: partnumbers {'parts': 94, 'confirmed': 18, 'plausible': 9, 'contradicted': 26, 'unverifiable': 41, 'unknown_ids': []} | videos 180/180 live | links 2 ok, 86 bot-walled | geometry 0 flagged | sheet 0 findings | stores {'claimed': 5, 'confirmed': 4, 'unverifiable': 1, 'not_found': 0}
 
