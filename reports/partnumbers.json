@@ -5,7 +5,11 @@
   "plausible": 9,
   "contradicted": 26,
   "unverifiable": 41,
-  "unknown_ids": []
+  "unknown_ids": [],
+  "rechecked": [
+   "fuel-filter",
+   "alternator"
+  ]
  },
  "verdicts": [
   {
@@ -24,7 +28,9 @@
     "https://www.fordpartsgiant.com/parts/ford-service-engine-asy_2m5z-6006-carm.html",
     "https://www.powertrainproducts.net/product/2000-2002-zetec/"
    ],
-   "note": "No -AA suffix exists; the 2M5Z-6006 family found (-BRM short block) is documented as 2.0L SOHC (SPI) Focus/Escort/Tracer, not the DOHC Zetec. -CARM exists but engine type unconfirmed. Treat the DOHC reman OE number as unknown."
+   "note": "No -AA suffix exists; the 2M5Z-6006 family found (-BRM short block) is documented as 2.0L SOHC (SPI) Focus/Escort/Tracer, not the DOHC Zetec. -CARM exists but engine type unconfirmed. Treat the DOHC reman OE number as unknown.",
+   "claim_hash": "c2a5c319cff47267",
+   "checked_at": "legacy"
   },
   {
    "id": "oil-filter",
@@ -43,7 +49,9 @@
     "https://www.focaljet.com/threads/does-motorcraft-still-sell-the-fl-2005-oil-filter.605619/",
     "https://www.amazon.com/WIX-Filters-51372-Spin-Filter/dp/B000C9Y14A"
    ],
-   "note": "FL-400S listed for 2000-2004 Focus and in the SVT (2.0 DOHC Zetec) manual; owner's-manual spec for the Zetec was FL-2005, now discontinued with FL-400S the accepted substitute. Wix 51372 crosses to FL-820S (4.6/5.4 V8) - wrong filter. Fram PH3600 unchecked."
+   "note": "FL-400S listed for 2000-2004 Focus and in the SVT (2.0 DOHC Zetec) manual; owner's-manual spec for the Zetec was FL-2005, now discontinued with FL-400S the accepted substitute. Wix 51372 crosses to FL-820S (4.6/5.4 V8) - wrong filter. Fram PH3600 unchecked.",
+   "claim_hash": "9c7f73ead20a1ca9",
+   "checked_at": "legacy"
   },
   {
    "id": "radiator",
@@ -62,7 +70,9 @@
     "https://www.amazon.com/KAC-Compatible-2005-2007-Automotive-3S4Z8005GA/dp/B0CHB4ZV8N",
     "https://www.fordpartsgiant.com/oem-2003-ford-focus-radiator.html"
    ],
-   "note": "CU2296 confirmed 2000-2007 Focus 2.0/2.3 (eBay: fits 2003 Focus). The exact OE suffix -AA not found; the OE crosses that appear are 3S4Z-8005-GA and YS4Z-8005-AA. Denso 221-9207 unverified (221-9073 is the Denso cross seen)."
+   "note": "CU2296 confirmed 2000-2007 Focus 2.0/2.3 (eBay: fits 2003 Focus). The exact OE suffix -AA not found; the OE crosses that appear are 3S4Z-8005-GA and YS4Z-8005-AA. Denso 221-9207 unverified (221-9073 is the Denso cross seen).",
+   "claim_hash": "3e8e8659ea15d5d6",
+   "checked_at": "legacy"
   },
   {
    "id": "rad-hoses",
@@ -82,7 +92,9 @@
     "https://www.partsgeek.com/rg28qfq-ford-focus-radiator-hose.html",
     "https://homedepot.com/p/Gates-Radiator-Coolant-Hose-2000-2004-Ford-Focus-2-0L-22500/307953402"
    ],
-   "note": "KM-4671 is the 7.3L Power Stroke Super Duty/Excursion lower hose - wrong vehicle. KM-4672 not found. Gates 22440 not found for Focus; Gates 22500 is listed for 2000-2004 Focus 2.0L."
+   "note": "KM-4671 is the 7.3L Power Stroke Super Duty/Excursion lower hose - wrong vehicle. KM-4672 not found. Gates 22440 not found for Focus; Gates 22500 is listed for 2000-2004 Focus 2.0L.",
+   "claim_hash": "d6fed66d97fbb8ed",
+   "checked_at": "legacy"
   },
   {
    "id": "airbox",
@@ -101,7 +113,9 @@
     "https://www.steeda.com/k-and-n-focus-drop-in-filter-00-04-zetec-300-33-2819",
     "https://www.oemfordpartsdirect.com/oem-parts/ford-motorcraft-trade-engine-air-filter-fa1632"
    ],
-   "note": "K&N 33-2119 is a Land Rover/Peugeot/Citroen filter; the Focus 00-04 Zetec part is 33-2819. FA-1632 exists (1996-2019 Ford listing) but no snippet tied it to Focus explicitly - not contradicted, just unproven. Wix 46650 unchecked."
+   "note": "K&N 33-2119 is a Land Rover/Peugeot/Citroen filter; the Focus 00-04 Zetec part is 33-2819. FA-1632 exists (1996-2019 Ford listing) but no snippet tied it to Focus explicitly - not contradicted, just unproven. Wix 46650 unchecked.",
+   "claim_hash": "3a7305dc00ccb1e8",
+   "checked_at": "legacy"
   },
   {
    "id": "fuel-tank",
@@ -117,7 +131,9 @@
     "https://www.walmart.com/ip/Spectra-Premium-F88A-Fuel-Tank-Fits-select-2003-2007-FORD-FOCUS/920592937",
     "https://www.showmetheparts.com/spectrafuel-parts/spectrafuel-fg76a.html"
    ],
-   "note": "4S4Z-9002-AA not found anywhere (1S4Z/5S4Z/6S4Z/7S4Z/9S4Z exist). Spectra F76A not found; FG76A is a sending unit, and the Spectra tank for 2003-2007 Focus is F88A. Wagon-specific tank number still needs a catalog lookup."
+   "note": "4S4Z-9002-AA not found anywhere (1S4Z/5S4Z/6S4Z/7S4Z/9S4Z exist). Spectra F76A not found; FG76A is a sending unit, and the Spectra tank for 2003-2007 Focus is F88A. Wagon-specific tank number still needs a catalog lookup.",
+   "claim_hash": "ce7e3d41a4222610",
+   "checked_at": "legacy"
   },
   {
    "id": "starter",
@@ -134,7 +150,9 @@
     "https://www.amazon.com/Electrical-410-14051-98Ap-11000-Ec-Ys4Z-11002-Ea-YS4Z-11002-EB/dp/B007Y85O3O",
     "https://www.amazon.com/Starter-Focus-2000-2004-Automatic-98AB-11000-EC/dp/B00TPM0716"
    ],
-   "note": "None of SA-830/SA-829, 1S7Z-11002-AA, Lester 17830/17831, or SFD0032 surfaced for any vehicle; the 2000-2004 Focus Zetec starter is consistently SA-886 / YS4Z-11002 / SFD0090 / Lester 6655. Claimed numbers are almost certainly wrong; manual-vs-auto split still needs confirming."
+   "note": "None of SA-830/SA-829, 1S7Z-11002-AA, Lester 17830/17831, or SFD0032 surfaced for any vehicle; the 2000-2004 Focus Zetec starter is consistently SA-886 / YS4Z-11002 / SFD0090 / Lester 6655. Claimed numbers are almost certainly wrong; manual-vs-auto split still needs confirming.",
+   "claim_hash": "ce8da29a8d8487fa",
+   "checked_at": "legacy"
   },
   {
    "id": "ckp-sensor",
@@ -151,7 +169,9 @@
     "https://www.fordoempartsdirect.com/oem-parts/ford-motorcraft-trade-engine-crankshaft-position-sensor-dy888",
     "https://www.amazon.com/Crankshaft-1S7Z-6C315-AA-Corrosion-resistance-durability/dp/B0D9K6WKJ5"
    ],
-   "note": "OE 1S7Z-6C315-AAA explicitly lists Focus 2.0L DOHC (2001-2013). DY-1194 not found; the Motorcraft number for this sensor is DY-888."
+   "note": "OE 1S7Z-6C315-AAA explicitly lists Focus 2.0L DOHC (2001-2013). DY-1194 not found; the Motorcraft number for this sensor is DY-888.",
+   "claim_hash": "fe3f1ba515764300",
+   "checked_at": "legacy"
   },
   {
    "id": "flex-pipe",
@@ -167,7 +187,9 @@
     "https://www.amazon.com/2000-2004-Ford-Focus-Front-Exhaust/dp/B014Q07HD2",
     "https://www.magnaflow.com/products/106-0127-brexhaust-2003-2007-ford-focus-2-3l-2005-2007-ford-focus-2-0l-direct-fit-exhaust-system-kit-106-0127"
    ],
-   "note": "3S4Z-5246-AA only surfaces near a MagnaFlow kit for 2003-07 2.3L / 2005-07 2.0L (Duratec) - risk it is the Duratec pipe. Walker 55254 not found; Walker's 2000-2004 Focus pipe is 52242. SOHC and DOHC front pipes differ - buy by engine code."
+   "note": "3S4Z-5246-AA only surfaces near a MagnaFlow kit for 2003-07 2.3L / 2005-07 2.0L (Duratec) - risk it is the Duratec pipe. Walker 55254 not found; Walker's 2000-2004 Focus pipe is 52242. SOHC and DOHC front pipes differ - buy by engine code.",
+   "claim_hash": "915815bbd486330f",
+   "checked_at": "legacy"
   },
   {
    "id": "clutch",
@@ -183,7 +205,9 @@
     "https://www.partsgeek.com/bzmjpq5-ford-focus-clutch-kit.html",
     "https://www.motorcraft.com/content/dam/ford-motorcraft/es_mx/inicio/ecatalog/pdf/mcmx-catalogo-kit-clutch.pdf"
    ],
-   "note": "CK-8135, 1S7Z-7B546-BA and LuK 07-141 all absent; LuK 07-175 is the documented 2002-2004 Focus 2.0 DOHC kit. Exedy FMK1005 unchecked (search budget exhausted)."
+   "note": "CK-8135, 1S7Z-7B546-BA and LuK 07-141 all absent; LuK 07-175 is the documented 2002-2004 Focus 2.0 DOHC kit. Exedy FMK1005 unchecked (search budget exhausted).",
+   "claim_hash": "07014d6dd31ac88e",
+   "checked_at": "legacy"
   },
   {
    "id": "strut-fl",
@@ -202,7 +226,9 @@
     "https://www.partsgeek.com/4xy67qk-ford-focus-strut-and-coil-spring-assembly.html",
     "https://www.suspension.com/monroe-171504"
    ],
-   "note": "AST-48 not found as such; ASTL-48 is a loaded strut for 2005-2007 Focus. Monroe 171528L/R not found - the 2000-2005 Focus Quick-Struts are 171505/171504. KYB SR4029/SR4030 unchecked."
+   "note": "AST-48 not found as such; ASTL-48 is a loaded strut for 2005-2007 Focus. Monroe 171528L/R not found - the 2000-2005 Focus Quick-Struts are 171505/171504. KYB SR4029/SR4030 unchecked.",
+   "claim_hash": "989e6eaa28db475f",
+   "checked_at": "legacy"
   },
   {
    "id": "shock-r",
@@ -219,7 +245,9 @@
     "https://www.amazon.com/MOSTPLUS-Complete-Absorbers-Compatible-2002-2004/dp/B08V4T4FZG",
     "https://www.shockwarehouse.com/products/kyb-343429-rear-excel-g-shock-absorber-ford-focus"
    ],
-   "note": "ASH-1103, Monroe 5964 and KYB 343309 all absent from results. Wagon-specific KYB is 343291; wagon spring rates still differ from sedan."
+   "note": "ASH-1103, Monroe 5964 and KYB 343309 all absent from results. Wagon-specific KYB is 343291; wagon spring rates still differ from sedan.",
+   "claim_hash": "eed69c7f7919f93b",
+   "checked_at": "legacy"
   },
   {
    "id": "rotor-f",
@@ -238,7 +266,9 @@
     "https://www.amazon.com/Raybestos-980112-Advanced-Technology-Brake/dp/B000C6ZE80",
     "https://newparts.com/motorcraft-brrf-95-disc-brake-rotor-front"
    ],
-   "note": "Raybestos 980112 sells as a Focus rotor but year not explicit in snippets; the Ford OEM 02-04 Focus front rotor that surfaced is 2M5Z-1125-AA (superseded by 7S6Z-1125-B). BRR-95 not found (BRRF-95 is a truck rotor). Bosch 20010358 unchecked."
+   "note": "Raybestos 980112 sells as a Focus rotor but year not explicit in snippets; the Ford OEM 02-04 Focus front rotor that surfaced is 2M5Z-1125-AA (superseded by 7S6Z-1125-B). BRR-95 not found (BRRF-95 is a truck rotor). Bosch 20010358 unchecked.",
+   "claim_hash": "f19b8d805496860e",
+   "checked_at": "legacy"
   },
   {
    "id": "shoes-r",
@@ -255,7 +285,9 @@
     "https://www.amazon.com/Wagner-Z764-Brake-Shoe-Rear/dp/B000CLSNCE",
     "https://www.partsgeek.com/ccmp9tw-ford-focus-brake-shoe-set.html"
    ],
-   "note": "Wagner Z764 documented for 2000-2011 Focus rear drums. BRS-13 / BR-2E not found; the Motorcraft shoe set is BR-1265. Raybestos 764PG unchecked (same 764 series)."
+   "note": "Wagner Z764 documented for 2000-2011 Focus rear drums. BRS-13 / BR-2E not found; the Motorcraft shoe set is BR-1265. Raybestos 764PG unchecked (same 764 series).",
+   "claim_hash": "0fb2bc5a30aa25b8",
+   "checked_at": "legacy"
   },
   {
    "id": "tie-rods",
@@ -271,7 +303,9 @@
     "https://www.moog-suspension-parts.com/moog-es3587",
     "https://www.amazon.com/Passenger-Compatible-Replacement-YS4Z3A130AA-ES3587/dp/B06XG32MF8"
    ],
-   "note": "1S4Z-3A130-AA and Moog ES3579/ES3580 never appear; the Focus 2000-2006 outer tie rods are YS4Z-3A130-xx crossing to Moog ES3587/ES3588."
+   "note": "1S4Z-3A130-AA and Moog ES3579/ES3580 never appear; the Focus 2000-2006 outer tie rods are YS4Z-3A130-xx crossing to Moog ES3587/ES3588.",
+   "claim_hash": "c816963a86546408",
+   "checked_at": "legacy"
   },
   {
    "id": "condenser",
@@ -290,7 +324,9 @@
     "https://www.fordonlyparts.com/2000-2004-ford-focus-air-conditioning-condenser-a-c/",
     "https://partshawk.com/ford-focus-a-c-condenser-denso-477-0751.html"
    ],
-   "note": "Spectra 7-4879 fits 2000-2004 Focus 2.0L all bodies. OE suffix found is -AB not -AA. Denso 477-0670 not found; the Denso for 2000-2004 Focus is 477-0751."
+   "note": "Spectra 7-4879 fits 2000-2004 Focus 2.0L all bodies. OE suffix found is -AB not -AA. Denso 477-0670 not found; the Denso for 2000-2004 Focus is 477-0751.",
+   "claim_hash": "126a0c912dd2440d",
+   "checked_at": "legacy"
   },
   {
    "id": "hood",
@@ -304,7 +340,9 @@
     "https://parts.lakelandford.com/p/Ford__Focus/Hood-Panel/54279174/YS4Z16612SA.html",
     "https://auto-bodyparts.com/ford-focus-hood-oem-ys4z16612sa-2000-2004.html"
    ],
-   "note": "2M5Z-16612-AA not found for any vehicle; the 2000-2004 Focus hood is YS4Z-16612-SA."
+   "note": "2M5Z-16612-AA not found for any vehicle; the 2000-2004 Focus hood is YS4Z-16612-SA.",
+   "claim_hash": "e4b56148376748a1",
+   "checked_at": "legacy"
   },
   {
    "id": "fender-r",
@@ -320,7 +358,9 @@
     "https://paintedautoparts.com/ford-focus-fender-right-oem-ys4z16005ca-2000-2004.html",
     "https://www.amazon.com/Go-Parts-Compatible-2000-2004-Passenger-Replacement/dp/B07F5XJ4BC"
    ],
-   "note": "Partslink FO1241210 = RH fender, 2000-2004 Focus, OE YS4Z-16005-CA. 2M5Z-16005-AA not found."
+   "note": "Partslink FO1241210 = RH fender, 2000-2004 Focus, OE YS4Z-16005-CA. 2M5Z-16005-AA not found.",
+   "claim_hash": "6fabaf52de127d4a",
+   "checked_at": "legacy"
   },
   {
    "id": "door-rr",
@@ -332,7 +372,9 @@
     "https://www.focusfanatics.com/threads/door-swap-years.339122/",
     "https://www.fordpartsgiant.com/parts/ford-door-asy-rear-less-hinges_ep5z-5424630-a.html"
    ],
-   "note": "2M5Z-5424630-AA not found; only 5S4Z-5424630-BA (RH rear door shell, sedan/hatch) surfaced, and sedan/wagon/hatch rear doors differ. Wagon RH rear door number still needs a catalog lookup."
+   "note": "2M5Z-5424630-AA not found; only 5S4Z-5424630-BA (RH rear door shell, sedan/hatch) surfaced, and sedan/wagon/hatch rear doors differ. Wagon RH rear door number still needs a catalog lookup.",
+   "claim_hash": "ad35b9a40e36dc9c",
+   "checked_at": "legacy"
   },
   {
    "id": "mirrors",
@@ -354,7 +396,9 @@
     "https://www.partsgeek.com/g9nlc5b-ford-focus-mirror.html",
     "https://www.go-parts.com/fo1320180-2000-2007-ford-focus-side-view-mirror-left-driver-side-s-se-lx-sony-limited-edition-zts-ztw-zx3-zx5-st-ses-zxw-zx4-st-zx4.html"
    ],
-   "note": "Dorman 955-1129/1128 are Excursion / Super Duty mirrors - wrong vehicle. Partslink FO1320180 (LH) confirmed for 2000-2007 Focus incl. ZTW wagon. 2M5Z-17682-AA not found (2M5Z-17682-BA exists, fitment unshown)."
+   "note": "Dorman 955-1129/1128 are Excursion / Super Duty mirrors - wrong vehicle. Partslink FO1320180 (LH) confirmed for 2000-2007 Focus incl. ZTW wagon. 2M5Z-17682-AA not found (2M5Z-17682-BA exists, fitment unshown).",
+   "claim_hash": "200b24dff26bf717",
+   "checked_at": "legacy"
   },
   {
    "id": "taillamp-l",
@@ -371,7 +415,9 @@
     "https://www.fordpartsgiant.com/parts/ford-lamp-assy-rear-stop-and-flasher_2s4z-13405-aa.html",
     "https://parts.lakelandford.com/p/Ford__/Lamp-Tail/54074700/2S4Z13405CA.html"
    ],
-   "note": "2S4Z-13405-AA = LH rear lamp, Focus 2000-2003 (Partslink FO2800187); 2003 is a split year - later-2003 wagons use 2S4Z-13405-CA (FO2800192). Check build date. TYC 11-5964-01 not found."
+   "note": "2S4Z-13405-AA = LH rear lamp, Focus 2000-2003 (Partslink FO2800187); 2003 is a split year - later-2003 wagons use 2S4Z-13405-CA (FO2800192). Check build date. TYC 11-5964-01 not found.",
+   "claim_hash": "e3114bd91fdb83eb",
+   "checked_at": "legacy"
   },
   {
    "id": "dash",
@@ -385,7 +431,9 @@
     "https://parts.lakelandford.com/p/ford__/INSTANT-cluster-Instrument-Cluster-2000-04-Instrument-Cluster/54166005/2M5Z10849DA.html",
     "https://www.fordpartsgiant.com/parts/ford-instrument-cluster_2m5z-10849-da.html"
    ],
-   "note": "2M5Z-10849-DA listed for 2000-2004 Focus 2.0 DOHC Zetec; suffix is option-specific as noted."
+   "note": "2M5Z-10849-DA listed for 2000-2004 Focus 2.0 DOHC Zetec; suffix is option-specific as noted.",
+   "claim_hash": "8fc2e839d679ec13",
+   "checked_at": "legacy"
   },
   {
    "id": "key",
@@ -403,7 +451,9 @@
     "https://www.locksmithkeyless.com/products/2003-ford-focus-keyless-entry-4b-fcc-cwtwb1u331-cwtwb1u345-red",
     "https://www.amazon.com/Ford-Transponder-key-Ilco-H72-PT/dp/B004DYRGM4"
    ],
-   "note": "CWTWB1U331 confirmed as the 2000-2004 Focus 4-button fob (OE 2S4T-15K601-AA). H72-PT confirmed as the Ford PATS blank of the era (Focus not named in snippets but generic Ford H72 profile)."
+   "note": "CWTWB1U331 confirmed as the 2000-2004 Focus 4-button fob (OE 2S4T-15K601-AA). H72-PT confirmed as the Ford PATS blank of the era (Focus not named in snippets but generic Ford H72 profile).",
+   "claim_hash": "281e8e98a5a0aee6",
+   "checked_at": "legacy"
   },
   {
    "id": "wheel-rr",
@@ -419,7 +469,9 @@
     "https://tiresize.com/tires/Ford/Focus/2003/ZTW/",
     "https://www.1010tires.com/Tires/2003/Ford/Focus/4-Dr-Wagon-ZTW"
    ],
-   "note": "2003 Focus ZTW wagon OE sizes: 195/60R15 or 205/50R16."
+   "note": "2003 Focus ZTW wagon OE sizes: 195/60R15 or 205/50R16.",
+   "claim_hash": "33203c34d3cddc8e",
+   "checked_at": "legacy"
   },
   {
    "id": "valve-cover",
@@ -440,7 +492,9 @@
     "https://www.oemfordpartsdirect.com/oem-parts/ford-valve-cover-gasket-ys4z6584aa",
     "https://www.homedepot.com/p/FEL-PRO-Engine-Valve-Cover-Gasket-Set-2002-2004-Ford-Focus-2-0L-VS-50581-R/308366345"
    ],
-   "note": "1S7Z-6584-AA is the 2.3L Duratec gasket; VS-50600 is a Fel-Pro number with no Focus evidence. Zetec DOHC gasket is YS4Z-6584-AA / Fel-Pro VS 50581 R."
+   "note": "1S7Z-6584-AA is the 2.3L Duratec gasket; VS-50600 is a Fel-Pro number with no Focus evidence. Zetec DOHC gasket is YS4Z-6584-AA / Fel-Pro VS 50581 R.",
+   "claim_hash": "00a406b22bfaf684",
+   "checked_at": "legacy"
   },
   {
    "id": "motor-mounts",
@@ -456,7 +510,9 @@
     "https://www.ebay.com/itm/263877314471",
     "https://ford.worldoemparts.com/oem-parts/ford-rear-insulator-ys4z6068ma"
    ],
-   "note": "None of the 1S4Z-6038/6068 numbers appear anywhere; the 2000-2004 Focus mounts found carry YS4Z prefixes (YS4Z-6038-BA is explicitly listed for 2.0L DOHC)."
+   "note": "None of the 1S4Z-6038/6068 numbers appear anywhere; the 2000-2004 Focus mounts found carry YS4Z prefixes (YS4Z-6038-BA is explicitly listed for 2.0L DOHC).",
+   "claim_hash": "f8e80d7125a90b60",
+   "checked_at": "legacy"
   },
   {
    "id": "rad-fan",
@@ -473,7 +529,9 @@
     "https://www.karparts360.com/2000-2002-ford-focus-radiator-cooling-fan-replaces-1s4z-8c607-cc-fo3115143-clx-m0-620720-cl360a55",
     "https://www.walmart.com/ip/Dorman-620-142-Engine-Cooling-Fan-Assembly-for-Specific-Ford-Models-Fits-2002-Ford-Focus/42932584"
    ],
-   "note": "YS4Z-8C607-AB, TYC 620590 and Dorman 620-141 not found. Related YS4Z-8C607-BA -> 1S4Z-8C607-DD is the no-A/C SOHC fan; the w/AC 2000-2002 fan is 1S4Z-8C607-CC. 2003-2004 fan number still unconfirmed."
+   "note": "YS4Z-8C607-AB, TYC 620590 and Dorman 620-141 not found. Related YS4Z-8C607-BA -> 1S4Z-8C607-DD is the no-A/C SOHC fan; the w/AC 2000-2002 fan is 1S4Z-8C607-CC. 2003-2004 fan number still unconfirmed.",
+   "claim_hash": "569be542e1402738",
+   "checked_at": "legacy"
   },
   {
    "id": "coolant-res",
@@ -489,7 +547,9 @@
     "https://www.sixityauto.com/dorman-oe-solutions-603-208-engine-coolant-reservoir-for-2f2z8a080aa-9c3z8101b-xf2z8a080aa-2f080a-3101018754.html",
     "https://www.amazon.com/Go-Parts-2000-2004-Reservoir-Replacement-FO3014105/dp/B07DZYW2ZN"
    ],
-   "note": "1S4Z-8A080-AA not found; Dorman 603-208 is a Taurus/Sable bottle. Focus bottle is 3S4Z-8A080-AC."
+   "note": "1S4Z-8A080-AA not found; Dorman 603-208 is a Taurus/Sable bottle. Focus bottle is 3S4Z-8A080-AC.",
+   "claim_hash": "343e47f967de1ec5",
+   "checked_at": "legacy"
   },
   {
    "id": "maf",
@@ -506,7 +566,9 @@
     "https://partshawk.com/motorcraft-afls-131-mass-air-flow-sensor.html",
     "https://www.walmart.com/ip/Motorcraft-Mass-Air-Flow-Sensor-AFLS-132-Fits-select-2003-2007-FORD-FOCUS-2004-2007-FORD-TAURUS/34185570"
    ],
-   "note": "AFLS-141 and 1S7F-12B579-AA not found; MAF0028 is a 4.6 V8 sensor. AFLS-132 is the 2003-2007 Focus/Taurus (Duratec) unit; AFLS-131 shows Focus fitment but engine not stated."
+   "note": "AFLS-141 and 1S7F-12B579-AA not found; MAF0028 is a 4.6 V8 sensor. AFLS-132 is the 2003-2007 Focus/Taurus (Duratec) unit; AFLS-131 shows Focus fitment but engine not stated.",
+   "claim_hash": "b5613795670e7eb8",
+   "checked_at": "legacy"
   },
   {
    "id": "fuel-filter",
@@ -516,15 +578,16 @@
     "Wix 33595"
    ],
    "wrong": [],
-   "suggested": [
-    "Motorcraft FG-1114 (supersedes FG-986B)"
-   ],
+   "suggested": [],
    "evidence": [
+    "https://www.rockauto.com/en/parts/motorcraft,FG986B,fuel+filter,6200",
     "https://www.amazon.com/Motorcraft-FG986B-FG1114-Fuel-Filter/dp/B0002JMV06",
-    "https://www.amazon.com/33595-Replacement-Compatible-Lincoln-Mercury/dp/B000C9WJV2",
-    "https://partshawk.com/wix-33595-fuel-filter.html"
+    "https://www.carparts.com/details/Ford/Focus/WIX/Fuel_Filter/2006/WIX33595.html",
+    "https://www.amazon.com/33595-Replacement-Compatible-Lincoln-Mercury/dp/B000C9WJV2"
    ],
-   "note": "FG-986B listed for 2000-2007 Focus (now FG-1114); Wix 33595 listed 2000-2008 Focus. Fram G7315 found as a product but no Focus fitment shown."
+   "note": "I did not open the pages. The search summary lists FG-986B as fitting the Focus 2.0 for 2000-2006, which covers 2003, but it does not name the DOHC engine specifically. Wix 33595 was only confirmed for a 2006 Focus (plus Ford 1998-2015 in general), so treat it as likely rather than verified for 2003. Fram G7315 was not checked.",
+   "claim_hash": "a39b470b8488fef3",
+   "checked_at": "2026-09-26T16:23:54Z"
   },
   {
    "id": "battery",
@@ -538,7 +601,9 @@
     "https://www.ford.com/product/vehicle-battery-p4000106678",
     "https://ford.oempartsonline.com/oem-parts/ford-vehicle-battery-bxt96r500"
    ],
-   "note": "BXT-96R-590 (590 CCA) listed as fitting 2003 Focus; BXT-96R-500 is the 500 CCA 2000-2019 variant."
+   "note": "BXT-96R-590 (590 CCA) listed as fitting 2003 Focus; BXT-96R-500 is the 500 CCA 2000-2019 variant.",
+   "claim_hash": "872208045994b0b7",
+   "checked_at": "legacy"
   },
   {
    "id": "pcm",
@@ -551,7 +616,9 @@
     "https://www.obdtester.com/ford-ecu-update/focus/2.0l_spi/2003/3S4A-12A650-GC",
     "https://www.importapart.com/product/02-03-ford-focus-svt-dohc-mt-ecu-ecm-pcm-engine-computer-2s4a-12a650-aff-1026/"
    ],
-   "note": "No number claimed. 2003 Focus 2.0L PCMs carry 3S4A-12A650-xx service numbers (hardware LP2-324); suffix is calibration-specific (e.g. -GC is 2.0 SPI), so the tear tag must be read."
+   "note": "No number claimed. 2003 Focus 2.0L PCMs carry 3S4A-12A650-xx service numbers (hardware LP2-324); suffix is calibration-specific (e.g. -GC is 2.0 SPI), so the tear tag must be read.",
+   "claim_hash": "3f7686b2d7f9735b",
+   "checked_at": "legacy"
   },
   {
    "id": "muffler",
@@ -563,7 +630,9 @@
     "https://www.ebay.com/itm/New-OEM-2000-2003-Ford-Focus-2-0L-Front-Exhaust-Muffler-Assembly-1S4Z-5230-AA-/153439056131",
     "https://www.amazon.com/Walker-54511-Quiet-Flow-Stainless-Muffler/dp/B000VL1PNO"
    ],
-   "note": "3S4Z-5230-AA, Walker 21550 and Bosal 279-135 not found. Only Focus mufflers surfaced: 1S4Z-5230-AA (2000-2003 2.0L FRONT muffler) and Walker 54511/47775; no wagon-specific rear muffler evidence."
+   "note": "3S4Z-5230-AA, Walker 21550 and Bosal 279-135 not found. Only Focus mufflers surfaced: 1S4Z-5230-AA (2000-2003 2.0L FRONT muffler) and Walker 54511/47775; no wagon-specific rear muffler evidence.",
+   "claim_hash": "5a76a82793c73d59",
+   "checked_at": "legacy"
   },
   {
    "id": "cv-axle-l",
@@ -579,7 +648,9 @@
     "https://www.cardone.com/product/cv-axle-assembly-66-2170",
     "https://www.partsgeek.com/8ncxvpx-ford-focus-cv-axle-assembly.html"
    ],
-   "note": "1S4Z-3A427-BA, Cardone 66-2081 and TrakMotive FD-8140 not found. FD-8038 is the LH Focus axle with fitment evidence; transmission (auto/manual) not stated."
+   "note": "1S4Z-3A427-BA, Cardone 66-2081 and TrakMotive FD-8140 not found. FD-8038 is the LH Focus axle with fitment evidence; transmission (auto/manual) not stated.",
+   "claim_hash": "14a40291002166b2",
+   "checked_at": "legacy"
   },
   {
    "id": "strut-fr",
@@ -596,7 +667,9 @@
     "https://www.suspension.com/monroe-171504",
     "https://www.amazon.com/Monroe-171504-Quick-Strut-Complete-Assembly/dp/B001ECPX0U"
    ],
-   "note": "AST-47 and Monroe 171528R not found; SR4030 is a driver-side unit. RH 2000-2005 Focus Quick-Strut is Monroe 171504 (LH 171505)."
+   "note": "AST-47 and Monroe 171528R not found; SR4030 is a driver-side unit. RH 2000-2005 Focus Quick-Strut is Monroe 171504 (LH 171505).",
+   "claim_hash": "13f6f24e64ef3359",
+   "checked_at": "legacy"
   },
   {
    "id": "rear-blade",
@@ -610,7 +683,9 @@
     "https://www.amazon.com/Dorman-522-500-Control-Arm/dp/B00NF1QJLU",
     "https://www.partsgeek.com/mmparts/trailing_arm/ford/focus.html"
    ],
-   "note": "2M5Z-5500-AA not found in any listing; Dorman 522-500 is a Toyota front control arm."
+   "note": "2M5Z-5500-AA not found in any listing; Dorman 522-500 is a Toyota front control arm.",
+   "claim_hash": "b7701301473638e9",
+   "checked_at": "legacy"
   },
   {
    "id": "pads-f",
@@ -626,7 +701,9 @@
     "https://partshawk.com/ford-focus-front-disc-brake-pad-set-raybestos-brakes-mgd816c.html",
     "https://shop.advanceautoparts.com/p/akebono-proact-ceramic-brake-pads-ultra-premium-act816/14340100-P"
    ],
-   "note": "Motorcraft BR-1214 / BR-1250 not found; Wagner QC816 not found by that exact name. The D816 pad family (Akebono ACT816, Wagner ZX816/MD816) is listed for Focus, year not explicit."
+   "note": "Motorcraft BR-1214 / BR-1250 not found; Wagner QC816 not found by that exact name. The D816 pad family (Akebono ACT816, Wagner ZX816/MD816) is listed for Focus, year not explicit.",
+   "claim_hash": "a29492caa7b2dc82",
+   "checked_at": "legacy"
   },
   {
    "id": "master-cyl",
@@ -640,7 +717,9 @@
     "https://partshawk.com/ford-focus-brake-master-cylinder-cardone-industries-13-2982.html",
     "https://www.partsgeek.com/mmparts/master_cylinder/ford/focus.html"
    ],
-   "note": "BRMC-84, 2M5Z-2140-AA and Cardone 13-2924 not found; Dorman M630115 not checked (search budget). 13-2982 is the Cardone Focus number surfaced."
+   "note": "BRMC-84, 2M5Z-2140-AA and Cardone 13-2924 not found; Dorman M630115 not checked (search budget). 13-2982 is the Cardone Focus number surfaced.",
+   "claim_hash": "5147a3968f3eef49",
+   "checked_at": "legacy"
   },
   {
    "id": "ps-pump",
@@ -656,7 +735,9 @@
     "https://www.cardone.com/product/power-steering-pump-20-289",
     "https://www.cardone.com/product/power-steering-pump-20-292"
    ],
-   "note": "STP-86 and 1S4Z-3A674-AA not found; Cardone 20-289 is an Escort pump. Focus 2000-2003 is Cardone 20-292."
+   "note": "STP-86 and 1S4Z-3A674-AA not found; Cardone 20-289 is an Escort pump. Focus 2000-2003 is Cardone 20-292.",
+   "claim_hash": "004d5247278ee1ef",
+   "checked_at": "legacy"
   },
   {
    "id": "blower",
@@ -670,7 +751,9 @@
     "https://www.walmart.com/ip/TYC-Front-HVAC-Blower-Motor-compatible-with-Ford-Focus-2000-2007/3364424327",
     "https://www.partsgeek.com/mmparts/blower_motor/ford/focus.html"
    ],
-   "note": "MM-1003, 1S4Z-19805-AA, TYC 700041, Dorman 973-046 and resistor 1S4Z-18591-AA not confirmed by number; MM-872 is the Motorcraft blower listed for 2000-2007 Focus and TYC does list a 2000-2007 Focus blower (number unconfirmed)."
+   "note": "MM-1003, 1S4Z-19805-AA, TYC 700041, Dorman 973-046 and resistor 1S4Z-18591-AA not confirmed by number; MM-872 is the Motorcraft blower listed for 2000-2007 Focus and TYC does list a 2000-2007 Focus blower (number unconfirmed).",
+   "claim_hash": "f000db1ff7f0c7b2",
+   "checked_at": "legacy"
   },
   {
    "id": "front-bumper",
@@ -686,7 +769,9 @@
     "https://www.fordpartsgiant.com/parts/ford-cover_2m5z-17d957-faacp.html",
     "https://www.fordpartsgiant.com/oem-2001-ford-focus-bumper.html"
    ],
-   "note": "Base number 2M5Z-17D957 fits 2000-2004 Focus but the listed suffix is -FAA/-FAACP, not -AA. Partslink FO1000512 not found (FO1000572 is the 2005-2007 Focus cover)."
+   "note": "Base number 2M5Z-17D957 fits 2000-2004 Focus but the listed suffix is -FAA/-FAACP, not -AA. Partslink FO1000512 not found (FO1000572 is the 2005-2007 Focus cover).",
+   "claim_hash": "26ae49f4dd72256e",
+   "checked_at": "legacy"
   },
   {
    "id": "door-fl",
@@ -700,7 +785,9 @@
     "https://www.fordpartsgiant.com/parts-list/2005-ford-focus/body_and_paint/front_doors_hinges_weatherstrips.html",
     "https://www.fordpartsgiant.com/parts/ford-door-asy-front_f1ez-5820125-a.html"
    ],
-   "note": "2M5Z-5420125-AA not found; the first-gen Focus LH door shell surfaced is YS4Z-5420125-SA."
+   "note": "2M5Z-5420125-AA not found; the first-gen Focus LH door shell surfaced is YS4Z-5420125-SA.",
+   "claim_hash": "485c815513125d2b",
+   "checked_at": "legacy"
   },
   {
    "id": "liftgate",
@@ -717,7 +804,9 @@
     "https://www.liftsupportsdepot.com/strong-arm-4358-gas-charged-tailgate-lift-support/",
     "https://www.carid.com/strongarm/liftgate-lift-support-mpn-4358.html"
    ],
-   "note": "4381 is a Lexus hood strut. 2M5Z-7440110-AA and 2M5Z-74406A10-AA not found; OE strut cross is YS41-N406A10-A."
+   "note": "4381 is a Lexus hood strut. 2M5Z-7440110-AA and 2M5Z-74406A10-AA not found; OE strut cross is YS41-N406A10-A.",
+   "claim_hash": "560a4a92481266fd",
+   "checked_at": "legacy"
   },
   {
    "id": "wipers",
@@ -733,7 +822,9 @@
     "https://mywiperblades.com/2003-ford-focus_wagon-wipers.htm",
     "https://oreillyauto.com/shop/b/wiper-blade-motor-16494/wiper-blade-12822/a351d183a1bd/2003/ford/focus"
    ],
-   "note": "WW-2201/WW-1801 are real Motorcraft blades (generic Ford fitment). Size charts give 2003 Focus wagon 22\" driver / 19\" passenger / 15\" rear, so 18\" passenger and 14\" rear (WW-1401) may be one inch short; WW-1401 not confirmed."
+   "note": "WW-2201/WW-1801 are real Motorcraft blades (generic Ford fitment). Size charts give 2003 Focus wagon 22\" driver / 19\" passenger / 15\" rear, so 18\" passenger and 14\" rear (WW-1401) may be one inch short; WW-1401 not confirmed.",
+   "claim_hash": "1eade080374b8f9f",
+   "checked_at": "legacy"
   },
   {
    "id": "taillamp-r",
@@ -750,7 +841,9 @@
     "https://www.amazon.com/RIGHT-2003-2007-FO2801192-2S4Z-13404-CA-2S4Z13404CA/dp/B06WLLHR1V",
     "https://www.walmart.com/ip/NEW-TAIL-LIGHT-PAIR-FITS-FORD-FOCUS-03-07-2S4Z13405CA-13405-FO2801192-FO2800192-2S4Z-13404-CA-2S4Z13404CA-2S4Z-13404-CA/580538025"
    ],
-   "note": "TYC 11-5963-01 crosses to 2S4Z-13404-AA, RH 2003-2007 Focus wagon; OE superseded to 2S4Z-13404-CA."
+   "note": "TYC 11-5963-01 crosses to 2S4Z-13404-AA, RH 2003-2007 Focus wagon; OE superseded to 2S4Z-13404-CA.",
+   "claim_hash": "a3ff19f073540068",
+   "checked_at": "legacy"
   },
   {
    "id": "window-reg",
@@ -769,7 +862,9 @@
     "https://www.ebay.com/p/75117555",
     "https://partshawk.com/ford-focus-front-left-power-window-motor-and-regulator-assembly-dorman-products-741-874.html"
    ],
-   "note": "741-878 is a GM N-body regulator. Focus fronts are Dorman 741-874/875 (rears 741-584/585). 2M5Z-5423209-AA not found; Dorman 741-879 not checked."
+   "note": "741-878 is a GM N-body regulator. Focus fronts are Dorman 741-874/875 (rears 741-584/585). 2M5Z-5423209-AA not found; Dorman 741-879 not checked.",
+   "claim_hash": "a76a3a540c887ed6",
+   "checked_at": "legacy"
   },
   {
    "id": "wheel-fl",
@@ -783,7 +878,9 @@
     "https://factorywheelwarehouse.com/2002-2004-ford-focus-svt-focus-aluminium-17-factory-oem-silver-wheel-03481u20.html",
     "https://www.fordpartsgiant.com/parts/ford-wheel-asy_2m5z-1007-aa.html"
    ],
-   "note": "2M5Z-1007-AA is the SVT 17\" alloy. No 2000-2004 15x6 steel wheel OE number surfaced (Road Ready/Chicago Wheel listings are 2004-2011 / 2008+)."
+   "note": "2M5Z-1007-AA is the SVT 17\" alloy. No 2000-2004 15x6 steel wheel OE number surfaced (Road Ready/Chicago Wheel listings are 2004-2011 / 2008+).",
+   "claim_hash": "9f64f2841b0c9524",
+   "checked_at": "legacy"
   },
   {
    "id": "lugs",
@@ -797,7 +894,9 @@
     "https://www.dormanproducts.com/p-48467-611-263.aspx",
     "https://www.summitracing.com/parts/rnb-611-303/overview/make/ford/model/focus"
    ],
-   "note": "611-263 is an M12-1.5 flat-top 35.9mm nut with no Focus fitment shown; W710294-S441 not checked (search budget). Dorman lists 611-303 for Focus."
+   "note": "611-263 is an M12-1.5 flat-top 35.9mm nut with no Focus fitment shown; W710294-S441 not checked (search budget). Dorman lists 611-303 for Focus.",
+   "claim_hash": "19d0d3255a6bd846",
+   "checked_at": "legacy"
   },
   {
    "id": "timing-belt",
@@ -816,7 +915,9 @@
     "https://www.carparts.com/details/Ford/Focus/Gates/Timing_Belt_Kit/2002/GATTCK294A.html",
     "https://www.amazon.com/Gates-TCK294B-Timing-Belt-Component/dp/B002ERKLXS"
    ],
-   "note": "TCK283/95283K1 are the 2.0 SOHC SPI (VIN P) 99-tooth kit; Zetec DOHC is the 129-tooth TCK294 family. Motorcraft TB-259 not found anywhere."
+   "note": "TCK283/95283K1 are the 2.0 SOHC SPI (VIN P) 99-tooth kit; Zetec DOHC is the 129-tooth TCK294 family. Motorcraft TB-259 not found anywhere.",
+   "claim_hash": "b18a0a5644b956fc",
+   "checked_at": "legacy"
   },
   {
    "id": "serp-belt",
@@ -835,7 +936,9 @@
     "https://www.sixityauto.com/gates-micro-v-serpentine-belt-for-2003-2004-ford-focus-2-0l-l4-2020023036.html",
     "https://www.tascaparts.com/oem-parts/ford-accessory-drive-belt-tensioner-assembly-ys4z6b209aa"
    ],
-   "note": "K060882 (88.3in 6-rib) is listed for 2003 Focus 2.0 DOHC w/AC; Motorcraft JK6-882-A/-AB are catalogued for 1987-95 Fords and 2005-10 Mustang, not Focus. 1S7Z-6B209-AA not found; Focus tensioner is YS4Z-6B209-AA."
+   "note": "K060882 (88.3in 6-rib) is listed for 2003 Focus 2.0 DOHC w/AC; Motorcraft JK6-882-A/-AB are catalogued for 1987-95 Fords and 2005-10 Mustang, not Focus. 1S7Z-6B209-AA not found; Focus tensioner is YS4Z-6B209-AA.",
+   "claim_hash": "92e68d29eddf833f",
+   "checked_at": "legacy"
   },
   {
    "id": "thermostat",
@@ -852,7 +955,9 @@
     "https://parts.lakelandford.com/p/Ford__Focus/Engine-Coolant-Thermostat-Housing/53346309/YS4Z8592BD.html",
     "https://www.amazon.com/YS4Z-8592-BD-Outlet-Housing-Thermostat-Tribute/dp/B06Y6NWBNV"
    ],
-   "note": "RT-1152 (=YF1Z-8575-BA, 197F) is catalogued for Ranger/Taurus with no Focus fitment found; RT-1157 is 2005+ Focus/2.3 Duratec, also wrong. 1S7Z-8592-AA not found; the Zetec housing is YS4Z-8592-BD (ABS plastic, known failure)."
+   "note": "RT-1152 (=YF1Z-8575-BA, 197F) is catalogued for Ranger/Taurus with no Focus fitment found; RT-1157 is 2005+ Focus/2.3 Duratec, also wrong. 1S7Z-8592-AA not found; the Zetec housing is YS4Z-8592-BD (ABS plastic, known failure).",
+   "claim_hash": "b31531f137c48b79",
+   "checked_at": "legacy"
   },
   {
    "id": "intake-mani",
@@ -866,7 +971,9 @@
     "https://www.fordpartsgiant.com/parts/ford-manifold-assy-inlet_ys4z-9424-ba.html",
     "https://www.ebay.com/p/1511136640"
    ],
-   "note": "1S7Z-9424-AA not found for any Focus; 2L1Z-9424-AA (5.4L truck) is the only 2000-04 hit. Zetec Focus manifold catalogued as YS4Z-9424-BA."
+   "note": "1S7Z-9424-AA not found for any Focus; 2L1Z-9424-AA (5.4L truck) is the only 2000-04 hit. Zetec Focus manifold catalogued as YS4Z-9424-BA.",
+   "claim_hash": "36ea2f297d59c332",
+   "checked_at": "legacy"
   },
   {
    "id": "fuel-inj",
@@ -881,7 +988,9 @@
     "https://www.go-parts.com/garage/fuel-injector-ford-escape-mercury-cougar-ford-focus-1998-2004",
     "https://www.fordpartsgiant.com/parts/ford-injector-asy_1s4z-9f593-aa.html"
    ],
-   "note": "Neither CM-4924 nor 1S7Z-9F593-BA appears anywhere; the Zetec Focus injector is 1S4Z-9F593-AA (no Motorcraft CM cross found)."
+   "note": "Neither CM-4924 nor 1S7Z-9F593-BA appears anywhere; the Zetec Focus injector is 1S4Z-9F593-AA (no Motorcraft CM cross found).",
+   "claim_hash": "98e4a2c5c74d3867",
+   "checked_at": "legacy"
   },
   {
    "id": "pcv",
@@ -896,7 +1005,9 @@
     "https://www.focusfanatics.com/threads/pcv-part-information.268665/",
     "https://www.walmart.com/ip/Motorcraft-PCV-Valve-EV-250-A-Fits-select-2000-2002-FORD-FOCUS-2001-2002-FORD-ESCAPE/131970869"
    ],
-   "note": "EV-192 not found. 2000-02 Zetec uses EV-250-A; 2003 valve stamped 3S4G-6A666-MB crosses to EV272."
+   "note": "EV-192 not found. 2000-02 Zetec uses EV-250-A; 2003 valve stamped 3S4G-6A666-MB crosses to EV272.",
+   "claim_hash": "8a9cbb2be4bdabf0",
+   "checked_at": "legacy"
   },
   {
    "id": "ignition-sw",
@@ -912,7 +1023,9 @@
     "https://www.partsgeek.com/td9c4m7-ford-focus-ignition-switch.html",
     "https://www.go-parts.com/garage/ps-2000-2004-ford-focus-ignition-switch"
    ],
-   "note": "3S4Z-11572-AA not found; only 5C3Z/AA6Z/F4DC-11572 hits (trucks, 2011+). Ignition electrical switch OE number for 2000-04 Focus remains unconfirmed."
+   "note": "3S4Z-11572-AA not found; only 5C3Z/AA6Z/F4DC-11572 hits (trucks, 2011+). Ignition electrical switch OE number for 2000-04 Focus remains unconfirmed.",
+   "claim_hash": "2cf1fe5e298dc8b5",
+   "checked_at": "legacy"
   },
   {
    "id": "fuse-box",
@@ -930,7 +1043,9 @@
     "https://www.fordpartsgiant.com/oem-2003-ford-focus-fuse_box.html",
     "https://www.fordpartsgiant.com/oem-2000-ford-focus-fuse_box.html"
    ],
-   "note": "2M5Z-14A068-xx is the right family for 2002-04 Focus fuse panels but the -AA suffix was not seen; the -PA is the interior CJB. Note the CJB is under-dash; the engine-bay unit is the power distribution box, a different item."
+   "note": "2M5Z-14A068-xx is the right family for 2002-04 Focus fuse panels but the -AA suffix was not seen; the -PA is the interior CJB. Note the CJB is under-dash; the engine-bay unit is the power distribution box, a different item.",
+   "claim_hash": "b6660a183c1a0ae0",
+   "checked_at": "legacy"
   },
   {
    "id": "mid-pipe",
@@ -942,7 +1057,9 @@
     "https://www.amazon.com/Walker-53773-Resonator-Muffler-Assembly/dp/B0060KDYF2",
     "https://www.amazon.com/Walker-Exhaust-54883-Resonator-Assembly/dp/B01HQSX65Y"
    ],
-   "note": "Walker 54551 not found for Focus or at all. Walker Focus resonator assemblies seen: 53773, 54883, 56257, 56261 (years not shown in snippets), so no confirmed 2000-04 Zetec number."
+   "note": "Walker 54551 not found for Focus or at all. Walker Focus resonator assemblies seen: 53773, 54883, 56257, 56261 (years not shown in snippets), so no confirmed 2000-04 Zetec number.",
+   "claim_hash": "064d45ea25a2bbeb",
+   "checked_at": "legacy"
   },
   {
    "id": "cv-axle-r",
@@ -956,7 +1073,9 @@
     "https://partshawk.com/ford-focus-front-right-cv-axle-shaft-trakmotive-fd-8048.html",
     "https://partshawk.com/ford-focus-front-left-cv-axle-shaft-trakmotive-fd-8038.html"
    ],
-   "note": "1S4Z-3B436-BA, TrakMotive FD-8141 and Cardone 66-2080 all absent from results; FD-8048 (RH) / FD-8038 (LH) are the catalogued 2000-04 Focus axles. Trans type (MTX-75 vs 4F27E) not distinguished."
+   "note": "1S4Z-3B436-BA, TrakMotive FD-8141 and Cardone 66-2080 all absent from results; FD-8048 (RH) / FD-8038 (LH) are the catalogued 2000-04 Focus axles. Trans type (MTX-75 vs 4F27E) not distinguished.",
+   "claim_hash": "0493db8c7c099898",
+   "checked_at": "legacy"
   },
   {
    "id": "lca-f",
@@ -971,7 +1090,9 @@
     "https://www.moog-suspension-parts.com/moog-rk80405",
     "https://www.walmart.com/ip/Dorman-520-231-Front-Left-Lower-Suspension-Control-Arm-and-Ball-Joint-Assembly-for-Specific-Ford-Models-Fits-select-2000-2004-FORD-FOCUS/42928882"
    ],
-   "note": "Moog RK620234/5 and Dorman 520-263/264 not found (Dorman 526-263 exists but is a rearward arm for other Fords). 1S4Z-3078/3079-BA not searched before budget ran out."
+   "note": "Moog RK620234/5 and Dorman 520-263/264 not found (Dorman 526-263 exists but is a rearward arm for other Fords). 1S4Z-3078/3079-BA not searched before budget ran out.",
+   "claim_hash": "2a58c1d887414370",
+   "checked_at": "legacy"
   },
   {
    "id": "wheel-brg-f",
@@ -989,7 +1110,9 @@
     "https://www.amazon.com/Bearing-TIMKEN-510030-DAC4379W-44300-S5A-004/dp/B07CMGK2XS",
     "https://www.fordpartsgiant.com/parts/ford-bearing-asy-wheel_ys4z-1215-aa.html"
    ],
-   "note": "Timken 510030 is a 43x79x41 Honda/Acura bearing (44300-S5A-004), not Focus. YS4Z-1215-AA is a genuine Focus wheel bearing (superseded to 6S4Z-1215-B). HUB-48 and SKF GRW178 unverified."
+   "note": "Timken 510030 is a 43x79x41 Honda/Acura bearing (44300-S5A-004), not Focus. YS4Z-1215-AA is a genuine Focus wheel bearing (superseded to 6S4Z-1215-B). HUB-48 and SKF GRW178 unverified.",
+   "claim_hash": "f46dca96e6ff9814",
+   "checked_at": "legacy"
   },
   {
    "id": "caliper-f",
@@ -1004,7 +1127,9 @@
     "https://www.stockwiseauto.com/a1-cardone-18-4794-disc-brake-caliper?Year=2001&Make=Ford&Model=Focus",
     "https://www.go-parts.com/garage/ps-2000-2006-ford-focus-disc-brake-caliper"
    ],
-   "note": "Cardone 19-2818 exists as an unloaded caliper but no Focus fitment appeared in results; 1S4Z-2B120/2B121-AA not searched before budget ran out."
+   "note": "Cardone 19-2818 exists as an unloaded caliper but no Focus fitment appeared in results; 1S4Z-2B120/2B121-AA not searched before budget ran out.",
+   "claim_hash": "e8d065772b82856e",
+   "checked_at": "legacy"
   },
   {
    "id": "abs-mod",
@@ -1020,7 +1145,9 @@
     "https://www.fordpartsgiant.com/oem-2003-ford-focus-abs_control_module.html",
     "https://www.partsforsaleonline.com/oem-parts/ford-abs-pump-assembly-ys4z2c286aa"
    ],
-   "note": "2M5Z-2C286-AA/AB/BB/DD are listed as 2003 Focus ABS hydraulic control units; suffix depends on ABS-only vs traction control."
+   "note": "2M5Z-2C286-AA/AB/BB/DD are listed as 2003 Focus ABS hydraulic control units; suffix depends on ABS-only vs traction control.",
+   "claim_hash": "362378a21739e106",
+   "checked_at": "legacy"
   },
   {
    "id": "steering-col",
@@ -1032,7 +1159,9 @@
     "https://www.fordpartsgiant.com/oem-ford-focus-steering_column.html",
     "https://ford.oempartsonline.com/v-2003-ford-focus--lx--2-0l-l4-gas/steering--steering-gear-and-linkage"
    ],
-   "note": "2M5Z-3524-AA not found; base 3524 is a steering shaft (hits were Crown Vic/truck shafts). Focus column/intermediate shaft number unconfirmed."
+   "note": "2M5Z-3524-AA not found; base 3524 is a steering shaft (hits were Crown Vic/truck shafts). Focus column/intermediate shaft number unconfirmed.",
+   "claim_hash": "6b47ffd25374d1b0",
+   "checked_at": "legacy"
   },
   {
    "id": "heater-core",
@@ -1047,7 +1176,9 @@
     "https://www.carid.com/motorcraft/hvac-heater-core-mpn-hc9.html",
     "https://www.amazon.com/clp/B0CZGKYT2T"
    ],
-   "note": "Spectra 98038 is a 2005-2015 Toyota Tacoma core. Motorcraft HC-9 exists (13x9.5in) but no Focus fitment shown; 2M5Z-18476-AA and APDI 9010184 not found. Go-Parts lists a 2000-2007 Focus core without a number."
+   "note": "Spectra 98038 is a 2005-2015 Toyota Tacoma core. Motorcraft HC-9 exists (13x9.5in) but no Focus fitment shown; 2M5Z-18476-AA and APDI 9010184 not found. Go-Parts lists a 2000-2007 Focus core without a number.",
+   "claim_hash": "cfdf25660115b04e",
+   "checked_at": "legacy"
   },
   {
    "id": "rear-bumper",
@@ -1062,7 +1193,9 @@
     "https://partifyusa.com/products/ford-focus-wagon-rear-bumper-fo1100292",
     "https://www.ebay.com/itm/233484771148"
    ],
-   "note": "FO1100322 not found; 2M5Z-17K835-AA not found (the -BA suffix is the 2002-04 SVT hatch cover). Wagon cover is FO1100292."
+   "note": "FO1100322 not found; 2M5Z-17K835-AA not found (the -BA suffix is the 2002-04 SVT hatch cover). Wagon cover is FO1100292.",
+   "claim_hash": "25bdd5155ba65c1d",
+   "checked_at": "legacy"
   },
   {
    "id": "door-fr",
@@ -1073,7 +1206,9 @@
    "evidence": [
     "https://ford.oempartsonline.com/v-2002-ford-focus--zx3--2-0l-l4-gas/body--door-and-components"
    ],
-   "note": "2M5Z-5420124-AA not found; only DP5Z/DS7Z-5420124 (2012+ Focus/Fusion) door shells appear. 2M5Z prefix is used on other 2002 Focus door parts, so format is plausible but unconfirmed."
+   "note": "2M5Z-5420124-AA not found; only DP5Z/DS7Z-5420124 (2012+ Focus/Fusion) door shells appear. 2M5Z prefix is used on other 2002 Focus door parts, so format is plausible but unconfirmed.",
+   "claim_hash": "a8e3a25fbb666aa3",
+   "checked_at": "legacy"
   },
   {
    "id": "windshield",
@@ -1085,7 +1220,9 @@
     "https://www.carlex.com/parts-search/",
     "https://www.fordpartsgiant.com/oem-ford-focus-windshield.html"
    ],
-   "note": "NAGS FW02306 not found in any result; verify via Carlex NAGS lookup by VIN."
+   "note": "NAGS FW02306 not found in any result; verify via Carlex NAGS lookup by VIN.",
+   "claim_hash": "44ce71555478d88d",
+   "checked_at": "legacy"
   },
   {
    "id": "headlamp-l",
@@ -1103,7 +1240,9 @@
     "https://www.tomsfordtruckparts.com/oem-parts/ford-headlamp-assembly-3s4z13008bc",
     "https://www.vividracing.com/tyc-headlight-ford-focus-20032004-p-153659866.html"
    ],
-   "note": "2M5Z-13008-AB suffix and TYC 20-6202-00 / FO2503181 not seen; the 2M5Z-13008 family is Focus, but the halogen LH suffix is unconfirmed."
+   "note": "2M5Z-13008-AB suffix and TYC 20-6202-00 / FO2503181 not seen; the 2M5Z-13008 family is Focus, but the halogen LH suffix is unconfirmed.",
+   "claim_hash": "c78ef2d6909f02e2",
+   "checked_at": "legacy"
   },
   {
    "id": "bulbs",
@@ -1123,7 +1262,9 @@
     "https://ntxglow.com/blogs/automotive-bulb-sizes/2003-ford-focus-bulb-sizes",
     "https://www.focusfanatics.com/threads/ford-focus-bulb-sizes.34666/"
    ],
-   "note": "3157 brake/tail and 921 reverse confirmed for 2003 wagon; headlight bulb disputed (9003/H4 vs 9007) - check the actual lamp before buying. 194 marker not explicitly seen."
+   "note": "3157 brake/tail and 921 reverse confirmed for 2003 wagon; headlight bulb disputed (9003/H4 vs 9007) - check the actual lamp before buying. 194 marker not explicitly seen.",
+   "claim_hash": "c925f0675c58c974",
+   "checked_at": "legacy"
   },
   {
    "id": "door-latch",
@@ -1135,7 +1276,9 @@
     "https://www.dormanproducts.com/p-66464-937-651.aspx",
     "https://www.amazon.com/Dorman-937-651-Door-Lock-Actuator/dp/B00HRSOHPC"
    ],
-   "note": "Dorman 937-651 is a front-passenger integrated latch/actuator for 'select Ford/Mercury' but no Focus year shown; 2M5Z-54219A64-AA not found (only CM5Z 2012-18 latches)."
+   "note": "Dorman 937-651 is a front-passenger integrated latch/actuator for 'select Ford/Mercury' but no Focus year shown; 2M5Z-54219A64-AA not found (only CM5Z 2012-18 latches).",
+   "claim_hash": "359a0cfc67dff0c2",
+   "checked_at": "legacy"
   },
   {
    "id": "wheel-fr",
@@ -1149,7 +1292,9 @@
     "https://tiresize.com/tires/Ford/Focus/2003/SE-Wagon/",
     "https://www.1010tires.com/Tires/2003/Ford/Focus/4-Dr-Wagon-ZTW"
    ],
-   "note": "195/60R15 is the stock size for the 2003 Focus SE/ZTW wagon."
+   "note": "195/60R15 is the stock size for the 2003 Focus SE/ZTW wagon.",
+   "claim_hash": "2c2de359044f5e66",
+   "checked_at": "legacy"
   },
   {
    "id": "oil-pan",
@@ -1166,7 +1311,9 @@
     "https://www.tascaparts.com/oem-parts/ford-oil-pan-ys4z6675aa",
     "https://www.ecstuning.com/b-dorman-parts/engine-oil-pan-ford-escape-2004-01-ford-focus-2004-00-mazda-tribute-2004-01/ys4z-6675-aa~dor/"
    ],
-   "note": "1S7Z-6675-AA is the 2005-2011 Focus Duratec HE pan; the 2000-2004 2.0L Zetec DOHC (timing-belt) pan is YS4Z-6675-AA (RTV, no gasket)."
+   "note": "1S7Z-6675-AA is the 2005-2011 Focus Duratec HE pan; the 2000-2004 2.0L Zetec DOHC (timing-belt) pan is YS4Z-6675-AA (RTV, no gasket).",
+   "claim_hash": "b02fe94496e219b2",
+   "checked_at": "legacy"
   },
   {
    "id": "spark-plugs",
@@ -1185,7 +1332,9 @@
     "https://www.fordpartsgiant.com/parts/ford-coil-asy-ignition_1s7z-12029-aa.html",
     "https://www.fordpartsgiant.com/oem-ford-focus-ignition_coil.html"
    ],
-   "note": "AGSF32FM is listed for 2009-2010 Focus and AGSF-32Y-PC for 2005-2011; Ford catalog shows AZFS-32F-E for 2000-2004 Zetec. Coil 1S7Z-12029-AA is a 2001-2010 Ranger 2.3L coil; Focus Zetec coil is XS8Z-12029-AA (superseded 988Z-12029-A). NGK 3672 / Denso 5304 not found in AGSF32FM cross-reference."
+   "note": "AGSF32FM is listed for 2009-2010 Focus and AGSF-32Y-PC for 2005-2011; Ford catalog shows AZFS-32F-E for 2000-2004 Zetec. Coil 1S7Z-12029-AA is a 2001-2010 Ranger 2.3L coil; Focus Zetec coil is XS8Z-12029-AA (superseded 988Z-12029-A). NGK 3672 / Denso 5304 not found in AGSF32FM cross-reference.",
+   "claim_hash": "855cc9dd77fcd565",
+   "checked_at": "legacy"
   },
   {
    "id": "water-pump",
@@ -1205,7 +1354,9 @@
     "https://www.homedepot.com/p/Gates-Engine-Water-Pump-2000-2004-Ford-Focus-2-0L-42294/307948216",
     "https://www.sixityauto.com/gates-41046-engine-water-pump-for-19200p13003-19200p13000-122032-fp2174-wp-885-41046-55-9273-us9273-3022000499.html"
    ],
-   "note": "Gates 41046 is a 1993-2001 Honda Prelude H22A pump; Airtex AW4109 is a Ford 6.8L V10 pump; 1S7Z-8501-A is 2013-2018 Focus EcoBoost. Motorcraft PW-425 not found anywhere. OEM 2000-2004 pump is YS4Z-8501-AA; Gates 42294 is the aftermarket match."
+   "note": "Gates 41046 is a 1993-2001 Honda Prelude H22A pump; Airtex AW4109 is a Ford 6.8L V10 pump; 1S7Z-8501-A is 2013-2018 Focus EcoBoost. Motorcraft PW-425 not found anywhere. OEM 2000-2004 pump is YS4Z-8501-AA; Gates 42294 is the aftermarket match.",
+   "claim_hash": "86d6db38ce131ee3",
+   "checked_at": "legacy"
   },
   {
    "id": "throttle-body",
@@ -1223,7 +1374,9 @@
     "https://shop.advanceautoparts.com/p/dorman-throttle-body-position-sensor-977-000/10414845-P",
     "https://www.fordpartsgiant.com/oem-ford-focus-throttle_body.html"
    ],
-   "note": "Dorman 977-000 is a throttle POSITION SENSOR, not a throttle body. 1S7Z-9E926-AA not in the Focus catalog; 2003-2004 Focus 2.0L throttle bodies are 3S4Z-9E926-CA / 2S4Z-9E926-AA (Zetec vs SPI split not shown, verify by VIN)."
+   "note": "Dorman 977-000 is a throttle POSITION SENSOR, not a throttle body. 1S7Z-9E926-AA not in the Focus catalog; 2003-2004 Focus 2.0L throttle bodies are 3S4Z-9E926-CA / 2S4Z-9E926-AA (Zetec vs SPI split not shown, verify by VIN).",
+   "claim_hash": "6c5487dafae655d5",
+   "checked_at": "legacy"
   },
   {
    "id": "fuel-pump",
@@ -1241,29 +1394,31 @@
     "https://partshawk.com/ford-focus-fuel-pump-module-assembly-delphi-fg1114.html",
     "https://www.amazon.com/clp/B075JH1D29"
    ],
-   "note": "3S4Z-9H307-AA appears on a Focus pump listing cross-referenced to Delphi FG1114 / Airtex E2368M (2003-2004 Focus; engine not explicit, one reviewer was 2.3L). Motorcraft PFS-118 does not exist (PFB-118 is a 6.0L diesel lift pump); Delphi FG0885 and Airtex E2372M not found for Focus. 3S4Z-9H307-BC is the SVT 255lph unit."
+   "note": "3S4Z-9H307-AA appears on a Focus pump listing cross-referenced to Delphi FG1114 / Airtex E2368M (2003-2004 Focus; engine not explicit, one reviewer was 2.3L). Motorcraft PFS-118 does not exist (PFB-118 is a 6.0L diesel lift pump); Delphi FG0885 and Airtex E2372M not found for Focus. 3S4Z-9H307-BC is the SVT 255lph unit.",
+   "claim_hash": "840a3d1fa280e16c",
+   "checked_at": "legacy"
   },
   {
    "id": "alternator",
    "verdict": "confirmed",
    "checked": [
+    "Lester 8260",
     "Motorcraft GL-456",
     "1S41-10300-AA",
     "98AB-10300-EB",
-    "Lester 8260",
     "DB Electrical AFD0091"
    ],
    "wrong": [],
-   "suggested": [
-    "TYC 2-08260",
-    "BBB Industries 8260"
-   ],
+   "suggested": [],
    "evidence": [
     "https://amazon.com/Electrical-AFD0091-1S41-10300-AA-98AB-10300-EB-98AZ-10346-EARM/dp/B007Y87WU2",
-    "https://www.partsgeek.com/s9xmfl6-ford-focus-alternator.html",
-    "https://www.maniacelectricmotors.com/alfofo220do.html"
+    "https://www.amazon.com/AFD0091-Alternator-Ford-Focus-2-0L/dp/B074TFTTFR",
+    "https://www.ebay.com/itm/396870418006",
+    "https://www.partsgeek.com/s9xmfl6-ford-focus-alternator.html"
    ],
-   "note": "Multiple listings tie GL-456 / 1S41-10300-AA / 98AB-10300-EB / Lester 8260 / AFD0091 to Focus 2.0L DOHC 2000-2004, 110A, 6-groove, 11 o'clock plug. Remy 92511 and WAI 8260N/R not individually checked."
+   "note": "I did not open the pages. Search snippets list Lester 8260, GL-456, 1S41-10300-AA, 98AB-10300-EB and AFD0091 as fitting the 2000-2004 Focus 2.0L. Listings also show a sibling unit (Lester 8261, Motorcraft GL-455, 1S41-10300-BB, 98AB-10300-FC, AFD0061, about 105A) for the Focus 2.0L, and one listing ties it to 'VIN P' 2003-04. The 8260/GL-456 is the likely match for the Zetec (VIN 3), but that pairing is unconfirmed, so check the VIN engine code or the alternator's label. WAI 8260N/8260R and Remy 92511 were not checked.",
+   "claim_hash": "074f5a88ffcef6aa",
+   "checked_at": "2026-09-26T16:23:54Z"
   },
   {
    "id": "o2-sensors",
@@ -1279,7 +1434,9 @@
     "https://ford.oempartsonline.com/oem-parts/ford-motorcraft-trade-oxygen-sensor-dy1036",
     "https://www.partsgeek.com/gh3r83c-ford-f150-oxygen-sensor.html"
    ],
-   "note": "DY-1003 and DY-1013 returned nothing; Denso 234-4127 shows only F-150 / generic Ford-Lincoln-Mazda fitment (Focus not stated); Bosch 15716 and Denso 234-4374 unchecked (search budget). Focus-listed Motorcraft sensors are DY-1043 / DY-1036 (up/down not confirmed)."
+   "note": "DY-1003 and DY-1013 returned nothing; Denso 234-4127 shows only F-150 / generic Ford-Lincoln-Mazda fitment (Focus not stated); Bosch 15716 and Denso 234-4374 unchecked (search budget). Focus-listed Motorcraft sensors are DY-1043 / DY-1036 (up/down not confirmed).",
+   "claim_hash": "d6fe7df57b10ac2d",
+   "checked_at": "legacy"
   },
   {
    "id": "exh-mani",
@@ -1296,7 +1453,9 @@
     "https://www.fordpartsgiant.com/parts/ford-exhaust-manifold-and-catalyst-assy_3s4z-5g232-cd.html",
     "https://us.amazon.com/Walker-16476-Direct-Catalytic-Converter/dp/B00BEGD7TK"
    ],
-   "note": "Dorman 674-955 fits 2011-2016 Hyundai Elantra / Kia Forte only. Walker 16404 not found (Focus Walker numbers seen: 16476, 16453 08-11, 16647 12-18). 1S7Z-5G232-AA not in Ford catalog; the only 2003-2004 Focus manifold-cat listed (3S4Z-5G232-CD) is 2.3L."
+   "note": "Dorman 674-955 fits 2011-2016 Hyundai Elantra / Kia Forte only. Walker 16404 not found (Focus Walker numbers seen: 16476, 16453 08-11, 16647 12-18). 1S7Z-5G232-AA not in Ford catalog; the only 2003-2004 Focus manifold-cat listed (3S4Z-5G232-CD) is 2.3L.",
+   "claim_hash": "85c7066e196e4cd9",
+   "checked_at": "legacy"
   },
   {
    "id": "trans",
@@ -1308,7 +1467,9 @@
     "https://www.fordpartsgiant.com/oem-ford-focus-transmission_assembly.html",
     "https://en.wikipedia.org/wiki/Ford_MTX-75_transmission"
    ],
-   "note": "No listing found for 1S7Z-7003-xx or 3S4Z-7000-xx (catalog page only shows 2008+ assemblies). MTX-75 behind the 2000-2004 2.0 Zetec is confirmed generically; part numbers are not."
+   "note": "No listing found for 1S7Z-7003-xx or 3S4Z-7000-xx (catalog page only shows 2008+ assemblies). MTX-75 behind the 2000-2004 2.0 Zetec is confirmed generically; part numbers are not.",
+   "claim_hash": "a623d5cf43aa8ea0",
+   "checked_at": "legacy"
   },
   {
    "id": "trans-fluid",
@@ -1323,7 +1484,9 @@
     "https://www.ebay.com/itm/324220612688",
     "https://www.motorcraft.com/us/en_us/home/our-products/chemicals-and-lubricants/transmission-fluid/full-synthetic-manual-transmission-fluids.html/1000"
    ],
-   "note": "XT-M5-QS is the Motorcraft full-synthetic 75W-90 for IB5 and 1995-2011 MTX-75 (2 qt for Focus). XT-5-QM (MERCON V) not checked due to search budget; Motorcraft MERCON V quart is commonly XT-5-QMC."
+   "note": "XT-M5-QS is the Motorcraft full-synthetic 75W-90 for IB5 and 1995-2011 MTX-75 (2 qt for Focus). XT-5-QM (MERCON V) not checked due to search budget; Motorcraft MERCON V quart is commonly XT-5-QMC.",
+   "claim_hash": "d5713b23c9980778",
+   "checked_at": "legacy"
   },
   {
    "id": "sway-f",
@@ -1341,7 +1504,9 @@
     "https://www.moog-suspension-parts.com/moog-k80104",
     "https://www.oemford.parts/oem-parts/ford-stabilizer-link-5s4z5k484aa"
    ],
-   "note": "K80104 (and MK80104) is the 2001-2004 Escape / Mazda Tribute / Protege link, not Focus. 1S4Z-5K484-AA not found; Ford lists 5S4Z-5K484-AA for 2000-2010 Focus."
+   "note": "K80104 (and MK80104) is the 2001-2004 Escape / Mazda Tribute / Protege link, not Focus. 1S4Z-5K484-AA not found; Ford lists 5S4Z-5K484-AA for 2000-2010 Focus.",
+   "claim_hash": "b7e56f99effcf7df",
+   "checked_at": "legacy"
   },
   {
    "id": "wheel-brg-r",
@@ -1355,7 +1520,9 @@
     "https://www.fordpartsgiant.com/parts/ford-hub-assy-wheel_ys4z-1104-aa.html",
     "https://www.sixityauto.com/2-pc-timken-rear-wheel-bearings-for-2000-2008-ford-focus-2096039842.html"
    ],
-   "note": "YS4Z-1104-BA / HUB-52 not found; the Focus 2000-2011 rear hub is YS4Z-1104-AA (-AA suffix). Timken 512219 and SKF BR930433 could not be verified (retailer pages blocked); Timken does list 2000-2008 Focus rear bearings."
+   "note": "YS4Z-1104-BA / HUB-52 not found; the Focus 2000-2011 rear hub is YS4Z-1104-AA (-AA suffix). Timken 512219 and SKF BR930433 could not be verified (retailer pages blocked); Timken does list 2000-2008 Focus rear bearings.",
+   "claim_hash": "03d1d2cb4c8f6f65",
+   "checked_at": "legacy"
   },
   {
    "id": "drum-r",
@@ -1373,7 +1540,9 @@
     "https://www.walmart.com/ip/Motorcraft-Brake-Drum-w-o-Bearing-or-Seal-Fits-select-2000-2011-FORD-FOCUS/48680590",
     "https://partshawk.com/ford-focus-rear-brake-drum-raybestos-brakes-9759rn.html"
    ],
-   "note": "Raybestos 9764R is an 11.61 in drum for 2005-2008 Silverado/Sierra. Motorcraft BRD-2 and YS4Z-1126-AA not found; Focus 2000-2011 drum is BRD-45, Raybestos 9759RN. Bendix PDR0764 unverified."
+   "note": "Raybestos 9764R is an 11.61 in drum for 2005-2008 Silverado/Sierra. Motorcraft BRD-2 and YS4Z-1126-AA not found; Focus 2000-2011 drum is BRD-45, Raybestos 9759RN. Bendix PDR0764 unverified.",
+   "claim_hash": "f0ea088a8dc7fda1",
+   "checked_at": "legacy"
   },
   {
    "id": "rack",
@@ -1387,7 +1556,9 @@
    "evidence": [
     "https://www.fordpartsgiant.com/oem-ford-focus-rack_and_pinion.html"
    ],
-   "note": "1S4Z-3504-BARM not in the Focus catalog; Ford lists YS4Z-3504-ABRM for 2000-2003 and 5S4Z-3504-ARM for 2004. Cardone 22-249 / 26-2058 could not be checked (Cardone and retailer pages blocked)."
+   "note": "1S4Z-3504-BARM not in the Focus catalog; Ford lists YS4Z-3504-ABRM for 2000-2003 and 5S4Z-3504-ARM for 2004. Cardone 22-249 / 26-2058 could not be checked (Cardone and retailer pages blocked).",
+   "claim_hash": "20fd3b027a06f6a6",
+   "checked_at": "legacy"
   },
   {
    "id": "ac-comp",
@@ -1401,7 +1572,9 @@
    "evidence": [
     "https://www.fordpartsgiant.com/oem-ford-focus-a_c_compressor.html"
    ],
-   "note": "YCC-179 / 1S4Z-19V703-AA not found; Ford catalog only shows 2004 Focus 2.0L compressors 4F2Z-19703-AB / G2MZ-19V703-H (2003 not listed). Four Seasons 78515 and Denso 471-8121 unverified (pages blocked)."
+   "note": "YCC-179 / 1S4Z-19V703-AA not found; Ford catalog only shows 2004 Focus 2.0L compressors 4F2Z-19703-AB / G2MZ-19V703-H (2003 not listed). Four Seasons 78515 and Denso 471-8121 unverified (pages blocked).",
+   "claim_hash": "33c4752ffaa64073",
+   "checked_at": "legacy"
   },
   {
    "id": "cabin-filter",
@@ -1414,7 +1587,9 @@
    "evidence": [
     "https://www.fordpartsgiant.com/oem-ford-focus-cabin_air_filter.html"
    ],
-   "note": "Motorcraft FP-45 and Fram CF10134 could not be verified (search budget / blocked pages). OEM 2000-2004 Focus cabin filter is XS4Z-19N619-AA (replaces XS4Z-19N619-CA)."
+   "note": "Motorcraft FP-45 and Fram CF10134 could not be verified (search budget / blocked pages). OEM 2000-2004 Focus cabin filter is XS4Z-19N619-AA (replaces XS4Z-19N619-CA).",
+   "claim_hash": "d68220e9ecc552dc",
+   "checked_at": "legacy"
   },
   {
    "id": "fender-l",
@@ -1427,7 +1602,9 @@
    "evidence": [
     "https://www.fordpartsgiant.com/oem-ford-focus-fender.html"
    ],
-   "note": "2M5Z-16006-AA not in the Focus catalog; driver-side 2000-2004 fender is YS4Z-16006-CA (RH is YS4Z-16005-CA). Partslink FO1240210 unverified."
+   "note": "2M5Z-16006-AA not in the Focus catalog; driver-side 2000-2004 fender is YS4Z-16006-CA (RH is YS4Z-16005-CA). Partslink FO1240210 unverified.",
+   "claim_hash": "f34010b7bcca00ff",
+   "checked_at": "legacy"
   },
   {
    "id": "door-rl",
@@ -1436,7 +1613,9 @@
    "wrong": [],
    "suggested": [],
    "evidence": [],
-   "note": "No listing found for 2M5Z-5424631-AA (search budget exhausted; Ford catalog door pages not reachable)."
+   "note": "No listing found for 2M5Z-5424631-AA (search budget exhausted; Ford catalog door pages not reachable).",
+   "claim_hash": "5f03e1df076c3559",
+   "checked_at": "legacy"
   },
   {
    "id": "roof",
@@ -1445,7 +1624,9 @@
    "wrong": [],
    "suggested": [],
    "evidence": [],
-   "note": "No listing found for 2M5Z-7450202-AA (search budget exhausted; catalog roof page not reachable)."
+   "note": "No listing found for 2M5Z-7450202-AA (search budget exhausted; catalog roof page not reachable).",
+   "claim_hash": "60678f213dd85261",
+   "checked_at": "legacy"
   },
   {
    "id": "headlamp-r",
@@ -1459,7 +1640,9 @@
    "evidence": [
     "https://www.fordpartsgiant.com/oem-ford-focus-headlight.html"
    ],
-   "note": "2M5Z-13008-AA not in the Focus catalog; 2003-2004 passenger-side lamps are 3S4Z-13008-AC / -BA (2001-2002: 3S4Z-13008-CC). TYC 20-6201-00 / FO2502181 unverified (pages blocked)."
+   "note": "2M5Z-13008-AA not in the Focus catalog; 2003-2004 passenger-side lamps are 3S4Z-13008-AC / -BA (2001-2002: 3S4Z-13008-CC). TYC 20-6201-00 / FO2502181 unverified (pages blocked).",
+   "claim_hash": "115752d0d8da2e80",
+   "checked_at": "legacy"
   },
   {
    "id": "seat-fl",
@@ -1468,7 +1651,9 @@
    "wrong": [],
    "suggested": [],
    "evidence": [],
-   "note": "No part number claimed; nothing to verify."
+   "note": "No part number claimed; nothing to verify.",
+   "claim_hash": "f5162d0e7e8f4625",
+   "checked_at": "legacy"
   },
   {
    "id": "shifter",
@@ -1481,7 +1666,9 @@
    "evidence": [
     "https://www.fordpartsgiant.com/oem-ford-focus-shift_cable.html"
    ],
-   "note": "2M5Z-7E395-AA not found; Ford catalog lists 1S4Z-7E395-HA for 2000-2002 and nothing for 2003-2004 manual on the reachable page."
+   "note": "2M5Z-7E395-AA not found; Ford catalog lists 1S4Z-7E395-HA for 2000-2002 and nothing for 2003-2004 manual on the reachable page.",
+   "claim_hash": "db3114da0b972ec0",
+   "checked_at": "legacy"
   },
   {
    "id": "wheel-rl",
@@ -1496,9 +1683,11 @@
    "evidence": [
     "https://www.tiresize.com/tires/Ford/Focus/2003/"
    ],
-   "note": "195/60R15 is the OEM size for the 2003 Focus SE Wagon; ZTW lists 195/60R15 or 205/50R16."
+   "note": "195/60R15 is the OEM size for the 2003 Focus SE Wagon; ZTW lists 195/60R15 or 205/50R16.",
+   "claim_hash": "507b2683abf9ad97",
+   "checked_at": "legacy"
   }
  ],
  "_loop": "partnumbers",
- "_at": "2026-09-26T06:12:10Z"
+ "_at": "2026-09-26T16:23:54Z"
 }

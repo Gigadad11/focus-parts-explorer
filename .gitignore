@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 loops/__pycache__/
+reports/.agent-cache/
