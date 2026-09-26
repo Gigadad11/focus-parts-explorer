@@ -18,3 +18,10 @@ Metallic; Mr.choppers, Wikimedia Commons, CC BY-SA 3.0): wagon side profile extr
 openings, separate hood/fenders/doors/liftgate/bumpers/roof panels, glass, lamps, wheels, seats and dash, under
 PBR paint with environment lighting and shadows. Paint color is editable in the Vehicle sheet (`paintHex`).
 `renders/` holds headless screenshots. URL params for testing: `?t=0.5&cam=x,y,z&target=x,y,z&shellonly=1&xray=1`.
+
+## The loop
+`./run.sh` = `python3 loop.py --deploy`. Stages: lint → videos (oEmbed re-check, dead links removed + logged to
+dead-videos.log) → sheet → syntax → stamp (build id in `<meta name="build">`) → render (7 headless frames) →
+smoke (live bounding-box check that the car is car-shaped) → git commit → deploy → verify the public URL carries
+the build id. Deploy and commit are skipped if any earlier stage fails. `BUILD-REPORT.md` has the last run.
+Flags: `--skip-videos`, `--skip-render`; omit `--deploy` to verify only.
