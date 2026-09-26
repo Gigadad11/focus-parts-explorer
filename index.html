@@ -3,210 +3,415 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<title>2003 Focus Wagon Zetec — Exploded Parts Explorer</title>
+<title>2003 Focus Wagon Zetec — Parts Explorer</title>
 <style>
+  :root{--or:#c67a30;--or2:#e8a56a;--bg:#0a0a0a;--card:#121212f5;--line:#2a2a2a}
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%;background:#0a0a0a;color:#eee;font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
+  html,body{height:100%;background:var(--bg);color:#eee;font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
   #c{position:fixed;inset:0;display:block;touch-action:none}
   #top{position:fixed;top:0;left:0;right:0;padding:10px 12px;background:linear-gradient(#0a0a0aee,#0a0a0a00);pointer-events:none;z-index:5}
-  #top h1{font-size:15px;font-weight:600;letter-spacing:.04em;color:#e8a56a}
+  #top h1{font-size:15px;font-weight:600;letter-spacing:.04em;color:var(--or2)}
   #top .sub{font-size:12px;color:#aaa}
-  #dial{position:fixed;left:12px;right:12px;bottom:12px;z-index:6;background:#141414ee;border:1px solid #2a2a2a;border-radius:12px;padding:10px 14px;display:flex;gap:12px;align-items:center}
-  #dial label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#c67a30;white-space:nowrap}
+  #dial{position:fixed;left:12px;right:12px;bottom:12px;z-index:6;background:#141414ee;border:1px solid var(--line);border-radius:12px;padding:10px 14px;display:flex;gap:12px;align-items:center}
+  #dial label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--or);white-space:nowrap}
   #dial input[type=range]{flex:1;accent-color:#e8856a;height:28px}
   #dial .val{width:44px;text-align:right;font-variant-numeric:tabular-nums;color:#ccc}
-  #tools{position:fixed;top:56px;left:12px;z-index:6;display:flex;flex-direction:column;gap:6px;max-width:46vw}
-  #tools input,#tools select{background:#141414ee;color:#eee;border:1px solid #2a2a2a;border-radius:8px;padding:8px 10px;font-size:13px;width:100%}
-  #tools .row{display:flex;gap:6px}
-  #tools button{background:#1e1e1e;color:#ddd;border:1px solid #333;border-radius:8px;padding:7px 10px;font-size:12px;cursor:pointer}
-  #tools button.on{background:#c67a30;color:#000;border-color:#c67a30}
-  #panel{position:fixed;top:56px;right:12px;bottom:84px;width:min(420px,52vw);z-index:6;background:#121212f5;border:1px solid #2a2a2a;border-radius:12px;padding:14px;overflow:auto;display:none}
-  #panel.open{display:block}
-  #panel h2{font-size:16px;color:#fff;margin-bottom:2px}
-  #panel .sys{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#c67a30;margin-bottom:10px}
-  #panel h3{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:12px 0 4px}
-  #panel code{display:block;background:#1c1c1c;border:1px solid #2a2a2a;border-radius:6px;padding:6px 8px;margin:3px 0;font-size:12.5px;color:#f1f1f1;word-break:break-all}
-  #panel .conf{display:inline-block;font-size:10px;padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:middle}
-  .cV{background:#1f5f2a;color:#bff5c8}.cK{background:#5a4a1a;color:#ffe3a0}.cL{background:#3a3a3a;color:#ccc}
-  #panel .notes{font-size:13px;color:#ccc;background:#1a1410;border-left:3px solid #c67a30;padding:8px;border-radius:4px}
-  #panel a.snipe{display:block;background:#1a1a1a;border:1px solid #333;border-radius:8px;padding:8px 10px;margin:5px 0;color:#e8a56a;text-decoration:none;font-size:13px}
-  #panel a.snipe:hover{border-color:#c67a30}
-  #panel a.snipe small{display:block;color:#888;font-size:11px}
-  #panel .close{position:absolute;top:8px;right:10px;background:none;border:none;color:#888;font-size:20px;cursor:pointer}
-  #list{position:fixed;top:56px;right:12px;bottom:84px;width:min(420px,52vw);z-index:6;background:#121212f5;border:1px solid #2a2a2a;border-radius:12px;padding:10px;overflow:auto;display:none}
-  #list.open{display:block}
-  #list .item{padding:8px 10px;border-bottom:1px solid #1f1f1f;cursor:pointer;font-size:13px}
-  #list .item:hover{background:#1c1c1c}
-  #list .item small{color:#777;display:block;font-size:11px}
-  #veh{position:fixed;top:56px;right:12px;bottom:84px;width:min(420px,52vw);z-index:6;background:#121212f5;border:1px solid #2a2a2a;border-radius:12px;padding:14px;overflow:auto;display:none;font-size:13px}
-  #veh.open{display:block}
-  #veh dt{color:#c67a30;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-top:10px}
-  #veh dd{color:#ddd}
+  #tools{position:fixed;top:56px;left:12px;z-index:6;display:flex;flex-direction:column;gap:6px;width:min(300px,46vw)}
+  #tools input,#tools select{background:#141414ee;color:#eee;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:13px;width:100%}
+  .row{display:flex;gap:6px;flex-wrap:wrap}
+  button{background:#1e1e1e;color:#ddd;border:1px solid #333;border-radius:8px;padding:7px 10px;font-size:12px;cursor:pointer}
+  button.on,button.pri{background:var(--or);color:#000;border-color:var(--or)}
+  button.danger{border-color:#7a2a2a;color:#f0a0a0}
+  .sheet{position:fixed;top:56px;right:12px;bottom:84px;width:min(440px,54vw);z-index:6;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;display:none}
+  .sheet.open{display:block}
+  .sheet h2{font-size:16px;color:#fff;margin-bottom:2px;padding-right:28px}
+  .sheet .sys{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--or);margin-bottom:10px}
+  .sheet h3{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:12px 0 4px}
+  .sheet code{display:block;background:#1c1c1c;border:1px solid var(--line);border-radius:6px;padding:6px 8px;margin:3px 0;font-size:12.5px;color:#f1f1f1;word-break:break-all}
+  .badge{display:inline-block;font-size:10px;padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:middle}
+  .cV{background:#1f5f2a;color:#bff5c8}.cK{background:#5a4a1a;color:#ffe3a0}.cL{background:#3a3a3a;color:#ccc}.cC{background:#1a3a5a;color:#bfe0ff}.cX{background:#5a1a1a;color:#ffc0c0}
+  .notes{font-size:13px;color:#ccc;background:#1a1410;border-left:3px solid var(--or);padding:8px;border-radius:4px;white-space:pre-wrap}
+  a.snipe{display:block;background:#1a1a1a;border:1px solid #333;border-radius:8px;padding:8px 10px;margin:5px 0;color:var(--or2);text-decoration:none;font-size:13px}
+  a.snipe:hover{border-color:var(--or)} a.snipe small{display:block;color:#888;font-size:11px}
+  .close{position:absolute;top:8px;right:10px;background:none;border:none;color:#888;font-size:20px;cursor:pointer;padding:0 6px}
+  .item{padding:8px 10px;border-bottom:1px solid #1f1f1f;cursor:pointer;font-size:13px}
+  .item:hover{background:#1c1c1c} .item small{color:#777;display:block;font-size:11px}
+  dt{color:var(--or);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-top:10px} dd{color:#ddd}
+  form label{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#888;margin:10px 0 3px}
+  form input,form select,form textarea{width:100%;background:#1a1a1a;color:#eee;border:1px solid #333;border-radius:6px;padding:7px 8px;font-size:13px;font-family:inherit}
+  form textarea{min-height:60px;resize:vertical}
+  form .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+  form input[type=range]{padding:0;accent-color:#e8856a}
+  .photo{max-width:100%;border-radius:8px;border:1px solid #333;margin:6px 0}
+  .muted{color:#777;font-size:12px}
   #hint{position:fixed;bottom:72px;left:50%;transform:translateX(-50%);font-size:11px;color:#777;z-index:5;pointer-events:none;white-space:nowrap}
+  #toast{position:fixed;top:12px;left:50%;transform:translateX(-50%);background:#1f5f2a;color:#dfffe6;padding:8px 14px;border-radius:8px;font-size:13px;z-index:20;display:none}
   @media (max-width:700px){
-    #tools{max-width:60vw}
-    #panel,#list,#veh{width:auto;left:12px;right:12px;top:auto;bottom:84px;max-height:58vh}
+    #tools{width:58vw}
+    .sheet{width:auto;left:12px;right:12px;top:auto;bottom:84px;max-height:60vh}
+    form .grid3{grid-template-columns:1fr 1fr}
   }
 </style>
 </head>
 <body>
 <canvas id="c"></canvas>
-<div id="top"><h1>2003 FORD FOCUS WAGON · 2.0 DOHC ZETEC</h1><div class="sub">VIN 1FAFP36363W175417 · drag to rotate · scroll or slide to explode · tap a part</div></div>
+<div id="top"><h1 id="title">2003 FORD FOCUS WAGON · 2.0 DOHC ZETEC</h1><div class="sub" id="subtitle">drag to rotate · scroll / slide / pinch to explode · tap a part</div></div>
 <div id="tools">
   <input id="q" placeholder="Search parts or part number…" autocomplete="off"/>
   <select id="sysf"><option value="">All systems</option></select>
-  <div class="row"><button id="bList">List</button><button id="bVeh">Vehicle</button><button id="bBody" class="on">Body</button><button id="bXray">X-ray</button></div>
+  <div class="row"><button id="bList">List</button><button id="bVeh">Vehicle</button><button id="bAdd">+ Part</button><button id="bBody" class="on">Body</button><button id="bXray">X-ray</button><button id="bData">Data</button></div>
 </div>
 <div id="hint">scroll wheel = explode dial</div>
+<div id="toast"></div>
 <div id="dial"><label>Explode</label><input id="t" type="range" min="0" max="1000" value="0"/><span class="val" id="tv">0%</span></div>
-<div id="panel"><button class="close" id="pc">×</button><div id="pbody"></div></div>
-<div id="list"></div>
-<div id="veh"></div>
-<script src="parts.js"></script>
+<div id="panel" class="sheet"><button class="close" data-close>×</button><div id="pbody"></div></div>
+<div id="list" class="sheet"></div>
+<div id="veh" class="sheet"><button class="close" data-close>×</button><div id="vbody"></div></div>
+<div id="data" class="sheet"><button class="close" data-close>×</button><div id="dbody"></div></div>
+<input type="file" id="importFile" accept="application/json" style="display:none"/>
+<input type="file" id="photoFile" accept="image/*" capture="environment" style="display:none"/>
 <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
 <script type="module">
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+/* ===== DEFAULT DATA (assumptions) — everything below can be corrected in the UI; corrections live in localStorage and export as JSON ===== */
+// 2003 Ford Focus Wagon, 2.0L DOHC Zetec (VIN 1FAFP36363W175417)
+// pos = [x fore/aft (+front), y up, z left/right (+driver side)] in decimeters-ish units
+// ex = explode direction (unit-ish vector); shape box|cyl; size [w,h,d] or [r,len]
+// conf: V = verified this session, K = well-known Motorcraft/Ford catalog number, L = lookup by link (no OE number asserted)
+const VEHICLE= {
+  vin:'1FAFP36363W175417', year:2003, make:'Ford', model:'Focus', body:'Wagon (P36) 4-door, 5-passenger',
+  trim:'SE Wagon or ZTW (wagon trims that carried the Zetec)', engine:'2.0L DOHC 16v Zetec-E, 130 hp / 135 lb-ft, VIN code 3',
+  engineCode:'Zetec (Ford "ZETEC-E" / EDDC), cast-iron block, aluminum head, timing belt (100k interval)',
+  trans:'Either MTX-75 5-speed manual or 4F27E 4-speed automatic (VIN does not encode this; check the shifter)',
+  drivetrain:'FWD', plant:'Wayne Assembly, Michigan (plant code W)', seq:'175417',
+  fuel:'Gasoline, port injection, 13.2 gal tank', brakes:'Front vented disc / rear drum standard (rear disc only with ABS+traction option)',
+  susp:'Front MacPherson strut, rear Control Blade independent multilink',
+  wheels:'15x6 steel or alloy, 195/60R15 (some wagons 16" 205/50R16 on ZTW; measure)',
+  rockautoVehicle:'https://www.rockauto.com/en/catalog/ford,2003,focus,2.0l+l4+dohc,1431898',
+  notes:'Ford emissions/certification label on the driver door jamb lists the build date, axle code, transmission code and paint code. Send a photo of it and the transmission and paint fields get filled.'
+};
+const SYSTEMS= ['Engine','Cooling','Fuel & Air','Ignition & Electrical','Exhaust','Transmission & Drive','Suspension','Brakes','Steering','HVAC','Body','Lighting','Interior','Wheels & Tires'];
+const PARTS= [
+ // ENGINE
+ {id:'eng-block',name:'Engine long block (2.0 Zetec)',sys:'Engine',shape:'box',size:[4.2,4,3.2],pos:[5.5,3.2,0],ex:[0,1.5,0],color:0x8a8f96,oe:['2M5Z-6006-AA (reman long block)'],conf:'K',notes:'Cast iron block, alum DOHC head. Common: valve cover gasket, timing belt/tensioner, oil pan gasket, rear main.'},
+ {id:'valve-cover',name:'Valve cover + gasket',sys:'Engine',shape:'box',size:[3.8,0.6,2.6],pos:[5.5,5.5,0],ex:[0,3,0],color:0x5c6168,oe:['Motorcraft VS-50600 (gasket)','1S7Z-6584-AA'],conf:'K'},
+ {id:'timing-belt',name:'Timing belt kit (belt, tensioner, idler)',sys:'Engine',shape:'box',size:[0.4,3.6,2.6],pos:[5.5,3.2,2],ex:[0,0,3],color:0x222222,oe:['Motorcraft TB-259','TCK283 (Gates kit)'],aft:['Gates TCK283','Dayco 95283K1'],conf:'K',notes:'Water pump is chain/belt independent on Zetec; do the belt + tensioner + idler together.'},
+ {id:'oil-pan',name:'Oil pan + gasket',sys:'Engine',shape:'box',size:[3.8,0.8,2.6],pos:[5.5,1.2,0],ex:[0,-3,0],color:0x444a52,oe:['Motorcraft 1S7Z-6675-AA'],conf:'K'},
+ {id:'oil-filter',name:'Oil filter',sys:'Engine',shape:'cyl',size:[0.5,0.9],pos:[4.2,2,-1.2],ex:[0,-2,-2],color:0xd0d0d0,oe:['Motorcraft FL-400S'],aft:['Wix 51372','Fram PH3600'],conf:'K'},
+ {id:'motor-mounts',name:'Engine mounts (3) + trans mount',sys:'Engine',shape:'box',size:[0.8,0.8,0.8],pos:[5.5,3.2,2.2],ex:[0,0,4],color:0x333333,oe:['1S4Z-6038-AA (RH)','1S4Z-6068-AA (front roll restrictor)','1S4Z-6068-BA (rear)'],conf:'K',notes:'Hydraulic RH mount is the usual failure. Check for leaking fluid.'},
+ {id:'serp-belt',name:'Serpentine belt + tensioner',sys:'Engine',shape:'box',size:[0.3,3.4,2.6],pos:[5.5,3.2,-2],ex:[0,0,-3],color:0x111111,oe:['Motorcraft JK6-882','Tensioner 1S7Z-6B209-AA'],aft:['Gates K060882','Dayco 5060882'],conf:'K'},
+ {id:'spark-plugs',name:'Spark plugs (4) + coil pack',sys:'Ignition & Electrical',shape:'box',size:[2.4,0.5,0.6],pos:[5.5,6,0.8],ex:[0,4,1],color:0xdddddd,oe:['Motorcraft AGSF-32FM / SP-432','Coil 1S7Z-12029-AA'],aft:['NGK 3672 (AGSF32FM equivalent)','Denso 5304'],conf:'K'},
+ // COOLING
+ {id:'radiator',name:'Radiator',sys:'Cooling',shape:'box',size:[0.4,3.4,5],pos:[9.4,3,0],ex:[4,0,0],color:0x6b8fa8,oe:['3S4Z-8005-AA'],aft:['Spectra CU2296','Denso 221-9207'],conf:'K'},
+ {id:'rad-fan',name:'Cooling fan + motor assembly',sys:'Cooling',shape:'cyl',size:[1.4,0.4],pos:[8.6,3,0],ex:[3,1.5,0],color:0x222222,oe:['YS4Z-8C607-AB'],aft:['TYC 620590','Dorman 620-141'],conf:'K'},
+ {id:'thermostat',name:'Thermostat + housing',sys:'Cooling',shape:'cyl',size:[0.45,0.6],pos:[6.8,4.2,-1.4],ex:[2,2,-2],color:0x999999,oe:['Motorcraft RT-1152 (stat)','1S7Z-8592-AA (housing)'],conf:'K'},
+ {id:'water-pump',name:'Water pump',sys:'Cooling',shape:'cyl',size:[0.7,0.8],pos:[5.5,2.2,2.2],ex:[0,-2,4],color:0xbfc4c9,oe:['Motorcraft PW-425','1S7Z-8501-AA'],aft:['Gates 41046','Airtex AW4109'],conf:'K'},
+ {id:'rad-hoses',name:'Radiator hoses (upper/lower)',sys:'Cooling',shape:'cyl',size:[0.25,3],pos:[8,4.2,1],ex:[3,3,0],color:0x111111,oe:['Motorcraft KM-4671 (upper)','KM-4672 (lower)'],aft:['Gates 22440 / 22441'],conf:'L'},
+ {id:'coolant-res',name:'Coolant degas bottle',sys:'Cooling',shape:'box',size:[1.2,1.4,1],pos:[8.6,5.2,-2.2],ex:[3,3,-2],color:0xeeeeee,oe:['1S4Z-8A080-AA'],aft:['Dorman 603-208'],conf:'K'},
+ // FUEL & AIR
+ {id:'intake-mani',name:'Intake manifold + gasket',sys:'Fuel & Air',shape:'box',size:[1.6,1.6,2.6],pos:[6.8,4.6,0],ex:[3,3,0],color:0x2f2f2f,oe:['1S7Z-9424-AA'],conf:'L'},
+ {id:'throttle-body',name:'Throttle body',sys:'Fuel & Air',shape:'cyl',size:[0.6,0.7],pos:[7.6,5.2,-1],ex:[3,3,-1],color:0xaaaaaa,oe:['1S7Z-9E926-AA'],aft:['Dorman 977-000'],conf:'L'},
+ {id:'airbox',name:'Air filter box + filter',sys:'Fuel & Air',shape:'box',size:[2,2,2],pos:[8.4,4.4,-3.2],ex:[3,2,-3],color:0x1a1a1a,oe:['Motorcraft FA-1632 (filter)'],aft:['Wix 46650','K&N 33-2119'],conf:'K'},
+ {id:'maf',name:'Mass air flow sensor',sys:'Fuel & Air',shape:'cyl',size:[0.4,0.8],pos:[8.2,4.6,-2],ex:[3,3,-3],color:0x333333,oe:['Motorcraft AFLS-141 / 1S7F-12B579-AA'],aft:['Hitachi MAF0028'],conf:'K'},
+ {id:'fuel-inj',name:'Fuel injectors (4) + rail',sys:'Fuel & Air',shape:'box',size:[2.6,0.4,0.4],pos:[6.4,5.0,0],ex:[2,4,0],color:0x777777,oe:['Motorcraft CM-4924','1S7Z-9F593-BA'],conf:'L'},
+ {id:'fuel-pump',name:'Fuel pump module (in tank)',sys:'Fuel & Air',shape:'cyl',size:[0.7,1.6],pos:[-4.5,2.2,0],ex:[0,4,0],color:0x999999,oe:['Motorcraft PFS-118','3S4Z-9H307-AA'],aft:['Delphi FG0885','Airtex E2372M'],conf:'K'},
+ {id:'fuel-tank',name:'Fuel tank (13.2 gal)',sys:'Fuel & Air',shape:'box',size:[3,1.2,4.5],pos:[-4.5,1.4,0],ex:[0,-3,0],color:0x333333,oe:['4S4Z-9002-AA'],aft:['Spectra F76A'],conf:'L'},
+ {id:'fuel-filter',name:'Fuel filter',sys:'Fuel & Air',shape:'cyl',size:[0.3,1],pos:[-2.5,1.2,1.2],ex:[0,-3,2],color:0xbbbbbb,oe:['Motorcraft FG-986B'],aft:['Wix 33595','Fram G7315'],conf:'K'},
+ {id:'pcv',name:'PCV valve + hose',sys:'Fuel & Air',shape:'cyl',size:[0.2,0.6],pos:[5,5.6,-1.2],ex:[0,3,-2],color:0x222222,oe:['Motorcraft EV-192'],conf:'K'},
+ // IGNITION & ELECTRICAL
+ {id:'alternator',name:'Alternator 110A (Lester 8260)',sys:'Ignition & Electrical',shape:'cyl',size:[0.75,1.2],pos:[7.2,2.4,-2.2],ex:[3,-1,-3],color:0xb0b0b0,oe:['Motorcraft GL-456','1S41-10300-AA','98AB-10300-EB'],aft:['Lester 8260','DB Electrical AFD0091','WAI 8260N / 8260R','Remy 92511'],conf:'V',notes:'NOT 8418 (SVT / late-04), NOT 8406 (05-07 Duratec). 6-groove pulley, 11 o clock plug, 2-ear mount.'},
+ {id:'starter',name:'Starter motor',sys:'Ignition & Electrical',shape:'cyl',size:[0.55,1.3],pos:[4.2,1.8,1.8],ex:[-2,-2,3],color:0x8f8f8f,oe:['Motorcraft SA-830 (MTX) / SA-829 (auto)','1S7Z-11002-AA'],aft:['Lester 17830 (manual) / 17831 (auto)','DB Electrical SFD0032'],conf:'K',notes:'Manual vs automatic use different starters. Confirm transmission first.'},
+ {id:'battery',name:'Battery (Group 96R)',sys:'Ignition & Electrical',shape:'box',size:[1.6,1.6,2.2],pos:[8.4,5,2.8],ex:[2,3,3],color:0x1a1a1a,oe:['Motorcraft BXT-96R'],aft:['Any Group 96R, 590 CCA'],conf:'K'},
+ {id:'ignition-sw',name:'Ignition switch + lock cylinder',sys:'Ignition & Electrical',shape:'cyl',size:[0.3,0.8],pos:[2.2,5.4,1.6],ex:[0,4,3],color:0x666666,oe:['3S4Z-11572-AA (switch)'],conf:'L'},
+ {id:'o2-sensors',name:'O2 sensors (upstream + downstream)',sys:'Ignition & Electrical',shape:'cyl',size:[0.15,0.6],pos:[3.6,1.6,-0.5],ex:[0,-3,-2],color:0xdddddd,oe:['Motorcraft DY-1003 (up) / DY-1013 (down)'],aft:['Denso 234-4127 / 234-4374','Bosch 15716'],conf:'L'},
+ {id:'ckp-sensor',name:'Crank position sensor',sys:'Ignition & Electrical',shape:'cyl',size:[0.15,0.5],pos:[4.6,1.4,2.4],ex:[0,-2,4],color:0x333333,oe:['Motorcraft DY-1194 / 1S7Z-6C315-AA'],conf:'K'},
+ {id:'pcm',name:'Powertrain control module (PCM)',sys:'Ignition & Electrical',shape:'box',size:[1.2,1.8,0.5],pos:[8.6,4.8,-3.8],ex:[2,3,-4],color:0x777777,oe:['Calibration-specific; read tear tag on module'],conf:'L',notes:'Must be programmed to VIN. Used units need PATS relearn.'},
+ {id:'fuse-box',name:'Engine bay fuse/relay box (CJB)',sys:'Ignition & Electrical',shape:'box',size:[1.4,1,1.4],pos:[8.6,5.2,3.6],ex:[2,3,4],color:0x222222,oe:['2M5Z-14A068-AA'],conf:'L'},
+ // EXHAUST
+ {id:'exh-mani',name:'Exhaust manifold + catalytic converter',sys:'Exhaust',shape:'box',size:[1.2,2.4,2.6],pos:[4.0,3.2,0],ex:[-2,-2,0],color:0x6a5a4a,oe:['1S7Z-5G232-AA (manifold cat)'],aft:['Dorman 674-955','Walker 16404'],conf:'L',notes:'49-state vs CA emissions differ. Check the underhood label.'},
+ {id:'flex-pipe',name:'Flex pipe / front pipe',sys:'Exhaust',shape:'cyl',size:[0.25,3],pos:[1.5,0.9,-0.4],ex:[0,-3,0],color:0x777777,oe:['3S4Z-5246-AA'],aft:['Walker 55254'],conf:'L'},
+ {id:'muffler',name:'Muffler + tailpipe',sys:'Exhaust',shape:'cyl',size:[0.7,3],pos:[-5.5,0.9,-1.4],ex:[-4,-3,0],color:0x777777,oe:['3S4Z-5230-AA (wagon)'],aft:['Walker 21550','Bosal 279-135'],conf:'L',notes:'Wagon muffler differs from sedan/hatch.'},
+ {id:'mid-pipe',name:'Resonator / mid pipe',sys:'Exhaust',shape:'cyl',size:[0.35,5],pos:[-2,0.9,-1],ex:[0,-3,0],color:0x777777,oe:[],aft:['Walker 54551'],conf:'L'},
+ // TRANSMISSION & DRIVE
+ {id:'trans',name:'Transaxle (MTX-75 manual or 4F27E auto)',sys:'Transmission & Drive',shape:'box',size:[3,3,2.4],pos:[5.5,2.6,3.2],ex:[0,0,6],color:0x9aa0a6,oe:['MTX-75: 1S7Z-7003-xx','4F27E: 3S4Z-7000-xx'],conf:'L',notes:'Identify: manual has clutch pedal. Auto 4F27E shares with Mazda FN4A-EL.'},
+ {id:'clutch',name:'Clutch kit + release bearing (manual only)',sys:'Transmission & Drive',shape:'cyl',size:[1.1,0.4],pos:[5.5,2.6,1.9],ex:[0,0,5],color:0x555555,oe:['Motorcraft CK-8135 / 1S7Z-7B546-BA'],aft:['LuK 07-141','Exedy FMK1005'],conf:'K'},
+ {id:'cv-axle-l',name:'CV axle, driver (LH)',sys:'Transmission & Drive',shape:'cyl',size:[0.2,2.6],pos:[5.5,1.5,4.4],ex:[0,0,5],color:0x444444,oe:['1S4Z-3A427-BA (LH)'],aft:['TrakMotive FD-8140','Cardone 66-2081'],conf:'K',rot:[Math.PI/2,0,0]},
+ {id:'cv-axle-r',name:'CV axle, passenger (RH, with intermediate shaft)',sys:'Transmission & Drive',shape:'cyl',size:[0.2,2.6],pos:[5.5,1.5,-4.4],ex:[0,0,-5],color:0x444444,oe:['1S4Z-3B436-BA (RH)'],aft:['TrakMotive FD-8141','Cardone 66-2080'],conf:'K',rot:[Math.PI/2,0,0]},
+ {id:'trans-fluid',name:'Transaxle fluid (MTX-75: Motorcraft MERCON V? No: XT-M5-QS / 4F27E: MERCON V)',sys:'Transmission & Drive',shape:'box',size:[0.6,0.9,0.6],pos:[5.5,4.6,3.2],ex:[0,4,5],color:0xcc3333,oe:['MTX-75: XT-M5-QS (Full Synthetic Manual Trans Fluid)','4F27E: XT-5-QM (MERCON V)'],conf:'K'},
+ // SUSPENSION
+ {id:'strut-fl',name:'Front strut + spring + mount, LH',sys:'Suspension',shape:'cyl',size:[0.35,3.2],pos:[6,3.5,4.4],ex:[0,4,4],color:0x222233,oe:['Motorcraft AST-48 (LH), AST-47 (RH)'],aft:['Monroe 171528L/R (Quick-Strut)','KYB SR4029/SR4030'],conf:'K'},
+ {id:'strut-fr',name:'Front strut + spring + mount, RH',sys:'Suspension',shape:'cyl',size:[0.35,3.2],pos:[6,3.5,-4.4],ex:[0,4,-4],color:0x222233,oe:['Motorcraft AST-47'],aft:['Monroe 171528R','KYB SR4030'],conf:'K'},
+ {id:'lca-f',name:'Front lower control arms + ball joints (pair)',sys:'Suspension',shape:'box',size:[1.6,0.3,1.8],pos:[6,1.2,3.8],ex:[0,-2,4],color:0x444444,oe:['1S4Z-3078-BA (LH) / 1S4Z-3079-BA (RH)'],aft:['Moog RK620234 / RK620235','Dorman 520-263/264'],conf:'K'},
+ {id:'sway-f',name:'Front sway bar links + bushings',sys:'Suspension',shape:'cyl',size:[0.12,1.4],pos:[7,2,3.8],ex:[2,0,4],color:0x555555,oe:['1S4Z-5K484-AA'],aft:['Moog K80104','Mevotech MK80104'],conf:'K'},
+ {id:'shock-r',name:'Rear shocks (pair) + springs',sys:'Suspension',shape:'cyl',size:[0.25,2.8],pos:[-5,3.2,4.2],ex:[0,4,4],color:0x222233,oe:['Motorcraft ASH-1103 (wagon)'],aft:['Monroe 5964','KYB 343309'],conf:'L',notes:'Wagon rear shock/spring rates differ from sedan.'},
+ {id:'rear-blade',name:'Rear Control Blade arms + bushings',sys:'Suspension',shape:'box',size:[3,0.3,0.6],pos:[-4,1.4,4],ex:[-2,-2,4],color:0x444444,oe:['2M5Z-5500-AA (trailing arm)'],aft:['Dorman 522-500'],conf:'L'},
+ {id:'wheel-brg-f',name:'Front wheel hub/bearing (pair)',sys:'Suspension',shape:'cyl',size:[0.5,0.5],pos:[6,1.5,4.9],ex:[0,0,5],color:0xbbbbbb,oe:['Motorcraft HUB-48 (bearing YS4Z-1215-AA)'],aft:['Timken 510030','SKF GRW178'],conf:'K',rot:[Math.PI/2,0,0]},
+ {id:'wheel-brg-r',name:'Rear wheel hub/bearing (pair)',sys:'Suspension',shape:'cyl',size:[0.5,0.5],pos:[-5,1.5,4.9],ex:[0,0,5],color:0xbbbbbb,oe:['Motorcraft HUB-52 / YS4Z-1104-BA'],aft:['Timken 512219','SKF BR930433'],conf:'K',rot:[Math.PI/2,0,0]},
+ // BRAKES
+ {id:'rotor-f',name:'Front brake rotors (vented, 258mm)',sys:'Brakes',shape:'cyl',size:[0.95,0.2],pos:[6,1.5,4.6],ex:[0,0,6],color:0x9a9a9a,oe:['Motorcraft BRR-95 / YS4Z-1125-AA'],aft:['Raybestos 980112','Bosch 20010358'],conf:'K',rot:[Math.PI/2,0,0]},
+ {id:'pads-f',name:'Front brake pads',sys:'Brakes',shape:'box',size:[0.5,0.7,0.2],pos:[6.4,2.2,4.6],ex:[2,2,6],color:0x333333,oe:['Motorcraft BR-1214 / BR-1250'],aft:['Wagner ThermoQuiet QC816','Akebono ACT816'],conf:'K'},
+ {id:'caliper-f',name:'Front calipers (pair)',sys:'Brakes',shape:'box',size:[0.9,0.9,0.5],pos:[6.4,2,4.7],ex:[2,3,6],color:0x8b1a1a,oe:['1S4Z-2B120-AA / 2B121-AA'],aft:['Cardone 19-2818 / 19-2819'],conf:'L'},
+ {id:'drum-r',name:'Rear brake drums (203mm)',sys:'Brakes',shape:'cyl',size:[0.85,0.5],pos:[-5,1.5,4.6],ex:[0,0,6],color:0x8a8a8a,oe:['Motorcraft BRD-2 / YS4Z-1126-AA'],aft:['Raybestos 9764R','Bendix PDR0764'],conf:'L',rot:[Math.PI/2,0,0],notes:'If the car has rear discs (ABS/traction package), rotor is 253mm solid; pads BR-1030.'},
+ {id:'shoes-r',name:'Rear brake shoes + hardware + wheel cylinders',sys:'Brakes',shape:'box',size:[0.5,0.7,0.2],pos:[-4.6,2.2,4.6],ex:[-2,2,6],color:0x333333,oe:['Motorcraft BRS-13 / BR-2E'],aft:['Wagner Z764','Raybestos 764PG'],conf:'L'},
+ {id:'master-cyl',name:'Brake master cylinder + booster',sys:'Brakes',shape:'cyl',size:[0.5,1.4],pos:[3.6,5.2,2.2],ex:[0,4,3],color:0xbbbbbb,oe:['Motorcraft BRMC-84 / 2M5Z-2140-AA'],aft:['Cardone 13-2924','Dorman M630115'],conf:'L'},
+ {id:'abs-mod',name:'ABS hydraulic unit (if equipped)',sys:'Brakes',shape:'box',size:[1,1,1],pos:[8,4,2.2],ex:[3,3,3],color:0x444444,oe:['2M5Z-2C286-AA'],conf:'L'},
+ // STEERING
+ {id:'rack',name:'Power steering rack + inner tie rods',sys:'Steering',shape:'cyl',size:[0.2,7],pos:[4.6,1.6,0],ex:[-2,-3,0],color:0x555555,oe:['1S4Z-3504-BARM (reman)'],aft:['Cardone 22-249','A1 Cardone 26-2058'],conf:'L',rot:[Math.PI/2,0,0]},
+ {id:'tie-rods',name:'Outer tie rod ends (pair)',sys:'Steering',shape:'cyl',size:[0.15,1],pos:[5.2,1.5,4.2],ex:[0,-2,4],color:0x666666,oe:['1S4Z-3A130-AA / 3A131-AA'],aft:['Moog ES3579 / ES3580'],conf:'K'},
+ {id:'ps-pump',name:'Power steering pump + reservoir',sys:'Steering',shape:'cyl',size:[0.5,1],pos:[7.2,4.4,-2.2],ex:[3,3,-3],color:0x999999,oe:['Motorcraft STP-86 / 1S4Z-3A674-AA'],aft:['Cardone 20-289'],conf:'L'},
+ {id:'steering-col',name:'Steering column + intermediate shaft',sys:'Steering',shape:'cyl',size:[0.2,3],pos:[2.5,4.2,2],ex:[0,4,3],color:0x333333,oe:['2M5Z-3524-AA'],conf:'L',rot:[0,0,Math.PI/4]},
+ // HVAC
+ {id:'ac-comp',name:'A/C compressor + clutch',sys:'HVAC',shape:'cyl',size:[0.65,1.2],pos:[7.2,1.6,-2.2],ex:[3,-3,-3],color:0xaaaaaa,oe:['Motorcraft YCC-179 / 1S4Z-19V703-AA'],aft:['Four Seasons 78515','Denso 471-8121'],conf:'L'},
+ {id:'condenser',name:'A/C condenser',sys:'HVAC',shape:'box',size:[0.2,3.2,4.8],pos:[9.9,3,0],ex:[5,0,0],color:0x8aa6b8,oe:['1S4Z-19712-AA'],aft:['Spectra 7-4879','Denso 477-0670'],conf:'L'},
+ {id:'blower',name:'Blower motor + resistor',sys:'HVAC',shape:'cyl',size:[0.7,0.8],pos:[3,4.8,-2.4],ex:[0,4,-4],color:0x222222,oe:['Motorcraft MM-1003 / 1S4Z-19805-AA','Resistor 1S4Z-18591-AA'],aft:['TYC 700041','Dorman 973-046'],conf:'K'},
+ {id:'heater-core',name:'Heater core',sys:'HVAC',shape:'box',size:[0.3,1.6,1.8],pos:[3,4.6,0],ex:[0,5,0],color:0xb87333,oe:['Motorcraft HC-9 / 2M5Z-18476-AA'],aft:['Spectra 98038','APDI 9010184'],conf:'L',notes:'Dash-out job. Common failure on this generation.'},
+ {id:'cabin-filter',name:'Cabin air filter',sys:'HVAC',shape:'box',size:[0.2,1.6,1.8],pos:[3.5,5.2,-1.2],ex:[0,4,-2],color:0xeeeeee,oe:['Motorcraft FP-45'],aft:['Fram CF10134'],conf:'K'},
+ // BODY
+ {id:'hood',name:'Hood',sys:'Body',body:true,shape:'box',size:[4.5,0.12,6.2],pos:[7,6.3,0],ex:[1,5,0],color:0x2a5b8c,oe:['2M5Z-16612-AA'],conf:'L'},
+ {id:'front-bumper',name:'Front bumper cover',sys:'Body',body:true,shape:'box',size:[0.5,2.4,6.4],pos:[10.4,2.2,0],ex:[6,0,0],color:0x2a5b8c,oe:['2M5Z-17D957-AA'],aft:['FO1000512 (CAPA)'],conf:'L'},
+ {id:'rear-bumper',name:'Rear bumper cover (wagon)',sys:'Body',body:true,shape:'box',size:[0.5,2.4,6.4],pos:[-7.4,2.2,0],ex:[-6,0,0],color:0x2a5b8c,oe:['2M5Z-17K835-AA (wagon)'],aft:['FO1100322'],conf:'L'},
+ {id:'fender-l',name:'Front fender, LH',sys:'Body',body:true,shape:'box',size:[4,2.4,0.12],pos:[7,3.8,3.4],ex:[0,1,5],color:0x2a5b8c,oe:['2M5Z-16006-AA'],aft:['FO1240210'],conf:'L'},
+ {id:'fender-r',name:'Front fender, RH',sys:'Body',body:true,shape:'box',size:[4,2.4,0.12],pos:[7,3.8,-3.4],ex:[0,1,-5],color:0x2a5b8c,oe:['2M5Z-16005-AA'],aft:['FO1241210'],conf:'L'},
+ {id:'door-fl',name:'Front door, LH (shell)',sys:'Body',body:true,shape:'box',size:[3.6,4.2,0.12],pos:[2.4,4.6,3.4],ex:[0,0,6],color:0x2a5b8c,oe:['2M5Z-5420125-AA'],conf:'L'},
+ {id:'door-fr',name:'Front door, RH',sys:'Body',body:true,shape:'box',size:[3.6,4.2,0.12],pos:[2.4,4.6,-3.4],ex:[0,0,-6],color:0x2a5b8c,oe:['2M5Z-5420124-AA'],conf:'L'},
+ {id:'door-rl',name:'Rear door, LH',sys:'Body',body:true,shape:'box',size:[3.2,4.2,0.12],pos:[-1.2,4.6,3.4],ex:[0,0,6],color:0x2a5b8c,oe:['2M5Z-5424631-AA'],conf:'L'},
+ {id:'door-rr',name:'Rear door, RH',sys:'Body',body:true,shape:'box',size:[3.2,4.2,0.12],pos:[-1.2,4.6,-3.4],ex:[0,0,-6],color:0x2a5b8c,oe:['2M5Z-5424630-AA'],conf:'L'},
+ {id:'liftgate',name:'Liftgate (wagon) + struts',sys:'Body',body:true,shape:'box',size:[0.12,4.6,6],pos:[-7,4.8,0],ex:[-6,2,0],color:0x2a5b8c,oe:['2M5Z-7440110-AA','Struts 2M5Z-74406A10-AA'],aft:['StrongArm 4381 (struts)'],conf:'L'},
+ {id:'windshield',name:'Windshield',sys:'Body',body:true,shape:'box',size:[2.2,3,5.8],pos:[3.6,6.3,0],ex:[2,5,0],color:0x9fd0ff,oe:['FW02306 (NAGS)'],conf:'L',rot:[0,0,-0.55]},
+ {id:'roof',name:'Roof panel',sys:'Body',body:true,shape:'box',size:[8,0.12,6],pos:[-1.8,7.5,0],ex:[0,6,0],color:0x2a5b8c,oe:['2M5Z-7450202-AA'],conf:'L'},
+ {id:'mirrors',name:'Side mirrors (pair)',sys:'Body',body:true,shape:'box',size:[0.8,0.6,0.5],pos:[4,5.6,3.6],ex:[0,2,5],color:0x2a5b8c,oe:['2M5Z-17682-AA (RH), 17683-AA (LH)'],aft:['Dorman 955-1129 / 955-1128','FO1320180 / FO1321180'],conf:'K'},
+ {id:'wipers',name:'Wiper blades + rear wiper motor',sys:'Body',shape:'box',size:[0.15,0.15,5],pos:[5,6.1,0],ex:[1,4,0],color:0x111111,oe:['Motorcraft WW-2201 / WW-1801, rear WW-1401'],aft:['Bosch ICON 22A / 18A'],conf:'K'},
+ // LIGHTING
+ {id:'headlamp-l',name:'Headlamp assembly, LH',sys:'Lighting',shape:'box',size:[0.7,1.2,1.8],pos:[10,3.8,2.4],ex:[5,2,2],color:0xf0f0f0,oe:['2M5Z-13008-AB'],aft:['TYC 20-6202-00','FO2503181'],conf:'K'},
+ {id:'headlamp-r',name:'Headlamp assembly, RH',sys:'Lighting',shape:'box',size:[0.7,1.2,1.8],pos:[10,3.8,-2.4],ex:[5,2,-2],color:0xf0f0f0,oe:['2M5Z-13008-AA'],aft:['TYC 20-6201-00','FO2502181'],conf:'K'},
+ {id:'taillamp-l',name:'Tail lamp, LH (wagon)',sys:'Lighting',shape:'box',size:[0.5,1.6,1],pos:[-7.2,4,2.8],ex:[-5,2,2],color:0xc0392b,oe:['2S4Z-13405-AA'],aft:['TYC 11-5964-01'],conf:'L'},
+ {id:'taillamp-r',name:'Tail lamp, RH (wagon)',sys:'Lighting',shape:'box',size:[0.5,1.6,1],pos:[-7.2,4,-2.8],ex:[-5,2,-2],color:0xc0392b,oe:['2S4Z-13404-AA'],aft:['TYC 11-5963-01'],conf:'L'},
+ {id:'bulbs',name:'Bulb set (9007 head, 3157 tail/turn, 194 marker)',sys:'Lighting',shape:'cyl',size:[0.15,0.4],pos:[9.6,4.4,0],ex:[5,3,0],color:0xffffcc,oe:['9007 low/high','3157','194','921 reverse'],aft:['Sylvania'],conf:'K'},
+ // INTERIOR
+ {id:'seat-fl',name:'Driver seat + track',sys:'Interior',shape:'box',size:[1.8,2.2,1.6],pos:[1.6,3.4,1.6],ex:[0,5,2],color:0x4a4a4a,oe:['Trim-specific; check label under seat'],conf:'L'},
+ {id:'seat-fr',name:'Passenger seat',sys:'Interior',shape:'box',size:[1.8,2.2,1.6],pos:[1.6,3.4,-1.6],ex:[0,5,-2],color:0x4a4a4a,oe:[],conf:'L'},
+ {id:'seat-rear',name:'Rear bench 60/40',sys:'Interior',shape:'box',size:[1.8,2.2,4.6],pos:[-2.4,3.4,0],ex:[0,5,0],color:0x4a4a4a,oe:[],conf:'L'},
+ {id:'dash',name:'Instrument panel + cluster',sys:'Interior',shape:'box',size:[1.6,1.6,5.6],pos:[3.8,4.8,0],ex:[0,5,0],color:0x2b2b2b,oe:['Cluster 2M5Z-10849-xx (option-specific)'],conf:'L'},
+ {id:'window-reg',name:'Window regulators + motors (4)',sys:'Interior',shape:'box',size:[1.6,1.2,0.1],pos:[2.4,4,3.2],ex:[0,1,4],color:0x777777,oe:['Front LH 2M5Z-5423209-AA / RH -5423208-AA'],aft:['Dorman 741-878 / 741-879'],conf:'K',notes:'Very common failure on 00-07 Focus.'},
+ {id:'door-latch',name:'Door latches / lock actuators',sys:'Interior',shape:'box',size:[0.4,0.6,0.2],pos:[4.2,4,3.3],ex:[0,1,5],color:0x555555,oe:['2M5Z-54219A64-AA (front)'],aft:['Dorman 937-651'],conf:'L'},
+ {id:'shifter',name:'Shifter + cables',sys:'Interior',shape:'cyl',size:[0.1,1],pos:[2.2,3.6,0],ex:[0,5,0],color:0x111111,oe:['Manual: 2M5Z-7E395-AA cables'],conf:'L'},
+ {id:'key',name:'PATS transponder key + fob',sys:'Interior',shape:'box',size:[0.3,0.1,0.15],pos:[2.2,5.6,1.9],ex:[0,6,4],color:0x222222,oe:['H72-PT key blank','Fob: CWTWB1U331'],aft:['Any H72-PT programmable; need 2 working keys to self-program'],conf:'K'},
+ // WHEELS & TIRES
+ {id:'wheel-fl',name:'Wheel + tire, front LH',sys:'Wheels & Tires',shape:'cyl',size:[1.3,0.8],pos:[6,1.3,3.9],ex:[0,0,7],color:0x111111,oe:['15x6 steel 2M5Z-1007-AA / alloy trim-specific'],aft:['195/60R15 88H'],conf:'L',rot:[Math.PI/2,0,0]},
+ {id:'wheel-fr',name:'Wheel + tire, front RH',sys:'Wheels & Tires',shape:'cyl',size:[1.3,0.8],pos:[6,1.3,-3.9],ex:[0,0,-7],color:0x111111,oe:[],aft:['195/60R15 88H'],conf:'L',rot:[Math.PI/2,0,0]},
+ {id:'wheel-rl',name:'Wheel + tire, rear LH',sys:'Wheels & Tires',shape:'cyl',size:[1.3,0.8],pos:[-5,1.3,3.9],ex:[0,0,7],color:0x111111,oe:[],aft:['195/60R15 88H'],conf:'L',rot:[Math.PI/2,0,0]},
+ {id:'wheel-rr',name:'Wheel + tire, rear RH',sys:'Wheels & Tires',shape:'cyl',size:[1.3,0.8],pos:[-5,1.3,-3.9],ex:[0,0,-7],color:0x111111,oe:[],aft:['195/60R15 88H'],conf:'L',rot:[Math.PI/2,0,0]},
+ {id:'lugs',name:'Lug nuts (M12x1.5, 20) + spare',sys:'Wheels & Tires',shape:'cyl',size:[0.15,0.3],pos:[-5.5,1.6,0],ex:[0,-3,0],color:0xcccccc,oe:['Motorcraft W710294-S441'],aft:['Dorman 611-263'],conf:'K'},
+];
+/* ===== STATE: defaults + overlay ===== */
+const KEY='focus-explorer-v1';
+const CONF={V:'verified',K:'assumed (catalog #)',L:'assumed (lookup only)',C:'corrected by owner',X:'flagged wrong'};
+function loadOverlay(){try{return JSON.parse(localStorage.getItem(KEY))||{};}catch(e){return {};}}
+let overlay=Object.assign({vehicle:{},parts:{},custom:[],deleted:[],log:[]},loadOverlay());
+function saveOverlay(){localStorage.setItem(KEY,JSON.stringify(overlay)); updateSubtitle();}
+function logChange(what){overlay.log.unshift({t:new Date().toISOString(),what}); if(overlay.log.length>500) overlay.log.length=500;}
+function vehicle(){return Object.assign({},VEHICLE,overlay.vehicle);}
+function allParts(){
+  const base=PARTS.filter(p=>!overlay.deleted.includes(p.id)).map(p=>Object.assign({},p,overlay.parts[p.id]||{}));
+  const custom=overlay.custom.filter(p=>!overlay.deleted.includes(p.id)).map(p=>Object.assign({custom:true},p,overlay.parts[p.id]||{}));
+  return base.concat(custom);
+}
+function isCorrected(id){return !!overlay.parts[id];}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.style.display='block';clearTimeout(t._h);t._h=setTimeout(()=>t.style.display='none',1800);}
+function updateSubtitle(){const n=Object.keys(overlay.parts).length+overlay.custom.length+overlay.deleted.length;document.getElementById('subtitle').textContent=(n?`${n} correction${n>1?'s':''} saved on this device · `:'')+'drag to rotate · scroll / slide / pinch to explode · tap a part';}
 
+/* ===== SCENE ===== */
 const canvas=document.getElementById('c');
-const renderer=new THREE.WebGLRenderer({canvas,antialias:true});
-renderer.setPixelRatio(Math.min(devicePixelRatio,2));
-const scene=new THREE.Scene(); scene.background=new THREE.Color(0x0a0a0a);
-scene.fog=new THREE.Fog(0x0a0a0a,60,140);
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true}); renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+const scene=new THREE.Scene(); scene.background=new THREE.Color(0x0a0a0a); scene.fog=new THREE.Fog(0x0a0a0a,60,140);
 const camera=new THREE.PerspectiveCamera(40,1,0.1,400); camera.position.set(22,14,26);
 const controls=new OrbitControls(camera,canvas); controls.enableDamping=true; controls.enableZoom=false; controls.target.set(0,3.2,0);
 scene.add(new THREE.HemisphereLight(0xffffff,0x222222,1.1));
 const key=new THREE.DirectionalLight(0xffe0c0,1.4); key.position.set(20,30,10); scene.add(key);
 const rim=new THREE.DirectionalLight(0x8fb8ff,0.6); rim.position.set(-20,10,-20); scene.add(rim);
 const grid=new THREE.GridHelper(60,30,0x222222,0x161616); grid.position.y=0.4; scene.add(grid);
-
-// unibody shell (non-part, semi-transparent)
 const shellMat=new THREE.MeshStandardMaterial({color:0x1d3f63,metalness:0.4,roughness:0.5,transparent:true,opacity:0.55});
 const shell=new THREE.Group();
 function box(w,h,d,x,y,z,mat){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.set(x,y,z);return m;}
-shell.add(box(17,2.2,6.4,-0.5,2.4,0,shellMat));        // floor/sills
-shell.add(box(9,3.2,6.2,-2,5.6,0,shellMat));            // cabin sides/greenhouse
-shell.add(box(4.5,1.2,6.2,7,5.5,0,shellMat));           // engine bay upper
-scene.add(shell);
-
+shell.add(box(17,2.2,6.4,-0.5,2.4,0,shellMat)); shell.add(box(9,3.2,6.2,-2,5.6,0,shellMat)); shell.add(box(4.5,1.2,6.2,7,5.5,0,shellMat)); scene.add(shell);
 const group=new THREE.Group(); scene.add(group);
-const meshes=[]; const byId={};
-const explodeScale=1.0;
-for(const p of PARTS){
-  let geo;
-  if(p.shape==='cyl'){geo=new THREE.CylinderGeometry(p.size[0],p.size[0],p.size[1],28);} else {geo=new THREE.BoxGeometry(...p.size);}
+let meshes=[], byId={};
+function buildMesh(p){
+  const geo=p.shape==='cyl'?new THREE.CylinderGeometry(p.size[0],p.size[0],p.size[1],28):new THREE.BoxGeometry(...p.size);
   const mat=new THREE.MeshStandardMaterial({color:p.color,metalness:p.body?0.5:0.35,roughness:p.body?0.4:0.6,transparent:true,opacity:1});
-  const m=new THREE.Mesh(geo,mat);
-  if(p.rot) m.rotation.set(...p.rot); else if(p.shape==='cyl'&&!p.rot) m.rotation.set(0,0,0);
-  m.position.set(...p.pos);
+  const m=new THREE.Mesh(geo,mat); if(p.rot) m.rotation.set(...p.rot); m.position.set(...p.pos);
   m.userData={p,rest:new THREE.Vector3(...p.pos),ex:new THREE.Vector3(...p.ex)};
-  const edges=new THREE.LineSegments(new THREE.EdgesGeometry(geo),new THREE.LineBasicMaterial({color:0x000000,transparent:true,opacity:0.35}));
-  m.add(edges);
-  group.add(m); meshes.push(m); byId[p.id]=m;
+  m.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo),new THREE.LineBasicMaterial({color:0x000000,transparent:true,opacity:0.35})));
+  return m;
 }
-
-// explode state
-let t=0, tTarget=0;
-const slider=document.getElementById('t'), tv=document.getElementById('tv');
-function setT(v){tTarget=Math.max(0,Math.min(1,v)); slider.value=Math.round(tTarget*1000); tv.textContent=Math.round(tTarget*100)+'%';}
-slider.addEventListener('input',()=>setT(slider.value/1000));
-canvas.addEventListener('wheel',e=>{e.preventDefault(); setT(tTarget+ (e.deltaY>0?0.04:-0.04));},{passive:false});
-// pinch on touch = explode
-let pinch0=null;
-canvas.addEventListener('touchstart',e=>{if(e.touches.length===2){pinch0={d:dist(e.touches),t:tTarget};}},{passive:true});
-canvas.addEventListener('touchmove',e=>{if(e.touches.length===2&&pinch0){const d=dist(e.touches); setT(pinch0.t+(d-pinch0.d)/300);}},{passive:true});
-canvas.addEventListener('touchend',()=>{pinch0=null;});
-function dist(tt){const dx=tt[0].clientX-tt[1].clientX,dy=tt[0].clientY-tt[1].clientY;return Math.hypot(dx,dy);}
-
-// filters
-let sysFilter='', query='', showBody=true, xray=false, selected=null;
-const sysSel=document.getElementById('sysf');
-for(const s of SYSTEMS){const o=document.createElement('option');o.value=s;o.textContent=s;sysSel.appendChild(o);}
-sysSel.addEventListener('change',()=>{sysFilter=sysSel.value;applyFilter();renderList();});
-document.getElementById('q').addEventListener('input',e=>{query=e.target.value.toLowerCase();applyFilter();renderList();openList();});
-document.getElementById('bBody').addEventListener('click',e=>{showBody=!showBody;e.target.classList.toggle('on',showBody);applyFilter();});
-document.getElementById('bXray').addEventListener('click',e=>{xray=!xray;e.target.classList.toggle('on',xray);shell.visible=!xray;applyFilter();});
-function matches(p){
-  if(sysFilter&&p.sys!==sysFilter) return false;
-  if(!query) return true;
-  const hay=[p.name,p.sys,...(p.oe||[]),...(p.aft||[]),p.notes||''].join(' ').toLowerCase();
-  return hay.includes(query);
-}
-function applyFilter(){
-  for(const m of meshes){const p=m.userData.p; const on=matches(p)&&(showBody||!p.body); m.visible=on;
-    const dim=(selected&&m!==selected)||xray; m.material.opacity=dim?(xray?0.35:0.5):1; m.material.transparent=true; }
-  if(selected){selected.material.opacity=1;}
-}
-
-// picking
-const ray=new THREE.Raycaster(), ptr=new THREE.Vector2(); let down=null;
-canvas.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY];});
-canvas.addEventListener('pointerup',e=>{
-  if(!down) return; const moved=Math.hypot(e.clientX-down[0],e.clientY-down[1]); down=null; if(moved>6) return;
-  ptr.x=(e.clientX/innerWidth)*2-1; ptr.y=-(e.clientY/innerHeight)*2+1; ray.setFromCamera(ptr,camera);
-  const hits=ray.intersectObjects(meshes.filter(m=>m.visible),false);
-  if(hits.length){select(hits[0].object);} else {select(null);}
-});
-function select(m){
-  if(selected){selected.material.emissive.setHex(0x000000);}
-  selected=m;
-  if(m){m.material.emissive.setHex(0x8a4a10); showPanel(m.userData.p);} else {closeAll();}
+function rebuild(){
+  const selId=selected?selected.userData.p.id:null;
+  for(const m of meshes){group.remove(m); m.geometry.dispose(); m.material.dispose();}
+  meshes=[]; byId={};
+  for(const p of allParts()){const m=buildMesh(p); group.add(m); meshes.push(m); byId[p.id]=m;}
+  selected=selId?byId[selId]||null:null; if(selected) selected.material.emissive.setHex(0x8a4a10);
   applyFilter();
 }
 
-// panel
-const panel=document.getElementById('panel'), pbody=document.getElementById('pbody');
-const list=document.getElementById('list'), veh=document.getElementById('veh');
-document.getElementById('pc').addEventListener('click',()=>select(null));
-function closeAll(){panel.classList.remove('open');list.classList.remove('open');veh.classList.remove('open');}
-function enc(s){return encodeURIComponent(s);}
+/* ===== EXPLODE DIAL ===== */
+let t=0,tTarget=0; const slider=document.getElementById('t'),tv=document.getElementById('tv');
+function setT(v){tTarget=Math.max(0,Math.min(1,v)); slider.value=Math.round(tTarget*1000); tv.textContent=Math.round(tTarget*100)+'%';}
+slider.addEventListener('input',()=>setT(slider.value/1000));
+canvas.addEventListener('wheel',e=>{e.preventDefault(); setT(tTarget+(e.deltaY>0?0.04:-0.04));},{passive:false});
+let pinch0=null; const dist=tt=>Math.hypot(tt[0].clientX-tt[1].clientX,tt[0].clientY-tt[1].clientY);
+canvas.addEventListener('touchstart',e=>{if(e.touches.length===2)pinch0={d:dist(e.touches),t:tTarget};},{passive:true});
+canvas.addEventListener('touchmove',e=>{if(e.touches.length===2&&pinch0)setT(pinch0.t+(dist(e.touches)-pinch0.d)/300);},{passive:true});
+canvas.addEventListener('touchend',()=>{pinch0=null;});
+
+/* ===== FILTER / PICK ===== */
+let sysFilter='',query='',showBody=true,xray=false,selected=null;
+const sysSel=document.getElementById('sysf'); for(const s of SYSTEMS){const o=document.createElement('option');o.value=s;o.textContent=s;sysSel.appendChild(o);}
+sysSel.addEventListener('change',()=>{sysFilter=sysSel.value;applyFilter();renderList();});
+document.getElementById('q').addEventListener('input',e=>{query=e.target.value.toLowerCase();applyFilter();renderList();open('list');});
+document.getElementById('bBody').addEventListener('click',e=>{showBody=!showBody;e.target.classList.toggle('on',showBody);applyFilter();});
+document.getElementById('bXray').addEventListener('click',e=>{xray=!xray;e.target.classList.toggle('on',xray);applyFilter();});
+function matches(p){ if(sysFilter&&p.sys!==sysFilter) return false; if(!query) return true;
+  return [p.name,p.sys,...(p.oe||[]),...(p.aft||[]),p.notes||'',p.price||''].join(' ').toLowerCase().includes(query); }
+function applyFilter(){ for(const m of meshes){const p=m.userData.p; m.visible=matches(p)&&(showBody||!p.body);
+  const dim=(selected&&m!==selected)||xray; m.material.opacity=dim?(xray?0.35:0.5):1;} if(selected) selected.material.opacity=1; }
+const ray=new THREE.Raycaster(),ptr=new THREE.Vector2(); let down=null;
+canvas.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY];});
+canvas.addEventListener('pointerup',e=>{ if(!down)return; const mv=Math.hypot(e.clientX-down[0],e.clientY-down[1]); down=null; if(mv>6)return;
+  ptr.x=(e.clientX/innerWidth)*2-1; ptr.y=-(e.clientY/innerHeight)*2+1; ray.setFromCamera(ptr,camera);
+  const hits=ray.intersectObjects(meshes.filter(m=>m.visible),false); select(hits.length?hits[0].object:null); });
+function select(m){ if(selected) selected.material.emissive.setHex(0x000000); selected=m;
+  if(m){m.material.emissive.setHex(0x8a4a10); showPanel(m.userData.p);} else closeAll(); applyFilter(); }
+
+/* ===== SHEETS ===== */
+const sheets={panel:document.getElementById('panel'),list:document.getElementById('list'),veh:document.getElementById('veh'),data:document.getElementById('data')};
+function closeAll(){for(const k in sheets)sheets[k].classList.remove('open');}
+function open(k){closeAll();sheets[k].classList.add('open');}
+document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>{if(selected)select(null);else closeAll();}));
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const enc=encodeURIComponent;
 function snipeLinks(p){
-  const yr='2003 Ford Focus 2.0 DOHC Zetec', nm=p.name.replace(/\(.*?\)/g,'').trim();
-  const primary=(p.oe&&p.oe[0]||'').split(/[\s/(]/)[0]||'';
-  const pn=primary.match(/[A-Z0-9]{2,}-?[A-Z0-9]+/i)?primary:'';
-  const q=(pn?pn+' ':'')+nm+' '+yr;
-  const L=[];
-  L.push(['RockAuto — vehicle catalog (filtered to this engine)',VEHICLE.rockautoVehicle,'cheapest reman/new, ships to Meridian']);
-  if(pn) L.push(['RockAuto — part number search: '+pn,'https://www.rockauto.com/en/partsearch/?partnum='+enc(pn),'direct interchange hit if the number is in their catalog']);
-  L.push(['eBay — new + used, sorted price low→high','https://www.ebay.com/sch/i.html?_nkw='+enc(q)+'&_sacat=6030&_sop=15','best for used OEM and salvage yards; snipe auctions here']);
-  L.push(['Amazon — search','https://www.amazon.com/s?k='+enc(q)+'&i=automotive','fast shipping; check fitment list on the page']);
-  L.push(['PartsGeek — 2003 Focus','https://www.partsgeek.com/catalog/2003/ford/focus.html','often undercuts RockAuto on brand-name parts']);
-  L.push(['1A Auto — 2003 Focus','https://www.1aauto.com/2003-ford-focus-parts/v-2003-ford-focus','install videos for almost every part']);
-  L.push(['Ford OEM parts online — search','https://ford.oempartsonline.com/search?search_str='+enc(pn||nm),'genuine Ford numbers; confirm the OE number here first']);
-  L.push(['Car-Part.com — salvage yards near 83642','https://www.car-part.com/','pick Focus 2003, part, ZIP 83642; local yard pulls are the true snipe']);
-  L.push(['LKQ Pick Your Part (Boise)','https://www.lkqpickyourpart.com/inventory/','self-service yard; interchange is on the yard sheet']);
+  const V=vehicle(), yr='2003 Ford Focus 2.0 DOHC Zetec', nm=p.name.replace(/\(.*?\)/g,'').trim();
+  const first=(p.oe&&p.oe[0]||'').split(/[\s/(]/)[0]; const pn=/^[A-Z0-9-]{4,}$/i.test(first)?first:'';
+  const q=(pn?pn+' ':'')+nm+' '+yr; const L=[];
+  L.push(['RockAuto — vehicle catalog (this engine)',V.rockautoVehicle,'cheapest reman/new, ships to Meridian']);
+  if(pn) L.push(['RockAuto — part number '+pn,'https://www.rockauto.com/en/partsearch/?partnum='+enc(pn),'direct interchange hit']);
+  L.push(['eBay — price low→high','https://www.ebay.com/sch/i.html?_nkw='+enc(q)+'&_sacat=6030&_sop=15','used OEM and salvage; snipe auctions here']);
+  L.push(['Amazon','https://www.amazon.com/s?k='+enc(q)+'&i=automotive','fast shipping; check the fitment list']);
+  L.push(['PartsGeek — 2003 Focus','https://www.partsgeek.com/catalog/2003/ford/focus.html','often undercuts RockAuto on brand names']);
+  L.push(['1A Auto — 2003 Focus','https://www.1aauto.com/2003-ford-focus-parts/v-2003-ford-focus','install videos']);
+  L.push(['Ford OEM parts online','https://ford.oempartsonline.com/search?search_str='+enc(pn||nm),'confirm the OE number here']);
+  L.push(['Car-Part.com — salvage near 83642','https://www.car-part.com/','yard pulls are the true snipe']);
+  L.push(['LKQ Pick Your Part Boise','https://www.lkqpickyourpart.com/inventory/','self-service yard']);
   return L;
 }
 function showPanel(p){
-  closeAll(); panel.classList.add('open');
-  const conf={V:'verified this session',K:'catalog number (confirm on OEM site)',L:'lookup by link, OE number not asserted'}[p.conf||'L'];
-  let h=`<h2>${p.name}</h2><div class="sys">${p.sys} <span class="conf c${p.conf||'L'}">${conf}</span></div>`;
-  if(p.oe&&p.oe.length){h+='<h3>Original manufacturer numbers</h3>'+p.oe.map(x=>`<code>${x}</code>`).join('');}
-  if(p.aft&&p.aft.length){h+='<h3>Aftermarket interchange</h3>'+p.aft.map(x=>`<code>${x}</code>`).join('');}
-  if(p.notes){h+=`<h3>Notes</h3><div class="notes">${p.notes}</div>`;}
-  h+='<h3>Snipe it</h3>'+snipeLinks(p).map(([a,u,s])=>`<a class="snipe" href="${u}" target="_blank" rel="noopener">${a}<small>${s}</small></a>`).join('');
-  pbody.innerHTML=h;
+  open('panel'); const c=isCorrected(p.id)?'C':(p.conf||'L');
+  let h=`<h2>${esc(p.name)}</h2><div class="sys">${esc(p.sys)} <span class="badge c${c}">${CONF[c]}</span>${p.custom?'<span class="badge cC">added</span>':''}</div>`;
+  if(c!=='C'&&c!=='V') h+=`<div class="muted" style="margin-bottom:8px">Part numbers below are an assumption from the Ford/Motorcraft catalog. Tap Correct if the part on the car says otherwise.</div>`;
+  if(p.photo) h+=`<img class="photo" src="${p.photo}" alt="photo"/>`;
+  if(p.oe&&p.oe.length){h+='<h3>Original manufacturer numbers</h3>'+p.oe.map(x=>`<code>${esc(x)}</code>`).join('');}
+  if(p.aft&&p.aft.length){h+='<h3>Aftermarket interchange</h3>'+p.aft.map(x=>`<code>${esc(x)}</code>`).join('');}
+  if(p.price||p.source){h+=`<h3>Best price found</h3><code>${esc(p.price||'')} ${p.source?'· '+esc(p.source):''}${p.url?` · <a href="${esc(p.url)}" target="_blank" style="color:#e8a56a">link</a>`:''}</code>`;}
+  if(p.status){h+=`<h3>Status</h3><code>${esc(p.status)}</code>`;}
+  if(p.notes){h+=`<h3>Notes</h3><div class="notes">${esc(p.notes)}</div>`;}
+  h+=`<div class="row" style="margin-top:12px"><button class="pri" id="bEdit">Correct / add details</button><button id="bPhoto">Photo</button>${p.custom?'<button class="danger" id="bDel">Delete</button>':'<button class="danger" id="bHide">Hide part</button>'}${isCorrected(p.id)?'<button id="bRevert">Revert to assumption</button>':''}</div>`;
+  h+='<h3>Snipe it</h3>'+snipeLinks(p).map(([a,u,s])=>`<a class="snipe" href="${u}" target="_blank" rel="noopener">${esc(a)}<small>${esc(s)}</small></a>`).join('');
+  document.getElementById('pbody').innerHTML=h;
+  document.getElementById('bEdit').onclick=()=>showEdit(p);
+  document.getElementById('bPhoto').onclick=()=>{photoTarget=p.id;document.getElementById('photoFile').click();};
+  const del=document.getElementById('bDel')||document.getElementById('bHide');
+  del.onclick=()=>{if(!confirm('Remove "'+p.name+'" from the model?'))return; overlay.deleted.push(p.id); logChange('removed '+p.name); saveOverlay(); select(null); rebuild(); renderList();};
+  const rv=document.getElementById('bRevert'); if(rv) rv.onclick=()=>{delete overlay.parts[p.id]; logChange('reverted '+p.name); saveOverlay(); rebuild(); showPanel(byId[p.id].userData.p);};
 }
-function renderList(){
-  const items=PARTS.filter(matches).filter(p=>showBody||!p.body);
-  list.innerHTML=`<div class="item" style="color:#888;cursor:default">${items.length} parts</div>`+items.map(p=>`<div class="item" data-id="${p.id}">${p.name}<small>${p.sys}${p.oe&&p.oe[0]?' · '+p.oe[0]:''}</small></div>`).join('');
-  list.querySelectorAll('.item[data-id]').forEach(el=>el.addEventListener('click',()=>{select(byId[el.dataset.id]);}));
-}
-function openList(){closeAll();list.classList.add('open');}
-document.getElementById('bList').addEventListener('click',()=>{if(list.classList.contains('open')){closeAll();}else{renderList();openList();}});
-document.getElementById('bVeh').addEventListener('click',()=>{if(veh.classList.contains('open')){closeAll();return;} closeAll(); veh.classList.add('open');
-  const V=VEHICLE; veh.innerHTML='<h2 style="font-size:16px;color:#fff">Vehicle</h2><dl>'+Object.entries({VIN:V.vin,Year:V.year,Body:V.body,Trim:V.trim,Engine:V.engine,'Engine code':V.engineCode,Transmission:V.trans,Drivetrain:V.drivetrain,Fuel:V.fuel,Brakes:V.brakes,Suspension:V.susp,'Wheels/tires':V.wheels,Plant:V.plant,'Serial':V.seq,Notes:V.notes}).map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')+'</dl>';});
+/* photo attach: resized to 900px, stored as data URL in the overlay */
+let photoTarget=null;
+document.getElementById('photoFile').addEventListener('change',e=>{const f=e.target.files[0]; if(!f||!photoTarget)return; const img=new Image(); img.onload=()=>{
+  const s=Math.min(1,900/Math.max(img.width,img.height)); const cv=document.createElement('canvas'); cv.width=img.width*s; cv.height=img.height*s; cv.getContext('2d').drawImage(img,0,0,cv.width,cv.height);
+  patch(photoTarget,{photo:cv.toDataURL('image/jpeg',0.8)}); logChange('photo added to '+photoTarget); saveOverlay(); rebuild(); showPanel(byId[photoTarget].userData.p); toast('Photo saved'); URL.revokeObjectURL(img.src);}; img.src=URL.createObjectURL(f); e.target.value='';});
+function patch(id,fields){overlay.parts[id]=Object.assign({},overlay.parts[id]||{},fields);}
 
-renderList();
-function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}
-addEventListener('resize',resize); resize();
-function tick(){
-  t+=(tTarget-t)*0.12;
-  for(const m of meshes){const u=m.userData; m.position.copy(u.rest).addScaledVector(u.ex,t*explodeScale*1.6);}
-  shellMat.opacity=0.55*(1-t)+0.08; shell.visible=!xray && t<0.98;
-  controls.update(); renderer.render(scene,camera); requestAnimationFrame(tick);
+/* ===== EDIT FORM (correct assumptions / add details) ===== */
+function fieldsHtml(p){ return `
+  <label>Name</label><input name="name" value="${esc(p.name||'')}" required/>
+  <label>System</label><select name="sys">${SYSTEMS.map(s=>`<option ${s===p.sys?'selected':''}>${s}</option>`).join('')}</select>
+  <label>Original manufacturer numbers (one per line)</label><textarea name="oe">${esc((p.oe||[]).join('\n'))}</textarea>
+  <label>Aftermarket interchange (one per line)</label><textarea name="aft">${esc((p.aft||[]).join('\n'))}</textarea>
+  <label>Confidence</label><select name="conf"><option value="C" ${!p.conf||p.conf==='C'?'selected':''}>Corrected / confirmed on the car</option><option value="V" ${p.conf==='V'?'selected':''}>Verified against a seller listing</option><option value="K" ${p.conf==='K'?'selected':''}>Assumed from catalog</option><option value="X" ${p.conf==='X'?'selected':''}>Flagged wrong, needs lookup</option></select>
+  <label>Status</label><select name="status"><option value="">—</option>${['OK','Worn, watch it','Needs replacement','Ordered','Replaced'].map(s=>`<option ${p.status===s?'selected':''}>${s}</option>`).join('')}</select>
+  <label>Best price found</label><input name="price" value="${esc(p.price||'')}" placeholder="$89.79 shipped"/>
+  <label>Source</label><input name="source" value="${esc(p.source||'')}" placeholder="RockAuto WAI 8260R"/>
+  <label>Listing URL</label><input name="url" value="${esc(p.url||'')}" placeholder="https://…"/>
+  <label>Notes</label><textarea name="notes">${esc(p.notes||'')}</textarea>`; }
+function geoHtml(p){ const [x,y,z]=p.pos,[a,b,c]=p.size,[ex,ey,ez]=p.ex; return `
+  <h3>Placement (live preview)</h3>
+  <label>Shape</label><select name="shape"><option value="box" ${p.shape==='box'?'selected':''}>box</option><option value="cyl" ${p.shape==='cyl'?'selected':''}>cylinder</option></select>
+  <label>Position fore/aft · height · left/right</label><div class="grid3"><input name="px" type="number" step="0.1" value="${x}"/><input name="py" type="number" step="0.1" value="${y}"/><input name="pz" type="number" step="0.1" value="${z}"/></div>
+  <label>Size (box: L×H×W · cylinder: radius, length)</label><div class="grid3"><input name="sa" type="number" step="0.1" value="${a}"/><input name="sb" type="number" step="0.1" value="${b}"/><input name="sc" type="number" step="0.1" value="${c??''}"/></div>
+  <label>Explode direction</label><div class="grid3"><input name="ex" type="number" step="0.5" value="${ex}"/><input name="ey" type="number" step="0.5" value="${ey}"/><input name="ez" type="number" step="0.5" value="${ez}"/></div>
+  <label>Color</label><input name="color" type="color" value="#${(p.color||0x888888).toString(16).padStart(6,'0')}"/>
+  <label><input type="checkbox" name="body" ${p.body?'checked':''} style="width:auto"/> body panel (hidden by the Body toggle)</label>`; }
+function readForm(f,withGeo){
+  const g=n=>f.elements[n]?.value??''; const lines=s=>s.split('\n').map(x=>x.trim()).filter(Boolean);
+  const o={name:g('name').trim(),sys:g('sys'),oe:lines(g('oe')),aft:lines(g('aft')),conf:g('conf'),status:g('status'),price:g('price').trim(),source:g('source').trim(),url:g('url').trim(),notes:g('notes').trim()};
+  if(withGeo){ const n=k=>parseFloat(g(k))||0; o.shape=g('shape'); o.pos=[n('px'),n('py'),n('pz')]; o.size=o.shape==='cyl'?[n('sa')||0.3,n('sb')||1]:[n('sa')||1,n('sb')||1,n('sc')||1]; o.ex=[n('ex'),n('ey'),n('ez')]; o.color=parseInt(g('color').slice(1),16); o.body=!!f.elements.body.checked; }
+  return o;
 }
-tick();
+function showEdit(p){
+  open('panel');
+  document.getElementById('pbody').innerHTML=`<h2>Correct: ${esc(p.name)}</h2><div class="sys">${esc(p.sys)}</div><form id="ef">${fieldsHtml(p)}${geoHtml(p)}<div class="row" style="margin-top:14px"><button class="pri" type="submit">Save correction</button><button type="button" id="bCancel">Cancel</button></div><p class="muted" style="margin-top:8px">Saved on this device. Use Data → Export to send the corrected catalog anywhere.</p></form>`;
+  const f=document.getElementById('ef'); livePreview(f,p.id);
+  f.onsubmit=e=>{e.preventDefault(); const o=readForm(f,true); patch(p.id,o); logChange('corrected '+o.name); saveOverlay(); rebuild(); showPanel(byId[p.id].userData.p); toast('Correction saved');};
+  document.getElementById('bCancel').onclick=()=>{rebuild(); showPanel(byId[p.id].userData.p);};
+}
+function livePreview(f,id){ f.addEventListener('input',()=>{ const m=byId[id]; if(!m)return; const o=readForm(f,true);
+  m.userData.rest.set(...o.pos); m.userData.ex.set(...o.ex); m.material.color.setHex(o.color);
+  const geo=o.shape==='cyl'?new THREE.CylinderGeometry(o.size[0],o.size[0],o.size[1],28):new THREE.BoxGeometry(...o.size);
+  m.geometry.dispose(); m.geometry=geo; const ed=m.children[0]; ed.geometry.dispose(); ed.geometry=new THREE.EdgesGeometry(geo); }); }
+/* add a new part */
+document.getElementById('bAdd').addEventListener('click',()=>{
+  const id='custom-'+Date.now().toString(36); const p={id,name:'',sys:sysFilter||'Engine',shape:'box',size:[1,1,1],pos:[0,3,0],ex:[0,3,0],color:0xe8a56a,oe:[],aft:[],conf:'C',notes:''};
+  overlay.custom.push(p); rebuild(); select(byId[id]);
+  document.getElementById('pbody').innerHTML=`<h2>Add a part</h2><div class="sys">new · shows as an orange block until you place it</div><form id="af">${fieldsHtml(p)}${geoHtml(p)}<div class="row" style="margin-top:14px"><button class="pri" type="submit">Add part</button><button type="button" id="bCancelAdd">Cancel</button></div></form>`;
+  const f=document.getElementById('af'); livePreview(f,id);
+  f.onsubmit=e=>{e.preventDefault(); const o=readForm(f,true); Object.assign(p,o); logChange('added '+o.name); saveOverlay(); rebuild(); showPanel(byId[id].userData.p); renderList(); toast('Part added');};
+  document.getElementById('bCancelAdd').onclick=()=>{overlay.custom=overlay.custom.filter(x=>x.id!==id); select(null); rebuild();};
+});
+
+/* ===== LIST / VEHICLE / DATA ===== */
+function renderList(){ const items=allParts().filter(matches).filter(p=>showBody||!p.body);
+  sheets.list.innerHTML=`<div class="item" style="color:#888;cursor:default">${items.length} parts</div>`+items.map(p=>{const c=isCorrected(p.id)?'C':(p.conf||'L');return `<div class="item" data-id="${p.id}">${esc(p.name)} <span class="badge c${c}">${CONF[c].split(' ')[0]}</span><small>${esc(p.sys)}${p.oe&&p.oe[0]?' · '+esc(p.oe[0]):''}${p.status?' · '+esc(p.status):''}</small></div>`;}).join('');
+  sheets.list.querySelectorAll('.item[data-id]').forEach(el=>el.addEventListener('click',()=>select(byId[el.dataset.id]))); }
+document.getElementById('bList').addEventListener('click',()=>{if(sheets.list.classList.contains('open'))closeAll();else{renderList();open('list');}});
+const VFIELDS=[['vin','VIN'],['year','Year'],['body','Body'],['trim','Trim'],['engine','Engine'],['engineCode','Engine code'],['trans','Transmission'],['drivetrain','Drivetrain'],['fuel','Fuel'],['brakes','Brakes'],['susp','Suspension'],['wheels','Wheels / tires'],['plant','Plant'],['seq','Serial'],['paint','Paint code'],['axle','Axle code'],['buildDate','Build date'],['mileage','Mileage'],['owner','Owner'],['notes','Notes']];
+function showVeh(edit){ const V=vehicle(); open('veh');
+  if(!edit){ document.getElementById('vbody').innerHTML='<h2>Vehicle</h2><dl>'+VFIELDS.filter(([k])=>V[k]).map(([k,l])=>`<dt>${l}${overlay.vehicle[k]!==undefined?' <span class="badge cC">corrected</span>':''}</dt><dd>${esc(V[k])}</dd>`).join('')+'</dl><div class="row" style="margin-top:12px"><button class="pri" id="bVEdit">Correct / add details</button></div>';
+    document.getElementById('bVEdit').onclick=()=>showVeh(true); return; }
+  document.getElementById('vbody').innerHTML='<h2>Vehicle details</h2><form id="vf">'+VFIELDS.map(([k,l])=>`<label>${l}</label>${k==='notes'||k==='trans'?`<textarea name="${k}">${esc(V[k]||'')}</textarea>`:`<input name="${k}" value="${esc(V[k]||'')}"/>`}`).join('')+'<div class="row" style="margin-top:14px"><button class="pri" type="submit">Save</button><button type="button" id="bVCancel">Cancel</button></div></form>';
+  const f=document.getElementById('vf'); f.onsubmit=e=>{e.preventDefault(); for(const [k] of VFIELDS){const v=f.elements[k].value.trim(); if(v!==String(VEHICLE[k]??'')) overlay.vehicle[k]=v; else delete overlay.vehicle[k];} logChange('vehicle details updated'); saveOverlay(); showVeh(false); toast('Saved');};
+  document.getElementById('bVCancel').onclick=()=>showVeh(false); }
+document.getElementById('bVeh').addEventListener('click',()=>{if(sheets.veh.classList.contains('open'))closeAll();else showVeh(false);});
+function exportJson(){ const out={exported:new Date().toISOString(),vehicle:vehicle(),parts:allParts(),overlay}; const b=new Blob([JSON.stringify(out,null,1)],{type:'application/json'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download='focus-'+vehicle().vin+'-catalog.json'; a.click(); }
+function showData(){ open('data'); const n=Object.keys(overlay.parts).length, c=overlay.custom.length, d=overlay.deleted.length;
+  document.getElementById('dbody').innerHTML=`<h2>Data</h2><div class="muted">Corrections are stored in this browser only. Export to keep them or move them to another device.</div>
+  <dl><dt>Corrected parts</dt><dd>${n}</dd><dt>Added parts</dt><dd>${c}</dd><dt>Hidden parts</dt><dd>${d}</dd></dl>
+  <div class="row" style="margin-top:12px"><button class="pri" id="bExport">Export JSON</button><button id="bImport">Import JSON</button><button id="bCopy">Copy corrections</button><button class="danger" id="bReset">Reset to assumptions</button></div>
+  <h3>Change log</h3>${overlay.log.slice(0,40).map(l=>`<div class="item" style="cursor:default">${esc(l.what)}<small>${new Date(l.t).toLocaleString()}</small></div>`).join('')||'<div class="muted">no changes yet</div>'}`;
+  document.getElementById('bExport').onclick=exportJson;
+  document.getElementById('bImport').onclick=()=>document.getElementById('importFile').click();
+  document.getElementById('bCopy').onclick=()=>navigator.clipboard.writeText(JSON.stringify(overlay)).then(()=>toast('Copied'));
+  document.getElementById('bReset').onclick=()=>{if(!confirm('Throw away every correction on this device?'))return; overlay={vehicle:{},parts:{},custom:[],deleted:[],log:[]}; saveOverlay(); rebuild(); renderList(); showData();}; }
+document.getElementById('bData').addEventListener('click',()=>{if(sheets.data.classList.contains('open'))closeAll();else showData();});
+document.getElementById('importFile').addEventListener('change',e=>{const f=e.target.files[0]; if(!f)return; f.text().then(txt=>{const j=JSON.parse(txt); const ov=j.overlay||j; if(!ov.parts||!ov.custom) throw new Error('not a catalog export');
+  overlay=Object.assign({vehicle:{},parts:{},custom:[],deleted:[],log:[]},ov); logChange('imported '+f.name); saveOverlay(); rebuild(); renderList(); showData(); toast('Imported');}).catch(err=>alert('Import failed: '+err.message)); e.target.value='';});
+
+/* ===== RUN ===== */
+rebuild(); renderList(); updateSubtitle();
+function resize(){renderer.setSize(innerWidth,innerHeight,false);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();}
+addEventListener('resize',resize); resize();
+(function tick(){ t+=(tTarget-t)*0.12; for(const m of meshes){const u=m.userData; m.position.copy(u.rest).addScaledVector(u.ex,t*1.6);}
+  shellMat.opacity=0.55*(1-t)+0.08; shell.visible=!xray&&t<0.98; controls.update(); renderer.render(scene,camera); requestAnimationFrame(tick); })();
 </script>
 </body>
 </html>
