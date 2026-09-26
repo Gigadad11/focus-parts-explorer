@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<title>2003 Focus Wagon Zetec — Exploded Parts Explorer</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;background:#0a0a0a;color:#eee;font:14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
+  #c{position:fixed;inset:0;display:block;touch-action:none}
+  #top{position:fixed;top:0;left:0;right:0;padding:10px 12px;background:linear-gradient(#0a0a0aee,#0a0a0a00);pointer-events:none;z-index:5}
+  #top h1{font-size:15px;font-weight:600;letter-spacing:.04em;color:#e8a56a}
+  #top .sub{font-size:12px;color:#aaa}
+  #dial{position:fixed;left:12px;right:12px;bottom:12px;z-index:6;background:#141414ee;border:1px solid #2a2a2a;border-radius:12px;padding:10px 14px;display:flex;gap:12px;align-items:center}
+  #dial label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#c67a30;white-space:nowrap}
+  #dial input[type=range]{flex:1;accent-color:#e8856a;height:28px}
+  #dial .val{width:44px;text-align:right;font-variant-numeric:tabular-nums;color:#ccc}
+  #tools{position:fixed;top:56px;left:12px;z-index:6;display:flex;flex-direction:column;gap:6px;max-width:46vw}
+  #tools input,#tools select{background:#141414ee;color:#eee;border:1px solid #2a2a2a;border-radius:8px;padding:8px 10px;font-size:13px;width:100%}
+  #tools .row{display:flex;gap:6px}
+  #tools button{background:#1e1e1e;color:#ddd;border:1px solid #333;border-radius:8px;padding:7px 10px;font-size:12px;cursor:pointer}
+  #tools button.on{background:#c67a30;color:#000;border-color:#c67a30}
+  #panel{position:fixed;top:56px;right:12px;bottom:84px;width:min(420px,52vw);z-index:6;background:#121212f5;border:1px solid #2a2a2a;border-radius:12px;padding:14px;overflow:auto;display:none}
+  #panel.open{display:block}
+  #panel h2{font-size:16px;color:#fff;margin-bottom:2px}
+  #panel .sys{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#c67a30;margin-bottom:10px}
+  #panel h3{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#888;margin:12px 0 4px}
+  #panel code{display:block;background:#1c1c1c;border:1px solid #2a2a2a;border-radius:6px;padding:6px 8px;margin:3px 0;font-size:12.5px;color:#f1f1f1;word-break:break-all}
+  #panel .conf{display:inline-block;font-size:10px;padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:middle}
+  .cV{background:#1f5f2a;color:#bff5c8}.cK{background:#5a4a1a;color:#ffe3a0}.cL{background:#3a3a3a;color:#ccc}
+  #panel .notes{font-size:13px;color:#ccc;background:#1a1410;border-left:3px solid #c67a30;padding:8px;border-radius:4px}
+  #panel a.snipe{display:block;background:#1a1a1a;border:1px solid #333;border-radius:8px;padding:8px 10px;margin:5px 0;color:#e8a56a;text-decoration:none;font-size:13px}
+  #panel a.snipe:hover{border-color:#c67a30}
+  #panel a.snipe small{display:block;color:#888;font-size:11px}
+  #panel .close{position:absolute;top:8px;right:10px;background:none;border:none;color:#888;font-size:20px;cursor:pointer}
+  #list{position:fixed;top:56px;right:12px;bottom:84px;width:min(420px,52vw);z-index:6;background:#121212f5;border:1px solid #2a2a2a;border-radius:12px;padding:10px;overflow:auto;display:none}
+  #list.open{display:block}
+  #list .item{padding:8px 10px;border-bottom:1px solid #1f1f1f;cursor:pointer;font-size:13px}
+  #list .item:hover{background:#1c1c1c}
+  #list .item small{color:#777;display:block;font-size:11px}
+  #veh{position:fixed;top:56px;right:12px;bottom:84px;width:min(420px,52vw);z-index:6;background:#121212f5;border:1px solid #2a2a2a;border-radius:12px;padding:14px;overflow:auto;display:none;font-size:13px}
+  #veh.open{display:block}
+  #veh dt{color:#c67a30;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-top:10px}
+  #veh dd{color:#ddd}
+  #hint{position:fixed;bottom:72px;left:50%;transform:translateX(-50%);font-size:11px;color:#777;z-index:5;pointer-events:none;white-space:nowrap}
+  @media (max-width:700px){
+    #tools{max-width:60vw}
+    #panel,#list,#veh{width:auto;left:12px;right:12px;top:auto;bottom:84px;max-height:58vh}
+  }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="top"><h1>2003 FORD FOCUS WAGON · 2.0 DOHC ZETEC</h1><div class="sub">VIN 1FAFP36363W175417 · drag to rotate · scroll or slide to explode · tap a part</div></div>
+<div id="tools">
+  <input id="q" placeholder="Search parts or part number…" autocomplete="off"/>
+  <select id="sysf"><option value="">All systems</option></select>
+  <div class="row"><button id="bList">List</button><button id="bVeh">Vehicle</button><button id="bBody" class="on">Body</button><button id="bXray">X-ray</button></div>
+</div>
+<div id="hint">scroll wheel = explode dial</div>
+<div id="dial"><label>Explode</label><input id="t" type="range" min="0" max="1000" value="0"/><span class="val" id="tv">0%</span></div>
+<div id="panel"><button class="close" id="pc">×</button><div id="pbody"></div></div>
+<div id="list"></div>
+<div id="veh"></div>
+<script src="parts.js"></script>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+
+const canvas=document.getElementById('c');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+const scene=new THREE.Scene(); scene.background=new THREE.Color(0x0a0a0a);
+scene.fog=new THREE.Fog(0x0a0a0a,60,140);
+const camera=new THREE.PerspectiveCamera(40,1,0.1,400); camera.position.set(22,14,26);
+const controls=new OrbitControls(camera,canvas); controls.enableDamping=true; controls.enableZoom=false; controls.target.set(0,3.2,0);
+scene.add(new THREE.HemisphereLight(0xffffff,0x222222,1.1));
+const key=new THREE.DirectionalLight(0xffe0c0,1.4); key.position.set(20,30,10); scene.add(key);
+const rim=new THREE.DirectionalLight(0x8fb8ff,0.6); rim.position.set(-20,10,-20); scene.add(rim);
+const grid=new THREE.GridHelper(60,30,0x222222,0x161616); grid.position.y=0.4; scene.add(grid);
+
+// unibody shell (non-part, semi-transparent)
+const shellMat=new THREE.MeshStandardMaterial({color:0x1d3f63,metalness:0.4,roughness:0.5,transparent:true,opacity:0.55});
+const shell=new THREE.Group();
+function box(w,h,d,x,y,z,mat){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),mat);m.position.set(x,y,z);return m;}
+shell.add(box(17,2.2,6.4,-0.5,2.4,0,shellMat));        // floor/sills
+shell.add(box(9,3.2,6.2,-2,5.6,0,shellMat));            // cabin sides/greenhouse
+shell.add(box(4.5,1.2,6.2,7,5.5,0,shellMat));           // engine bay upper
+scene.add(shell);
+
+const group=new THREE.Group(); scene.add(group);
+const meshes=[]; const byId={};
+const explodeScale=1.0;
+for(const p of PARTS){
+  let geo;
+  if(p.shape==='cyl'){geo=new THREE.CylinderGeometry(p.size[0],p.size[0],p.size[1],28);} else {geo=new THREE.BoxGeometry(...p.size);}
+  const mat=new THREE.MeshStandardMaterial({color:p.color,metalness:p.body?0.5:0.35,roughness:p.body?0.4:0.6,transparent:true,opacity:1});
+  const m=new THREE.Mesh(geo,mat);
+  if(p.rot) m.rotation.set(...p.rot); else if(p.shape==='cyl'&&!p.rot) m.rotation.set(0,0,0);
+  m.position.set(...p.pos);
+  m.userData={p,rest:new THREE.Vector3(...p.pos),ex:new THREE.Vector3(...p.ex)};
+  const edges=new THREE.LineSegments(new THREE.EdgesGeometry(geo),new THREE.LineBasicMaterial({color:0x000000,transparent:true,opacity:0.35}));
+  m.add(edges);
+  group.add(m); meshes.push(m); byId[p.id]=m;
+}
+
+// explode state
+let t=0, tTarget=0;
+const slider=document.getElementById('t'), tv=document.getElementById('tv');
+function setT(v){tTarget=Math.max(0,Math.min(1,v)); slider.value=Math.round(tTarget*1000); tv.textContent=Math.round(tTarget*100)+'%';}
+slider.addEventListener('input',()=>setT(slider.value/1000));
+canvas.addEventListener('wheel',e=>{e.preventDefault(); setT(tTarget+ (e.deltaY>0?0.04:-0.04));},{passive:false});
+// pinch on touch = explode
+let pinch0=null;
+canvas.addEventListener('touchstart',e=>{if(e.touches.length===2){pinch0={d:dist(e.touches),t:tTarget};}},{passive:true});
+canvas.addEventListener('touchmove',e=>{if(e.touches.length===2&&pinch0){const d=dist(e.touches); setT(pinch0.t+(d-pinch0.d)/300);}},{passive:true});
+canvas.addEventListener('touchend',()=>{pinch0=null;});
+function dist(tt){const dx=tt[0].clientX-tt[1].clientX,dy=tt[0].clientY-tt[1].clientY;return Math.hypot(dx,dy);}
+
+// filters
+let sysFilter='', query='', showBody=true, xray=false, selected=null;
+const sysSel=document.getElementById('sysf');
+for(const s of SYSTEMS){const o=document.createElement('option');o.value=s;o.textContent=s;sysSel.appendChild(o);}
+sysSel.addEventListener('change',()=>{sysFilter=sysSel.value;applyFilter();renderList();});
+document.getElementById('q').addEventListener('input',e=>{query=e.target.value.toLowerCase();applyFilter();renderList();openList();});
+document.getElementById('bBody').addEventListener('click',e=>{showBody=!showBody;e.target.classList.toggle('on',showBody);applyFilter();});
+document.getElementById('bXray').addEventListener('click',e=>{xray=!xray;e.target.classList.toggle('on',xray);shell.visible=!xray;applyFilter();});
+function matches(p){
+  if(sysFilter&&p.sys!==sysFilter) return false;
+  if(!query) return true;
+  const hay=[p.name,p.sys,...(p.oe||[]),...(p.aft||[]),p.notes||''].join(' ').toLowerCase();
+  return hay.includes(query);
+}
+function applyFilter(){
+  for(const m of meshes){const p=m.userData.p; const on=matches(p)&&(showBody||!p.body); m.visible=on;
+    const dim=(selected&&m!==selected)||xray; m.material.opacity=dim?(xray?0.35:0.5):1; m.material.transparent=true; }
+  if(selected){selected.material.opacity=1;}
+}
+
+// picking
+const ray=new THREE.Raycaster(), ptr=new THREE.Vector2(); let down=null;
+canvas.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY];});
+canvas.addEventListener('pointerup',e=>{
+  if(!down) return; const moved=Math.hypot(e.clientX-down[0],e.clientY-down[1]); down=null; if(moved>6) return;
+  ptr.x=(e.clientX/innerWidth)*2-1; ptr.y=-(e.clientY/innerHeight)*2+1; ray.setFromCamera(ptr,camera);
+  const hits=ray.intersectObjects(meshes.filter(m=>m.visible),false);
+  if(hits.length){select(hits[0].object);} else {select(null);}
+});
+function select(m){
+  if(selected){selected.material.emissive.setHex(0x000000);}
+  selected=m;
+  if(m){m.material.emissive.setHex(0x8a4a10); showPanel(m.userData.p);} else {closeAll();}
+  applyFilter();
+}
+
+// panel
+const panel=document.getElementById('panel'), pbody=document.getElementById('pbody');
+const list=document.getElementById('list'), veh=document.getElementById('veh');
+document.getElementById('pc').addEventListener('click',()=>select(null));
+function closeAll(){panel.classList.remove('open');list.classList.remove('open');veh.classList.remove('open');}
+function enc(s){return encodeURIComponent(s);}
+function snipeLinks(p){
+  const yr='2003 Ford Focus 2.0 DOHC Zetec', nm=p.name.replace(/\(.*?\)/g,'').trim();
+  const primary=(p.oe&&p.oe[0]||'').split(/[\s/(]/)[0]||'';
+  const pn=primary.match(/[A-Z0-9]{2,}-?[A-Z0-9]+/i)?primary:'';
+  const q=(pn?pn+' ':'')+nm+' '+yr;
+  const L=[];
+  L.push(['RockAuto — vehicle catalog (filtered to this engine)',VEHICLE.rockautoVehicle,'cheapest reman/new, ships to Meridian']);
+  if(pn) L.push(['RockAuto — part number search: '+pn,'https://www.rockauto.com/en/partsearch/?partnum='+enc(pn),'direct interchange hit if the number is in their catalog']);
+  L.push(['eBay — new + used, sorted price low→high','https://www.ebay.com/sch/i.html?_nkw='+enc(q)+'&_sacat=6030&_sop=15','best for used OEM and salvage yards; snipe auctions here']);
+  L.push(['Amazon — search','https://www.amazon.com/s?k='+enc(q)+'&i=automotive','fast shipping; check fitment list on the page']);
+  L.push(['PartsGeek — 2003 Focus','https://www.partsgeek.com/catalog/2003/ford/focus.html','often undercuts RockAuto on brand-name parts']);
+  L.push(['1A Auto — 2003 Focus','https://www.1aauto.com/2003-ford-focus-parts/v-2003-ford-focus','install videos for almost every part']);
+  L.push(['Ford OEM parts online — search','https://ford.oempartsonline.com/search?search_str='+enc(pn||nm),'genuine Ford numbers; confirm the OE number here first']);
+  L.push(['Car-Part.com — salvage yards near 83642','https://www.car-part.com/','pick Focus 2003, part, ZIP 83642; local yard pulls are the true snipe']);
+  L.push(['LKQ Pick Your Part (Boise)','https://www.lkqpickyourpart.com/inventory/','self-service yard; interchange is on the yard sheet']);
+  return L;
+}
+function showPanel(p){
+  closeAll(); panel.classList.add('open');
+  const conf={V:'verified this session',K:'catalog number (confirm on OEM site)',L:'lookup by link, OE number not asserted'}[p.conf||'L'];
+  let h=`<h2>${p.name}</h2><div class="sys">${p.sys} <span class="conf c${p.conf||'L'}">${conf}</span></div>`;
+  if(p.oe&&p.oe.length){h+='<h3>Original manufacturer numbers</h3>'+p.oe.map(x=>`<code>${x}</code>`).join('');}
+  if(p.aft&&p.aft.length){h+='<h3>Aftermarket interchange</h3>'+p.aft.map(x=>`<code>${x}</code>`).join('');}
+  if(p.notes){h+=`<h3>Notes</h3><div class="notes">${p.notes}</div>`;}
+  h+='<h3>Snipe it</h3>'+snipeLinks(p).map(([a,u,s])=>`<a class="snipe" href="${u}" target="_blank" rel="noopener">${a}<small>${s}</small></a>`).join('');
+  pbody.innerHTML=h;
+}
+function renderList(){
+  const items=PARTS.filter(matches).filter(p=>showBody||!p.body);
+  list.innerHTML=`<div class="item" style="color:#888;cursor:default">${items.length} parts</div>`+items.map(p=>`<div class="item" data-id="${p.id}">${p.name}<small>${p.sys}${p.oe&&p.oe[0]?' · '+p.oe[0]:''}</small></div>`).join('');
+  list.querySelectorAll('.item[data-id]').forEach(el=>el.addEventListener('click',()=>{select(byId[el.dataset.id]);}));
+}
+function openList(){closeAll();list.classList.add('open');}
+document.getElementById('bList').addEventListener('click',()=>{if(list.classList.contains('open')){closeAll();}else{renderList();openList();}});
+document.getElementById('bVeh').addEventListener('click',()=>{if(veh.classList.contains('open')){closeAll();return;} closeAll(); veh.classList.add('open');
+  const V=VEHICLE; veh.innerHTML='<h2 style="font-size:16px;color:#fff">Vehicle</h2><dl>'+Object.entries({VIN:V.vin,Year:V.year,Body:V.body,Trim:V.trim,Engine:V.engine,'Engine code':V.engineCode,Transmission:V.trans,Drivetrain:V.drivetrain,Fuel:V.fuel,Brakes:V.brakes,Suspension:V.susp,'Wheels/tires':V.wheels,Plant:V.plant,'Serial':V.seq,Notes:V.notes}).map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')+'</dl>';});
+
+renderList();
+function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}
+addEventListener('resize',resize); resize();
+function tick(){
+  t+=(tTarget-t)*0.12;
+  for(const m of meshes){const u=m.userData; m.position.copy(u.rest).addScaledVector(u.ex,t*explodeScale*1.6);}
+  shellMat.opacity=0.55*(1-t)+0.08; shell.visible=!xray && t<0.98;
+  controls.update(); renderer.render(scene,camera); requestAnimationFrame(tick);
+}
+tick();
+</script>
+</body>
+</html>
