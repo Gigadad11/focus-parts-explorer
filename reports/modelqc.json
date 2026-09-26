@@ -1,0 +1,321 @@
+{
+ "summary": {
+  "parts": 96,
+  "findings": 24,
+  "errors": 3,
+  "warnings": 15,
+  "lh_side_z": "+z",
+  "overall": "The sides are consistent: +z is driver/LH for every named part, and the big layout calls are right. Intake is toward the firewall, exhaust toward the radiator, the timing and accessory drive are on the passenger (-z) end, the transaxle is on the driver end, the tank is under the rear seat and the muffler is at the back. The real problems are collisions and scale near the driver-side front: the battery is inside the headlamp and radiator, the master cylinder is behind the firewall inside the dash, the ABS unit is inside the LH tire and the PCM is far from the battery. The engine stack also has the valve cover and coil pack buried in the block, and the wheels are 0.26 lower than their hubs. The motor-mount explode vector is the only ex that points the wrong way."
+ },
+ "lh_evidence": "Every LH-named part is at +z and every RH-named part is at -z: fender-l z=+3.4 / fender-r z=-3.4, door-fl/rl z=+3.4, wheel-fl/rl z=+2.98, strut-fl z=+2.5, headlamp-l z=+2.05, taillamp-l z=+2.8, cv-axle-l 'driver (LH)' z=+2.4. The driver-side parts agree: seat-fl 'Driver seat' z=+1.6, steering-col and ignition-sw z=+1.55, trans z=+1.85, battery z=+2, airbox z=+2.3 and CJB z=+2.75. The passenger-side parts are all at -z: timing belt -1.5, serp belt -1.9, alternator -1.5, PS pump -1.8, A/C compressor -1.2, degas bottle -2.5 and blower -2. Fore/aft checks out too: exhaust manifold x=6.9 is toward the radiator and intake x=4.5 is toward the firewall.",
+ "findings": [
+  {
+   "id": "battery",
+   "severity": "error",
+   "problem": "The battery box spans x 6.9\u20138.3, y 1.8\u20132.9, z 1.1\u20132.9. That puts about 0.6\u00d70.65\u00d71.8 of it inside headlamp-l (x\u22657.68, y 2.25\u20133.45, z 1.15\u20132.95) and its corner inside the radiator (x\u22658.125, z\u22641.4). It also overlaps the airbox.",
+   "suggest": {
+    "pos": [
+     7.05,
+     2.65,
+     2.3
+    ]
+   },
+   "why": "On the Mk1 Focus the battery sits on a tray above the transaxle, behind the LH headlamp. It does not share space with the headlamp."
+  },
+  {
+   "id": "battery",
+   "severity": "warn",
+   "problem": "Size 1.4\u00d71.1\u00d71.8 works out to about 340\u00d7270\u00d7440 mm (1 unit \u2248 0.243 m). The 1.8 across-car dimension is about 2.5\u00d7 too big.",
+   "suggest": {
+    "size": [
+     1.0,
+     0.72,
+     0.72
+    ]
+   },
+   "why": "A Group 96R battery is about 242\u00d7173\u00d7175 mm."
+  },
+  {
+   "id": "master-cyl",
+   "severity": "error",
+   "problem": "At x=3.7 the master cylinder and booster are inside the dash box (x 2.97\u20134.57), so the master cylinder ends up on the cabin side of the firewall.",
+   "suggest": {
+    "pos": [
+     4.3,
+     2.7,
+     1.95
+    ]
+   },
+   "why": "The booster bolts to the driver-side firewall and the master cylinder projects forward into the engine bay."
+  },
+  {
+   "id": "motor-mounts",
+   "severity": "error",
+   "problem": "The part sits at z=-2.2 (passenger end) but ex=[0,0,4] explodes it across the whole engine bay to the driver side.",
+   "suggest": {
+    "ex": [
+     0,
+     1.5,
+     -4
+    ]
+   },
+   "why": "The passenger-end mount on the belt-end strut tower is the one this proxy represents, so it should explode outboard toward -z."
+  },
+  {
+   "id": "dash",
+   "severity": "warn",
+   "problem": "The dash runs from x 2.97 to 4.57, so it pokes past the firewall into the intake manifold (x from 4.05), the throttle body and the cowl-mounted cabin filter (x 4.5).",
+   "suggest": {
+    "pos": [
+     3.3,
+     3.6,
+     0
+    ]
+   },
+   "why": "The IP ends at the firewall, just behind the intake manifold. Size should become [1.4,1.6,5.6] so it spans x 2.6\u20134.0."
+  },
+  {
+   "id": "abs-mod",
+   "severity": "warn",
+   "problem": "The ABS unit spans x 6.1\u20136.9, y 1.1\u20131.9, z 2.0\u20132.8, which puts it inside the LH front tire (z\u22652.58) and against the sway bar.",
+   "suggest": {
+    "pos": [
+     7.2,
+     1.6,
+     1.7
+    ]
+   },
+   "why": "The HCU is mounted to the body inboard of the wheel well on the driver side of the bay. It is never in the wheel envelope."
+  },
+  {
+   "id": "pcm",
+   "severity": "warn",
+   "problem": "The PCM is at the cowl (x=4.6), about 3 units behind the battery. It also crowds the fuse box and the strut tower.",
+   "suggest": {
+    "pos": [
+     6.9,
+     2.8,
+     2.95
+    ]
+   },
+   "why": "On the 2000\u201304 Focus the PCM mounts next to the battery at the driver-side front of the bay."
+  },
+  {
+   "id": "airbox",
+   "severity": "warn",
+   "problem": "The box spans x 5.4\u20137.0, y 2.4\u20133.6, z 1.55\u20133.05 and overlaps the battery. At 1.6\u00d71.2\u00d71.5 (about 390\u00d7290\u00d7365 mm) it is also oversized.",
+   "suggest": {
+    "pos": [
+     5.9,
+     3.45,
+     1.55
+    ]
+   },
+   "why": "The Zetec airbox sits above the transaxle, inboard of and behind the battery. Resize to [1.2,0.9,1.0]."
+  },
+  {
+   "id": "eng-block",
+   "severity": "warn",
+   "problem": "The block plus head is 2.9 tall (0.70 m). With the oil pan and valve cover stacked on it the engine is 0.96 m tall, so the pan and valve cover have to sit inside the block to fit under the hood.",
+   "suggest": {
+    "size": [
+     1.9,
+     2.4,
+     2.5
+    ]
+   },
+   "why": "The 2.0 Zetec is about 0.6 m tall from block bottom to cam cover. Set pos y to 2.1 so it spans y 0.9\u20133.3."
+  },
+  {
+   "id": "valve-cover",
+   "severity": "warn",
+   "problem": "y=3.23 puts the valve cover (y 2.955\u20133.505) almost entirely inside the block (top at 3.45).",
+   "suggest": {
+    "pos": [
+     5.72,
+     3.55,
+     0
+    ]
+   },
+   "why": "The cam cover sits on top of the head. With the resized block it should span y 3.275\u20133.825."
+  },
+  {
+   "id": "oil-pan",
+   "severity": "nit",
+   "problem": "The pan (y 0.5\u20131.0) overlaps the bottom of the block (y 0.55).",
+   "suggest": {
+    "pos": [
+     5.7,
+     0.7,
+     0
+    ]
+   },
+   "why": "The sump bolts under the block. Use size [1.4,0.4,2.2] so it spans y 0.5\u20130.9 under a block that starts at 0.9."
+  },
+  {
+   "id": "spark-plugs",
+   "severity": "warn",
+   "problem": "Size [2.4,0.35,0.5] makes the plug/coil row run fore/aft. On a transverse inline-4 the cylinders run along z. The row also sits inside the valve cover and uses the same ex [0,3,0], so it never separates from the cover when exploded.",
+   "suggest": {
+    "size": [
+     0.5,
+     0.35,
+     2.4
+    ]
+   },
+   "why": "The cylinder row of a transverse engine runs across the car. Also set pos y to 3.95 and ex to [0,4.5,0]."
+  },
+  {
+   "id": "wheel-fl",
+   "severity": "warn",
+   "problem": "All four wheels are centered at y=0.98, but every hub, rotor, drum and CV axle is at y=1.24. That is a 0.26 non-concentric offset, and with a ~1.25-unit tire radius the tires sink into the ground.",
+   "suggest": {
+    "pos": [
+     5.62,
+     1.24,
+     2.98
+    ]
+   },
+   "why": "A 195/60R15 tire has a radius of about 0.305 m (about 1.25 units), and the hub is at the wheel center. Apply y=1.24 to wheel-fr, wheel-rl and wheel-rr as well."
+  },
+  {
+   "id": "strut-fl",
+   "severity": "warn",
+   "problem": "The strut is at z 2.2\u20132.8, y 1.3\u20133.7, which goes through the top of the LH tire (z\u22652.58, y\u22642.2). strut-fr has the same problem mirrored.",
+   "suggest": {
+    "pos": [
+     5.4,
+     3.0,
+     2.3
+    ]
+   },
+   "why": "The McPherson strut runs from the knuckle up to the tower, inboard of the tire. Use [5.4,3.0,-2.3] for strut-fr."
+  },
+  {
+   "id": "fuel-tank",
+   "severity": "warn",
+   "problem": "The tank spans x -4.8 to -1.8, so its back edge sits almost on the rear axle line (-4.97) and in the Control Blade/crossmember zone. At 3\u00d71\u00d73.2 (about 137 L as a box) it is also far over 13.2 gal, and it is offset 0.4 toward the LH side for no reason.",
+   "suggest": {
+    "pos": [
+     -2.8,
+     0.95,
+     0
+    ]
+   },
+   "why": "The tank saddles the tunnel under the rear seat (seat x -3.42 to -1.62), clearly ahead of the axle. Size about [2.6,0.9,3.0]."
+  },
+  {
+   "id": "fuel-pump",
+   "severity": "warn",
+   "problem": "The cylinder spans y 0.8\u20132.4, so it pokes about 1 unit out of the tank top (1.45) into the rear bench.",
+   "suggest": {
+    "pos": [
+     -2.8,
+     1.0,
+     0.4
+    ]
+   },
+   "why": "The module drops into the tank from the top and its flange sits flush under the seat. Use size [0.7,1.0]."
+  },
+  {
+   "id": "heater-core",
+   "severity": "warn",
+   "problem": "The heater core is centered at z=0, but the spec puts the blower and heater core behind the dash on the passenger side.",
+   "suggest": {
+    "pos": [
+     3.1,
+     2.5,
+     -0.8
+    ]
+   },
+   "why": "The HVAC case with the heater core sits center-to-passenger side, next to the blower at z=-2."
+  },
+  {
+   "id": "fender-l",
+   "severity": "warn",
+   "problem": "The fender top is at y 4.05 but the hood is at 4.72, which leaves a 0.67-unit (16 cm) step all along the hood edge (see the front and side renders). fender-r has the same problem.",
+   "suggest": {
+    "pos": [
+     6.45,
+     3.2,
+     3.4
+    ]
+   },
+   "why": "The hood shut line sits flush with the fender tops. Use size [4,2.9,0.12] so the top reaches about 4.65, or drop the hood to about 4.1."
+  },
+  {
+   "id": "muffler",
+   "severity": "warn",
+   "problem": "The mid pipe ends at x -5.1, z -1.6, while the muffler starts at x -5.1, z +1.4. That is a 3-unit lateral gap in the exhaust.",
+   "suggest": {
+    "pos": [
+     -6.6,
+     0.7,
+     -0.6
+    ]
+   },
+   "why": "The exhaust is one continuous run. The muffler inlet has to line up with the mid pipe behind the axle."
+  },
+  {
+   "id": "fuse-box",
+   "severity": "nit",
+   "problem": "The fuse box spans x 4.5\u20135.5, y 3.15\u20133.65, z 2.25\u20133.25 and intersects the top of strut-fl.",
+   "suggest": {
+    "pos": [
+     4.5,
+     3.4,
+     2.75
+    ]
+   },
+   "why": "The CJB/BJB sits on the driver-side inner fender apron beside the strut tower, not inside it."
+  },
+  {
+   "id": "flex-pipe",
+   "severity": "nit",
+   "problem": "At y=0.7, z=-0.8 the pipe runs through the oil pan volume.",
+   "suggest": {
+    "pos": [
+     4.6,
+     0.4,
+     -0.8
+    ]
+   },
+   "why": "The front pipe runs under and behind the sump, not through it."
+  },
+  {
+   "id": "shock-r",
+   "severity": "nit",
+   "problem": "At z 2.28\u20132.72, y 1.1\u20133.3 the shock clips the top of the LH rear tire.",
+   "suggest": {
+    "pos": [
+     -5.2,
+     2.4,
+     2.25
+    ]
+   },
+   "why": "The Control Blade damper mounts inboard of the tire, on the knuckle and the body rail."
+  },
+  {
+   "id": "lugs",
+   "severity": "nit",
+   "problem": "The spare and lugs are in the cargo floor, but ex=[0,-0.53,0] explodes them down into the floor or ground.",
+   "suggest": {
+    "ex": [
+     -3,
+     3,
+     0
+    ]
+   },
+   "why": "The spare well is under the cargo floor, and you get to it through the liftgate."
+  },
+  {
+   "id": "mirrors",
+   "severity": "nit",
+   "problem": "The part is labeled 'pair' but only an LH (+z) proxy exists. rear-blade 'pair' and window-reg '(4)' have the same problem.",
+   "suggest": null,
+   "why": "A pair should be visible on both sides, or the part should be labeled per side."
+  }
+ ],
+ "_loop": "modelqc",
+ "_at": "2026-09-26T16:42:43Z"
+}

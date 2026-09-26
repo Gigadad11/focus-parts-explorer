@@ -1,11 +1,6 @@
 {
- "errors": [
-  "report missing: systems"
- ],
+ "errors": [],
  "warnings": [
-  "agent report missing: modelqc (run loops/loop_modelqc.py)",
-  "agent report missing: uiqc (run loops/loop_uiqc.py)",
-  "oil-filter: confirmed, but wrong-fit numbers still listed (Wix 51372) -> remove",
   "weak title match pcm: 2002 FORD FOCUS 2.0L ECM REPLACEMENT",
   "weak title match muffler: How to Replace Flex Pipe 00-04 Ford Focus",
   "2005-07 facelift video (same platform, check the part differs) seat-fr: How to remove front seats in a 2005 Ford Focus",
@@ -17,99 +12,66 @@
   "2005-07 facelift video (same platform, check the part differs) exh-mani: 2005 Ford Focus Exhaust Manifold Removal- Part 1",
   "2005-07 facelift video (same platform, check the part differs) cabin-filter: 2007 Ford Focus Cabin Air Filter Replacement PC5387X - Breathe Easier with PUREFLOW",
   "2005-07 facelift video (same platform, check the part differs) seat-fl: How to remove front seats in a 2005 Ford Focus",
-  "link not reachable right now (rate-limited?) rockauto-vehicle",
-  "store AutoZone 1626 N Main St, Meridian, ID 83642: unverifiable"
+  "store AutoZone 1626 N Main St, Meridian, ID 83642: unverifiable",
+  "systems: Cooling -> Ignition & Electrical interaction is not reciprocated in Ignition & Electrical",
+  "systems: Exhaust -> Ignition & Electrical interaction is not reciprocated in Ignition & Electrical",
+  "systems: Exhaust -> Body interaction is not reciprocated in Body",
+  "systems: Transmission & Drive -> Ignition & Electrical interaction is not reciprocated in Ignition & Electrical",
+  "systems: Suspension -> Transmission & Drive interaction is not reciprocated in Transmission & Drive",
+  "systems: Brakes -> Engine interaction is not reciprocated in Engine",
+  "systems: Steering -> Engine interaction is not reciprocated in Engine",
+  "systems: Steering -> Interior interaction is not reciprocated in Interior",
+  "systems: HVAC -> Engine interaction is not reciprocated in Engine",
+  "systems: HVAC -> Ignition & Electrical interaction is not reciprocated in Ignition & Electrical",
+  "systems: Body -> Ignition & Electrical interaction is not reciprocated in Ignition & Electrical",
+  "systems: Lighting -> Interior interaction is not reciprocated in Interior",
+  "model error battery: The battery box spans x 6.9\u20138.3, y 1.8\u20132.9, z 1.1\u20132.9. That puts about 0.6\u00d70.65\u00d71.8 of it inside headlamp-l (x\u22657.68, y 2.25\u20133.45, z 1.15\u20132.95) and its corner inside the radiator (x\u22658.125, z\u22641.4). It also overlaps the airbox. -> suggest {\"pos\": [7.05, 2.65, 2.3]}",
+  "model error master-cyl: At x=3.7 the master cylinder and booster are inside the dash box (x 2.97\u20134.57), so the master cylinder ends up on the cabin side of the firewall. -> suggest {\"pos\": [4.3, 2.7, 1.95]}",
+  "model error motor-mounts: The part sits at z=-2.2 (passenger end) but ex=[0,0,4] explodes it across the whole engine bay to the driver side. -> suggest {\"ex\": [0, 1.5, -4]}",
+  "ui high [panel]: The part-number rows split the text in the wrong place. The regex in pnRow takes the first word as the number, so 'Motorcraft GL-456', 'Lester 8260' and 'Gates 42294' show the brand name in large monospace and the real number in small grey text. data-pn is set to that first word, so tapping 'copy' copies 'Motorcraft' or 'Lester' instead of the number. You can see this in ui-panel-phone, ui-panel-desk and ui-panel-flagged-desk. -> In pnRow, check whether the first word contains no digits (/^[A-Za-z]+$/). If so, treat it as the brand: render <small class=brand>Motorcraft</small> first and the number (the first word that contains a digit, e.g. GL-456) as the <span>. Set data-pn to that number. Brand rows then show as 'GL-456 \u00b7 Motorcraft', and copy grabs GL-456.",
+  "ui high [visual]: On the phone, the Explode dial sits on top of every open sheet (z-index 7, background #141414ee, which is almost opaque). It covers the last visible part number, list row or paragraph, and text shows faintly through it (ui-panel-phone, ui-list-phone, ui-systems-phone, ui-help-phone). The dial does nothing useful while you are reading a sheet. -> In open(), add document.body.classList.add('sheet-open'); in closeAll(), remove it. Add CSS: @media(max-width:700px){body.sheet-open #dial,body.sheet-open #hint{display:none} .sheet{padding-bottom:calc(20px + env(safe-area-inset-bottom))}}",
+  "ui high [first-run]: The Help sheet explains controls that don't exist. It lists 'Filter', 'Body', 'X-ray' and '+ Part / Data', but the real UI has 'View: Full' (which cycles Full, See-through and Parts only), '\u22ef', 'Backup & fixes' and 'Add a missing part'. The system filter <select> is hidden on phones, so 'Filter: show one system at a time' can't be done there at all. -> Rewrite the help rows to match the real labels: 'View button: tap to cycle Full car \u2192 See-through \u2192 Parts only', 'Systems: tap a system, then Show on car to see just that system', '\u22ef More: How to use, Backup & fixes, Add a missing part'. Remove the Filter, Body and X-ray rows.",
+  "ui high [panel]: On flagged parts the owner can't tell which number to order. The panel shows Motorcraft PW-425 first with no warning. The suggested numbers come after it, and each carries the jargon 'suggested by verification, confirm on the car' packed into grey 11px text (ui-panel-flagged-phone/desk). Nothing marks which number is the wrong-fit one. -> When conf==='X', sort rows so isSug(x) rows come first and add <span class=badge cV>use this one</span> to each. Show the original non-suggested rows dimmed (opacity:.55) under a heading 'Old number, fits a different car'. Change the text to 'likely right \u2014 check it matches the old part'."
  ],
- "agent_notes": [],
+ "agent_notes": [
+  "Model QC (+z = LH): The sides are consistent: +z is driver/LH for every named part, and the big layout calls are right. Intake is toward the firewall, exhaust toward the radiator, the timing and accessory drive are on the passenger (-z) end, the transaxle is on the driver end, the tank is under the rear seat and the muffler is at the back. The real problems are collisions and scale near the driver-side front: the battery is inside the headlamp and radiator, the master cylinder is behind the firewall inside the dash, the ABS unit is inside the LH tire and the PCM is far from the battery. The engine stack also has the valve cover and coil pack buried in the block, and the wheels are 0.26 lower than their hubs. The motor-mount explode vector is the only ex that points the wrong way.",
+  "model warn battery: Size 1.4\u00d71.1\u00d71.8 works out to about 340\u00d7270\u00d7440 mm (1 unit \u2248 0.243 m). The 1.8 across-car dimension is about 2.5\u00d7 too big. -> suggest {\"size\": [1.0, 0.72, 0.72]}",
+  "model warn dash: The dash runs from x 2.97 to 4.57, so it pokes past the firewall into the intake manifold (x from 4.05), the throttle body and the cowl-mounted cabin filter (x 4.5). -> suggest {\"pos\": [3.3, 3.6, 0]}",
+  "model warn abs-mod: The ABS unit spans x 6.1\u20136.9, y 1.1\u20131.9, z 2.0\u20132.8, which puts it inside the LH front tire (z\u22652.58) and against the sway bar. -> suggest {\"pos\": [7.2, 1.6, 1.7]}",
+  "model warn pcm: The PCM is at the cowl (x=4.6), about 3 units behind the battery. It also crowds the fuse box and the strut tower. -> suggest {\"pos\": [6.9, 2.8, 2.95]}",
+  "model warn airbox: The box spans x 5.4\u20137.0, y 2.4\u20133.6, z 1.55\u20133.05 and overlaps the battery. At 1.6\u00d71.2\u00d71.5 (about 390\u00d7290\u00d7365 mm) it is also oversized. -> suggest {\"pos\": [5.9, 3.45, 1.55]}",
+  "model warn eng-block: The block plus head is 2.9 tall (0.70 m). With the oil pan and valve cover stacked on it the engine is 0.96 m tall, so the pan and valve cover have to sit inside the block to fit under the hood. -> suggest {\"size\": [1.9, 2.4, 2.5]}",
+  "model warn valve-cover: y=3.23 puts the valve cover (y 2.955\u20133.505) almost entirely inside the block (top at 3.45). -> suggest {\"pos\": [5.72, 3.55, 0]}",
+  "model nit oil-pan: The pan (y 0.5\u20131.0) overlaps the bottom of the block (y 0.55). -> suggest {\"pos\": [5.7, 0.7, 0]}",
+  "model warn spark-plugs: Size [2.4,0.35,0.5] makes the plug/coil row run fore/aft. On a transverse inline-4 the cylinders run along z. The row also sits inside the valve cover and uses the same ex [0,3,0], so it never separates from the cover when exploded. -> suggest {\"size\": [0.5, 0.35, 2.4]}",
+  "model warn wheel-fl: All four wheels are centered at y=0.98, but every hub, rotor, drum and CV axle is at y=1.24. That is a 0.26 non-concentric offset, and with a ~1.25-unit tire radius the tires sink into the ground. -> suggest {\"pos\": [5.62, 1.24, 2.98]}",
+  "model warn strut-fl: The strut is at z 2.2\u20132.8, y 1.3\u20133.7, which goes through the top of the LH tire (z\u22652.58, y\u22642.2). strut-fr has the same problem mirrored. -> suggest {\"pos\": [5.4, 3.0, 2.3]}",
+  "model warn fuel-tank: The tank spans x -4.8 to -1.8, so its back edge sits almost on the rear axle line (-4.97) and in the Control Blade/crossmember zone. At 3\u00d71\u00d73.2 (about 137 L as a box) it is also far over 13.2 gal, and it is offset 0.4 toward the LH side for no reason. -> suggest {\"pos\": [-2.8, 0.95, 0]}",
+  "model warn fuel-pump: The cylinder spans y 0.8\u20132.4, so it pokes about 1 unit out of the tank top (1.45) into the rear bench. -> suggest {\"pos\": [-2.8, 1.0, 0.4]}",
+  "model warn heater-core: The heater core is centered at z=0, but the spec puts the blower and heater core behind the dash on the passenger side. -> suggest {\"pos\": [3.1, 2.5, -0.8]}",
+  "model warn fender-l: The fender top is at y 4.05 but the hood is at 4.72, which leaves a 0.67-unit (16 cm) step all along the hood edge (see the front and side renders). fender-r has the same problem. -> suggest {\"pos\": [6.45, 3.2, 3.4]}",
+  "model warn muffler: The mid pipe ends at x -5.1, z -1.6, while the muffler starts at x -5.1, z +1.4. That is a 3-unit lateral gap in the exhaust. -> suggest {\"pos\": [-6.6, 0.7, -0.6]}",
+  "model nit fuse-box: The fuse box spans x 4.5\u20135.5, y 3.15\u20133.65, z 2.25\u20133.25 and intersects the top of strut-fl. -> suggest {\"pos\": [4.5, 3.4, 2.75]}",
+  "model nit flex-pipe: At y=0.7, z=-0.8 the pipe runs through the oil pan volume. -> suggest {\"pos\": [4.6, 0.4, -0.8]}",
+  "model nit shock-r: At z 2.28\u20132.72, y 1.1\u20133.3 the shock clips the top of the LH rear tire. -> suggest {\"pos\": [-5.2, 2.4, 2.25]}",
+  "model nit lugs: The spare and lugs are in the cargo floor, but ex=[0,-0.53,0] explodes them down into the floor or ground. -> suggest {\"ex\": [-3, 3, 0]}",
+  "model nit mirrors: The part is labeled 'pair' but only an LH (+z) proxy exists. rear-blade 'pair' and window-reg '(4)' have the same problem.",
+  "UI QC score 6/10, 17 findings",
+  "ui med [nav]: On the phone, the app's only instructions ('How to use') are hidden behind a bare '\u22ef' button, and the mobile CSS hides the subtitle that holds the gesture hints (#top .sub{display:none}). After the coach dialog is dismissed, a first-time user has no visible way back to help. -> Change the \u22ef button's label to 'More' and put a visible '?' button (the #helpbtn style already exists, 36px wide) at the end of the first #tools .row that opens help. Or move bHelp out of #moreRow into the main row as '? Help'.",
+  "ui med [labels]: The button text 'View: Full' means nothing to a layperson, and you only find out what the other modes are by tapping it. The title tooltip ('Full car / See-through / Parts only') never appears on touch screens. -> Rename the states to 'Full car', 'See inside', 'Parts only' and set the button text to e.g. '\ud83d\udc41 Full car'. On the first tap, show a toast such as 'See inside: body is see-through. Tap again for Parts only'.",
+  "ui med [panel]: When you open a part from List, Search or a system chip at 0% explode with the Full view, the part stays hidden inside the body. The car moves up behind the toolbar and you can't see which part was picked (ui-panel-phone: alternator not visible). select() only reveals the part when opts.reveal is set. -> Call select(m,{reveal:true}) from every list, search and chip handler. In select(), when reveal is set, also give the selected part a short pulse (animate the emissive between 0x8a4a10 and 0xffa040 three times).",
+  "ui med [visual]: On the phone, while a sheet is open, the camera view offset (innerHeight*0.28) pushes the car up under the search bar and buttons. The toolbar covers the roof and upper part of the car (every phone sheet screenshot). -> When a sheet is open on screens \u2264700px, collapse #tools to the search field only (body.sheet-open #tools .row{display:none}). Lower the view offset to innerHeight*0.2 so the car sits in the visible band between the toolbar and the sheet.",
+  "ui med [labels]: Two different trust levels share the same grey 'number unconfirmed' badge: K (from Ford's catalog) and L (a best guess). The Help sheet's trust key shows two identical grey badges with different meanings (ui-help-desk). -> Set CONF.L to 'best guess, check first' and give it its own style, e.g. .cL{background:#4a2f1a;color:#ffd3a8}. Keep K as 'from Ford catalog'.",
+  "ui med [jargon]: The panel Notes and DIY tip are aimed at a parts clerk: 'NOT 8418 (SVT / late-04), NOT 8406 (05-07 Duratec). 6-groove pulley, 11 o clock plug, 2-ear mount' and 'Lester 8260 for this car, not 8418 or 8406'. The Vehicle facts use 'MTX-75', '4F27E', 'ZTW', 'VIN code 3', and Systems uses 'PCM' and 'degas bottle', all with no explanation. -> Put Notes inside <details><summary>Details for the parts counter</summary>. Take part numbers out of the tip text. Add a GLOSS map ({PCM:'engine computer',degas:'coolant overflow tank',Duratec:'the newer 2.0 engine, not yours',...}) and, on first use of each term, wrap it in <abbr title> with a dotted underline that shows the gloss when tapped.",
+  "ui med [touch]: Several touch targets are well under 44px. The inline part chips in the Systems text are about 24px tall (.chip padding 4px 10px, min-height:0). The '\u2039 All systems' back link has padding 0 and is about 18px tall. The system chip in the panel header is about 24px. -> Set .chip{padding:7px 12px;min-height:34px;line-height:1.3}. Set .back{padding:10px 12px 10px 0;min-height:44px;font-size:14px}. In the systems prose, add line-height:2.1 to the paragraph so the larger chips don't overlap.",
+  "ui med [visual]: On the phone at 60% explode, the exploded parts run off both sides of the screen (headlamps and wheels cut off in ui-exploded-phone). The camera doesn't pull back as the car spreads out. -> In the render loop, move the camera back along its direction as the explode amount grows on narrow screens: const k=1+t*(camera.aspect<0.7?0.55:0.15); camera.position.copy(target).addScaledVector(dir, baseDist*k).",
+  "ui low [nav]: On desktop, the '\u22ef' button wraps onto its own line under Systems/List/Vehicle/View because #tools is only 300px wide. It looks orphaned (ui-home-desk). The 'All systems' dropdown also does the same job as the Systems button. -> Set #tools{width:min(360px,46vw)} and .row{flex-wrap:nowrap}. Label the select 'Show only: All systems' so it reads as a filter rather than a second menu.",
+  "ui low [visual]: The sheet's drag handle (.sheet::before) looks like a bottom sheet you can swipe down to close, but swiping does nothing. -> Add touchstart/touchmove/touchend handlers on .sheet: when scrollTop===0 and the finger moves down more than 80px, call closeAll(). Otherwise remove the ::before handle.",
+  "ui low [panel]: The three action buttons look inconsistent. 'Buy nearby' is a grey-text <button> while 'Prices online' is an orange link, and 'Prices online' actually opens RockAuto's vehicle catalog, not a price comparison. -> Give all three the same .snipe style, with 'Watch how-to' as the only filled one. Rename 'Prices online' to 'Order online (RockAuto)'.",
+  "ui low [editor]: With no fixes yet, the Backup sheet still shows three '0' counters, backup/restore buttons and a red 'Erase all my fixes' button placed right next to 'Save a backup' (ui-data-phone). -> When n===0, show a single line: 'Nothing changed yet. When you correct a part number or add a photo, it's saved here.' Show only 'Restore a backup'. Hide Erase until n>0, and give it margin-top:16px so it sits apart from Save.",
+  "ui low [visual]: The hint text (#777, 11px) and the explode sub-label (10px #9a9a9a) are low contrast and very small. The desktop hint 'two-finger pinch on touch' is irrelevant on desktop. -> Set #hint{color:#9a9a9a;font-size:12px} with the text 'scroll to pull apart \u00b7 drag to spin \u00b7 click a part'. Set #dial label small{font-size:11px}."
+ ],
  "fixes": [
-  [
-   "dedupe",
-   "valve-cover"
-  ],
-  [
-   "dedupe",
-   "timing-belt"
-  ],
-  [
-   "dedupe",
-   "oil-pan"
-  ],
-  [
-   "dedupe",
-   "serp-belt"
-  ],
-  [
-   "dedupe",
-   "spark-plugs"
-  ],
-  [
-   "dedupe",
-   "thermostat"
-  ],
-  [
-   "dedupe",
-   "water-pump"
-  ],
-  [
-   "dedupe",
-   "rad-hoses"
-  ],
-  [
-   "dedupe",
-   "coolant-res"
-  ],
-  [
-   "dedupe",
-   "throttle-body"
-  ],
-  [
-   "dedupe",
-   "airbox"
-  ],
-  [
-   "dedupe",
-   "maf"
-  ],
-  [
-   "dedupe",
-   "exh-mani"
-  ],
-  [
-   "dedupe",
-   "strut-fl"
-  ],
-  [
-   "dedupe",
-   "strut-fr"
-  ],
-  [
-   "dedupe",
-   "sway-f"
-  ],
-  [
-   "dedupe",
-   "wheel-brg-f"
-  ],
-  [
-   "dedupe",
-   "drum-r"
-  ],
-  [
-   "dedupe",
-   "ps-pump"
-  ],
-  [
-   "dedupe",
-   "liftgate"
-  ],
-  [
-   "dedupe",
-   "mirrors"
-  ],
-  [
-   "dedupe",
-   "window-reg"
-  ],
   [
    "flag",
    "eng-block"
@@ -125,10 +87,6 @@
   [
    "flag",
    "oil-pan"
-  ],
-  [
-   "unwrong",
-   "oil-filter"
   ],
   [
    "flag",
@@ -217,36 +175,25 @@
   [
    "flag",
    "wheel-fl"
+  ],
+  [
+   "model",
+   "battery"
+  ],
+  [
+   "model",
+   "master-cyl"
+  ],
+  [
+   "model",
+   "motor-mounts"
   ]
  ],
  "applied": [
-  "dedupe valve-cover",
-  "dedupe timing-belt",
-  "dedupe oil-pan",
-  "dedupe serp-belt",
-  "dedupe spark-plugs",
-  "dedupe thermostat",
-  "dedupe water-pump",
-  "dedupe rad-hoses",
-  "dedupe coolant-res",
-  "dedupe throttle-body",
-  "dedupe airbox",
-  "dedupe maf",
-  "dedupe exh-mani",
-  "dedupe strut-fl",
-  "dedupe strut-fr",
-  "dedupe sway-f",
-  "dedupe wheel-brg-f",
-  "dedupe drum-r",
-  "dedupe ps-pump",
-  "dedupe liftgate",
-  "dedupe mirrors",
-  "dedupe window-reg",
   "flag eng-block",
   "flag valve-cover",
   "flag timing-belt",
   "flag oil-pan",
-  "unwrong oil-filter",
   "flag serp-belt",
   "flag spark-plugs",
   "flag thermostat",
@@ -271,5 +218,5 @@
   "flag wheel-fl"
  ],
  "_loop": "cross",
- "_at": "2026-09-26T16:22:58Z"
+ "_at": "2026-09-26T16:46:26Z"
 }
