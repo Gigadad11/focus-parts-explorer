@@ -8,14 +8,14 @@ from common import *
 from agent import ask, h
 FRESH='--fresh' in sys.argv
 d=load(); P=d['PARTS']
-geo=[{k:p.get(k) for k in ('id','name','sys','shape','size','pos','ex','body')} for p in P]
+geo=[{k:p.get(k) for k in ('id','name','sys','shape','size','pos','ex','rot','body')} for p in P]
 views={'qc-top':'t=0&xray=1&cam=0.01,40,0.01&target=0,1,0','qc-side':'t=0&xray=1&cam=0,3,34&target=0,2.8,0','qc-front':'t=0&xray=1&cam=34,4,0&target=0,2.5,0','qc-exploded':'t=0.6&cam=24,12,28&target=0,3,0','qc-rear-quarter':'t=0&xray=1&cam=-20,9,-22&target=0,2.4,0'}
 os.makedirs(os.path.join(ROOT,'renders'),exist_ok=True)
 with Server(8798):
     for n,q in views.items(): render(os.path.join(ROOT,'renders',n+'.png'),q)
 paths=', '.join(os.path.join(ROOT,'renders',n+'.png') for n in views)
 PROMPT=f"""QC a procedural three.js 3D parts model of a 2003 Ford Focus WAGON, 2.0 DOHC Zetec, FWD, transverse engine.
-Coordinate frame: x = fore/aft with POSITIVE X = FRONT (radiator x~8.3, engine x~5, fuel tank/muffler negative x); y = height (0 = ground); z = left/right.
+Cylinders: size=[radius,length], vertical (y) unless rot is given (rot=[x,y,z] radians). Coordinate frame: x = fore/aft with POSITIVE X = FRONT (radiator x~8.3, engine x~5, fuel tank/muffler negative x); y = height (0 = ground); z = left/right.
 Work out which sign of z is the driver (LH) side from the LH/RH-named parts and check it is consistent everywhere.
 Real-car facts to judge against: Zetec Focus has the INTAKE manifold toward the firewall and the EXHAUST manifold toward the radiator; battery front-left of the bay (driver side, US LHD); airbox driver side; degas bottle passenger side; alternator, PS pump, A/C compressor and the timing belt on the passenger (belt) end of the engine; transaxle on the driver end; fuel tank under the rear seat ahead of the rear axle; muffler at the rear; Control Blade rear suspension; blower and heater core behind the dash on the passenger side; PCM in the bay near the battery; CJB fuse box at the driver-side of the bay.
 Look at these renders with the Read tool: {paths}
