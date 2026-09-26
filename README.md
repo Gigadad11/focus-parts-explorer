@@ -6,7 +6,8 @@ Single-file interactive exploded-view parts catalog for one specific car:
   Default data (the part-number ASSUMPTIONS) is inline at the top of the module script.
   Corrections, added parts, photos and vehicle details save to localStorage; Data → Export JSON.
 - `snipe.py` — regenerates `snipe-sheet.html` / `.csv` (every part + OE numbers + retailer links) from index.html.
-- Serve: `python3 -m http.server 8790 --bind 0.0.0.0` from this folder.
+- Serve locally: `python3 -m http.server 8790 --bind 0.0.0.0` from this folder.
+- Public: https://focus-parts-explorer.vercel.app (Vercel project focus-parts-explorer, `vercel deploy --prod --yes` to update; noindex).
 
 Scope for now: help with this one car. Anything beyond that (public launch, any token/claimant mechanics)
 is explicitly deferred and is the last thing that would ever ship, not the first.
