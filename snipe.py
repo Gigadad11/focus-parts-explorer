@@ -20,7 +20,7 @@ def links(p,V):
     qq=(pn+' ' if pn else '')+nm+' '+yr
     L=[('RockAuto catalog',V['rockautoVehicle'])]
     if pn: L.append(('RockAuto #'+pn,'https://www.rockauto.com/en/partsearch/?partnum='+q(pn)))
-    L+= [('eBay low→high','https://www.ebay.com/sch/i.html?_nkw='+q(qq)+'&_sacat=6030&_sop=15'),
+    L+= [('AutoZone','https://www.autozone.com/searchresult?searchText='+q(qq)),("O'Reilly",'https://www.oreillyauto.com/search?q='+q(qq)),('eBay low→high','https://www.ebay.com/sch/i.html?_nkw='+q(qq)+'&_sacat=6030&_sop=15'),
          ('Amazon','https://www.amazon.com/s?k='+q(qq)+'&i=automotive'),
          ('PartsGeek','https://www.partsgeek.com/catalog/2003/ford/focus.html'),
          ('1A Auto','https://www.1aauto.com/2003-ford-focus-parts/v-2003-ford-focus'),
@@ -33,7 +33,7 @@ def main():
     except Exception: prices={}
     rows=[]; H=['<!DOCTYPE html><meta charset=utf-8><title>Snipe sheet — 2003 Focus Wagon Zetec</title>',
       '<style>body{font:13px system-ui;background:#0a0a0a;color:#ddd;padding:12px}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #222;padding:6px 8px;vertical-align:top;text-align:left}th{color:#c67a30;font-size:11px;letter-spacing:.1em;text-transform:uppercase}a{color:#e8a56a;text-decoration:none;margin-right:8px;white-space:nowrap}code{color:#fff;background:#1a1a1a;padding:1px 4px;border-radius:3px}small{color:#777}.V{color:#8f8}.K{color:#fd8}</style>',
-      f'<h2>Snipe sheet · {V["year"]} {V["make"]} {V["model"]} {V["body"]} · {V["engine"]}</h2><p>VIN {V["vin"]} · <a href="index.html">← 3D explorer</a></p>',
+      f'<h2>Snipe sheet · {V["year"]} {V["make"]} {V["model"]} {V["body"]} · {V["engine"]}</h2><p>VIN {V["vin"]} · <a href="/">← 3D explorer</a></p><p><b>Meridian counters:</b> AutoZone 1626 N Main St (208) 888-1430 · O&#39;Reilly 1915 Fairview Ave (208) 288-2114 · O&#39;Reilly 24 E Calderwood Dr (208) 888-4815 · O&#39;Reilly 3420 N Eagle Rd (208) 888-0805 · O&#39;Reilly 3377 N Ten Mile Rd (208) 888-1200 · all Mon-Sat 7:30a-10p, Sun 8a-8p</p>',
       '<table><tr><th>System</th><th>Part</th><th>OE / interchange</th><th>Best price found</th><th>How-to video</th><th>Snipe</th></tr>']
     for p in P:
         pn,L=links(p,V); pr=prices.get(p['id'],{})
