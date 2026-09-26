@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+<meta name="robots" content="noindex, nofollow"/>
+<meta name="theme-color" content="#0a0a0a"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<link rel="icon" href="data:,">
 <title>2003 Focus Wagon Zetec — Parts Explorer</title>
 <style>
   :root{--or:#c67a30;--or2:#e8a56a;--bg:#0a0a0a;--card:#121212f5;--line:#2a2a2a}
@@ -46,10 +51,26 @@
   .muted{color:#777;font-size:12px}
   #hint{position:fixed;bottom:72px;left:50%;transform:translateX(-50%);font-size:11px;color:#777;z-index:5;pointer-events:none;white-space:nowrap}
   #toast{position:fixed;top:12px;left:50%;transform:translateX(-50%);background:#1f5f2a;color:#dfffe6;padding:8px 14px;border-radius:8px;font-size:13px;z-index:20;display:none}
+  html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
+  button{min-height:36px}
+  @media (pointer:coarse){ #hint{display:none} }
   @media (max-width:700px){
-    #tools{width:58vw}
-    .sheet{width:auto;left:12px;right:12px;top:auto;bottom:84px;max-height:60vh}
-    form .grid3{grid-template-columns:1fr 1fr}
+    #top{padding:calc(8px + env(safe-area-inset-top)) 12px 6px}
+    #top h1{font-size:13px} #top .sub{display:none}
+    #tools{left:10px;right:10px;width:auto;top:calc(38px + env(safe-area-inset-top));gap:6px}
+    #tools input,#tools select{font-size:16px;padding:9px 10px;min-height:42px}
+    #tools .row{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+    #tools .row::-webkit-scrollbar{display:none}
+    #tools .row button{flex:0 0 auto;min-height:40px;padding:8px 11px;font-size:12.5px}
+    #tools select{display:none} #tools.open select{display:block}
+    #dial{left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));padding:10px 12px}
+    #dial input[type=range]{height:36px}
+    .sheet{width:auto;left:0;right:0;top:auto;bottom:0;max-height:66vh;border-radius:16px 16px 0 0;padding:14px 14px calc(78px + env(safe-area-inset-bottom));box-shadow:0 -8px 30px #000a}
+    .sheet::before{content:'';display:block;width:40px;height:4px;border-radius:2px;background:#333;margin:-4px auto 10px}
+    .sheet h2{font-size:17px} .sheet .close{top:10px;right:12px;font-size:26px;min-height:0}
+    a.snipe,.item{padding:11px 12px;font-size:14px}
+    form input,form select,form textarea{font-size:16px;padding:9px 10px}
+    form .grid3{grid-template-columns:1fr 1fr 1fr}
   }
 </style>
 </head>
@@ -59,9 +80,9 @@
 <div id="tools">
   <input id="q" placeholder="Search parts or part number…" autocomplete="off"/>
   <select id="sysf"><option value="">All systems</option></select>
-  <div class="row"><button id="bList">List</button><button id="bVeh">Vehicle</button><button id="bAdd">+ Part</button><button id="bBody" class="on">Body</button><button id="bXray">X-ray</button><button id="bData">Data</button></div>
+  <div class="row"><button id="bList">List</button><button id="bFilter">Filter</button><button id="bVeh">Vehicle</button><button id="bAdd">+ Part</button><button id="bBody" class="on">Body</button><button id="bXray">X-ray</button><button id="bData">Data</button></div>
 </div>
-<div id="hint">scroll wheel = explode dial</div>
+<div id="hint">scroll wheel = explode dial · two-finger pinch on touch</div>
 <div id="toast"></div>
 <div id="dial"><label>Explode</label><input id="t" type="range" min="0" max="1000" value="0"/><span class="val" id="tv">0%</span></div>
 <div id="panel" class="sheet"><button class="close" data-close>×</button><div id="pbody"></div></div>
@@ -198,14 +219,15 @@ function updateSubtitle(){const n=Object.keys(overlay.parts).length+overlay.cust
 
 /* ===== SCENE ===== */
 const canvas=document.getElementById('c');
-const renderer=new THREE.WebGLRenderer({canvas,antialias:true}); renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+const isMobile=matchMedia('(pointer:coarse)').matches||innerWidth<700;
+const renderer=new THREE.WebGLRenderer({canvas,antialias:!isMobile||devicePixelRatio<2,powerPreference:'high-performance'}); renderer.setPixelRatio(Math.min(devicePixelRatio,isMobile?1.5:2));
 renderer.toneMapping=THREE.ACESFilmicToneMapping; renderer.toneMappingExposure=0.95; renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 const scene=new THREE.Scene(); scene.background=new THREE.Color(0x0b0c0d); scene.fog=new THREE.Fog(0x0b0c0d,70,160);
 const pmrem=new THREE.PMREMGenerator(renderer); scene.environment=pmrem.fromScene(new RoomEnvironment(renderer),0.04).texture;
 const camera=new THREE.PerspectiveCamera(38,1,0.1,400); camera.position.set(19,8.5,23);
-const controls=new OrbitControls(camera,canvas); controls.enableDamping=true; controls.enableZoom=false; controls.target.set(0,2.4,0); controls.maxPolarAngle=Math.PI/2-0.02;
+const controls=new OrbitControls(camera,canvas); controls.enableDamping=true; controls.enableZoom=false; controls.enablePan=false; controls.rotateSpeed=isMobile?0.6:1; controls.target.set(0,2.4,0); controls.maxPolarAngle=Math.PI/2-0.02;
 scene.add(new THREE.HemisphereLight(0xdfe8ff,0x1a1612,0.35));
-const key=new THREE.DirectionalLight(0xfff1e0,2.2); key.position.set(18,26,12); key.castShadow=true; key.shadow.mapSize.set(2048,2048);
+const key=new THREE.DirectionalLight(0xfff1e0,2.2); key.position.set(18,26,12); key.castShadow=true; key.shadow.mapSize.set(isMobile?1024:2048,isMobile?1024:2048);
 Object.assign(key.shadow.camera,{left:-22,right:22,top:22,bottom:-22,near:1,far:80}); key.shadow.bias=-0.0005; scene.add(key);
 const rim=new THREE.DirectionalLight(0x9fc3ff,0.8); rim.position.set(-20,8,-18); scene.add(rim);
 const ground=new THREE.Mesh(new THREE.CircleGeometry(60,64),new THREE.MeshStandardMaterial({color:0x141516,roughness:0.95,metalness:0})); ground.rotation.x=-Math.PI/2; ground.receiveShadow=true; scene.add(ground);
@@ -371,7 +393,7 @@ function matches(p){ if(sysFilter&&p.sys!==sysFilter) return false; if(!query) r
 function applyFilter(){ for(const m of meshes){const p=m.userData.p; m.visible=matches(p)&&(showBody||!p.body);
   const dim=(selected&&m!==selected)||xray; setOpacity(m,dim?(xray?0.3:0.45):1);} if(selected) setOpacity(selected,1); shell.visible=showBody&&!xray; }
 const ray=new THREE.Raycaster(),ptr=new THREE.Vector2(); let down=null;
-canvas.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY];});
+canvas.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY]; document.activeElement&&document.activeElement.blur&&document.activeElement.blur();});
 canvas.addEventListener('pointerup',e=>{ if(!down)return; const mv=Math.hypot(e.clientX-down[0],e.clientY-down[1]); down=null; if(mv>6)return;
   ptr.x=(e.clientX/innerWidth)*2-1; ptr.y=-(e.clientY/innerHeight)*2+1; ray.setFromCamera(ptr,camera);
   const hits=ray.intersectObjects(meshes.filter(m=>m.visible),true); let o=hits.length?hits[0].object:null; while(o&&!(o.userData&&o.userData.p)) o=o.parent; select(o||null); });
@@ -487,6 +509,7 @@ document.getElementById('bAdd').addEventListener('click',()=>{
 function renderList(){ const items=allParts().filter(matches).filter(p=>showBody||!p.body);
   sheets.list.innerHTML=`<div class="item" style="color:#888;cursor:default">${items.length} parts</div>`+items.map(p=>{const c=isCorrected(p.id)?'C':(p.conf||'L');return `<div class="item" data-id="${p.id}">${esc(p.name)} <span class="badge c${c}">${CONF[c].split(' ')[0]}</span><small>${esc(p.sys)}${p.oe&&p.oe[0]?' · '+esc(p.oe[0]):''}${p.status?' · '+esc(p.status):''}</small></div>`;}).join('');
   sheets.list.querySelectorAll('.item[data-id]').forEach(el=>el.addEventListener('click',()=>select(byId[el.dataset.id]))); }
+document.getElementById('bFilter').addEventListener('click',()=>{document.getElementById('tools').classList.toggle('open');});
 document.getElementById('bList').addEventListener('click',()=>{if(sheets.list.classList.contains('open'))closeAll();else{renderList();open('list');}});
 const VFIELDS=[['paintHex','Paint color (hex, e.g. #a7b3ad Light Tundra)'],['vin','VIN'],['year','Year'],['body','Body'],['trim','Trim'],['engine','Engine'],['engineCode','Engine code'],['trans','Transmission'],['drivetrain','Drivetrain'],['fuel','Fuel'],['brakes','Brakes'],['susp','Suspension'],['wheels','Wheels / tires'],['plant','Plant'],['seq','Serial'],['paint','Paint code'],['axle','Axle code'],['buildDate','Build date'],['mileage','Mileage'],['owner','Owner'],['notes','Notes']];
 function showVeh(edit){ const V=vehicle(); open('veh');
@@ -513,7 +536,10 @@ document.getElementById('importFile').addEventListener('change',e=>{const f=e.ta
 
 /* ===== RUN ===== */
 rebuild(); renderList(); updateSubtitle();
-function resize(){renderer.setSize(innerWidth,innerHeight,false);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();}
+let fitted=false;
+function resize(){renderer.setSize(innerWidth,innerHeight,false);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();
+  if(camera.aspect<1){camera.fov=Math.min(70,38*Math.max(1,1.25/camera.aspect)); camera.updateProjectionMatrix();}
+  if(!fitted&&!new URLSearchParams(location.search).has('cam')){const k=camera.aspect<1?1.2:1; camera.position.set(19*k,7*k+1,23*k); fitted=true;}}
 addEventListener('resize',resize); resize();
 (function tick(){ t+=(tTarget-t)*0.12; for(const m of meshes){const u=m.userData; m.position.copy(u.rest).addScaledVector(u.ex,t*1.6);}
   setOpacity(shell,Math.max(0.06,1-t*1.15)); shell.visible=showBody&&!xray&&t<0.97; controls.update(); renderer.render(scene,camera); requestAnimationFrame(tick); })();
