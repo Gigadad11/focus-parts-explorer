@@ -129,8 +129,9 @@ def deploy():
 
 def git():
     if sh(['git','status','--porcelain']).stdout.strip()=='' : return 'clean'
-    sh(['git','add','-A']); r=sh(['git','-c','user.name=Torgen','-c','user.email=tsoderlund@protonmail.com','commit','-q','-m',f'loop: build {BUILD_ID}\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>'])
-    assert r.returncode==0,r.stderr[-200:]; return 'committed '+sh(['git','rev-parse','--short','HEAD']).stdout.strip()
+    sh(['git','add','-A']); r=sh(['git','-c','user.name=Gigadad11','-c','user.email=Gigadad11@users.noreply.github.com','commit','-q','-m',f'loop: build {BUILD_ID}\n\nCo-Authored-By: Claude Fable 5.1 <noreply@anthropic.com>'])
+    assert r.returncode==0,r.stderr[-200:]
+    p=sh(['git','push','-q','origin','HEAD'],timeout=120); return 'committed '+sh(['git','rev-parse','--short','HEAD']).stdout.strip()+(' + pushed' if p.returncode==0 else ' (push failed: '+p.stderr.strip()[-80:]+')')
 
 for name,fn in [('lint',lint),('videos',videos),('sheet',sheet),('syntax',syntax),('stamp',stamp),('render',render),('smoke',smoke),('git',git),('deploy',deploy)]:
     if FAIL and name in ('git','deploy'): REPORT.append((name,False,'skipped: earlier failure',0)); continue
