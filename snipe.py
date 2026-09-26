@@ -40,7 +40,8 @@ def main():
         oe='<br>'.join(f'<code>{html.escape(x)}</code>' for x in (p.get('oe') or []))
         aft='<br>'.join(f'<small>{html.escape(x)}</small>' for x in (p.get('aft') or []))
         best=html.escape(str(pr.get('best',''))) if pr else ''
-        H.append(f'<tr><td>{p["sys"]}</td><td>{html.escape(p["name"])}<br><small class="{p.get("conf","L")}">{ {"V":"verified","K":"catalog #","L":"lookup"}[p.get("conf","L")] }</small>'+(f'<br><small>{html.escape(p["notes"])}</small>' if p.get('notes') else '')+f'</td><td>{oe}{"<br>" if oe and aft else ""}{aft}</td><td>{best}</td><td>'+' '.join(f'<a href="{u}" target=_blank>{a}</a>' for a,u in L)+'</td></tr>')
+        vids=' '.join(f'<a href="{v["url"]}" target=_blank>▶ {html.escape(v["title"][:40])}</a>' for v in VID.get(p['id'],[]))+f' <a href="https://www.youtube.com/results?search_query={q("2003 Ford Focus "+nm_of(p)+" replacement")}" target=_blank>search</a>'
+        H.append(f'<tr><td>{p["sys"]}</td><td>{html.escape(p["name"])}<br><small class="{p.get("conf","L")}">{ {"V":"verified","K":"catalog #","L":"lookup"}[p.get("conf","L")] }</small>'+(f'<br><small>{html.escape(p["notes"])}</small>' if p.get('notes') else '')+f'</td><td>{oe}{"<br>" if oe and aft else ""}{aft}</td><td>{best}</td><td>{vids}</td><td>'+' '.join(f'<a href="{u}" target=_blank>{a}</a>' for a,u in L)+'</td></tr>')
         rows.append([p['sys'],p['name'],pn,' | '.join(p.get('oe') or []),' | '.join(p.get('aft') or []),p.get('notes',''),' | '.join(v['url'] for v in VID.get(p['id'],[])),*[u for _,u in L[:4]]])
     H.append('</table>'); open('snipe-sheet.html','w').write('\n'.join(H))
     with open('snipe-sheet.csv','w',newline='') as f:
