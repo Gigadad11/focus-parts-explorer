@@ -224,3 +224,10 @@ Common thread in the failures: insider-held float, thin or removable liquidity, 
 - Any regulator statement specifically on stock-paired memecoins (none found).
 - Year of Idaho Digital Assets Act signing (secondary source only).
 - Deployment/audit status of the open-source array-hook launchpad.
+
+## 11. Addendum 2026-09-26: Solana / StonkFun instead of Robinhood Chain?
+- StonkFun (stonkfun.xyz, STONK) and pump.fun both let a new Solana coin be quoted in a tokenized stock. StonkFun runs on Raydium LaunchLab bonding curves (~0.03 SOL to deploy), graduates into a Raydium 0.25% pool with liquidity locked to the platform, creator picks the quote asset once, creator earns a share of pool fees in the quote asset, some launches use a transfer tax paid out pro-rata to holders (Token-2022 transfer-fee extension). No KYC on the launchpad. Sources: datawallet.com/crypto/stonk-fun-explained, airdropalert.com/blogs/what-is-stonkfun, news.bitcoin.com (pump.fun stock pairs).
+- The quote assets are Backed Finance xStocks (SPYx, NVDAx, QQQx, TSLAx ...). xstocks.com: "xStocks are not available in the United States or to U.S. persons." Backed: not registered under the 1933 Act, may not be offered or sold to US persons. Same wall as Robinhood Stock Tokens, different issuer (Switzerland/Jersey structure).
+- Automotive quote assets actually in use on the launchpads/terminals: TSLAx only. No Fx, GMx, AZOx, ORLYx seen in any launchpad list (Terminalpedia registry, StonkFun menu). Backed's catalog claims 1,100 products so an Fx may exist in the issuer list; UNVERIFIED, and irrelevant for a US launcher because of the restriction above.
+- A stock-quoted memecoin confers no exposure to the stock beyond denomination; holders get "no dividends, no shareholder rights, nothing" (datawallet).
+- Conclusion unchanged: the platform is fine for non-US launchers; for a US person the quote asset is the problem, not the chain. The Howey analysis of a development-funding token is identical on Solana.
