@@ -23,18 +23,30 @@ PBR paint with environment lighting and shadows. Paint color is editable in the 
 `renders/` holds headless screenshots. URL params for testing: `?t=0.5&cam=x,y,z&target=x,y,z&shellonly=1&xray=1`.
 
 ## The loop
-`./run.sh` = `python3 loop.py --deploy`. Stages: lint → videos (oEmbed re-check, dead links removed + logged to
-dead-videos.log) → sheet → syntax → stamp (build id in `<meta name="build">`) → render (7 headless frames) →
-smoke (live bounding-box check that the car is car-shaped) → git commit → deploy → verify the public URL carries
-the build id. Deploy and commit are skipped if any earlier stage fails. `BUILD-REPORT.md` has the last run.
-Flags: `--skip-videos`, `--skip-render`; omit `--deploy` to verify only.
+`./run.sh` runs everything and deploys only if it all passes. Run it after ANY edit; never hand-deploy.
+1. Deterministic loops (`loops/loop_*.py` -> `reports/*.json`): `videos` (live + relevant + right generation), `links`
+   (HTTP status of every generated URL; bot-walled hosts recorded as unverifiable, never as pass), `geometry` (headless render,
+   every part's world bbox checked against its system's zone and the body envelope), `sheet` (flat sheet agrees with the page
+   part-for-part), `stores` (addresses/phones re-read from the chains' own pages), `systems` (the Systems sheet content is
+   complete: every system described, every interaction names a real system and is reciprocated, every part has does/fails/diy/tip).
+2. Agentic loops, each running its own `claude -p` through `loops/agent.py` and cached on a hash of the data it judges
+   (`reports/.agent-cache/`, so unchanged inputs never cost a second run; `--fresh` forces one):
+   `partnumbers` (web-checks the claimed OE/aftermarket numbers of every part whose claim changed; verdict per part with
+   evidence URLs; `--all`, `--ids=a,b`, `--stale-days=N`), `modelqc` (renders x-ray top/side/front views and has an agent that
+   knows the real 2000-04 Zetec Focus layout judge every part's position, size and explode direction), `uiqc` (screenshots
+   every sheet at phone and desktop size via the `?open=` hook and has an agent review usability for a non-mechanic owner).
+3. `loops/loop_cross.py --apply` cross-checks all reports against each other and the page, applies only the safe fixes
+   (dedupe numbers, confirmed numbers -> verified + reordered first, contradicted -> flagged + wrong-fit numbers removed +
+   suggestion added once, wrong-generation videos dropped), writes `CROSS-REPORT.md` and blocks the deploy on any error.
+   Agent opinions (model/UI QC) are surfaced as warnings and notes, never enforced; `--apply-model` also applies the model
+   QC's error-severity position suggestions.
+4. `loop.py --deploy`: lint -> videos -> sheet -> syntax -> stamp (build id in `<meta name="build">`) -> render (7 frames) ->
+   smoke (live bounding-box check that the car is car-shaped) -> git commit + push -> vercel deploy -> verify the public URL
+   carries the build id. `BUILD-REPORT.md` has the last run.
+Flags to `run.sh`: `--no-agents`, `--fresh`, `--apply-model`; everything else is passed to `loop.py` (`--skip-videos`, `--skip-render`).
 
-## Verification loops (run before every deploy)
-`run.sh` now runs, in order: `loops/loop_videos.py` (live + relevant + right generation), `loop_links.py`
-(HTTP status of every generated URL; bot-walled hosts recorded as unverifiable, never as pass), `loop_geometry.py`
-(headless render, every part's world bbox checked against its system's zone and the body envelope), `loop_sheet.py`
-(flat sheet must agree with the page part-for-part), `loop_stores.py` (store addresses/phones re-read from the chains'
-own location pages). `reports/partnumbers.json` comes from an agent pass that web-checks every claimed part number.
-Then `loops/loop_cross.py --apply` checks all reports against each other and the page, applies only safe fixes
-(confirmed numbers → verified + reordered first; contradicted → flagged X; wrong-vehicle videos dropped), writes
-CROSS-REPORT.md, and blocks the deploy on any error. Only then does `loop.py --deploy` run.
+## Plain-English layer
+`docs/systems.json` (14 systems: what it does, how it works on this car, interactions, what usually fails, a one-line refresher)
+and `docs/part-notes.json` (96 parts: does / fails / diy 1-5 / tip) are injected into `index.html` by
+`loops/inject_content.py` as `SYSTEM_INFO` and `PART_NOTES`. Edit the JSON, re-inject, run the loop.
+URL test hook: `?open=panel:<id> | list | veh | data | help | systems | systems:<name>`.
