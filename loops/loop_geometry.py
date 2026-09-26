@@ -2,8 +2,8 @@
 """Geometry loop: render the page headless, dump every part's world bounding box, and check each part sits in the zone its system implies."""
 import json, re, subprocess, time, os
 from common import *
-ZONES={'Engine':dict(x=(3.0,9.0),y=(0.5,4.0)),'Cooling':dict(x=(5.0,9.4),y=(0.5,4.0)),'Fuel & Air':dict(x=(-6.5,9.4),y=(0.3,4.0)),'Ignition & Electrical':dict(x=(1.5,9.4),y=(0.3,4.2)),
- 'Exhaust':dict(x=(-9.4,5.0),y=(0.0,3.5)),'Transmission & Drive':dict(x=(3.0,8.0),y=(0.5,4.0)),'Suspension':dict(x=(-7.0,8.0),y=(0.0,4.5)),'Brakes':dict(x=(-7.0,9.0),y=(0.0,4.0)),
+ZONES={'Engine':dict(x=(3.0,9.0),y=(0.5,4.0)),'Cooling':dict(x=(4.5,9.4),y=(0.5,4.0)),'Fuel & Air':dict(x=(-6.5,9.4),y=(0.3,4.0)),'Ignition & Electrical':dict(x=(1.5,9.4),y=(0.3,4.2)),
+ 'Exhaust':dict(x=(-9.4,7.6),y=(0.0,3.5)),'Transmission & Drive':dict(x=(3.0,8.0),y=(0.5,4.0)),'Suspension':dict(x=(-7.0,8.0),y=(0.0,4.5)),'Brakes':dict(x=(-7.0,9.0),y=(0.0,4.0)),
  'Steering':dict(x=(1.0,9.0),y=(0.3,4.5)),'HVAC':dict(x=(1.5,9.4),y=(0.3,4.5)),'Body':dict(x=(-9.5,9.5),y=(0.0,6.5)),'Lighting':dict(x=(-9.5,9.5),y=(1.5,4.5)),'Interior':dict(x=(-5.0,4.5),y=(0.5,6.0)),'Wheels & Tires':dict(x=(-7.0,7.0),y=(-0.1,2.6))}
 srv=subprocess.Popen(['python3','-m','http.server','8798','--bind','127.0.0.1'],cwd=ROOT,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL); time.sleep(1)
 try:

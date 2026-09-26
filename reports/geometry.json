@@ -1,9 +1,31 @@
 {
  "summary": {
   "parts": 96,
-  "flagged": 0
+  "flagged": 1
  },
- "findings": [],
+ "findings": [
+  {
+   "id": "flex-pipe",
+   "name": "Flex pipe / front pipe",
+   "sys": "Exhaust",
+   "bbox": {
+    "id": "flex-pipe",
+    "min": [
+     2.29,
+     -0.24,
+     -1.15
+    ],
+    "max": [
+     6.91,
+     1.14,
+     -0.45
+    ]
+   },
+   "problems": [
+    "outside height -0.2..1.1"
+   ]
+  }
+ ],
  "_loop": "geometry",
- "_at": "2026-09-26T06:13:41Z"
+ "_at": "2026-09-26T16:35:15Z"
 }
