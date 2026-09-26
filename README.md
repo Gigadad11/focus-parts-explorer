@@ -1,6 +1,9 @@
 # Focus Parts Explorer
-Single-file interactive exploded-view parts catalog for one specific car:
-2003 Ford Focus Wagon, 2.0L DOHC Zetec, VIN 1FAFP36363W175417 (Torgen's brother's car).
+Interactive exploded-view parts catalog for one specific car, built as a single HTML file with a verification pipeline
+behind it. Live demo: https://focus-parts-explorer.vercel.app
+
+Car: 2003 Ford Focus Wagon, 2.0L DOHC Zetec (VIN 1FAFP36363W1xxxxx, serial masked). Everything in the catalog is a
+best-effort assumption until the verification loops or the owner confirm it; the UI shows which state each part is in.
 
 - `index.html` — the whole product. three.js from CDN (needs internet once; cached after).
   Default data (the part-number ASSUMPTIONS) is inline at the top of the module script.
