@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
-<meta name="build" content="20260926-164849-63d2f8a2"/>
+<meta name="build" content="20260926-165706-e04796e0"/>
 <meta name="robots" content="noindex, nofollow"/>
 <meta name="theme-color" content="#0a0a0a"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -116,7 +116,7 @@
 <div id="tools">
   <input id="q" type="search" placeholder="Search parts or part number…" autocomplete="off"/>
   <select id="sysf"><option value="">All systems</option></select>
-  <div class="row"><button id="bSys">Systems</button><button id="bList">List</button><button id="bVeh">Vehicle</button><button id="bView" title="Full car / See inside / Parts only">View: Full car</button><button id="bHelp" title="How to use this" style="width:38px;font-weight:700">?</button><button id="bMore" title="More" style="min-width:40px;font-weight:700">⋯</button></div>
+  <div class="row"><button id="bSys">Systems</button><button id="bList">List</button><button id="bVeh">Car</button><button id="bView" title="Full car / See inside / Parts only">👁 Full car</button><button id="bHelp" title="How to use this" style="width:38px;font-weight:700">?</button><button id="bMore" title="More" style="min-width:40px;font-weight:700">⋯</button></div>
   <div class="row" id="moreRow" style="display:none"><button id="bData">Backup &amp; fixes</button><button id="bAdd">Add a missing part</button></div>
 </div>
 <div id="sysbar"></div>
@@ -522,7 +522,7 @@ qEl.addEventListener('input',e=>{query=e.target.value.toLowerCase();applyFilter(
 qEl.addEventListener('focus',()=>{document.getElementById('tools').classList.add('searching'); setToolsH();});
 qEl.addEventListener('blur',()=>setTimeout(()=>document.getElementById('tools').classList.remove('searching'),250));
 const VIEWS=[['Full car',true,false],['See inside',true,true],['Parts only',false,false]]; let viewIdx=0; let viewTip=false;
-function setView(i){viewIdx=(i+VIEWS.length)%VIEWS.length; const [n,b,x]=VIEWS[viewIdx]; showBody=b; xray=x; const el=document.getElementById('bView'); el.textContent='View: '+n; el.classList.toggle('on',viewIdx>0); applyFilter(); if(!viewTip&&viewIdx===1){viewTip=true; toast('See inside: the body is see-through. Tap again for Parts only');}}
+function setView(i){viewIdx=(i+VIEWS.length)%VIEWS.length; const [n,b,x]=VIEWS[viewIdx]; showBody=b; xray=x; const el=document.getElementById('bView'); el.textContent='👁 '+n; el.classList.toggle('on',viewIdx>0); applyFilter(); if(!viewTip&&viewIdx===1){viewTip=true; toast('See inside: the body is see-through. Tap again for Parts only');}}
 document.getElementById('bView').addEventListener('click',()=>setView(viewIdx+1));
 document.getElementById('bMore').addEventListener('click',e=>{const r=document.getElementById('moreRow'); const on=r.style.display==='none'; r.style.display=on?'flex':'none'; e.target.classList.toggle('on',on); setToolsH();});
 function setToolsH(){document.documentElement.style.setProperty('--tools-h',document.getElementById('tools').offsetHeight+'px');}
@@ -733,7 +733,7 @@ document.getElementById('sysbar').addEventListener('click',e=>{ if(e.target.data
 const GLOSSARY=[['OE / OEM','the number Ford itself uses for the part (Ford or Motorcraft). Best for exact matching.'],['Aftermarket','a part from another brand made to fit the same spot. Cheaper; check the fitment list.'],['Interchange','a list of other part numbers that fit the same place.'],['Reman','remanufactured: a used unit rebuilt with new wearing parts, usually with a core charge you get back.'],['Core charge','a deposit refunded when you hand in the old part.'],['Fitment','the list of cars a part is sold for. If 2003 Focus 2.0 DOHC is not on it, do not buy it.'],['Zetec','the 2.0 L DOHC 16-valve engine in this car (not the SPI/SOHC, not the Duratec).'],['DOHC','double overhead cam: two camshafts in the head, 4 valves per cylinder.'],['PCM','the engine computer (powertrain control module).'],['PATS','Ford\'s anti-theft system: the key has a chip; a non-chipped copy will not start the car.'],['CJB','central junction box: the fuse and relay box.'],['Degas bottle','the coolant expansion / overflow tank.'],['Transaxle','front-wheel-drive gearbox and differential in one case.'],['CV axle','the drive shaft from the transaxle to each front wheel, with flexible joints.'],['Control Blade','Ford\'s name for this car\'s independent rear suspension arms.'],['Serpentine belt','the single long belt that spins the alternator, power steering pump and A/C.'],['Timing belt','the toothed belt inside the engine that keeps the cams and crank in step. Snaps = engine damage.'],['Snipe','our word for hunting the cheapest correct part (used, salvage, or an auction).']];
 function showHelp(){ open('help'); document.getElementById('hbody').innerHTML=`<h2>How to use this</h2><div class="sys">one car, every part, in plain English</div>
   <div class="refresh"><b>The idea</b>Spin the car, pull it apart, tap a part. Each part tells you what it does, when it is failing, how hard it is to replace, which number to order, a video, and where to buy it in Meridian.</div>
-  <dl class="kv"><dt>Drag</dt><dd>rotate the car</dd><dt>Explode slider</dt><dd>pulls the car apart so you can see inside (scroll wheel or two-finger pinch also works)</dd><dt>Tap a part</dt><dd>opens its card</dd><dt>Systems</dt><dd>the car explained system by system, with what talks to what</dd><dt>List / Search</dt><dd>find a part by name, number, or what it does</dd><dt>View</dt><dd>tap to cycle Full car → See inside (body see-through) → Parts only</dd><dt>Vehicle</dt><dd>the facts about this exact car (engine, what is still unknown)</dd><dt>More (⋯)</dt><dd>Backup & fixes (your corrections stay on this phone until you save a backup), Add a missing part, this help</dd><dt>Back button</dt><dd>closes whatever is open</dd></dl>
+  <dl class="kv"><dt>Drag</dt><dd>rotate the car</dd><dt>Explode slider</dt><dd>pulls the car apart so you can see inside (scroll wheel or two-finger pinch also works)</dd><dt>Tap a part</dt><dd>opens its card</dd><dt>Systems</dt><dd>the car explained system by system, with what talks to what</dd><dt>List / Search</dt><dd>find a part by name, number, or what it does</dd><dt>👁 View</dt><dd>tap to cycle Full car → See inside (body see-through) → Parts only</dd><dt>Car</dt><dd>the facts about this exact car (engine, what is still unknown)</dd><dt>More (⋯)</dt><dd>Backup & fixes (your corrections stay on this phone until you save a backup), Add a missing part, this help</dd><dt>Back button</dt><dd>closes whatever is open</dd></dl>
   <h3>Trust badges on part numbers</h3>${Object.keys(CONF).map(k=>`<div class="item" style="cursor:default"><span class="badge c${k}" style="margin:0 6px 0 0">${CONF[k]}</span><small>${esc(CONF_HELP[k])}</small></div>`).join('')}
   <h3>Words you will see</h3>${GLOSSARY.map(([k,v])=>`<div class="item" style="cursor:default"><b>${esc(k)}</b><small>${esc(v)}</small></div>`).join('')}
   <div class="row" style="margin-top:12px"><button class="pri" id="bHelpOk">Got it</button></div>`;
@@ -759,7 +759,7 @@ addEventListener('resize',resize); resize();
 (function tick(){ t+=(tTarget-t)*0.12; for(const m of meshes){const u=m.userData; m.position.copy(u.rest).addScaledVector(u.ex,t*1.6);}
   if(lookTarget){ controls.target.lerp(lookTarget,0.08); if(controls.target.distanceTo(lookTarget)<0.05) lookTarget=null; }
   const ld=document.getElementById('loading'); if(ld&&!ld.classList.contains('gone')) ld.classList.add('gone');
-  {const z=1/(1+t*(camera.aspect<0.7?0.5:0.15)); if(Math.abs(camera.zoom-z)>0.002){camera.zoom=z; camera.updateProjectionMatrix();}}
+  {const z=1/(1+t*(camera.aspect<0.7?0.75:0.15)); if(Math.abs(camera.zoom-z)>0.002){camera.zoom=z; camera.updateProjectionMatrix();}}
   setOpacity(shell,Math.max(0.06,1-t*1.15)); shell.visible=showBody&&!xray&&t<0.97; controls.update(); renderer.render(scene,camera); requestAnimationFrame(tick); })();
 </script>
 </body>

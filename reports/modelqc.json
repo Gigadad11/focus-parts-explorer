@@ -1,321 +1,393 @@
 {
  "summary": {
   "parts": 96,
-  "findings": 24,
-  "errors": 3,
-  "warnings": 15,
+  "findings": 30,
+  "errors": 11,
+  "warnings": 13,
   "lh_side_z": "+z",
-  "overall": "The sides are consistent: +z is driver/LH for every named part, and the big layout calls are right. Intake is toward the firewall, exhaust toward the radiator, the timing and accessory drive are on the passenger (-z) end, the transaxle is on the driver end, the tank is under the rear seat and the muffler is at the back. The real problems are collisions and scale near the driver-side front: the battery is inside the headlamp and radiator, the master cylinder is behind the firewall inside the dash, the ABS unit is inside the LH tire and the PCM is far from the battery. The engine stack also has the valve cover and coil pack buried in the block, and the wheels are 0.26 lower than their hubs. The motor-mount explode vector is the only ex that points the wrong way."
+  "overall": "Left/right handedness is consistent: LH/driver is +z. Every system is on the correct side and end of the car, and the intake/exhaust orientation is correct. The main problem is systematic: the renderer treats cyl size[0] as the radius, but most rotating parts were sized as if it were the diameter. That makes rotors, drums, the clutch, alternator, water pump, A/C compressor, fan, starter, pipes and hoses 2\u20133\u00d7 too big, and it causes the pile-up at the passenger belt end. The wheel/hub stack sits 0.2\u20130.46 below the shell's wheel center (1.44), and both belts and the spark-plug row are rotated 90\u00b0. The mid pipe also runs through the fuel tank."
  },
- "lh_evidence": "Every LH-named part is at +z and every RH-named part is at -z: fender-l z=+3.4 / fender-r z=-3.4, door-fl/rl z=+3.4, wheel-fl/rl z=+2.98, strut-fl z=+2.5, headlamp-l z=+2.05, taillamp-l z=+2.8, cv-axle-l 'driver (LH)' z=+2.4. The driver-side parts agree: seat-fl 'Driver seat' z=+1.6, steering-col and ignition-sw z=+1.55, trans z=+1.85, battery z=+2, airbox z=+2.3 and CJB z=+2.75. The passenger-side parts are all at -z: timing belt -1.5, serp belt -1.9, alternator -1.5, PS pump -1.8, A/C compressor -1.2, degas bottle -2.5 and blower -2. Fore/aft checks out too: exhaust manifold x=6.9 is toward the radiator and intake x=4.5 is toward the firewall.",
+ "lh_evidence": "All LH-named parts sit at +z: fender-l, door-fl, door-rl, strut-fl, cv-axle-l (driver), headlamp-l, taillamp-l, wheel-fl and wheel-rl. All RH-named parts sit at -z. The driver seat, steering column, ignition switch, key, battery, airbox, PCM, CJB and transaxle are at +z. The passenger seat, degas bottle, blower, cabin filter, timing belt, serpentine belt, alternator, PS pump and A/C compressor are at -z. The sides are consistent everywhere, with intake toward the firewall (x 4.5) and exhaust toward the radiator (x 6.9).",
  "findings": [
   {
-   "id": "battery",
+   "id": "wheel-fl",
    "severity": "error",
-   "problem": "The battery box spans x 6.9\u20138.3, y 1.8\u20132.9, z 1.1\u20132.9. That puts about 0.6\u00d70.65\u00d71.8 of it inside headlamp-l (x\u22657.68, y 2.25\u20133.45, z 1.15\u20132.95) and its corner inside the radiator (x\u22658.125, z\u22641.4). It also overlaps the airbox.",
+   "problem": "The wheel center is at y 0.98 with radius 1.3, so the tire sinks 0.32 below ground. The shell wheel profile puts the front wheel center at cy 1.439, r 1.439 (rear cy 1.393), so this part is 0.46 low and sits inside the arch. The same applies to wheel-fr, wheel-rl and wheel-rr (rear y 1.39).",
    "suggest": {
     "pos": [
-     7.05,
-     2.65,
-     2.3
+     5.62,
+     1.44,
+     2.98
     ]
    },
-   "why": "On the Mk1 Focus the battery sits on a tray above the transaxle, behind the LH headlamp. It does not share space with the headlamp."
+   "why": "A wheel's center sits one tire radius above the ground and has to match the shell's wheel arch."
   },
   {
-   "id": "battery",
-   "severity": "warn",
-   "problem": "Size 1.4\u00d71.1\u00d71.8 works out to about 340\u00d7270\u00d7440 mm (1 unit \u2248 0.243 m). The 1.8 across-car dimension is about 2.5\u00d7 too big.",
+   "id": "wheel-brg-f",
+   "severity": "error",
+   "problem": "The hub, rotor and CV axles are at y 1.24, but the wheel center is 1.44. The whole corner stack is 0.2 low and not on the axle line. The same applies to rotor-f, caliper-f/pads-f (+0.2), cv-axle-l and cv-axle-r (y 1.44), and wheel-brg-r, drum-r and shoes-r (y 1.39).",
+   "suggest": {
+    "pos": [
+     5.5,
+     1.44,
+     2.75
+    ]
+   },
+   "why": "The hub, rotor, CV outer joint and wheel all share one spin axis."
+  },
+  {
+   "id": "rotor-f",
+   "severity": "error",
+   "problem": "size[0] is the radius (CylinderGeometry(r,r,len)), so r 0.95 means a 1.9-unit (about 46 cm) disc. A 258 mm rotor at about 0.244 m/unit is r 0.53. The rotor also nearly fills the wheel.",
    "suggest": {
     "size": [
-     1.0,
-     0.72,
-     0.72
+     0.53,
+     0.14
     ]
    },
-   "why": "A Group 96R battery is about 242\u00d7173\u00d7175 mm."
+   "why": "The Mk1 Focus front rotor is 258 mm diameter, inside a 15-inch wheel."
   },
   {
-   "id": "master-cyl",
+   "id": "drum-r",
    "severity": "error",
-   "problem": "At x=3.7 the master cylinder and booster are inside the dash box (x 2.97\u20134.57), so the master cylinder ends up on the cabin side of the firewall.",
-   "suggest": {
-    "pos": [
-     4.3,
-     2.7,
-     1.95
-    ]
-   },
-   "why": "The booster bolts to the driver-side firewall and the master cylinder projects forward into the engine bay."
-  },
-  {
-   "id": "motor-mounts",
-   "severity": "error",
-   "problem": "The part sits at z=-2.2 (passenger end) but ex=[0,0,4] explodes it across the whole engine bay to the driver side.",
-   "suggest": {
-    "ex": [
-     0,
-     1.5,
-     -4
-    ]
-   },
-   "why": "The passenger-end mount on the belt-end strut tower is the one this proxy represents, so it should explode outboard toward -z."
-  },
-  {
-   "id": "dash",
-   "severity": "warn",
-   "problem": "The dash runs from x 2.97 to 4.57, so it pokes past the firewall into the intake manifold (x from 4.05), the throttle body and the cowl-mounted cabin filter (x 4.5).",
-   "suggest": {
-    "pos": [
-     3.3,
-     3.6,
-     0
-    ]
-   },
-   "why": "The IP ends at the firewall, just behind the intake manifold. Size should become [1.4,1.6,5.6] so it spans x 2.6\u20134.0."
-  },
-  {
-   "id": "abs-mod",
-   "severity": "warn",
-   "problem": "The ABS unit spans x 6.1\u20136.9, y 1.1\u20131.9, z 2.0\u20132.8, which puts it inside the LH front tire (z\u22652.58) and against the sway bar.",
-   "suggest": {
-    "pos": [
-     7.2,
-     1.6,
-     1.7
-    ]
-   },
-   "why": "The HCU is mounted to the body inboard of the wheel well on the driver side of the bay. It is never in the wheel envelope."
-  },
-  {
-   "id": "pcm",
-   "severity": "warn",
-   "problem": "The PCM is at the cowl (x=4.6), about 3 units behind the battery. It also crowds the fuse box and the strut tower.",
-   "suggest": {
-    "pos": [
-     6.9,
-     2.8,
-     2.95
-    ]
-   },
-   "why": "On the 2000\u201304 Focus the PCM mounts next to the battery at the driver-side front of the bay."
-  },
-  {
-   "id": "airbox",
-   "severity": "warn",
-   "problem": "The box spans x 5.4\u20137.0, y 2.4\u20133.6, z 1.55\u20133.05 and overlaps the battery. At 1.6\u00d71.2\u00d71.5 (about 390\u00d7290\u00d7365 mm) it is also oversized.",
-   "suggest": {
-    "pos": [
-     5.9,
-     3.45,
-     1.55
-    ]
-   },
-   "why": "The Zetec airbox sits above the transaxle, inboard of and behind the battery. Resize to [1.2,0.9,1.0]."
-  },
-  {
-   "id": "eng-block",
-   "severity": "warn",
-   "problem": "The block plus head is 2.9 tall (0.70 m). With the oil pan and valve cover stacked on it the engine is 0.96 m tall, so the pan and valve cover have to sit inside the block to fit under the hood.",
+   "problem": "r 0.8 gives a drum about 39 cm across. A 203 mm drum is r 0.42.",
    "suggest": {
     "size": [
-     1.9,
+     0.42,
+     0.2
+    ]
+   },
+   "why": "The rear drum is 203 mm diameter and about 50 mm wide."
+  },
+  {
+   "id": "clutch",
+   "severity": "error",
+   "problem": "r 1.1 gives a clutch disc about 54 cm across, larger than the engine block is tall. The real disc is about 220 mm, so r 0.45.",
+   "suggest": {
+    "size": [
+     0.45,
+     0.3
+    ]
+   },
+   "why": "The Zetec/MTX-75 clutch is about 220 mm diameter."
+  },
+  {
+   "id": "alternator",
+   "severity": "error",
+   "problem": "r 0.75 gives an alternator about 37 cm across (the real one is about 13 cm). It also overlaps the block, the water pump, the A/C compressor and the 2.4-wide exhaust manifold at the passenger end.",
+   "suggest": {
+    "size": [
+     0.28,
+     0.6
+    ]
+   },
+   "why": "The Zetec Focus alternator is a compact unit about 130 mm across, low on the front (exhaust) face at the belt end. Suggested pos: [7.0,1.9,-1.15]."
+  },
+  {
+   "id": "ac-comp",
+   "severity": "error",
+   "problem": "r 0.65 gives about 32 cm across. It is also centered at x 6.4, which is inside the block (x 4.77\u20136.67).",
+   "suggest": {
+    "pos": [
+     6.95,
+     0.95,
+     -1.0
+    ]
+   },
+   "why": "The compressor bolts low on the front face of the block at the belt end. Also resize to [0.28,0.55]."
+  },
+  {
+   "id": "timing-belt",
+   "severity": "error",
+   "problem": "The box is [0.3,2.6,2.2], so it is thin in x and runs 2.2 along z, the crank axis. The belt plane should be perpendicular to the crank (x-y plane). As modeled it cuts through the block from z -2.6 to -0.4.",
+   "suggest": {
+    "size": [
+     2.0,
+     2.6,
+     0.3
+    ]
+   },
+   "why": "On a transverse engine the timing belt runs in a fore/aft-vertical plane at the passenger end. Use pos z -1.4."
+  },
+  {
+   "id": "serp-belt",
+   "severity": "error",
+   "problem": "Same orientation error as timing-belt: [0.25,2.6,2.2] runs along the crank axis and goes through the block.",
+   "suggest": {
+    "size": [
+     2.2,
      2.4,
-     2.5
+     0.25
     ]
    },
-   "why": "The 2.0 Zetec is about 0.6 m tall from block bottom to cam cover. Set pos y to 2.1 so it spans y 0.9\u20133.3."
-  },
-  {
-   "id": "valve-cover",
-   "severity": "warn",
-   "problem": "y=3.23 puts the valve cover (y 2.955\u20133.505) almost entirely inside the block (top at 3.45).",
-   "suggest": {
-    "pos": [
-     5.72,
-     3.55,
-     0
-    ]
-   },
-   "why": "The cam cover sits on top of the head. With the resized block it should span y 3.275\u20133.825."
-  },
-  {
-   "id": "oil-pan",
-   "severity": "nit",
-   "problem": "The pan (y 0.5\u20131.0) overlaps the bottom of the block (y 0.55).",
-   "suggest": {
-    "pos": [
-     5.7,
-     0.7,
-     0
-    ]
-   },
-   "why": "The sump bolts under the block. Use size [1.4,0.4,2.2] so it spans y 0.5\u20130.9 under a block that starts at 0.9."
+   "why": "The accessory belt sits outboard of the timing cover, in a plane perpendicular to the crank. Use pos z -1.7."
   },
   {
    "id": "spark-plugs",
-   "severity": "warn",
-   "problem": "Size [2.4,0.35,0.5] makes the plug/coil row run fore/aft. On a transverse inline-4 the cylinders run along z. The row also sits inside the valve cover and uses the same ex [0,3,0], so it never separates from the cover when exploded.",
+   "severity": "error",
+   "problem": "The plug/coil row is 2.4 long in x (fore/aft), but the cylinders are in line along z on a transverse engine.",
    "suggest": {
     "size": [
      0.5,
      0.35,
-     2.4
+     2.2
     ]
    },
-   "why": "The cylinder row of a transverse engine runs across the car. Also set pos y to 3.95 and ex to [0,4.5,0]."
+   "why": "The four plugs run along the head centerline, parallel to the crankshaft."
   },
   {
-   "id": "wheel-fl",
-   "severity": "warn",
-   "problem": "All four wheels are centered at y=0.98, but every hub, rotor, drum and CV axle is at y=1.24. That is a 0.26 non-concentric offset, and with a ~1.25-unit tire radius the tires sink into the ground.",
+   "id": "mid-pipe",
+   "severity": "error",
+   "problem": "At z -1.6 with r 0.3, the pipe spans z -1.9 to -1.3 and y 0.2 to 0.8, so it passes through the fuel tank (z \u00b11.5, y 0.5\u20131.4). r 0.3 is also a 15 cm pipe; the real one is about 5 cm.",
    "suggest": {
     "pos": [
-     5.62,
-     1.24,
-     2.98
+     -1.5,
+     0.45,
+     -1.8
     ]
    },
-   "why": "A 195/60R15 tire has a radius of about 0.305 m (about 1.25 units), and the hub is at the wheel center. Apply y=1.24 to wheel-fr, wheel-rl and wheel-rr as well."
+   "why": "The exhaust routes beside the tank, never through it. Also resize to [0.1,7.2]."
   },
   {
-   "id": "strut-fl",
+   "id": "flex-pipe",
    "severity": "warn",
-   "problem": "The strut is at z 2.2\u20132.8, y 1.3\u20133.7, which goes through the top of the LH tire (z\u22652.58, y\u22642.2). strut-fr has the same problem mirrored.",
+   "problem": "r 0.25 gives a pipe about 12 cm across; the real front pipe is about 5 cm.",
    "suggest": {
-    "pos": [
-     5.4,
-     3.0,
-     2.3
+    "size": [
+     0.1,
+     4.6
     ]
    },
-   "why": "The McPherson strut runs from the knuckle up to the tower, inboard of the tire. Use [5.4,3.0,-2.3] for strut-fr."
+   "why": "The front pipe on the 2.0 Zetec is about 50 mm OD."
   },
   {
-   "id": "fuel-tank",
+   "id": "exh-mani",
    "severity": "warn",
-   "problem": "The tank spans x -4.8 to -1.8, so its back edge sits almost on the rear axle line (-4.97) and in the Control Blade/crossmember zone. At 3\u00d71\u00d73.2 (about 137 L as a box) it is also far over 13.2 gal, and it is offset 0.4 toward the LH side for no reason.",
+   "problem": "[1,1.8,2.4] covers the whole front face of the block, end to end. It swallows the alternator, O2 sensor and A/C region, and reaches x 7.4, nearly touching the fan.",
    "suggest": {
-    "pos": [
-     -2.8,
-     0.95,
-     0
+    "size": [
+     0.8,
+     1.6,
+     1.6
     ]
    },
-   "why": "The tank saddles the tunnel under the rear seat (seat x -3.42 to -1.62), clearly ahead of the axle. Size about [2.6,0.9,3.0]."
+   "why": "The 4-into-1 manifold and close-coupled cat are about 40 cm wide, centered on the ports. Use pos [7.0,2.2,0.2]."
   },
   {
-   "id": "fuel-pump",
+   "id": "water-pump",
    "severity": "warn",
-   "problem": "The cylinder spans y 0.8\u20132.4, so it pokes about 1 unit out of the tank top (1.45) into the rear bench.",
+   "problem": "r 0.7 gives about 34 cm across (the real one is about 10 cm), and it overlaps the alternator and the block.",
+   "suggest": {
+    "size": [
+     0.25,
+     0.3
+    ]
+   },
+   "why": "The Zetec water pump is a small belt-driven unit at the passenger end of the block. Suggested pos: [6.75,2.45,-1.2]."
+  },
+  {
+   "id": "ps-pump",
+   "severity": "warn",
+   "problem": "At [5.4,3,-1.8] with r 0.5, it overlaps strut-fr (x 5.1\u20135.7, z -2.6 to -2.0), motor-mounts and the belts.",
    "suggest": {
     "pos": [
-     -2.8,
-     1.0,
+     4.7,
+     2.5,
+     -1.6
+    ]
+   },
+   "why": "On the Zetec Focus the PS pump sits on the rear (intake) side at the belt end. Also resize to [0.3,0.6]."
+  },
+  {
+   "id": "motor-mounts",
+   "severity": "warn",
+   "problem": "At [5.7,3.2,-2.2] the 0.8 cube overlaps strut-fr and the coolant degas bottle, so three parts share the same space.",
+   "suggest": {
+    "pos": [
+     6.0,
+     3.5,
+     -1.9
+    ]
+   },
+   "why": "The RH engine mount bolts to the top of the timing-end bracket, just ahead of and inboard of the strut tower."
+  },
+  {
+   "id": "coolant-res",
+   "severity": "warn",
+   "problem": "It overlaps motor-mounts (x 5.75\u20136.1, z -2.6 to -2.15).",
+   "suggest": {
+    "pos": [
+     6.9,
+     3.1,
+     -2.5
+    ]
+   },
+   "why": "The degas bottle sits on the RH inner fender, ahead of the strut tower."
+  },
+  {
+   "id": "rad-fan",
+   "severity": "warn",
+   "problem": "r 1.1 gives a fan 2.2 across, taller than the radiator (1.6), so it sticks out above and below the core.",
+   "suggest": {
+    "size": [
+     0.72,
+     0.3
+    ]
+   },
+   "why": "The fan shroud fits within the radiator core, about 38 cm fan."
+  },
+  {
+   "id": "oil-filter",
+   "severity": "warn",
+   "problem": "[0.45,0.9] gives a filter about 22 cm across and 22 cm long. The FL-400S is about 76 \u00d7 100 mm.",
+   "suggest": {
+    "size": [
+     0.16,
      0.4
     ]
    },
-   "why": "The module drops into the tank from the top and its flange sits flush under the seat. Use size [0.7,1.0]."
+   "why": "The FL-400S is a small spin-on filter."
+  },
+  {
+   "id": "starter",
+   "severity": "warn",
+   "problem": "r 0.55 gives about 27 cm across; the real starter is about 9 cm.",
+   "suggest": {
+    "size": [
+     0.2,
+     0.8
+    ]
+   },
+   "why": "The Focus starter is a compact gear-reduction unit on the rear of the bellhousing."
+  },
+  {
+   "id": "throttle-body",
+   "severity": "warn",
+   "problem": "r 0.6 gives about 29 cm across; the real bore is about 55 mm.",
+   "suggest": {
+    "size": [
+     0.2,
+     0.35
+    ]
+   },
+   "why": "The Zetec throttle body is about 60 mm bore."
+  },
+  {
+   "id": "rad-hoses",
+   "severity": "nit",
+   "problem": "r 0.25 gives a hose about 12 cm across; the real hose is about 3.5 cm.",
+   "suggest": {
+    "size": [
+     0.08,
+     1.6
+    ]
+   },
+   "why": "Radiator hoses are about 32\u201338 mm ID."
+  },
+  {
+   "id": "blower",
+   "severity": "nit",
+   "problem": "r 0.7 gives about 34 cm across.",
+   "suggest": {
+    "size": [
+     0.35,
+     0.5
+    ]
+   },
+   "why": "The blower wheel is about 15 cm across."
   },
   {
    "id": "heater-core",
    "severity": "warn",
-   "problem": "The heater core is centered at z=0, but the spec puts the blower and heater core behind the dash on the passenger side.",
+   "problem": "[0.3,1.6,1.8] is about 39 \u00d7 44 cm, far too big. Its ex [0,5,0] is the same as dash, so it never separates from it when exploded.",
    "suggest": {
-    "pos": [
-     3.1,
-     2.5,
-     -0.8
-    ]
-   },
-   "why": "The HVAC case with the heater core sits center-to-passenger side, next to the blower at z=-2."
-  },
-  {
-   "id": "fender-l",
-   "severity": "warn",
-   "problem": "The fender top is at y 4.05 but the hood is at 4.72, which leaves a 0.67-unit (16 cm) step all along the hood edge (see the front and side renders). fender-r has the same problem.",
-   "suggest": {
-    "pos": [
-     6.45,
-     3.2,
-     3.4
-    ]
-   },
-   "why": "The hood shut line sits flush with the fender tops. Use size [4,2.9,0.12] so the top reaches about 4.65, or drop the hood to about 4.1."
-  },
-  {
-   "id": "muffler",
-   "severity": "warn",
-   "problem": "The mid pipe ends at x -5.1, z -1.6, while the muffler starts at x -5.1, z +1.4. That is a 3-unit lateral gap in the exhaust.",
-   "suggest": {
-    "pos": [
-     -6.6,
+    "size": [
+     0.25,
      0.7,
-     -0.6
+     1.1
     ]
    },
-   "why": "The exhaust is one continuous run. The muffler inlet has to line up with the mid pipe behind the axle."
+   "why": "The heater core is about 15 \u00d7 25 cm. Also give it ex [-1,4,-3] so it clears the dash."
   },
   {
-   "id": "fuse-box",
-   "severity": "nit",
-   "problem": "The fuse box spans x 4.5\u20135.5, y 3.15\u20133.65, z 2.25\u20133.25 and intersects the top of strut-fl.",
+   "id": "fuel-filter",
+   "severity": "warn",
+   "problem": "At x -2.4, z 1.2 it is inside the fuel tank volume (x -4.1 to -1.5, z \u00b11.5).",
    "suggest": {
     "pos": [
-     4.5,
-     3.4,
-     2.75
+     -1.1,
+     0.6,
+     1.2
     ]
    },
-   "why": "The CJB/BJB sits on the driver-side inner fender apron beside the strut tower, not inside it."
+   "why": "The in-line filter mounts on the underbody rail ahead of the tank, not inside it."
   },
   {
-   "id": "flex-pipe",
+   "id": "fuel-tank",
    "severity": "nit",
-   "problem": "At y=0.7, z=-0.8 the pipe runs through the oil pan volume.",
+   "problem": "2.6 \u00d7 0.9 \u00d7 3.0 units is about 63 \u00d7 22 \u00d7 73 cm, roughly 100 L, which is double 13.2 gal (50 L).",
+   "suggest": {
+    "size": [
+     2.2,
+     0.75,
+     2.8
+    ]
+   },
+   "why": "The Mk1 Focus tank holds 50 L."
+  },
+  {
+   "id": "strut-fl",
+   "severity": "warn",
+   "problem": "The strut bottom (y 1.8) at z 2.0\u20132.6 goes into the transaxle top (y \u22642.9, z \u22642.4). It is also inboard of the hub (z 2.75) instead of above the knuckle. The same applies to strut-fr on the passenger side.",
    "suggest": {
     "pos": [
-     4.6,
-     0.4,
-     -0.8
+     5.4,
+     3.3,
+     2.55
     ]
    },
-   "why": "The front pipe runs under and behind the sump, not through it."
+   "why": "The strut lower end clamps the knuckle just inboard of the wheel, outboard of the gearbox."
   },
   {
-   "id": "shock-r",
+   "id": "caliper-f",
    "severity": "nit",
-   "problem": "At z 2.28\u20132.72, y 1.1\u20133.3 the shock clips the top of the LH rear tire.",
+   "problem": "0.9 \u00d7 0.9 \u00d7 0.5 is about 22 cm, oversized. Once the rotor is shrunk to r 0.53 it also floats off the disc.",
+   "suggest": {
+    "size": [
+     0.45,
+     0.6,
+     0.35
+    ]
+   },
+   "why": "A single-piston floating caliper is about 15 cm, sitting on the rotor's trailing edge. Use pos [5.9,1.8,2.55] after the y fix."
+  },
+  {
+   "id": "maf",
+   "severity": "nit",
+   "problem": "It sits inside the airbox volume (x 5.2\u20136.6).",
    "suggest": {
     "pos": [
-     -5.2,
-     2.4,
-     2.25
+     5.0,
+     3.6,
+     1.5
     ]
    },
-   "why": "The Control Blade damper mounts inboard of the tire, on the knuckle and the body rail."
+   "why": "The MAF sits in the duct between the airbox outlet and the throttle body."
   },
   {
-   "id": "lugs",
+   "id": "taillamp-l",
    "severity": "nit",
-   "problem": "The spare and lugs are in the cargo floor, but ex=[0,-0.53,0] explodes them down into the floor or ground.",
+   "problem": "y 3.0 \u00b1 0.8 is sedan height. The wagon lamps are tall units on the D-pillar. The same applies to taillamp-r.",
    "suggest": {
-    "ex": [
-     -3,
-     3,
-     0
+    "pos": [
+     -9,
+     3.8,
+     2.8
     ]
    },
-   "why": "The spare well is under the cargo floor, and you get to it through the liftgate."
-  },
-  {
-   "id": "mirrors",
-   "severity": "nit",
-   "problem": "The part is labeled 'pair' but only an LH (+z) proxy exists. rear-blade 'pair' and window-reg '(4)' have the same problem.",
-   "suggest": null,
-   "why": "A pair should be visible on both sides, or the part should be labeled per side."
+   "why": "Focus wagon tail lamps run vertically up the D-pillar beside the liftgate. Also resize to [0.5,2.2,0.8]."
   }
  ],
  "_loop": "modelqc",
- "_at": "2026-09-26T16:42:43Z"
+ "_at": "2026-09-26T16:53:27Z"
 }

@@ -1,141 +1,150 @@
 {
  "summary": {
-  "score": 6,
-  "findings": 17,
-  "high": 4
+  "score": 7,
+  "findings": 18,
+  "high": 5
  },
  "findings": [
   {
    "rank": 1,
    "severity": "high",
-   "area": "panel",
-   "problem": "The part-number rows split the text in the wrong place. The regex in pnRow takes the first word as the number, so 'Motorcraft GL-456', 'Lester 8260' and 'Gates 42294' show the brand name in large monospace and the real number in small grey text. data-pn is set to that first word, so tapping 'copy' copies 'Motorcraft' or 'Lester' instead of the number. You can see this in ui-panel-phone, ui-panel-desk and ui-panel-flagged-desk.",
-   "fix": "In pnRow, check whether the first word contains no digits (/^[A-Za-z]+$/). If so, treat it as the brand: render <small class=brand>Motorcraft</small> first and the number (the first word that contains a digit, e.g. GL-456) as the <span>. Set data-pn to that number. Brand rows then show as 'GL-456 \u00b7 Motorcraft', and copy grabs GL-456."
+   "area": "visual",
+   "problem": "On the phone the car is drawn small. At 60% explode (ui-exploded-phone) the 96 parts are packed into a band about 390x180px in the upper-middle of the screen, and the bottom ~40% is empty grid. Pinch is used for exploding and zoom is turned off (controls.enableZoom=false), so there is no way to make small parts such as sensors, filters or plugs big enough to tap.",
+   "fix": "In resize(), when innerHeight>innerWidth, set camera distance so the car's bounding box fills about 90% of the width (dist = (carLen/2)/Math.tan(fovH/2)), and lower controls.target.y by about 1.5 so the car sits in the vertical middle. Add double-tap-to-zoom: on a double pointerup, lerp the camera toward the raycast hit point to 50% distance. Show a 'Reset view' button while zoomed."
   },
   {
    "rank": 2,
    "severity": "high",
-   "area": "visual",
-   "problem": "On the phone, the Explode dial sits on top of every open sheet (z-index 7, background #141414ee, which is almost opaque). It covers the last visible part number, list row or paragraph, and text shows faintly through it (ui-panel-phone, ui-list-phone, ui-systems-phone, ui-help-phone). The dial does nothing useful while you are reading a sheet.",
-   "fix": "In open(), add document.body.classList.add('sheet-open'); in closeAll(), remove it. Add CSS: @media(max-width:700px){body.sheet-open #dial,body.sheet-open #hint{display:none} .sheet{padding-bottom:calc(20px + env(safe-area-inset-bottom))}}"
+   "area": "panel",
+   "problem": "When a part card opens, the part itself cannot be seen. In ui-panel-phone and ui-panel-flagged-phone the card is open, the car is still at 0% explode in Full car view, and the alternator and water pump are hidden inside the body. In ui-panel-desk the body is see-through but the part is barely highlighted. select() only reveals the part when opts.reveal is set, and lookAt() stores lookTarget but the camera does not visibly frame the part.",
+   "fix": "Always call select(m,{reveal:true}) from list, search and system chips. When a part is selected, also: fade the other parts to 0.15 opacity instead of 0.45, set emissive to 0xff8a20 with a 1Hz sine pulse in the render loop, and on the phone move controls.target to the part and the camera to 60% distance so the part appears in the top 34% of the screen above the sheet."
   },
   {
    "rank": 3,
    "severity": "high",
    "area": "first-run",
-   "problem": "The Help sheet explains controls that don't exist. It lists 'Filter', 'Body', 'X-ray' and '+ Part / Data', but the real UI has 'View: Full' (which cycles Full, See-through and Parts only), '\u22ef', 'Backup & fixes' and 'Add a missing part'. The system filter <select> is hidden on phones, so 'Filter: show one system at a time' can't be done there at all.",
-   "fix": "Rewrite the help rows to match the real labels: 'View button: tap to cycle Full car \u2192 See-through \u2192 Parts only', 'Systems: tap a system, then Show on car to see just that system', '\u22ef More: How to use, Backup & fixes, Add a missing part'. Remove the Filter, Body and X-ray rows."
+   "problem": "The exploded view is about 96 grey and colored blocks with no labels. A non-mechanic has to tap blindly to find out what anything is. Nothing on screen says 'this is the battery' or 'engine bay is here'.",
+   "fix": "On pointermove (desktop) and on touchstart held 300ms (phone), raycast and show a floating label <div id=tag> at the part's screen position with p.name. Also, when explode is above 0.3, show 6\u20138 fixed labels ('Engine', 'Radiator', 'Battery', 'Brakes', 'Fuel tank') projected from the system centroids, styled as .chip with pointer-events:auto so tapping one runs setSystem()."
   },
   {
    "rank": 4,
    "severity": "high",
-   "area": "panel",
-   "problem": "On flagged parts the owner can't tell which number to order. The panel shows Motorcraft PW-425 first with no warning. The suggested numbers come after it, and each carries the jargon 'suggested by verification, confirm on the car' packed into grey 11px text (ui-panel-flagged-phone/desk). Nothing marks which number is the wrong-fit one.",
-   "fix": "When conf==='X', sort rows so isSug(x) rows come first and add <span class=badge cV>use this one</span> to each. Show the original non-suggested rows dimmed (opacity:.55) under a heading 'Old number, fits a different car'. Change the text to 'likely right \u2014 check it matches the old part'."
+   "area": "systems",
+   "problem": "In the system detail 'How it works on this car' paragraph (ui-system-cooling phone and desk), the inline part chips keep min-height:32px, padding 6px 12px and a 3px margin. Every line with a chip becomes about 40px tall, so the prose reads as broken fragments with large gaps between lines.",
+   "fix": "Add a scoped rule for chips inside prose: .how .chip{display:inline;min-height:0;padding:1px 7px;margin:0 1px;line-height:1.4;font-size:inherit;border-radius:6px;vertical-align:baseline}. Keep tap area with .how{line-height:1.9}, or use underlined links (color:var(--or2);text-decoration:underline dotted) instead of pills in running text."
   },
   {
    "rank": 5,
-   "severity": "med",
-   "area": "nav",
-   "problem": "On the phone, the app's only instructions ('How to use') are hidden behind a bare '\u22ef' button, and the mobile CSS hides the subtitle that holds the gesture hints (#top .sub{display:none}). After the coach dialog is dismissed, a first-time user has no visible way back to help.",
-   "fix": "Change the \u22ef button's label to 'More' and put a visible '?' button (the #helpbtn style already exists, 36px wide) at the end of the first #tools .row that opens help. Or move bHelp out of #moreRow into the main row as '? Help'."
+   "severity": "high",
+   "area": "panel",
+   "problem": "The alternator card shows 7 part numbers (GL-456, 1S41-\u2026, 98AB-\u2026, Lester, DB, WAI, Remy), all given equal weight. A layperson at the counter doesn't know which one to ask for. The flagged water pump card handles this well with 'Use one of these'; the confirmed card has no equivalent.",
+   "fix": "Render the first confirmed OE number as a highlighted .pn.use row with the label 'Ask the counter for this one'. Put the other Ford numbers and aftermarket brands inside <details><summary>Other numbers that fit (6)</summary>\u2026</details>."
   },
   {
    "rank": 6,
    "severity": "med",
-   "area": "labels",
-   "problem": "The button text 'View: Full' means nothing to a layperson, and you only find out what the other modes are by tapping it. The title tooltip ('Full car / See-through / Parts only') never appears on touch screens.",
-   "fix": "Rename the states to 'Full car', 'See inside', 'Parts only' and set the button text to e.g. '\ud83d\udc41 Full car'. On the first tap, show a toast such as 'See inside: body is see-through. Tap again for Parts only'."
+   "area": "jargon",
+   "problem": "Many terms appear without any explanation: 'DOHC Zetec' in the header, 'serpentine belt', 'degas bottle', 'transaxle', 'Motorcraft', 'OE/OEM', 'MTX-75 / 4F27E', 'VIN code 3', 'ZTW', 'reman', and 'Lester 8260'. Help has a 'Words you will see' glossary, but nothing links to it from where the words appear.",
+   "fix": "After rendering each sheet, wrap known glossary terms in <abbr class=g data-g=\"term\"> (style: border-bottom:1px dotted #e8a56a; cursor:help). Tapping one shows the glossary definition in the toast, or in a small popover that stays until tapped away. Change the header to '2003 Ford Focus Wagon \u00b7 2.0L engine'."
   },
   {
    "rank": 7,
    "severity": "med",
-   "area": "panel",
-   "problem": "When you open a part from List, Search or a system chip at 0% explode with the Full view, the part stays hidden inside the body. The car moves up behind the toolbar and you can't see which part was picked (ui-panel-phone: alternator not visible). select() only reveals the part when opts.reveal is set.",
-   "fix": "Call select(m,{reveal:true}) from every list, search and chip handler. In select(), when reveal is set, also give the selected part a short pulse (animate the emissive between 0x8a4a10 and 0xffa040 three times)."
+   "area": "labels",
+   "problem": "Several toolbar labels are unclear to a layperson. 'Car' is vague when the whole app is a car. 'List' doesn't say what it lists. '\ud83d\udc41 Full car' shows the current state rather than what tapping will do, and nothing shows that it cycles through three modes. '\u22ef' hides Backup and Add part with no hint.",
+   "fix": "Rename: 'Car' \u2192 'My car', 'List' \u2192 'All parts', bView \u2192 'View: Full car \u25be' (or three toggle buttons: 'Outside' / 'See-through' / 'Parts only'), '\u22ef' \u2192 'More'."
   },
   {
    "rank": 8,
    "severity": "med",
-   "area": "visual",
-   "problem": "On the phone, while a sheet is open, the camera view offset (innerHeight*0.28) pushes the car up under the search bar and buttons. The toolbar covers the roof and upper part of the car (every phone sheet screenshot).",
-   "fix": "When a sheet is open on screens \u2264700px, collapse #tools to the search field only (body.sheet-open #tools .row{display:none}). Lower the view offset to innerHeight*0.2 so the car sits in the visible band between the toolbar and the sheet."
+   "area": "nav",
+   "problem": "On the phone the system filter is removed (#tools select{display:none}), so the only way to narrow the 3D view or the All parts list to one system is through the Systems sheet. The list sheet itself has no filter chips, and 96 items take a long scroll.",
+   "fix": "At the top of #lbody, render a horizontal scroll row of system chips (All \u00b7 Engine \u00b7 Cooling \u00b7 Brakes \u2026) using .chips{flex-wrap:nowrap;overflow-x:auto}, each calling setSystem(s); renderList(). Show the active one with class .on."
   },
   {
    "rank": 9,
    "severity": "med",
-   "area": "labels",
-   "problem": "Two different trust levels share the same grey 'number unconfirmed' badge: K (from Ford's catalog) and L (a best guess). The Help sheet's trust key shows two identical grey badges with different meanings (ui-help-desk).",
-   "fix": "Set CONF.L to 'best guess, check first' and give it its own style, e.g. .cL{background:#4a2f1a;color:#ffd3a8}. Keep K as 'from Ford catalog'."
+   "area": "panel",
+   "problem": "The DIY line runs difficulty, tools and a part-number warning together in one 12px grey sentence ('weekend job, jack + torque wrench \u00b7 Lester 8260 for this car, not 8418 or 8406\u2026'). The number advice gets lost, and 'Confirm belt tension and the battery first' (a diagnosis tip) is hidden in it.",
+   "fix": "Split into three lines: '<div class=diy>Difficulty \u25cf\u25cf\u25cf\u25cb\u25cb weekend job \u00b7 needs jack + torque wrench</div>', then '<div class=notes>Check first: \u2026</div>' placed right after the 'When it's going' line, and move any number-specific tip into the Part numbers section above the rows. Raise .diy to 13px and #bbb."
   },
   {
    "rank": 10,
    "severity": "med",
-   "area": "jargon",
-   "problem": "The panel Notes and DIY tip are aimed at a parts clerk: 'NOT 8418 (SVT / late-04), NOT 8406 (05-07 Duratec). 6-groove pulley, 11 o clock plug, 2-ear mount' and 'Lester 8260 for this car, not 8418 or 8406'. The Vehicle facts use 'MTX-75', '4F27E', 'ZTW', 'VIN code 3', and Systems uses 'PCM' and 'degas bottle', all with no explanation.",
-   "fix": "Put Notes inside <details><summary>Details for the parts counter</summary>. Take part numbers out of the tip text. Add a GLOSS map ({PCM:'engine computer',degas:'coolant overflow tank',Duratec:'the newer 2.0 engine, not yours',...}) and, on first use of each term, wrap it in <abbr title> with a dotted underline that shows the gloss when tapped."
+   "area": "labels",
+   "problem": "The trust explanation under PART NUMBERS starts lowercase and uses internal pipeline wording: 'the original number turned out to fit a different car\u2026' and 'Use one of these (found by verification, confirm on the car)'. 'Verification' means nothing to the owner.",
+   "fix": "Capitalize the CONF_HELP strings. Replace 'found by verification' with 'double-checked against a seller listing'. X copy: 'Our first number was for a different Focus. Use the green one below; match it to the old part before paying.'"
   },
   {
    "rank": 11,
    "severity": "med",
-   "area": "touch",
-   "problem": "Several touch targets are well under 44px. The inline part chips in the Systems text are about 24px tall (.chip padding 4px 10px, min-height:0). The '\u2039 All systems' back link has padding 0 and is about 18px tall. The system chip in the panel header is about 24px.",
-   "fix": "Set .chip{padding:7px 12px;min-height:34px;line-height:1.3}. Set .back{padding:10px 12px 10px 0;min-height:44px;font-size:14px}. In the systems prose, add line-height:2.1 to the paragraph so the larger chips don't overlap."
+   "area": "visual",
+   "problem": "On desktop the car isn't moved over when a sheet opens. In ui-panel-desk, ui-list-desk and ui-systems-desk the front of the car (headlamps, bumper) sits under the 440px sheet. camera.setViewOffset is only applied when innerWidth<=700.",
+   "fix": "In open(): if(innerWidth>700) camera.setViewOffset(innerWidth,innerHeight,sheetW/2,0,innerWidth,innerHeight) where sheetW=sheets[k].offsetWidth+12. This moves the car left into the free area."
   },
   {
    "rank": 12,
    "severity": "med",
-   "area": "visual",
-   "problem": "On the phone at 60% explode, the exploded parts run off both sides of the screen (headlamps and wheels cut off in ui-exploded-phone). The camera doesn't pull back as the car spreads out.",
-   "fix": "In the render loop, move the camera back along its direction as the explode amount grows on narrow screens: const k=1+t*(camera.aspect<0.7?0.55:0.15); camera.position.copy(target).addScaledVector(dir, baseDist*k)."
+   "area": "editor",
+   "problem": "The Backup & fixes sheet shows three large dt/dd rows of '0' and puts a red 'Erase all my fixes' button right under 'Save a backup' even when there is nothing to erase. 'Copy backup text' is unclear.",
+   "fix": "Replace the three counts with one line: n?`${n} fixes saved on this phone`:'No fixes yet \u2014 nothing to back up.' Hide or disable the Erase button when n===0, and move it into a <details><summary>Danger zone</summary>. Rename to 'Copy backup (to paste in a note or email)'."
   },
   {
    "rank": 13,
-   "severity": "low",
-   "area": "nav",
-   "problem": "On desktop, the '\u22ef' button wraps onto its own line under Systems/List/Vehicle/View because #tools is only 300px wide. It looks orphaned (ui-home-desk). The 'All systems' dropdown also does the same job as the Systems button.",
-   "fix": "Set #tools{width:min(360px,46vw)} and .row{flex-wrap:nowrap}. Label the select 'Show only: All systems' so it reads as a filter rather than a second menu."
+   "severity": "med",
+   "area": "panel",
+   "problem": "Almost every row in All parts carries a mustard 'number needs checking' badge (ui-list phone and desk). This teaches the owner to ignore the badge, and on the phone the badge wraps to its own line under long names (Timing belt kit).",
+   "fix": "In the list, replace the text badges with a 10px colored dot plus a short word (\u2713 / ? / !), e.g. <span class=\"dot cX\" title=\u2026>check</span>. Keep the full wording in the part card. Style .item .badge{white-space:nowrap;font-size:10.5px;margin-left:4px} and float it right."
   },
   {
    "rank": 14,
    "severity": "low",
-   "area": "visual",
-   "problem": "The sheet's drag handle (.sheet::before) looks like a bottom sheet you can swipe down to close, but swiping does nothing.",
-   "fix": "Add touchstart/touchmove/touchend handlers on .sheet: when scrollTop===0 and the finger moves down more than 80px, call closeAll(). Otherwise remove the ::before handle."
+   "area": "nav",
+   "problem": "On desktop the \u22ef button wraps onto its own second row under the tool buttons (ui-home-desk), which looks accidental. The 'All systems' dropdown and the 'Systems' button sit next to each other, doing different things with similar names.",
+   "fix": "Set #tools{width:min(360px,46vw)} or #tools .row{flex-wrap:nowrap} so everything fits on one row. Rename the select's first option to 'Show on car: all systems' so it reads as a 3D filter rather than a second Systems page."
   },
   {
    "rank": 15,
    "severity": "low",
-   "area": "panel",
-   "problem": "The three action buttons look inconsistent. 'Buy nearby' is a grey-text <button> while 'Prices online' is an orange link, and 'Prices online' actually opens RockAuto's vehicle catalog, not a price comparison.",
-   "fix": "Give all three the same .snipe style, with 'Watch how-to' as the only filled one. Rename 'Prices online' to 'Order online (RockAuto)'."
+   "area": "first-run",
+   "problem": "The desktop-oriented hint 'scroll wheel = explode dial \u00b7 two-finger pinch on touch' appears in the phone renders at 390px (the pointer:coarse rule doesn't catch every phone or emulator). 'Explode dial' is also a term the UI doesn't use; the control is labeled 'Explode'.",
+   "fix": "Add #hint to the max-width:700px block: @media (max-width:700px){#hint{display:none}}. Change the desktop copy to 'mouse wheel also pulls the car apart'."
   },
   {
    "rank": 16,
    "severity": "low",
-   "area": "editor",
-   "problem": "With no fixes yet, the Backup sheet still shows three '0' counters, backup/restore buttons and a red 'Erase all my fixes' button placed right next to 'Save a backup' (ui-data-phone).",
-   "fix": "When n===0, show a single line: 'Nothing changed yet. When you correct a part number or add a photo, it's saved here.' Show only 'Restore a backup'. Hide Erase until n>0, and give it margin-top:16px so it sits apart from Save."
+   "area": "panel",
+   "problem": "The three action buttons in the part card look inconsistent. 'Watch how-to' is a solid orange link, 'Buy nearby' is a grey <button>, and 'Prices online' is an a.snipe with orange text and different padding and height. All three should look like equal-weight siblings.",
+   "fix": "Give all three a shared class .act{flex:1;min-height:44px;display:grid;place-items:center;border-radius:8px;font-size:13.5px}. Keep .pri for 'Watch how-to' and use the same neutral style for 'Buy nearby' and 'Prices online'. Add '\u2197' to the two that open another site."
   },
   {
    "rank": 17,
    "severity": "low",
-   "area": "visual",
-   "problem": "The hint text (#777, 11px) and the explode sub-label (10px #9a9a9a) are low contrast and very small. The desktop hint 'two-finger pinch on touch' is irrelevant on desktop.",
-   "fix": "Set #hint{color:#9a9a9a;font-size:12px} with the text 'scroll to pull apart \u00b7 drag to spin \u00b7 click a part'. Set #dial label small{font-size:11px}."
+   "area": "systems",
+   "problem": "The Car sheet's 'Help finish this' callout says 'tap Edit below', but the Edit control is far below the fold on the phone (not visible in ui-vehicle-phone).",
+   "fix": "Put the actions inside the callout itself: <div class=row><button class=pri data-act=editveh>Enter it now</button><button data-act=photo>\ud83d\udcf7 Photo the door sticker</button></div>."
+  },
+  {
+   "rank": 18,
+   "severity": "low",
+   "area": "touch",
+   "problem": "The 'copy' pills inside part-number rows are about 20px tall (padding 2px 6px, 11px text). The whole .pn row is tappable, but the pill looks like the only target and is too small.",
+   "fix": "Remove the pill and put a trailing icon inside the full-row button: .pn::after{content:'\u29c9 copy';color:#e8a56a;font-size:12px}. After copying, toast 'Copied GL-456 \u2014 paste it into the store search'."
   }
  ],
  "keep": [
-  "Part panel reading order: plain-English 'what it does', then orange 'When it's going' symptoms, then a DIY difficulty dot rating with a plain meaning, then Watch/Buy buttons, then numbers",
-  "The trust badge explains itself: the sentence under PART NUMBERS says why the number is or isn't confirmed",
-  "Store cards with large Directions and Call buttons, and real local addresses and hours",
-  "Systems sheet: plain green refresher boxes, 'How it works on this car' text with tappable part chips, and a 'What usually goes wrong' section in orange",
-  "Vehicle sheet 'Help finish this' card that asks for one specific photo (the door-jamb sticker) and says why it matters",
-  "List grouped by system with sticky headers, a one-line description per part and a trust badge",
-  "The Explode label comes with a plain sub-label ('pull the car apart') and a large 28px thumb on the phone",
-  "Editing tools (Add part, Backup & fixes) are tucked behind the \u22ef menu, out of the way of the main task",
-  "Close buttons are 44px, the back gesture closes sheets through history.pushState, and inputs use 16px text so iOS doesn't zoom in"
+  "Bottom-sheet pattern on the phone, with a drag handle, 44px close button and back-button closing",
+  "Explode slider with the plain-English 'pull the car apart' sub-label and a large 28px thumb",
+  "Part card opens with 'what it does' and then 'When it's going:' symptoms before any numbers",
+  "Flagged-number handling: the green 'use one of these' rows and the dimmed 'Old number, fits a different car' row",
+  "Green REFRESHER callouts and 'Works together with' cards in Systems",
+  "Systems list cards with part counts and a one-sentence plain explanation",
+  "Local store cards with large Directions and Call buttons and opening hours",
+  "Car sheet 'Help finish this' prompt with reference photos and a note that they aren't this exact car",
+  "Editing tools (Backup, Add part) kept behind \u22ef",
+  "Help sheet's trust-badge legend and glossary section",
+  "16px inputs on the phone so iOS doesn't zoom on focus"
  ],
  "_loop": "uiqc",
- "_at": "2026-09-26T16:46:26Z"
+ "_at": "2026-09-26T16:57:02Z"
 }
