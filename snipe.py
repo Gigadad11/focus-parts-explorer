@@ -8,9 +8,8 @@ Usage: python3 snipe.py   -> writes snipe-sheet.html + snipe-sheet.csv"""
 import json, re, csv, subprocess, html
 from urllib.parse import quote as q
 def load():
-    h=open('index.html',encoding='utf8').read()
-    src=h.split('/* ===== DEFAULT DATA')[1].split('/* ===== STATE')[0]
-    src=src[src.index('const VEHICLE'):]+'\nconsole.log(JSON.stringify({PARTS,VEHICLE}))'
+    src=open('parts.js',encoding='utf8').read()
+    src=re.sub(r'window\.(\w+)\s*=',r'var \1=',src)+'\nconsole.log(JSON.stringify({PARTS,VEHICLE}))'
     return json.loads(subprocess.run(['node','-e',src],capture_output=True,text=True,check=True).stdout)
 def links(p,V):
     nm=re.sub(r'\(.*?\)','',p['name']).strip(); yr='2003 Ford Focus 2.0 DOHC Zetec'
